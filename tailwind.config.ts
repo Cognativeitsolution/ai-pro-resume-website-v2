@@ -8,6 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+      },
+      screens: {
+        xs: { max: "576px" },
+        sm: "576px",
+        md: "768px",
+        lg: "992px",
+        xl: "1200px",
+        "2xl": "1400px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -20,6 +32,9 @@ export default {
         secondaryGray: "#A7A7A7",
         primaryCran: "#00caa5",
         primarySlate: "#343434",
+      },
+      backgroundImage: {
+        primary: "linear-gradient(to right, #9885FF,#79A9FF)",
       },
       keyframes: {
         fadeInUp: {

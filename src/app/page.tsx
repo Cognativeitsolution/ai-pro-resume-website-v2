@@ -1,9 +1,11 @@
+import { Banner, ExploreTemplates } from "@/components";
 import React from "react";
 
 export default function Page() {
   return (
     <>
-      <section>Welcome</section>
+      <Banner />
+      <ExploreTemplates />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "@/components";
 //==================
-import ConditionalLayout from "./Layout/conditionalLayout";
 
 //========= Meta Data
 export const metadata: Metadata = {
@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: "",
   description: "",
   // Canonical
-  alternates: { canonical: 'https://ai-pro-resume-next.vercel.app/' },
+  alternates: { canonical: "https://ai-pro-resume-next.vercel.app/" },
   // OG Metas
   openGraph: {
     title: "",
     description: "",
-    url: 'https://ai-pro-resume-next.vercel.app/',
-    siteName: 'Ai Pro Resume',
-    locale: 'en_US',
-    type: 'website',
+    url: "https://ai-pro-resume-next.vercel.app/",
+    siteName: "Ai Pro Resume",
+    locale: "en_US",
+    type: "website",
   },
   //===== No-Index =====
   robots: {
@@ -27,18 +27,19 @@ export const metadata: Metadata = {
       index: false,
       follow: false,
       noimageindex: false,
-      'max-snippet': -1,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
+      "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
     },
-  }
-}
+  },
+};
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Header />
         {children}
       </body>
     </html>
   );
-} 
+}
