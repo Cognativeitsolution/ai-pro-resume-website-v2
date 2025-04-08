@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import BannerBg from "/public/images/bannerBg.svg";
+
 import banner from "/public/images/banner.svg";
 import headerTemp from "/public/images/header-template.svg";
 import robo_1 from "/public/images/robo_1.svg";
@@ -11,12 +11,7 @@ const Banner = () => {
   return (
     <>
       <section className="relative z-10 overflow-hidden bg-none h-full flex items-start justify-center">
-        <Image
-          src={BannerBg}
-          alt="Banner Image"
-          fill={true}
-          className="block -z-10 object-cover object-bottom"
-        />
+       
         <div className="container flex flex-col items-center justify-between mt-[90px] sm:mt-[150px]">
           <p className="font-semibold text-[25px] md:text-[56px] w-full sm:w-[75%] text-center leading-[30px] md:leading-[65px]">
             Let AI Build the Resume That Builds Your Career

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components";
-//==================
+import Image from "next/image";
 
+//==================
+import BannerBg from "/public/images/bannerBg.svg";
 //========= Meta Data
 export const metadata: Metadata = {
   // Title & Descriptions
@@ -36,7 +38,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="relative z-10 bg-none">
+        <Image
+          src={BannerBg}
+          alt="Banner Image"
+          fill={true}
+          className="block -z-10 object-cover object-bottom"
+        />
+
         <Header />
         {children}
       </body>
