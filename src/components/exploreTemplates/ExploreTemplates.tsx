@@ -53,53 +53,55 @@ const ExploreTemplates = () => {
 
   return (
     <>
-      <section className="container mt-10">
-        <p className="text-[25px] md:text-[56px] font-semibold text-center">
-          Explore professional Resume templates
-        </p>
-        <p className="font-normal text-[16px] text-center">
-          Our professional resume templates are based on what employers look for
-          in a candidate.
-        </p>
+      <section className="py-10">
+        <div className="container">
+          <p className="text-[25px] md:text-[56px] font-semibold text-center">
+            Explore professional Resume templates
+          </p>
+          <p className="font-normal text-[16px] text-center">
+            Our professional resume templates are based on what employers look
+            for in a candidate.
+          </p>
 
-        <div className="p-5">
-          {/* Tabs */}
-          <div className="flex mb-5 items-center justify-center gap-[50px] flex-wrap">
-            {(Object.keys(tabDisplayMap) as TabKey[]).map((tabId) => (
-              <button
-                key={tabId}
-                className={`px-4 py-2 border-b-2 transition-colors ${
-                  activeTab === tabId
-                    ? "border-[#6A55DD] text-[#6A55DD] font-bold"
-                    : "border-transparent text-black font-semibold"
-                }`}
-                onClick={() => setActiveTab(tabId)}
-              >
-                {tabDisplayMap[tabId]}
+          <div className="p-5">
+            {/* Tabs */}
+            <div className="flex mb-5 items-center justify-center gap-[50px] flex-wrap">
+              {(Object.keys(tabDisplayMap) as TabKey[]).map((tabId) => (
+                <button
+                  key={tabId}
+                  className={`px-4 py-2 border-b-2 transition-colors ${
+                    activeTab === tabId
+                      ? "border-[#6A55DD] text-[#6A55DD] font-bold"
+                      : "border-transparent text-black font-semibold"
+                  }`}
+                  onClick={() => setActiveTab(tabId)}
+                >
+                  {tabDisplayMap[tabId]}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab Images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5">
+              {imagesData[activeTab].map((image) => (
+                <div key={image.id} className="w-full">
+                  <Image
+                    src={image.src}
+                    alt={`Image ${image.id}`}
+                    width={500}
+                    height={300}
+                    className="w-full h-auto rounded-lg cursor-pointer transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* View All Button */}
+            <div className="mt-6 text-center">
+              <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
+                View All
               </button>
-            ))}
-          </div>
-
-          {/* Tab Images */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5">
-            {imagesData[activeTab].map((image) => (
-              <div key={image.id} className="w-full">
-                <Image
-                  src={image.src}
-                  alt={`Image ${image.id}`}
-                  width={500}
-                  height={300}
-                  className="w-full h-auto rounded-lg cursor-pointer transition-transform duration-300 hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* View All Button */}
-          <div className="mt-6 text-center">
-            <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
-              View All
-            </button>
+            </div>
           </div>
         </div>
       </section>

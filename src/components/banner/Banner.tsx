@@ -10,8 +10,7 @@ import improveText from "/public/images/header-improvetext.svg";
 const Banner = () => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden bg-none h-full flex items-start justify-center">
-       
+      <section className="relative z-10 overflow-hidden bg-none h-full flex items-start justify-center pb-6">
         <div className="container flex flex-col items-center justify-between mt-[90px] sm:mt-[150px]">
           <p className="font-semibold text-[25px] md:text-[56px] w-full sm:w-[75%] text-center leading-[30px] md:leading-[65px]">
             Let AI Build the Resume That Builds Your Career
