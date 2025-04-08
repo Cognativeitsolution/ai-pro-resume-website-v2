@@ -1,21 +1,27 @@
 import Image from "next/image";
 import React from "react";
-
 import banner from "/public/images/banner.svg";
 import headerTemp from "/public/images/header-template.svg";
-import robo_1 from "/public/images/robo_1.svg";
-import robo_2 from "/public/images/robo_2.svg";
+import robo_1 from "/public/images/robo_1.gif";
+import robo_2 from "/public/images/robo_2.gif";
 import improveText from "/public/images/header-improvetext.svg";
+import banner_bg_2 from "/public/images/banner_bg_2.svg";
 
 const Banner = () => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden bg-none h-full flex items-start justify-center pb-6">
+      <section className="relative z-10 overflow-hidden h-full flex items-start justify-center pb-6">
+        <Image
+          src={banner_bg_2}
+          alt="banner_bg_2"
+          fill={true}
+          className="block -z-10 object-cover object-top !top-[-160px]"
+        />
         <div className="container flex flex-col items-center justify-between mt-[90px] sm:mt-[150px]">
-          <p className="font-semibold text-[25px] md:text-[56px] w-full sm:w-[75%] text-center leading-[30px] md:leading-[65px]">
+          <p className="font-semibold text-[25px] md:text-[56px] w-full sm:w-[75%] text-center leading-[30px] md:leading-[65px] text-white">
             Let AI Build the Resume That Builds Your Career
           </p>
-          <p className="font-normal text-[18px] md:text-[24px] mt-3 w-full sm:w-[55%] text-center">
+          <p className="font-normal text-[18px] md:text-[24px] mt-3 text-center text-white">
             Easy to use templates, AI Powered Suggestions, and one click
             download.
           </p>
@@ -24,16 +30,16 @@ const Banner = () => {
             <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] rounded-md bg-primary text-white">
               Create Resume
             </button>
-            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] border border-[#9885FF] rounded-md hover:text-[#9885FF] transition">
+            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] border border-white text-white rounded-md hover:bg-primary">
               Import Resume
             </button>
-            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] border border-black hover:border-[#79A9FF] rounded-md hover:text-[#79A9FF] transition">
+            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] border border-white text-white hover:bg-primary rounded-md">
               ATS Checker
             </button>
           </div>
 
           {/* image section */}
-          <div className="relative w-full flex justify-center items-center py-10 overflow-hidden">
+          <div className="w-full flex justify-center items-center py-10 overflow-hidden relative">
             {/* Main laptop mockup */}
             <Image
               src={banner}
@@ -45,13 +51,13 @@ const Banner = () => {
             <Image
               src={robo_1}
               alt="Robot Left"
-              className="absolute z-20
+              className="absolute -rotate-45
       w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px] xl:w-[120px]
       top-2 left-4
       sm:top-4 sm:left-10
       md:top-6 md:left-20
       lg:top-4 lg:left-32
-      xl:top-4 xl:left-56"
+      xl:top-8 xl:left-64"
             />
 
             {/* Robot on right */}
@@ -64,14 +70,14 @@ const Banner = () => {
       sm:bottom-6 sm:right-10
       md:bottom-8 md:right-20
       lg:bottom-10 lg:right-32
-      xl:bottom-10 xl:right-56"
+      xl:bottom-10 xl:right-64"
             />
 
             {/* Resume preview popup */}
             <Image
               src={headerTemp}
               alt="Resume Preview"
-              className="absolute z-30 shadow-xl rounded-md
+              className="absolute z-30 animate-diagonalFloat shadow-xl rounded-md
       w-[100px] sm:w-[140px] md:w-[180px] lg:w-[200px]
       top-[100px] left-[20px]
       sm:top-[140px] sm:left-[80px]
@@ -84,7 +90,7 @@ const Banner = () => {
             <Image
               src={improveText}
               alt="Toggles"
-              className="absolute z-30
+              className="absolute z-30 animate-float
       w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px]
       top-[100px] right-[20px]
       sm:top-[140px] sm:right-[80px]

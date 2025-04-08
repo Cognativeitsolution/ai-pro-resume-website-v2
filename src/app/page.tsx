@@ -1,4 +1,10 @@
-import { Banner, ExploreTemplates, Steps, VideoSection } from "@/components";
+import {
+  Ats,
+  Banner,
+  ExploreTemplates,
+  Steps,
+  VideoSection,
+} from "@/components";
 import React from "react";
 
 export default function Page() {
@@ -8,6 +14,7 @@ export default function Page() {
       <ExploreTemplates />
       <VideoSection />
       <Steps />
+      <Ats />
     </>
   );
 }

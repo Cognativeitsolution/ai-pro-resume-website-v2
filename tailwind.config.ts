@@ -51,12 +51,22 @@ export default {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        diagonalFloat: {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(-10px, 10px)" },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 0.5s ease-out forwards",
         "bounce-in-up": "bounce-in-up 0.8s ease-out forwards",
         rotate:
           "rotate 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite alternate",
+        float: "float 2s ease-in-out infinite",
+        diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
       },
     },
   },

@@ -9,5 +9,6 @@ const ExploreTemplates = dynamic(
 );
 const VideoSection = dynamic(() => import("./videoSection/VideoSection"));
 const Steps = dynamic(() => import("./steps/Steps"));
+const Ats = dynamic(() => import("./ATS/Ats"));
 
-export { Header, Banner, ExploreTemplates, VideoSection, Steps };
+export { Header, Banner, ExploreTemplates, VideoSection, Steps, Ats };
