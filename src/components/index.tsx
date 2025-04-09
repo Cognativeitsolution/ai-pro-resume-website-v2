@@ -10,5 +10,24 @@ const ExploreTemplates = dynamic(
 const VideoSection = dynamic(() => import("./videoSection/VideoSection"));
 const Steps = dynamic(() => import("./steps/Steps"));
 const Ats = dynamic(() => import("./ATS/Ats"));
+const ResumeFeatures = dynamic(() => import("./resumeFeatures/ResumeFeatures"));
+const FindResumeTemplates = dynamic(
+  () => import("./findResume/FindResumeTemplates")
+);
+const ServiceSection = dynamic(() => import("./serviceSection/ServiceSection"));
+const Reviews = dynamic(() => import("./reviews/Reviews"));
+const Faq = dynamic(() => import("./faq/Faq"));
 
-export { Header, Banner, ExploreTemplates, VideoSection, Steps, Ats };
+export {
+  Header,
+  Banner,
+  ExploreTemplates,
+  VideoSection,
+  Steps,
+  Ats,
+  ResumeFeatures,
+  FindResumeTemplates,
+  ServiceSection,
+  Reviews,
+  Faq,
+};
