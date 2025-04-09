@@ -32,6 +32,7 @@ export default {
         secondaryGray: "#A7A7A7",
         primaryCran: "#00caa5",
         primarySlate: "#343434",
+        hamzaPrimary: "#9885FF",
       },
       backgroundImage: {
         primary: "linear-gradient(to right, #9885FF,#79A9FF)",
