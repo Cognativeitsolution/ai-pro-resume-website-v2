@@ -21,16 +21,17 @@ const Header = () => {
 
   return (
     <>
-      <header className="mt-0 sm:mt-10 absolute z-20 w-full">
+      <header className="mt-4 md:mt-10 absolute top-0 left-0 z-20 w-full">
         <div className="container flex justify-between items-center bg-white backdrop-blur-xl p-4 shadow-lg rounded-md h-full">
           {/* logo */}
-          <Link href={"/"} className="flex">
-            <Image
-              src={headerLogo}
-              alt="header_logo"
-              className="w-[80px] sm:w-[140px] h-[30px] sm:h-[50px]"
-            />
-          </Link>
+          <div className="w-[80px] md:w-[140px] flex items-center">
+            <Link href={"/"} className="flex">
+              <Image
+                src={headerLogo}
+                alt="header_logo"
+              />
+            </Link>
+          </div>
 
           {/* desktop navigation */}
           <nav className="hidden lg:flex items-center justify-center gap-[20px] lg:gap-[35px] xl:gap-[80px] h-full">

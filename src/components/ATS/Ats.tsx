@@ -6,7 +6,7 @@ import robo_2 from "../../../public/images/robo_2.gif";
 
 const Ats = () => {
   return (
-    <section className="py-6">
+    <section className="py-10">
       <div className="container">
         <div className="relative z-10 overflow-hidden rounded-3xl flex items-start justify-center">
           <Image

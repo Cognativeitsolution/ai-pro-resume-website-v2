@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Ats,
   Banner,
@@ -10,7 +11,6 @@ import {
   Steps,
   VideoSection,
 } from "@/components";
-import React from "react";
 
 export default function Page() {
   return (
