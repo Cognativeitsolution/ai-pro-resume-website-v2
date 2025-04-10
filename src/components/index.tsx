@@ -18,6 +18,9 @@ const FindResumeTemplates = dynamic(
 const ServiceSection = dynamic(() => import("./serviceSection/ServiceSection"));
 const Reviews = dynamic(() => import("./reviews/Reviews"));
 const Faq = dynamic(() => import("./faq/Faq"));
+const Counter = dynamic(() => import("./counter/Counter"));
+const InnerBanner = dynamic(() => import("./innerBanner/InnerBanner"));
+const Features = dynamic(() => import("./Features/Features"));
 
 export {
   Header,
@@ -34,4 +37,7 @@ export {
   AutoPlaySlider,
   AutoScrollSlider,
   SliderArrows,
+  InnerBanner,
+  Features,
+  Counter
 };
