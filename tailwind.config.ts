@@ -20,22 +20,18 @@ export default {
         xl: "1200px",
         "2xl": "1400px",
       },
+      fontFamily: {
+        primary: ["var(--font-primary),sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primaryBlue: "#0072b1",
-        secondaryBlue: "#27AAE1",
-        primaryGreen: "#01b2ac",
-        secondaryGreen: "#01b2ac90",
-        primaryBlack: "#231F20",
-        primaryGray: "#a3a3a3",
-        secondaryGray: "#A7A7A7",
-        primaryCran: "#00caa5",
-        primarySlate: "#343434",
         hamzaPrimary: "#9885FF",
       },
       backgroundImage: {
         primary: "linear-gradient(to right, #9885FF,#79A9FF)",
+        secondary:
+          "linear-gradient(90deg, rgba(207,199,255,0.6) 0%, rgba(211,211,211,0.1) 50%, rgba(212,228,255,1) 100%)",
       },
       keyframes: {
         fadeInUp: {

@@ -62,19 +62,15 @@ const Faq = () => {
                   />
                 </div>
 
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="overflow-hidden text-sm text-gray-600 mt-2"
-                    >
-                      {faq.answer}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  className={`transition-all duration-300 overflow-hidden text-sm text-black ${
+                    openIndex === index
+                      ? "max-h-96 opacity-100 mt-2"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="py-2 px-1">{faq.answer}</div>
+                </div>
               </div>
             ))}
           </div>

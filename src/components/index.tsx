@@ -1,7 +1,8 @@
 import dynamic from "next/dynamic";
 
-// const AutoPlaySlider = dynamic(() => import("./slider/AutoPlaySlider"));
-// const AutoScrollSlider = dynamic(() => import("./slider/AutoScrollSlider"));
+const AutoPlaySlider = dynamic(() => import("./slider/AutoPlaySlider"));
+const AutoScrollSlider = dynamic(() => import("./slider/AutoScrollSlider"));
+const SliderArrows = dynamic(() => import("./slider/SliderArrows"));
 const Header = dynamic(() => import("./layout/Header"));
 const Banner = dynamic(() => import("./banner/Banner"));
 const ExploreTemplates = dynamic(
@@ -30,4 +31,7 @@ export {
   ServiceSection,
   Reviews,
   Faq,
+  AutoPlaySlider,
+  AutoScrollSlider,
+  SliderArrows,
 };
