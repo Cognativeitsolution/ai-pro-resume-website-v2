@@ -123,9 +123,9 @@ const Footer = () => {
               </div>
               <div className="flex gap-6 text-lg text-white">
                 <FaFacebookF className="hover:animate-float" size={30} />
-                <FaInstagram size={30} />
-                <FaLinkedinIn size={30} />
-                <FaPinterest size={30} />
+                <FaInstagram className="hover:animate-float" size={30} />
+                <FaLinkedinIn className="hover:animate-float" size={30} />
+                <FaPinterest className="hover:animate-float" size={30} />
               </div>
             </div>
 
