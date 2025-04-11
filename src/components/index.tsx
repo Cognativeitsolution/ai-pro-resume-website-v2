@@ -17,6 +17,7 @@ const Faq = dynamic(() => import("./faq/Faq"));
 const InnerBanner = dynamic(() => import("./innerBanner/InnerBanner"));
 const Features = dynamic(() => import("./Features/Features"));
 const Counter = dynamic(() => import("./counter/Counter"));
+const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
 
 export {
   Header,
@@ -35,5 +36,6 @@ export {
   SliderArrows,
   InnerBanner,
   Features,
-  Counter
+  Counter,
+  PrivacyFeatures
 };

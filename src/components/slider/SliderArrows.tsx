@@ -6,6 +6,8 @@ import React, { useCallback, useEffect, useState } from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 
 import type { EmblaCarouselType } from "embla-carousel";
+import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 type propsType = {
   emblaApi?: EmblaCarouselType | null;
@@ -52,7 +54,7 @@ export const PrevButton = (props: any) => {
 
   return (
     <button type="button" {...restProps}>
-      <FaLongArrowAltLeft className="text-primaryGreen text-2xl cursor-pointer transition-all hover:text-3xl" />
+      <IoArrowBack className="text-primaryGreen text-2xl cursor-pointer transition-all" />
     </button>
   );
 };
@@ -62,7 +64,7 @@ export const NextButton = (props: any) => {
 
   return (
     <button type="button" {...restProps}>
-      <FaLongArrowAltRight className="text-primaryGreen text-2xl cursor-pointer transition-all hover:text-3xl" />
+      <IoArrowForward className="text-primaryGreen text-2xl cursor-pointer transition-all" />
     </button>
   );
 };
