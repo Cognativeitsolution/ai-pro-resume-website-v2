@@ -18,7 +18,7 @@ export const BannerData = {
     subtitle: "Privacy Policy",
     description: (
         <>
-            Welcome to AI Pro Resume, where your privacy is our top priority. In this era of rapid technological advancements, safeguarding your personal information is more critical than ever.
+            Welcome to AI Pro Resume, where your privacy is our top priority. <br className="hidden lg:block" /> In this era of rapid technological advancements, safeguarding your personal information is more critical than ever.
         </>
     ),
 };
