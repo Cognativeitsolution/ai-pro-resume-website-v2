@@ -68,7 +68,7 @@ const Footer = () => {
   };
   return (
     <>
-      <footer className="relative text-white">
+      <footer className="relative text-white mt-4 md:mt-10">
         {/* Background Image */}
         <Image
           src={footer_bg}

@@ -5,12 +5,12 @@ import home_page_video from "/public/images/home_page_video.svg";
 const VideoSection = () => {
   return (
     <>
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="container">
-          <p className="font-semibold text-[25px] md:text-[32px] text-center">
+          <h2 className="font-semibold text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] text-center">
             What Makes UsThe Best Resume Builder Online?
-          </p>
-          <p className="font-normal text-[14px] sm:text-[16px] text-center mt-5">
+          </h2>
+          <p className="font-normal text-[16px] lg:text-[18px] text-center mt-6">
             AI Pro Resume is your resume specialist that provides AI-based
             personalized suggestions based on your skills and experiences. These
             suggestions can speed up your cover letter and resume-making
@@ -19,12 +19,12 @@ const VideoSection = () => {
             magic of our resume parser tool. It fetches all the data from your
             file and transfers them to creative resume maker.
           </p>
-          <div className="mt-5 text-center">
+          <div className="mt-7 text-center">
             <button className="px-2 sm:px-4 py-1 font-semibold text-[16px] sm:text-[18px] rounded-md bg-primary text-white">
               Let’s Build Your Resume
             </button>
           </div>
-          <div className="mt-5 flex items-center justify-center text-center">
+          <div className="mt-6 flex items-center justify-center text-center">
             <Image src={home_page_video} alt="video" className="w-full" />
           </div>
         </div>

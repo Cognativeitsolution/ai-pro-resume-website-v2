@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -36,25 +35,25 @@ const Faq = () => {
 
   return (
     <>
-      <section className="py-10">
-        <div className="container p-10 mx-auto rounded-2xl bg-white/30 border-2 border-white">
-          <h2 className="text-center text-2xl sm:text-3xl font-bold mb-10">
+      <section className="py-5 md:py-10">
+        <div className="container p-4 md:p-10 mx-auto rounded-2xl bg-white/30 border-2 border-white">
+          <h3 className="text-center text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-bold mb-10">
             FREQUENTLY ASKED QUESTIONS
-          </h2>
+          </h3>
 
           <div className="flex flex-col items-center justify-center gap-5">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-2 border-white bg-white/60 p-4 cursor-pointer rounded-2xl w-auto lg:w-[768px]"
+                className="border-2 border-white bg-white/60 p-4 cursor-pointer rounded-2xl w-full lg:w-[768px]"
               >
                 <div
                   className="flex justify-between items-center"
                   onClick={() => toggle(index)}
                 >
-                  <h3 className="font-semibold text-md sm:text-lg text-black">
+                  <h4 className="font-semibold text-md sm:text-lg text-black">
                     {faq.question}
-                  </h3>
+                  </h4>
                   <IoIosArrowDown
                     className={`transform transition-transform duration-300 ${
                       openIndex === index ? "rotate-180" : ""
@@ -69,7 +68,9 @@ const Faq = () => {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="py-2 px-1">{faq.answer}</div>
+                  <div className="py-2 px-1 text-[16px] lg:text-[18px">
+                    {faq.answer}
+                  </div>
                 </div>
               </div>
             ))}

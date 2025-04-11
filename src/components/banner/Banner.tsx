@@ -15,6 +15,7 @@ const Banner = () => {
         <Image
           src={banner_bg_2}
           alt="banner_bg_2"
+          priority
           className="absolute w-full h-dvh md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom"
         />
         <div className="container flex flex-col items-center justify-between">

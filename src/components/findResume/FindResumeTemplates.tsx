@@ -49,19 +49,19 @@ const FindResumeTemplates = () => {
 
   return (
     <>
-      <section className="py-10">
-        <div className="container border-2 border-white rounded-2xl py-10 bg-white/50">
-          <p className="text-[24px] md:text-[32px] font-semibold text-center">
+      <section className="py-5 md:py-10">
+        <div className="container border-2 border-white rounded-2xl py-3 md:py-10 bg-white/50">
+          <h3 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold text-center">
             Find the Perfect Resume Example for Your Field
-          </p>
-          <p className="font-normal px-0 lg:px-40 text-[16px] text-center">
+          </h3>
+          <p className="font-normal px-0 lg:px-40 text-[16px] lg:text-[18px] text-center mt-4">
             To save you time and effort, we have introduced creative resume
             examples. These great resume examples are pre-written. You just have
             to click on them and add minor details to make your resume more
             personalized. 
           </p>
 
-          <div className="p-3 ">
+          <div className="p-4 ">
             {/* Embla Viewport */}
             <div className="overflow-hidden px-2 py-5" ref={emblaRef}>
               <div className="flex">
@@ -83,7 +83,7 @@ const FindResumeTemplates = () => {
             </div>
 
             {/* Arrows */}
-            <div className="flex items-center justify-center gap-4 text-xl mt-3 text-gray-700">
+            <div className="flex items-center justify-center gap-4 text-xl mt-4 text-gray-700">
               <button
                 onClick={scrollPrev}
                 className="hover:text-black transition"
@@ -99,7 +99,7 @@ const FindResumeTemplates = () => {
             </div>
 
             {/* View All Button */}
-            <div className="mt-5 text-center">
+            <div className="mt-8 text-center">
               <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
                 View All
               </button>

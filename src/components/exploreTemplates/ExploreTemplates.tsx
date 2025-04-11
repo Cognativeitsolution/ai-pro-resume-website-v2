@@ -53,19 +53,19 @@ const ExploreTemplates = () => {
 
   return (
     <>
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="container">
-          <p className="text-[25px] md:text-[56px] font-semibold text-center">
+          <h2 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold text-center">
             Explore professional Resume templates
-          </p>
-          <p className="font-normal text-[16px] text-center">
+          </h2>
+          <p className="font-normal text-center mt-5 text-[16px] lg:text-[18px]">
             Our professional resume templates are based on what employers look
             for in a candidate.
           </p>
 
           <div className="p-5">
             {/* Tabs */}
-            <div className="flex mb-5 items-center justify-center gap-[50px] flex-wrap">
+            <div className="flex mb-5 items-center justify-center gap-[20px] sm:gap-[50px] flex-wrap">
               {(Object.keys(tabDisplayMap) as TabKey[]).map((tabId) => (
                 <button
                   key={tabId}
@@ -97,7 +97,7 @@ const ExploreTemplates = () => {
             </div>
 
             {/* View All Button */}
-            <div className="mt-6 text-center">
+            <div className="mt-5 text-center">
               <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
                 View All
               </button>

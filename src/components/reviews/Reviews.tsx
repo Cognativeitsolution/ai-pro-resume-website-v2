@@ -36,12 +36,13 @@ const Reviews = () => {
 
   return (
     <>
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="container text-center px-4 relative">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Your Resume Is An Extension Of Yourself – Make One That’s Truly You
-          </h2>
-          <button className="bg-primary text-white px-4 py-2 rounded-lg mb-6 hover:bg-indigo-600 transition">
+          <h3 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-bold mb-4">
+            Your Resume Is An Extension Of Yourself – Make One
+            <br /> That’s Truly You
+          </h3>
+          <button className="bg-primary text-white px-4 py-2 rounded-lg mb-3 hover:bg-indigo-600 transition">
             Create Resume
           </button>
           {/* Review stars */}
@@ -73,7 +74,7 @@ const Reviews = () => {
               </div>
             </div>
 
-            <div className="absolute left-48 top-[-1rem] w-10 h-10">
+            <div className="absolute left-[27px] xl:left-48 top-[-15px] xl:top-[-1rem] w-7 md:w-10 h-7 md:h-10">
               <Image
                 src={startQuotes}
                 alt="Opening quote"
@@ -81,7 +82,7 @@ const Reviews = () => {
                 className="object-contain"
               />
             </div>
-            <div className="absolute right-48 bottom-[7rem] w-10 h-10">
+            <div className="absolute right-[20px] xl:right-48 bottom-[120px] xl:bottom-[7rem] w-7 md:w-10 h-7 md:h-10">
               <Image
                 src={endQuotes}
                 alt="Closing quote"

@@ -49,15 +49,15 @@ const ServiceSection = () => {
     },
   ];
   return (
-    <section className="py-10">
+    <section className="py-5 md:py-10">
       <div className="container">
-        <p className="font-normal text-[18px] md:text-[22px] text-center">
+        <h3 className="font-normal text-[18px] md:text-[22px] text-center">
           Services
-        </p>
-        <p className="font-semibold text-[25px] md:text-[32px] text-center px-0 lg:px-[450px]">
-          Let’s Perfect Your Resume & Cover Letter Together
-        </p>
-        <p className="font-normal text-[14px] sm:text-[16px] text-center mt-5">
+        </h3>
+        <h4 className="font-semibold text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] text-center mt-4">
+          Let’s Perfect Your Resume &<br /> Cover Letter Together
+        </h4>
+        <p className="font-normal text-[16px] lg:text-[18px] text-center mt-4">
           Writing a professional cover letter and resume can be a hectic task,
           and it will not guarantee you will pass the ATS checkers. AI Pro
           Resume is here to cater to all your needs by offering top-notch
@@ -73,7 +73,7 @@ const ServiceSection = () => {
           </button>
         </div>
         {/* service cards */}
-        <div className="my-5">
+        <div className="my-8">
           <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ServiceData.map((item, idx) => (
               <ServiceCard

@@ -24,7 +24,7 @@ const ResumeFeaturesCard = ({
       <div
         className={`flex flex-col ${
           reverse ? "md:flex-row-reverse" : "md:flex-row"
-        } gap-10 rounded-xl p-6 items-start`}
+        } gap-10 rounded-xl p-2 sm:p-6 items-start`}
       >
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex-shrink-0">
@@ -33,7 +33,7 @@ const ResumeFeaturesCard = ({
 
         {/* Description Section */}
         <div className="w-full md:w-1/2">
-          <h3 className="text-[18px] sm:text-[32px] font-semibold mb-2">
+          <h3 className="text-[26px] md:text-[30px] 2xl:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[44px] font-semibold mb-4">
             {title}
           </h3>
           <p className="text-[16px] font-normal mb-4">{description}</p>
@@ -51,7 +51,7 @@ const ResumeFeaturesCard = ({
               </li>
             ))}
           </ul>
-          <button className="px-4 py-2 bg-primary text-white font-semibold rounded transition">
+          <button className="px-4 py-2 bg-primary text-white font-semibold rounded transition mt-2 sm:mt-4">
             {buttonText}
           </button>
         </div>
