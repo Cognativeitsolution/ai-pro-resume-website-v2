@@ -1,117 +1,239 @@
-"use client";
-
-import Image from "next/image";
-import React, { useState } from "react";
-import headerLogo from "/public/images/headerLogo.svg";
+"use client"
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation"
+//========== Import Components
+// import { CTA } from "@/components";
+//========== Import Icons
+import { FaAngleDoubleLeft, FaAngleDown, FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
+//========== Import Images
+import logo from '/public/images/headerLogo.svg'
 import profile from "/public/images/profileicon.svg";
+import coin from "/public/images/dollar.webp";
+
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMegaMenuOpen1, setIsMegaMenuOpen1] = useState(false);
+  const [isMegaMenuOpen2, setIsMegaMenuOpen2] = useState(false);
+  const [isMegaMenuOpen3, setIsMegaMenuOpen3] = useState(false);
+  const [isMegaMenuOpen4, setIsMegaMenuOpen4] = useState(false);
+  const router = usePathname();
+  // ========= Header Fixed
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
 
-  const navItems = [
-    { name: "Tools", link: "#", dropdown: true },
-    { name: "Resume", link: "#", dropdown: true },
-    { name: "Cover Letter", link: "#", dropdown: true },
-    { name: "Blogs", link: "#", dropdown: true },
-    { name: "Services", link: "#" },
-    { name: "Pricing", link: "#" },
-  ];
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  // ========= Mobile Menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  // ========= MegaMenu1
+  const toggleMegaMenu1 = () => {
+    setIsMegaMenuOpen1(!isMegaMenuOpen1);
+  };
+  // ========= MegaMenu2
+  const toggleMegaMenu2 = () => {
+    setIsMegaMenuOpen2(!isMegaMenuOpen2);
+  };
+  // ========= MegaMenu1
+  const toggleMegaMenu3 = () => {
+    setIsMegaMenuOpen3(!isMegaMenuOpen3);
+  };
+  // ========= MegaMenu2
+  const toggleMegaMenu4 = () => {
+    setIsMegaMenuOpen4(!isMegaMenuOpen4);
+  };
 
   return (
-    <>
-      <header className="mt-4 md:mt-10 absolute top-0 left-0 z-20 w-full">
-        <div className="container flex justify-between items-center bg-white backdrop-blur-xl p-4 shadow-lg rounded-md h-full">
-          {/* logo */}
-          <div className="w-[80px] md:w-[140px] flex items-center">
-            <Link href={"/"} className="flex">
-              <Image
-                src={headerLogo}
-                alt="header_logo"
-              />
+
+    <header className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 ${isFixed ? 'fixed top-0 left-0 w-full duration-1000 ease-in-out' : 'absolute duration-1000 ease-in-out bg-transparent shadow-md lg:shadow-none'}`}>
+      <div className={`container h-full flex items-center rounded-md ${isFixed ? 'duration-1000 ease-in-out bg-white/90 shadow-md' : 'duration-1000 ease-in-out bg-white shadow-md lg:shadow-none'}`}>
+        <nav className="w-full h-full flex items-center justify-between mx-auto bg-transparent px-4">
+          <div className="w-full lg:w-auto h-full flex flex-wrap items-center justify-between">
+            <Link href="/" className="h-full flex items-center cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px]">
+              <Image src={logo} alt="Logo" />
             </Link>
           </div>
-
-          {/* desktop navigation */}
-          <nav className="hidden lg:flex items-center justify-center gap-[20px] lg:gap-[35px] xl:gap-[80px] h-full">
-            {navItems.map((item) => (
-              <ul key={item.name} className="relative group h-full">
-                <li className="flex items-center gap-1 text-sm text-black font-semibold hover:text-purple-600 cursor-pointer h-full">
-                  <Link className="h-full" href={item.link}>
-                    {item.name}
-                  </Link>
-                  {item.dropdown && (
-                    <ChevronDown size={16} className="mt-0.5" />
-                  )}
-                </li>
-                {item.dropdown && (
-                  <div className="absolute text-sm text-black font-semibold left-0 hidden group-hover:block bg-white shadow rounded-md p-2 w-40 z-10">
-                    <Link
-                      href="#"
-                      className="block px-2 py-1 hover:bg-gray-100"
-                    >
-                      Option 1
-                    </Link>
-                    <Link
-                      href="#"
-                      className="block px-2 py-1 hover:bg-gray-100"
-                    >
-                      Option 2
-                    </Link>
-                  </div>
-                )}
-              </ul>
-            ))}
-          </nav>
-
-          {/* dashboard button and profile icon */}
-          <div className="flex items-center justify-center gap-3">
-            <Link href="/dashboard">
-              <button className="bg-[#9885FF] text-white text-xs sm:text-sm px-2 sm:px-4 py-2 rounded hover:bg-[#8A72DF] transition">
-                My Dashboard
-              </button>
-            </Link>
-            <Image src={profile} alt="profile_icon" />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="container bg-white lg:hidden mt-2">
-            {navItems.map((item) => (
-              <div key={item.name} className="relative">
-                <Link
-                  href={item.link}
-                  className="block text-md font-semibold text-black"
-                >
-                  {item.name}
+          <div className={`w-[80%] lg:w-auto h-[100vh] lg:h-full flex items-center fixed top-0 z-50 lg:static bg-[#484848] lg:bg-transparent ${isMenuOpen ? 'left-0 duration-700 ease-in-out' : 'left-[-100%] duration-700 ease-in-out'}`} id="navbar-default">
+            <ul className="w-full h-full flex lg:items-center flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-6 xl:space-x-10 rtl:space-x-reverse p-5 lg:p-0 relative lg:static">
+              <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
+                <Image src={logo} alt="Logo" />
+              </Link>
+              <li className="lg:h-full flex lg:items-center group lg:relative">
+                <Link href="#" className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100" onClick={toggleMegaMenu1}>
+                  <span>Tools</span>
+                  <FaAngleDown className="mt-[1px]" />
                 </Link>
-                {item.dropdown && (
-                  <div className="pl-4 mt-1 space-y-1">
-                    <Link href="#" className="block text-sm text-gray-600">
-                      Option 1
+                <div className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute z-10 lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen1 ? 'left-0 duration-700 ease-in-out' : 'left-[-100%]'}`}>
+                  <div className="w-full flex lg:hidden items-center justify-between mb-5">
+                    <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
+                      <Image src={logo} alt="Logo" />
                     </Link>
-                    <Link href="#" className="block text-sm text-gray-600">
-                      Option 2
-                    </Link>
+                    <FaAngleDoubleLeft className="text-[30px] text-white" onClick={toggleMegaMenu1} />
                   </div>
-                )}
-              </div>
-            ))}
+                  <ul className="flex flex-col space-y-10 lg:space-y-5 w-full mb-5 lg:mb-0">
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Create a Resume</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Create a Cover Letter</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Import Resume</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="lg:h-full flex lg:items-center group lg:relative">
+                <Link href="#" className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100" onClick={toggleMegaMenu2}>
+                  <span>Resume</span>
+                  <FaAngleDown className="mt-[1px]" />
+                </Link>
+                <div className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen2 ? 'left-0 duration-700 ease-in-out' : 'left-[-100%]'}`}>
+                  <div className="w-full flex lg:hidden items-center justify-between mb-5">
+                    <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
+                      <Image src={logo} alt="Logo" />
+                    </Link>
+                    <FaAngleDoubleLeft className="text-[30px] text-white" onClick={toggleMegaMenu2} />
+                  </div>
+                  <ul className="flex flex-col space-y-10 lg:space-y-5 w-full">
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Resume Templates</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Resume Examples</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Resume format</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        How to write a resume</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="lg:h-full flex lg:items-center group lg:relative">
+                <Link href="#" className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100" onClick={toggleMegaMenu3}>
+                  <span>Cover Letter</span>
+                  <FaAngleDown className="mt-[1px]" />
+                </Link>
+                <div className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute z-10 lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen3 ? 'left-0 duration-700 ease-in-out' : 'left-[-100%]'}`}>
+                  <div className="w-full flex lg:hidden items-center justify-between mb-5">
+                    <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
+                      <Image src={logo} alt="Logo" />
+                    </Link>
+                    <FaAngleDoubleLeft className="text-[30px] text-white" onClick={toggleMegaMenu3} />
+                  </div>
+                  <ul className="flex flex-col space-y-10 lg:space-y-5 w-full">
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Cover Letter Templates</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Cover Letter Examples</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Cover Letter format</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        How to write a Cover Letter</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="lg:h-full flex lg:items-center group lg:relative">
+                <Link href="#" className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100" onClick={toggleMegaMenu4}>
+                  <span>Blogs</span>
+                  <FaAngleDown className="mt-[1px]" />
+                </Link>
+                <div className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen4 ? 'left-0 duration-700 ease-in-out' : 'left-[-100%]'}`}>
+                  <div className="w-full flex lg:hidden items-center justify-between mb-5">
+                    <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
+                      <Image src={logo} alt="Logo" />
+                    </Link>
+                    <FaAngleDoubleLeft className="text-[30px] text-white" onClick={toggleMegaMenu4} />
+                  </div>
+                  <ul className="flex flex-col space-y-10 lg:space-y-5 w-full">
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Blog 1</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Blog 2</Link>
+                    </li>
+                    <li className="cursor-pointer">
+                      <Link href="javascript:;" className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2" onClick={toggleMenu}>
+                        <FaTimes className="text-[20px]" />
+                        Blog 3</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="lg:h-full flex lg:items-center">
+                <Link href="#about-us" className="lg:h-full flex lg:items-center text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100" onClick={toggleMenu}>About</Link>
+              </li>
+              <li className="lg:h-full flex lg:items-center">
+                <Link href="#contact-us" className="lg:h-full flex lg:items-center text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100" onClick={toggleMenu}>Contact</Link>
+              </li>
+            </ul>
           </div>
-        )}
-      </header>
-    </>
+          <div className="flex items-center justify-center gap-4">
+            <div className="w-[25px] cursor-pointer">
+              <Image src={profile} alt="profile_icon" />
+            </div>
+            <FaShoppingCart
+              className="text-[#0072b1] text-md cursor-pointer"
+              size={25}
+            />
+            <div className="w-[25px] cursor-pointer">
+              <Image src={coin} alt="Coin" />
+            </div>
+          </div>
+          <div className="block lg:hidden w-max9">
+            {isMenuOpen ? (
+              <FaTimes className="text-[30px] cursor-pointer" onClick={toggleMenu} />
+            ) : (
+              <FaBars className="text-[30px] cursor-pointer" onClick={toggleMenu} />
+            )}
+          </div>
+        </nav>
+      </div>
+    </header>
   );
-};
-
+}
 export default Header;

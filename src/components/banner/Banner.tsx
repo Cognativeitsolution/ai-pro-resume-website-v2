@@ -18,7 +18,7 @@ const Banner = () => {
           className="absolute w-full h-dvh md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom"
         />
         <div className="container flex flex-col items-center justify-between">
-          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-[120px] lg:mt-[170px] 2xl:mt-[150px]">
+          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
             Let AI Build the Resume That Builds <br /> Your Career
           </h1>
           <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-normal text-center text-white my-3 capitalize">
