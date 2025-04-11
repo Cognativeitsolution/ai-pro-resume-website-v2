@@ -21,18 +21,14 @@ const ResumeFeaturesCard = ({
 }: ResumeFeatureCardProps) => {
   return (
     <>
-      <div
-        className={`flex flex-col ${
-          reverse ? "md:flex-row-reverse" : "md:flex-row"
-        } gap-10 rounded-xl p-2 sm:p-6 items-start`}
-      >
+      <div className={`flex flex-col ${ reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}>
         {/* Image Section */}
-        <div className="w-full md:w-1/2 flex-shrink-0">
+        <div className={`w-full lg:w-1/2 flex flex-shrink-0 ${ reverse ? "justify-center lg:justify-end" : "justify-center lg:justify-start"}`}>
           <Image src={image} alt={title} className="w-[500px] h-auto" />
         </div>
 
         {/* Description Section */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full lg:w-1/2">
           <h3 className="text-[26px] md:text-[30px] 2xl:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[44px] font-semibold mb-4">
             {title}
           </h3>

@@ -15,18 +15,17 @@ const Banner = () => {
         <Image
           src={banner_bg_2}
           alt="banner_bg_2"
-          priority
           className="absolute w-full h-dvh md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom"
         />
         <div className="container flex flex-col items-center justify-between">
           <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
-            Let AI Build the Resume That Builds <br /> Your Career
+            Let AI Build the Resume That Builds <br className="hidden md:block" /> Your Career
           </h1>
           <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-normal text-center text-white my-3 capitalize">
             Easy to use templates, AI Powered Suggestions, and one click download.
           </p>
           {/* buttons */}
-          <div className="flex flex-col sm:flex sm:flex-row items-center justify-center gap-5 sm:gap-10 mt-3 md:mt-5">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-10 mt-3 md:mt-5">
             <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] rounded-md bg-primary text-white">
               Create Resume
             </button>

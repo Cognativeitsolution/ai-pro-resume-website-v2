@@ -1,23 +1,12 @@
 "use client";
-
-import React, { useCallback } from "react";
-import reviewImage from "../../../public/images/reviews.svg";
-import useEmblaCarousel from "embla-carousel-react";
-
-import { IoArrowBack } from "react-icons/io5";
-import { IoArrowForward } from "react-icons/io5";
-import reviewAvatar from "../../../public/images/reviewAvatar.svg";
+// ===============
+import { AutoPlaySlider } from "@/components";
 import ReviewCard from "./ReviewCard";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import startQuotes from "../../../public/images/start_quotes.svg";
-import endQuotes from "../../../public/images/end_quotes.svg";
+// ===============
+import reviewImage from "../../../public/images/reviews.svg";
+import reviewAvatar from "../../../public/images/reviewAvatar.svg";
 
 const Reviews = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   const reviews = [
     {
@@ -27,7 +16,7 @@ const Reviews = () => {
       avatar: reviewImage,
     },
     {
-      text: "Easy to use and very customizable. Highly recommend it!",
+      text: "Beautiful templates and intuitive interface. Created my resume in under 30 minutes!,Beautiful templates and intuitive interface. Created my resume in under 30 minutes! Beautiful templates",
       author: "Michael Roberts",
       role: "Product Manager",
       avatar: reviewAvatar,
@@ -38,74 +27,34 @@ const Reviews = () => {
     <>
       <section className="py-5 md:py-10">
         <div className="container text-center px-4 relative">
-          <h3 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-bold mb-4">
-            Your Resume Is An Extension Of Yourself – Make One
-            <br /> That’s Truly You
+          <h3 className="font-normal text-[18px] md:text-[22px] text-center">
+            Reviews
           </h3>
-          <button className="bg-primary text-white px-4 py-2 rounded-lg mb-3 hover:bg-indigo-600 transition">
-            Create Resume
-          </button>
-          {/* Review stars */}
-          <div className="flex justify-center items-center gap-2 my-5">
-            {[...Array(5)].map((_, idx) => (
-              <span key={idx} className="text-yellow-400 text-xl">
-                <FaStar />
-              </span>
-            ))}
-            <span className="text-sm text-black ml-2 font-semibold">
-              Reviews
-            </span>
-          </div>
+          <h4 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-8">
+            Your Resume Is An Extension Of Yourself – Make <br className="hidden md:block" /> One That’s Truly You
+          </h4>
           <div className="relative">
-            {/* Embla slider */}
-            <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex">
-                {reviews.map((rev, id) => (
-                  <div key={id} className="min-w-full flex justify-center px-4">
-                    <ReviewCard
-                      id={id}
-                      text={rev.text}
-                      author={rev.author}
-                      role={rev.role}
-                      avatar={rev.avatar}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="absolute left-[27px] xl:left-48 top-[-15px] xl:top-[-1rem] w-7 md:w-10 h-7 md:h-10">
-              <Image
-                src={startQuotes}
-                alt="Opening quote"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="absolute right-[20px] xl:right-48 bottom-[120px] xl:bottom-[7rem] w-7 md:w-10 h-7 md:h-10">
-              <Image
-                src={endQuotes}
-                alt="Closing quote"
-                fill
-                className="object-contain"
-              />
-            </div>
-
-            {/* Arrows */}
-            <div className="flex justify-center items-center gap-6 text-xl text-gray-700 mt-6">
-              <button
-                onClick={scrollPrev}
-                className="hover:text-black transition"
-              >
-                <IoArrowBack />
-              </button>
-              <button
-                onClick={scrollNext}
-                className="hover:text-black transition"
-              >
-                <IoArrowForward />
-              </button>
-            </div>
+            <AutoPlaySlider
+              options={{ align: "center" }}
+              arrowPosition="mt-8 mb-8"
+            >
+              {reviews.map((rev, id) => (
+                <div key={id} className="grow-0 shrink-0 basis-[100%] pl-5" >
+                  <ReviewCard
+                    id={id}
+                    text={rev.text}
+                    author={rev.author}
+                    role={rev.role}
+                    avatar={rev.avatar}
+                  />
+                </div>
+              ))}
+            </AutoPlaySlider>
+          </div>
+          <div className="">
+            <button className="bg-primary text-white px-4 py-2 rounded-lg mb-6 hover:bg-indigo-600 transition">
+              Create Resume
+            </button>
           </div>
         </div>
       </section>

@@ -16,25 +16,25 @@ const Ats = () => {
             priority
             className="block -z-10 object-cover object-bottom"
           />
-          <div className="container mx-auto px-5 py-10 flex flex-col md:flex-row items-center justify-between gap-10 relative">
+          <div className="container mx-auto px-5 py-6 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 relative">
             {/* Text Section */}
-            <div className="md:w-1/2 text-center pl-0 sm:pl-[50px] md:text-left">
-              <h3 className="text-white font-semibold text-2xl md:text-3xl leading-tight">
-                Resumes Optimized For Applicant <br /> Tracking Systems (ATS)
+            <div className="w-full lg:w-1/2 text-center p-5 lg:pl-[40px] xl:pl-[50px] md:text-left">
+              <h3 className="text-white font-semibold text-2xl xl:text-3xl leading-tight">
+                Resumes Optimized For Applicant <br className="hidden xl:block" /> Tracking Systems (ATS)
               </h3>
               <p className="text-white mt-4 text-sm md:text-base">
                 AI PRO RESUME Resumes And Cover Letters Are Vigorously Tested
                 Against Major ATS Systems To Ensure Complete Parsability
               </p>
-              <button className="mt-[3.5rem] px-5 py-2 rounded-md bg-primary text-white font-semibold hover:bg-gray-100 transition">
+              <button className="mt-6 xl:mt-14 px-5 py-2 rounded-md bg-primary text-white font-semibold hover:bg-gray-100 transition">
                 Check ATS Score
               </button>
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 flex items-center justify-center relative">
-              <div className="w-[350px]">
-                <Image src={ats_score} alt="Resume Previews" className="z-10" />
+            <div className="w-full lg:w-1/2 text-center p-5 lg:p-0 flex items-center justify-center relative">
+              <div className="w-full lg:w-[350px]">
+                <Image src={ats_score} alt="Resume Previews" className="w-full" />
               </div>
               <div className="w-[150px] absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 md:translate-x-1/4 md:translate-y-1/4 lg:translate-x-[-80px] lg:translate-y-12 z-20">
                 <Image src={robo_2} alt="Robot Icon" />

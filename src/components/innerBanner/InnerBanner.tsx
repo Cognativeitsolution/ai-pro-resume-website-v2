@@ -27,7 +27,7 @@ const InnerBanner = (props: BannerProps) => {
                         <h1 className="text-[30px] md:text-[40px] lg:text-[50px] font-semibold text-center leading-[40px] md:leading-[50px] lg:leading-[60px] text-white my-1 sm:my-3">
                             {title}
                         </h1>
-                        <p className="font-normal text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
+                        <p className="text-[16px] lg:text-[18px] text-center text-white">
                             {description}
                         </p>
                     </div>

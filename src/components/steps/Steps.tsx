@@ -9,11 +9,13 @@ const Steps = () => {
     <>
       <section className="py-5 md:py-10">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-10">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-10 xl:gap-5 px-10">
             {/* step#1 */}
-            <div className="flex flex-col items-center justify-center gap-5">
+            <div className="flex flex-col items-center justify-start gap-3">
+              <div className="w-[50px] mb-3">
               <Image src={choose_template} alt="choose_template" />
-              <h4 className="text-[20px] md:text-[24px] font-medium">
+              </div>
+              <h4 className="text-[20px] xl:text-[24px] font-medium text-center">
                 Choose your resume Template
               </h4>
               <p className="text-[16px] lg:text-[18px] text-center font-normal">
@@ -23,9 +25,11 @@ const Steps = () => {
               </p>
             </div>
             {/* step#2 */}
-            <div className="flex flex-col items-center justify-center gap-5">
+            <div className="flex flex-col items-center justify-start gap-3">
+              <div className="w-[50px] mb-3">
               <Image src={enlist} alt="choose_template" />
-              <h4 className="text-[20px] md:text-[24px] font-medium">
+              </div>
+              <h4 className="text-[20px] xl:text-[24px] font-medium text-center">
                 Enlist your Capabilities
               </h4>
               <p className="text-[16px] lg:text-[18px] text-center font-normal">
@@ -35,9 +39,11 @@ const Steps = () => {
               </p>
             </div>
             {/* step#3 */}
-            <div className="flex flex-col items-center justify-center gap-5">
+            <div className="flex flex-col items-center justify-start gap-3">
+              <div className="w-[50px] mb-3">
               <Image src={download_resume} alt="choose_template" />
-              <h4 className="text-[20px] md:text-[24px] font-medium">
+              </div>
+              <h4 className="text-[20px] xl:text-[24px] font-medium text-center">
                 Download Your Resume
               </h4>
               <p className="text-[16px] lg:text-[18px] text-center font-normal">

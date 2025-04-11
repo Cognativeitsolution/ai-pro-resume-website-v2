@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import creativeinfusion from "/public/images/Creativeinfusion.svg";
 import innovativeedge from "/public/images/Creativeinfusion.svg";
@@ -82,7 +81,7 @@ const ExploreTemplates = () => {
             </div>
 
             {/* Tab Images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-10">
               {imagesData[activeTab].map((image) => (
                 <div key={image.id} className="w-full">
                   <Image
@@ -97,7 +96,7 @@ const ExploreTemplates = () => {
             </div>
 
             {/* View All Button */}
-            <div className="mt-5 text-center">
+            <div className="mt-8 lg:mt-10 text-center">
               <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
                 View All
               </button>

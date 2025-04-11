@@ -74,14 +74,14 @@ const Footer = () => {
           src={footer_bg}
           alt="Footer Background"
           fill={true}
-          className="block -z-10 object-cover object-bottom"
+          className="block -z-10 object-cover object-top"
         />
 
         {/* Content */}
-        <div className="relative z-10 px-6 pt-[12rem] pb-[1rem]">
+        <div className="relative z-10 px-5 xl:px-0 pt-20">
           {/* Newsletter Box */}
           <form onSubmit={handleSubmit(onSubscribe)}>
-            <div className="bg-primary container rounded-xl p-6 md:flex justify-between items-center mb-10 relative bottom-[60px]">
+            <div className="bg-primary container rounded-xl px-12 py-6 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[60px]">
               <div className="mb-4 md:mb-0">
                 <h3 className="text-[22px] md:text-[36px] font-bold leading-tight text-white">
                   Keep Up to date with <br />
@@ -110,28 +110,26 @@ const Footer = () => {
           </form>
 
           {/* Footer Links */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 container text-sm">
+          <div className="grid grid-cols-1 xl:grid-cols-5 gap-y-10 gap-5 container text-sm">
             {/* Logo and Socials */}
-            <div className="flex flex-col items-start justify-between gap-5 sm:gap-0">
-              <div className="">
+            <div className="flex xl:flex-col items-center xl:items-start justify-between gap-5 sm:gap-0">
+              <div className="w-[125px] xl:w-[150px]">
                 <Image
                   src={footer_logo}
                   alt="footer_logo"
-                  width={150}
-                  height={150}
                 />
               </div>
               <div className="flex gap-6 text-lg text-white">
-                <FaFacebookF className="hover:animate-float" size={30} />
-                <FaInstagram className="hover:animate-float" size={30} />
-                <FaLinkedinIn className="hover:animate-float" size={30} />
-                <FaPinterest className="hover:animate-float" size={30} />
+                <FaFacebookF className="hover:animate-float text-[25px] xl:text-[30px]" />
+                <FaInstagram className="hover:animate-float text-[25px] xl:text-[30px]" />
+                <FaLinkedinIn className="hover:animate-float text-[25px] xl:text-[30px]" />
+                <FaPinterest className="hover:animate-float text-[25px] xl:text-[30px]" />
               </div>
             </div>
 
             {/* Footer Links */}
             {footerSections.map((section, index) => (
-              <div key={index}>
+              <div key={index} className="col-span-1">
                 <h4 className="font-bold text-xl mb-4">{section.heading}</h4>
                 <ul className="space-y-3 text-base">
                   {section.items.map((item, idx) => (
@@ -153,7 +151,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Text */}
-          <div className="text-center mt-10 text-[16px] border-t-[1px] pt-2 text-gray-200">
+          <div className="text-center mt-10 text-[16px] border-t-[1px] py-2 text-gray-200">
             © 2005 & 2023 Resume Builder. All Rights Reserved.
           </div>
         </div>
