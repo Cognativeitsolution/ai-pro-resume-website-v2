@@ -65,7 +65,7 @@ const ExploreTemplates = () => {
 
           <div className="p-5">
             {/* Tabs */}
-            <div className="flex mb-5 items-center justify-center gap-[20px] sm:gap-[50px] flex-wrap">
+            <div className="flex mb-5 items-center justify-center gap-[20px] lg:gap-[50px] flex-wrap">
               {(Object.keys(tabDisplayMap) as TabKey[]).map((tabId) => (
                 <button
                   key={tabId}
