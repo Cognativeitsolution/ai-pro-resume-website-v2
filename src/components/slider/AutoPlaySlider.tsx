@@ -8,7 +8,7 @@ import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "@/components/slider/SliderArrows";
+} from "./SliderArrows";
 
 type propsType = {
   wrapperClasses?: string;
