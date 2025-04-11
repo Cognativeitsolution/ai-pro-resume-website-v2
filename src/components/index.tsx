@@ -17,6 +17,8 @@ const Faq = dynamic(() => import("./faq/Faq"));
 const InnerBanner = dynamic(() => import("./innerBanner/InnerBanner"));
 const Features = dynamic(() => import("./Features/Features"));
 const Counter = dynamic(() => import("./counter/Counter"));
+const Stepper = dynamic(() => import("./stepper/Stepper"));
+const Client = dynamic(() => import("./client/Client"));
 const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
 
 export {
@@ -37,5 +39,7 @@ export {
   InnerBanner,
   Features,
   Counter,
+  Stepper,
+  Client,
   PrivacyFeatures
 };

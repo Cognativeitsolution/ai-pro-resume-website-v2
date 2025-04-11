@@ -26,7 +26,7 @@ const Counter = (props: propsType) => {
         <section className="py-5 md:py-10">
             <div className="container">
                 <div className={`relative overflow-hidden rounded-3xl
-                 flex flex-col items-center justify-center  py-6 md:py-10 px-6 md:px-8 bg-PrimaryDark`}
+                 flex flex-col items-center justify-center py-6 md:py-10 px-6 md:px-8 bg-PrimaryDark`}
                 >
                     <div className="text-white text-justify sm:text-center">
                         <h3 className="text-[25px] md:text-[30px] xl:text-[40px] leading-[35px] md:leading-[40px] xl:leading-[50px] mb-2 font-medium">
@@ -48,7 +48,7 @@ const Counter = (props: propsType) => {
                                     <p className="text-[#D7EAA2] text-[24px] md:text-[28px] xl:text-[38px] leading-none font-semibold">
                                         {item.count}
                                     </p>
-                                    <p className="text-white text-[18px] lg:text-[20px] font-medium">
+                                    <p className="text-white text-[16px] lg:text-[18px] font-medium">
                                         {item.label}
                                     </p>
                                 </div>

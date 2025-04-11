@@ -2,6 +2,8 @@ import {
     InnerBanner,
     Features,
     Counter,
+    Stepper,
+    Client,
 } from "@/components";
 import React from "react";
 import {
@@ -11,8 +13,6 @@ import {
     FeaturesData,
     StepperData,
 } from "./data";
-import Stepper from "@/components/stepper/Stepper";
-import Client from "@/components/client/Client";
 
 export default function Page() {
     return (
