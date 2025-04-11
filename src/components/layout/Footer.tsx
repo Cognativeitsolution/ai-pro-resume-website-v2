@@ -78,7 +78,7 @@ const Footer = () => {
         />
 
         {/* Content */}
-        <div className="relative z-10 px-6 py-24">
+        <div className="relative z-10 px-6 pt-[12rem] pb-[1rem]">
           {/* Newsletter Box */}
           <form onSubmit={handleSubmit(onSubscribe)}>
             <div className="bg-primary container rounded-xl p-6 md:flex justify-between items-center mb-10 relative bottom-[60px]">
