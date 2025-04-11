@@ -32,6 +32,7 @@ export default {
         primary: "linear-gradient(to right, #9885FF,#79A9FF)",
         secondary:
           "linear-gradient(90deg, rgba(207,199,255,0.6) 0%, rgba(211,211,211,0.1) 50%, rgba(212,228,255,1) 100%)",
+        PrimaryDark: "radial-gradient(95.2% 351.86% at 100.99% 0%, #7D16C4 0%, #3358C3 81.2%, #3358C3 100%)",
       },
       keyframes: {
         fadeInUp: {

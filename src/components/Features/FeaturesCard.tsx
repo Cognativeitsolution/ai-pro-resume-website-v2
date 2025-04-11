@@ -35,10 +35,10 @@ const ResumeFeaturesCard = ({
         <div
           className={`col-span-12 lg:col-span-6 ${reverse ? "ms-auto" : ""}`}
         >
-          <h3 className="text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2">
+          <h2 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
             {title}
-          </h3>
-          <p className="text-[12px] sm:text-[14px] md:text-[16px] ">{description}</p>
+          </h2>
+          <p className="text-[16px] lg:text-[18px] text-justify lg:text-left ">{description}</p>
           <ul className="mb-4 space-y-3">
             {features?.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-4">

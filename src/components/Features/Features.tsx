@@ -11,7 +11,7 @@ const Features = (props: propsType) => {
 
   return (
     <>
-      <section className="pb-8 lg:pb-10 xl:py-12 ">
+      <section className="py-5 md:py-10">
         <div className="container mx-auto ">
           {data?.map((item: any, index: any) => (
             <FeaturesCard

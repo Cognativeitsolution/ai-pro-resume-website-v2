@@ -1,61 +1,60 @@
 import Image from "next/image";
-import React from "react";
-import ats_bg from "/public/images/ats_bg.svg";
-import ats_score from "/public/images/ats_score.svg";
-import robo_2 from "../../../public/images/robo_2.gif";
+import React, { ReactNode } from "react";
+import miniLogoShade from "media/images/mini-logo-shade.svg";
 
-import inner_banner_bg from "media/images/inner-banner_bg.svg";
 
-const Counter = () => {
+type CounterItem = {
+    icon: string;
+    count: string;
+    label: string;
+};
+
+type CounterData = {
+    title: string;
+    description: ReactNode;
+    counterlist: CounterItem[];
+};
+
+type propsType = {
+    data: CounterData;
+};
+
+
+const Counter = (props: propsType) => {
+    const { data } = props
     return (
-        <section className="py-4 lg:py-10 xl:py-8 ">
+        <section className="py-5 md:py-10">
             <div className="container">
-                <div className={`relative overflow-hidden bg-no-repeat bg-cover bg-center rounded-3xl flex items-start justify-center`}
-                    style={{
-                        backgroundImage: `url(${ats_bg.src})`
-                    }}>
-                    <div className="w-8/12 text-center">
-                        <h3 className="text-white text-2xl md:text-3xl leading-tight">
-                            Start your journey toward your dream job with AI Pro Resume.
+                <div className={`relative overflow-hidden rounded-3xl
+                 flex flex-col items-center justify-center  py-6 md:py-10 px-6 md:px-8 bg-PrimaryDark`}
+                >
+                    <div className="text-white text-justify sm:text-center">
+                        <h3 className="text-[25px] md:text-[30px] xl:text-[40px] leading-[35px] md:leading-[40px] xl:leading-[50px] mb-2 font-medium">
+                            {data.title}
                         </h3>
-                        <p className="text-white mt-4 text-sm md:text-base">
-                            AI PRO RESUME Resumes And Cover Letters Are Vigorously Tested
-                            Against Major ATS Systems To Ensure Complete Parsability
+                        <p className="text-[16px] lg:text-[18px]">
+                            {data.description}
                         </p>
                     </div>
-                    {/* <div className="container mx-auto px-5 py-10 flex flex-col md:flex-row items-center justify-between gap-10 relative">
-                        
-                        <div className="md:w-1/2 text-center pl-0 sm:pl-[50px] md:text-left">
-                            <h2 className="text-white font-semibold text-2xl md:text-3xl leading-tight">
-                                Resumes Optimized For Applicant <br /> Tracking Systems (ATS)
-                            </h2>
-                            <p className="text-white mt-4 text-sm md:text-base">
-                                AI PRO RESUME Resumes And Cover Letters Are Vigorously Tested
-                                Against Major ATS Systems To Ensure Complete Parsability
-                            </p>
-                            <button className="mt-6 px-5 py-2 rounded-md bg-primary text-white font-semibold hover:bg-gray-100 transition">
-                                Check ATS Score
-                            </button>
-                        </div>
-
-                        
-                        <div className="md:w-1/2 flex items-center justify-center relative">
-                            <Image
-                                src={ats_score}
-                                alt="Resume Previews"
-                                width={350}
-                                height={350}
-                                className="z-10"
-                            />
-                            <Image
-                                src={robo_2}
-                                alt="Robot Icon"
-                                width={150}
-                                height={150}
-                                className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 md:translate-x-1/4 md:translate-y-1/4 lg:translate-x-[-80px] lg:translate-y-12 z-20"
-                            />
-                        </div>
-                    </div> */}
+                    <div className="flex items-start md:items-center justify-start sm:justify-evenly pt-4 md:pt-6 flex-col md:flex-row w-full lg:w-11/12 xl:w-9/12 gap-y-4">
+                        {data.counterlist.map((item: any, index: any) => (
+                            <div
+                                key={index}
+                                className="flex items-center justify-center gap-4 bg-no-repeat bg-contain bg-center relative sm:w-[50%] md:w-[33%] min-h-[90px] lg:min-h-[120px] xl:min-h-[140px]"
+                                style={{ backgroundImage: `url(${miniLogoShade.src})` }}
+                            >
+                                <Image src={item.icon} alt={item.label} width={50} height={50} />
+                                <div className="flex flex-col">
+                                    <p className="text-[#D7EAA2] text-[24px] md:text-[28px] xl:text-[38px] leading-none font-semibold">
+                                        {item.count}
+                                    </p>
+                                    <p className="text-white text-[18px] lg:text-[20px] font-medium">
+                                        {item.label}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section >
