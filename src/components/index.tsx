@@ -3,6 +3,8 @@ import dynamic from "next/dynamic";
 const AutoPlaySlider = dynamic(() => import("./slider/AutoPlaySlider"));
 const AutoScrollSlider = dynamic(() => import("./slider/AutoScrollSlider"));
 const Header = dynamic(() => import("./layout/Header"));
+const Footer = dynamic(() => import("./layout/Footer"));
+const CTA = dynamic(() => import("./custom/CTA"));
 const Banner = dynamic(() => import("./banner/Banner"));
 const ExploreTemplates = dynamic(() => import("./exploreTemplates/ExploreTemplates"));
 const VideoSection = dynamic(() => import("./videoSection/VideoSection"));
@@ -18,11 +20,16 @@ const Features = dynamic(() => import("./Features/Features"));
 const Counter = dynamic(() => import("./counter/Counter"));
 const Stepper = dynamic(() => import("./stepper/Stepper"));
 const Client = dynamic(() => import("./client/Client"));
+const Welcome = dynamic(() => import("./welcome/Welcome"));
 const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
 const ContactUs = dynamic(() => import("./contactUs/CountactUs"));
 
 export {
+  AutoPlaySlider,
+  AutoScrollSlider,
   Header,
+  Footer,
+  CTA,
   Banner,
   ExploreTemplates,
   VideoSection,
@@ -33,13 +40,12 @@ export {
   ServiceSection,
   Reviews,
   Faq,
-  AutoPlaySlider,
-  AutoScrollSlider,
   InnerBanner,
   Features,
   Counter,
   Stepper,
   Client,
   PrivacyFeatures,
-  ContactUs
+  ContactUs,
+  Welcome
 };

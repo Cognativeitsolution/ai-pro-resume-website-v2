@@ -1,5 +1,5 @@
 import React from "react";
-import CTA from "../custom/CTA";
+import { CTA } from "@/components";
 
 const Welcome = () => {
 

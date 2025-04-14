@@ -1,7 +1,6 @@
 import React from "react";
 // =================
-import { Client, Counter, InnerBanner, PrivacyFeatures, Reviews } from "@/components";
-import Welcome from "@/components/welcome/Welcome";
+import { Client, Counter, InnerBanner, PrivacyFeatures, Reviews, Welcome } from "@/components";
 // =================
 import { BannerData, FeaturesData, } from "./data";
 import { ClientData, CounterData } from "../about-us/data";
