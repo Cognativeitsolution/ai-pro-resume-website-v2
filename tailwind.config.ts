@@ -32,7 +32,8 @@ export default {
         primary: "linear-gradient(to right, #9885FF,#79A9FF)",
         secondary:
           "linear-gradient(90deg, rgba(207,199,255,0.6) 0%, rgba(211,211,211,0.1) 50%, rgba(212,228,255,1) 100%)",
-        PrimaryDark: "radial-gradient(95.2% 351.86% at 100.99% 0%, #7D16C4 0%, #3358C3 81.2%, #3358C3 100%)",
+        PrimaryDark:
+          "radial-gradient(95.2% 351.86% at 100.99% 0%, #7D16C4 0%, #3358C3 81.2%, #3358C3 100%)",
       },
       keyframes: {
         fadeInUp: {
@@ -57,6 +58,10 @@ export default {
           "0%, 100%": { transform: "translate(0, 0)" },
           "50%": { transform: "translate(-10px, 10px)" },
         },
+        dropdown: {
+          "0%": { opacity: "0", transform: "translateY(-10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 0.5s ease-out forwards",
@@ -65,6 +70,7 @@ export default {
           "rotate 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite alternate",
         float: "float 2s ease-in-out infinite",
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
+        dropdown: "dropdown 0.3s ease-out forwards",
       },
     },
   },

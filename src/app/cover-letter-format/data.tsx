@@ -1,5 +1,5 @@
-import aboutVideo from "media/images/about-video.svg";
-import aboutCounter from "media/images/about-counter.svg";
+import aboutVideo from "media/about_us/about-video.svg";
+import aboutCounter from "media/about_us/about-counter.svg";
 import aboutCounter1 from "media/images/about-counter-1.svg";
 import aboutCounter2 from "media/images/about-counter-2.svg";
 import aboutCounter3 from "media/images/about-counter-3.svg";

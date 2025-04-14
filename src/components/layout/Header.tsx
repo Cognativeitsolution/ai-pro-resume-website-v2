@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+import { HiBars3 } from "react-icons/hi2";
 //========== Import Components
 // import { CTA } from "@/components";
 //========== Import Icons
@@ -13,6 +16,7 @@ import {
   FaTimes,
   FaShoppingCart,
 } from "react-icons/fa";
+import { BsCart2 } from "react-icons/bs";
 //========== Import Images
 import logo from "/public/images/headerLogo.svg";
 import profile from "/public/images/profileicon.svg";
@@ -25,6 +29,7 @@ const Header = () => {
   const [isMegaMenuOpen2, setIsMegaMenuOpen2] = useState(false);
   const [isMegaMenuOpen3, setIsMegaMenuOpen3] = useState(false);
   const [isMegaMenuOpen4, setIsMegaMenuOpen4] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const router = usePathname();
   // ========= Header Fixed
   useEffect(() => {
@@ -62,7 +67,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 ${
+      className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 px-5 xl:px-0 ${
         isFixed
           ? "fixed top-0 left-0 w-full duration-1000 ease-in-out"
           : "absolute duration-1000 ease-in-out bg-transparent shadow-md lg:shadow-none"
@@ -387,26 +392,90 @@ const Header = () => {
               </li>
             </ul>
           </div>
+
           <div className="flex items-center justify-center gap-4">
-            <div className="w-[25px] cursor-pointer">
-              <Image src={profile} alt="profile_icon" />
+            {/* profile */}
+            <div className="hidden lg:block relative text-left">
+              {/* Profile + Dropdown Icon */}
+              <div
+                className="flex items-center gap-1 cursor-pointer"
+                onClick={() => setIsOpen((prev) => !prev)}
+              >
+                <div className="w-[25px]">
+                  <Image src={profile} alt="profile_icon" />
+                </div>
+                <IoMdArrowDropdown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+
+              {/* Dropdown Menu */}
+              {isOpen && (
+                <div
+                  className="absolute right-0 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50
+          animate-dropdown"
+                >
+                  <div className="py-2 text-sm text-gray-700">
+                    <Link
+                      href="/profile"
+                      className="block px-4 py-2 hover:bg-primary hover:text-white font-semibold"
+                    >
+                      Profile
+                    </Link>
+                    <Link
+                      href="/dashboard"
+                      className="block px-4 py-2 hover:bg-primary hover:text-white font-semibold"
+                    >
+                      Dashboard
+                    </Link>
+                    <Link
+                      href={"/login"}
+                      onClick={() => console.log("Logout clicked")}
+                      className="block px-4 py-2 hover:bg-primary hover:text-white font-semibold"
+                    >
+                      Logout
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
-            <FaShoppingCart
-              className="text-[#0072b1] text-md cursor-pointer"
-              size={25}
-            />
-            <div className="w-[25px] cursor-pointer">
-              <Image src={coin} alt="Coin" />
+
+            {/* cart */}
+            <div className="relative">
+              <span className="flex items-center justify-center w-[20px] h-[20px] absolute top-[-10px] right-[-10px] bg-white text-hamzaPrimary rounded-full text-xs border border-hamzaPrimary font-semibold">
+                10
+              </span>
+              <BsCart2
+                className="text-hamzaPrimary text-md cursor-pointer"
+                size={25}
+              />
+            </div>
+
+            {/* coin */}
+            <div className="relative cursor-pointer">
+              <div
+                style={{ minHeight: "20px", minWidth: "20px" }}
+                className="select-none absolute max-h-8 max-w-8 text-primary font-bold flex justify-center items-center text-xs  top-[-10px] right-[-10px] bg-white text-hamzaPrimary rounded-full shadow-lg border border-hamzaPrimary"
+              >
+                10
+              </div>
+              <Link href={"/packages#coins_purchase"}>
+                <div className="w-[25px] cursor-pointer">
+                  <Image src={coin} alt="Coin" />
+                </div>
+              </Link>
             </div>
           </div>
-          <div className="block lg:hidden w-max9">
+          <div className="block lg:hidden w-max-9 ml-4">
             {isMenuOpen ? (
-              <FaTimes
+              <IoMdClose
                 className="text-[30px] cursor-pointer"
                 onClick={toggleMenu}
               />
             ) : (
-              <FaBars
+              <HiBars3
                 className="text-[30px] cursor-pointer"
                 onClick={toggleMenu}
               />
