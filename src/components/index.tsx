@@ -19,6 +19,7 @@ const Counter = dynamic(() => import("./counter/Counter"));
 const Stepper = dynamic(() => import("./stepper/Stepper"));
 const Client = dynamic(() => import("./client/Client"));
 const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
+const ContactUs = dynamic(() => import("./contactUs/CountactUs"));
 
 export {
   Header,
@@ -39,5 +40,6 @@ export {
   Counter,
   Stepper,
   Client,
-  PrivacyFeatures
+  PrivacyFeatures,
+  ContactUs
 };
