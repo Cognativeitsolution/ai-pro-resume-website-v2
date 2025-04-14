@@ -15,6 +15,7 @@ const Banner = () => {
         <Image
           src={banner_bg_2}
           alt="banner_bg_2"
+          priority
           className="absolute w-full h-dvh md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom"
         />
         <div className="container flex flex-col items-center justify-between">
@@ -44,6 +45,7 @@ const Banner = () => {
               <Image
                 src={banner}
                 alt="Laptop"
+                priority
                 className="w-full"
               />
 
@@ -52,6 +54,7 @@ const Banner = () => {
                 <Image
                   src={robo_1}
                   alt="Robot Left"
+                  priority
                   className="w-[full]"
                 />
               </div>
@@ -61,6 +64,7 @@ const Banner = () => {
                 <Image
                   src={robo_2}
                   alt="Robot Right"
+                  priority
                   className="w-full"
                 />
               </div>
@@ -69,6 +73,7 @@ const Banner = () => {
                 <Image
                   src={headerTemp}
                   alt="Resume Preview"
+                  priority
                   className="w-full"
                 />
               </div>
@@ -78,6 +83,7 @@ const Banner = () => {
                 <Image
                   src={improveText}
                   alt="Toggles"
+                  priority
                   className="w-full"
                 />
               </div>
