@@ -31,7 +31,7 @@ const Faq = (props: propsType) => {
       <section className="py-5 md:py-10">
         <div className="container">
           <div className="p-4 md:p-10 mx-auto rounded-2xl bg-white/30 border-2 border-white">
-            <h3 className="text-center text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-bold mb-10">
+            <h3 className="text-center text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-10">
               {data.title}
             </h3>
 
@@ -39,7 +39,7 @@ const Faq = (props: propsType) => {
               {data?.faqlist?.map((faq: any, index: any) => (
                 <div
                   key={index}
-                  className="border-2 border-white bg-white/60 p-4 cursor-pointer rounded-2xl w-full lg:w-[768px]"
+                  className="border-2 border-white bg-white/60 p-4 cursor-pointer rounded-2xl w-full lg:w-[75%]"
                 >
                   <div
                     className="flex justify-between items-center"

@@ -1,14 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
+import { useForm, Controller } from "react-hook-form";
+// ================
+import { IoCaretForwardOutline } from "react-icons/io5";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterest } from "react-icons/fa";
+// ================
 import footer_bg from "/public/images/Footer_bg.svg";
 import footer_logo from "/public/images/footer_logo.svg";
-import { IoCaretForwardOutline } from "react-icons/io5";
-import { FaPinterest } from "react-icons/fa";
-import { useForm, Controller } from "react-hook-form";
-import Link from "next/link";
+
 
 const Footer = () => {
   const footerSections = [
@@ -81,9 +83,9 @@ const Footer = () => {
         <div className="relative z-10 px-5 xl:px-0 pt-20">
           {/* Newsletter Box */}
           <form onSubmit={handleSubmit(onSubscribe)}>
-            <div className="bg-primary container rounded-xl px-12 py-6 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[60px]">
+            <div className="bg-primary container rounded-xl px-12 py-8 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[50px]">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-[22px] md:text-[36px] font-bold leading-tight text-white">
+                <h3 className="text-[24px] lg:text-[36px] font-bold leading-tight text-white">
                   Keep Up to date with <br />
                   <span className="text-white">Latest News</span>
                 </h3>
