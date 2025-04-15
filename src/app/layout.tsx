@@ -1,6 +1,7 @@
 import { primary } from "./configs/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
+
 //==================
 import { Footer, Header } from "@/components";
 //==================
