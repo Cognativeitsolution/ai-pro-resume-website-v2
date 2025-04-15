@@ -31,6 +31,7 @@ const Content = dynamic(() => import("./servicepage/Content"));
 const ServicesSection = dynamic(() => import("./servicepage/ServicesSection"));
 const CareerJobs = dynamic(() => import("./careerJobs/CareerJobs"));
 
+const Blogs = dynamic(() => import("./blog/Blogs"));
 export {
   AutoPlaySlider,
   AutoScrollSlider,
@@ -57,5 +58,6 @@ export {
   Welcome,
   Content,
   ServicesSection,
-  CareerJobs
+  CareerJobs,
+  Blogs
 };

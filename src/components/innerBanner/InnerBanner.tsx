@@ -3,9 +3,9 @@ import Image from "next/image";
 import inner_banner_bg from "media/images/inner-banner_bg.svg";
 
 type BannerProps = {
-  title?: string | React.ReactNode;
-  subtitle?: string;
-  description?: string | React.ReactNode;
+    title?: string | React.ReactNode;
+    subtitle?: string;
+    description?: string | React.ReactNode;
 };
 
 const InnerBanner = (props: BannerProps) => {

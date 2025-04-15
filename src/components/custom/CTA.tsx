@@ -11,6 +11,8 @@ interface CTAProps {
     bgColor: string;
     txtColor: string;
     border: string;
+    handleClick?: () => void;
+    width?: string;
 }
 
 const CTA: React.FC<CTAProps> = ({
@@ -23,8 +25,10 @@ const CTA: React.FC<CTAProps> = ({
     bgColor,
     txtColor,
     border,
+    handleClick,
+    width,
 }) => {
-    const baseClasses = `${bgColor} ${txtColor} ${border} w-max h-[40px] px-4 rounded-md flex items-center`;
+    const baseClasses = `${bgColor} ${txtColor} ${border} ${width ? width : "w-max"} w-max h-[40px] px-4 rounded-md flex items-center`;
     const content = (
         <span className="text-[16px] xl:text-[18px] font-semibold tracking-wide">
             {text}
@@ -38,7 +42,7 @@ const CTA: React.FC<CTAProps> = ({
     ) : link ? (
         <a href={href} className={baseClasses}>{content}</a>
     ) : btn ? (
-        <button type="button" className={baseClasses}>{content}</button>
+        <button onClick={handleClick} type="button" className={baseClasses}>{content}</button>
     ) : null;
 };
 
