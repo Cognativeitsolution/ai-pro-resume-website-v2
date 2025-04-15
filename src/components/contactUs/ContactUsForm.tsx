@@ -2,6 +2,7 @@
 import React from 'react'
 import { Controller, useForm } from "react-hook-form";
 import AppInputField from '../custom/inpufield/inpufield';
+import CTA from '../custom/CTA';
 
 export default function ContactUsForm() {
     const {
@@ -14,9 +15,9 @@ export default function ContactUsForm() {
     const handleRegisterSubmit = async (formData: any) => {
         const credentials = {
             name: formData?.name,
-            // email: formData?.email,
-            // contact: formData?.contact,
-            // message: formData?.message,
+            email: formData?.email,
+            phone: formData?.phone,
+            message: formData?.message,
         }
     }
 
@@ -24,10 +25,9 @@ export default function ContactUsForm() {
         <>
             <form onSubmit={handleSubmit(handleRegisterSubmit)}
             >
-                <div className='grid grid-cols-2'>
-
+                <div className='grid grid-cols-2 gap-6'>
                     {/* Name */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col ">
                         <Controller
                             name='name'
                             control={control}
@@ -51,6 +51,36 @@ export default function ContactUsForm() {
                         />
                     </div>
 
+                    {/* Phone */}
+                    <div className="flex flex-col ">
+                        <Controller
+                            name='phone'
+                            control={control}
+                            defaultValue=""
+                            rules={{ required: "Phone is required" }}
+                            render={({ field }) => (
+                                <>
+                                    <AppInputField
+                                        label="Phone*"
+                                        type="text"
+                                        className="w-full"
+                                        error={!!errors.phone}
+                                        errorMessage={errors.phone?.message}
+                                        aria-invalid={errors.phone ? "true" : "false"}
+                                        {...field}
+                                    />
+
+                                </>
+
+                            )}
+                        />
+                    </div>
+
+
+                </div>
+
+                <div className='grid grid-cols-1'>
+
                     {/* Email */}
                     <div className="flex flex-col">
                         <Controller
@@ -73,6 +103,40 @@ export default function ContactUsForm() {
                         />
                     </div>
 
+                    {/* Message */}
+                    <div className="flex flex-col ">
+                        <Controller
+                            name='message'
+                            control={control}
+                            defaultValue=""
+                            rules={{ required: "Message is required" }}
+                            render={({ field }) => (
+                                <>
+                                    <AppInputField
+                                        label="Message*"
+                                        type="textarea"
+                                        className="w-full"
+                                        error={!!errors.message}
+                                        errorMessage={errors.message?.message}
+                                        aria-invalid={errors.message ? "true" : "false"}
+                                        {...field}
+                                    />
+
+                                </>
+
+                            )}
+                        />
+                    </div>
+                </div>
+
+                <div className='w-full flex justify-end mt-2'>
+                    <CTA
+                        btn
+                        text="Submit"
+                        bgColor="bg-transparent hover:bg-primary"
+                        txtColor="text-indigo-500 hover:text-white"
+                        border="border border-indigo-500 hover:border-white"
+                    />
                 </div>
 
 
