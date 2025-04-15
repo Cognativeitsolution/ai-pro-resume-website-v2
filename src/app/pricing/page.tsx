@@ -1,15 +1,19 @@
-import { Content, Faq, InnerBanner, ServicesSection } from "@/components";
+import { Faq, InnerBanner } from "@/components";
 import React from "react";
 import { BannerData } from "./data";
 import { faqs } from "../data";
-import ServiceSection from "../../components/servicepage/ServicesSection";
+import PricingCard from "./PricingCard";
 
 export default function Page() {
   return (
     <>
       <InnerBanner {...BannerData} />
-      <ServicesSection />
-      <Content />
+      <PricingCard
+        content={{
+          title: "",
+          para: "",
+        }}
+      />
       <Faq data={faqs} />
     </>
   );

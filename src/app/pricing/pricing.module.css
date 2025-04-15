@@ -1,0 +1,44 @@
+.cardsMainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cards {
+  max-width: 32%;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+/* For WebKit (Chrome, Safari, Edge) */
+.redscrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.redscrollbar::-webkit-scrollbar-thumb {
+  background-color: #6d25c4;
+  border-radius: 4px;
+}
+.redscrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light track */
+}
+
+/* For Firefox */
+.redscrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6d25c4 #f1f1f1;
+}
+
+@media only screen and (max-width: 1099px) {
+  .cards {
+    max-width: 48%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cards {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+}
