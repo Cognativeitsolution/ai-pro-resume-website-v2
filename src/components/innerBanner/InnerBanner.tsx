@@ -24,10 +24,10 @@ const InnerBanner = (props: BannerProps) => {
             <p className="font-normal text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
               {subtitle}
             </p>
-            <h1 className="text-[20px] md:text-[30px] lg:text-[40px] font-semibold text-center leading-[30px] md:leading-[40px] lg:leading-[50px] text-white my-1 sm:my-3">
+            <h1 className="text-[20px] md:text-[30px] lg:text-[40px] font-semibold text-center leading-[30px] md:leading-[40px] lg:leading-[50px] text-white mt-1 mb-1 sm:mb-3">
               {title}
             </h1>
-            <p className="text-[16px] lg:text-[18px] text-center text-white">
+            <p className="text-[16px] lg:text-[18px] text-center text-white mt-3">
               {description}
             </p>
           </div>

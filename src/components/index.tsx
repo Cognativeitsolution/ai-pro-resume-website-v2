@@ -29,6 +29,7 @@ const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
 const ContactUs = dynamic(() => import("./contactUs/CountactUs"));
 const Content = dynamic(() => import("./servicepage/Content"));
 const ServicesSection = dynamic(() => import("./servicepage/ServicesSection"));
+const CareerJobs = dynamic(() => import("./careerJobs/CareerJobs"));
 
 export {
   AutoPlaySlider,
@@ -56,4 +57,5 @@ export {
   Welcome,
   Content,
   ServicesSection,
+  CareerJobs
 };
