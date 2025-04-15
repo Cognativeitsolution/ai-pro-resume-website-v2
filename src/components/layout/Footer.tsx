@@ -1,14 +1,18 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
+import { useForm, Controller } from "react-hook-form";
+// ================
+import { CTA } from "@/components";
+// ================
+import { IoCaretForwardOutline } from "react-icons/io5";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterest } from "react-icons/fa";
+// ================
 import footer_bg from "/public/images/Footer_bg.svg";
 import footer_logo from "/public/images/footer_logo.svg";
-import { IoCaretForwardOutline } from "react-icons/io5";
-import { FaPinterest } from "react-icons/fa";
-import { useForm, Controller } from "react-hook-form";
-import Link from "next/link";
+
 
 const Footer = () => {
   const footerSections = [
@@ -81,14 +85,14 @@ const Footer = () => {
         <div className="relative z-10 px-5 xl:px-0 pt-20">
           {/* Newsletter Box */}
           <form onSubmit={handleSubmit(onSubscribe)}>
-            <div className="bg-primary container rounded-xl px-12 py-6 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[60px]">
+            <div className="bg-primary container rounded-xl px-12 py-8 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[50px]">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-[22px] md:text-[36px] font-bold leading-tight text-white">
+                <h3 className="text-[24px] lg:text-[36px] font-bold leading-tight text-white">
                   Keep Up to date with <br />
                   <span className="text-white">Latest News</span>
                 </h3>
               </div>
-              <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+              <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto">
                 <Controller
                   name="email"
                   control={control}
@@ -97,14 +101,17 @@ const Footer = () => {
                       {...field}
                       type="email"
                       placeholder="Email"
-                      className="py-2 outline-none bg-transparent text-white border-b-[2px] border-white w-full md:w-52 placeholder-white"
+                      className="w-full lg:w-60 h-[40px] p-[5px] outline-none bg-transparent text-white border-b-[2px] border-white placeholder-white"
                     />
                   )}
                 />
-
-                <button className="bg-white text-[#9885FF] px-4 py-2 rounded font-semibold hover:bg-blue-100">
-                  Subscribe
-                </button>
+                <CTA
+                  btn
+                  text="Subscribe"
+                  bgColor="bg-white hover:bg-black"
+                  txtColor="text-hamzaPrimary hover:text-white"
+                  border="border-0"
+                />
               </div>
             </div>
           </form>

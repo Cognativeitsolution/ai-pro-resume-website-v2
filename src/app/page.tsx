@@ -11,6 +11,7 @@ import {
   Steps,
   VideoSection,
 } from "@/components";
+import { faqs } from "./data";
 
 export default function Page() {
   return (
@@ -24,7 +25,7 @@ export default function Page() {
       <FindResumeTemplates />
       <ServiceSection />
       <Reviews />
-      <Faq />
+      <Faq data={faqs} />
     </>
   );
 }

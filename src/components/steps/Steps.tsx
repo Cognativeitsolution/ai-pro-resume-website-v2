@@ -15,9 +15,9 @@ const Steps = () => {
               <div className="w-[50px] mb-3">
               <Image src={choose_template} alt="choose_template" />
               </div>
-              <h4 className="text-[20px] xl:text-[24px] font-medium text-center">
+              <h3 className="text-[20px] xl:text-[24px] font-medium text-center">
                 Choose your resume Template
-              </h4>
+              </h3>
               <p className="text-[16px] lg:text-[18px] text-center font-normal">
                 Our professional resume templates are designed strictly
                 following all industry guidelines and best practices that
@@ -29,9 +29,9 @@ const Steps = () => {
               <div className="w-[50px] mb-3">
               <Image src={enlist} alt="choose_template" />
               </div>
-              <h4 className="text-[20px] xl:text-[24px] font-medium text-center">
+              <h3 className="text-[20px] xl:text-[24px] font-medium text-center">
                 Enlist your Capabilities
-              </h4>
+              </h3>
               <p className="text-[16px] lg:text-[18px] text-center font-normal">
                 Not finding the right words to showcase yourself? We´ve added
                 thousands of pre-written examples and resume samples. As easy as
@@ -43,9 +43,9 @@ const Steps = () => {
               <div className="w-[50px] mb-3">
               <Image src={download_resume} alt="choose_template" />
               </div>
-              <h4 className="text-[20px] xl:text-[24px] font-medium text-center">
+              <h3 className="text-[20px] xl:text-[24px] font-medium text-center">
                 Download Your Resume
-              </h4>
+              </h3>
               <p className="text-[16px] lg:text-[18px] text-center font-normal">
                 Start impressing employers. Download your awesome resume and
                 land the job you are looking for, effortlessly.

@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 //==================
-import { Header } from "@/components";
-import Footer from "@/components/layout/Footer";
+import { Footer, Header } from "@/components";
 //==================
 
 //========= Meta Data

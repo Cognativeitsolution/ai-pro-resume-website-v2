@@ -1,11 +1,14 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
+// ===============
+import { CTA } from "@/components";
+// ===============
 import creativeinfusion from "/public/images/Creativeinfusion.svg";
 import innovativeedge from "/public/images/Creativeinfusion.svg";
 import fresherresume from "/public/images/fresherResume.svg";
 import sleeksimplicity from "/public/images/SleekSimplicity.svg";
 import brightfuture from "/public/images/BrightFuture.svg";
-import Image from "next/image";
 
 type TabKey = "creative" | "food" | "management" | "it";
 
@@ -68,11 +71,10 @@ const ExploreTemplates = () => {
               {(Object.keys(tabDisplayMap) as TabKey[]).map((tabId) => (
                 <button
                   key={tabId}
-                  className={`px-4 py-2 border-b-2 transition-colors ${
-                    activeTab === tabId
-                      ? "border-[#6A55DD] text-[#6A55DD] font-bold"
-                      : "border-transparent text-black font-semibold"
-                  }`}
+                  className={`px-4 py-2 border-b-2 transition-colors ${activeTab === tabId
+                    ? "border-[#6A55DD] text-[#6A55DD] font-bold"
+                    : "border-transparent text-black font-semibold"
+                    }`}
                   onClick={() => setActiveTab(tabId)}
                 >
                   {tabDisplayMap[tabId]}
@@ -96,10 +98,14 @@ const ExploreTemplates = () => {
             </div>
 
             {/* View All Button */}
-            <div className="mt-8 lg:mt-10 text-center">
-              <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
-                View All
-              </button>
+            <div className="mt-8 lg:mt-10 flex justify-center">
+              <CTA
+                btn
+                text="View All"
+                bgColor="bg-white hover:bg-primary"
+                txtColor="text-hamzaPrimary hover:text-white"
+                border="border-2 border-hamzaPrimary"
+              />
             </div>
           </div>
         </div>

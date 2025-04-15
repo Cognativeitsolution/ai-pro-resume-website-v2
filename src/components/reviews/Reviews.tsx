@@ -1,6 +1,6 @@
 "use client";
 // ===============
-import { AutoPlaySlider } from "@/components";
+import { AutoPlaySlider, CTA } from "@/components";
 import ReviewCard from "./ReviewCard";
 // ===============
 import reviewImage from "../../../public/images/reviews.svg";
@@ -51,10 +51,14 @@ const Reviews = () => {
               ))}
             </AutoPlaySlider>
           </div>
-          <div className="">
-            <button className="bg-primary text-white px-4 py-2 rounded-lg mb-6 hover:bg-indigo-600 transition">
-              Create Resume
-            </button>
+          <div className="flex justify-center mb-6">
+            <CTA
+              btn
+              text="Create Resume"
+              bgColor="bg-primary hover:bg-PrimaryDark"
+              txtColor="text-white"
+              border="border-0"
+            />
           </div>
         </div>
       </section>

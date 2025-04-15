@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import inner_banner_bg from "media/images/inner-banner_bg.svg";
 
 type BannerProps = {
-    title?: string | React.ReactNode;
-    subtitle?: string;
-    description?: string | React.ReactNode;
+  title?: string | React.ReactNode;
+  subtitle?: string;
+  description?: string | React.ReactNode;
 };
 
 const InnerBanner = (props: BannerProps) => {
@@ -15,10 +16,13 @@ const InnerBanner = (props: BannerProps) => {
     } = props;
     return (
         <>
-            <section className={`relative overflow-hidden bg-no-repeat bg-cover bg-bottom`}
-                style={{
-                    backgroundImage: `url(${inner_banner_bg.src})`
-                }}>
+            <section className={`relative z-10 overflow-hidden`}>
+                <Image
+                    src={inner_banner_bg}
+                    alt="banner_bg_2"
+                    priority
+                    className="absolute w-full h-full -z-10 object-cover !2xl:object-fill object-bottom"
+                />
                 <div className="container flex items-center justify-center relative min-h-[500px] sm:min-h-[550px] md:min-h-[650px]" >
                     <div className=" flex flex-col items-center justify-between py-16 absolute ">
                         <p className="font-normal text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
