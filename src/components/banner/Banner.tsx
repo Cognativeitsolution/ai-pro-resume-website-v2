@@ -20,88 +20,90 @@ const Banner = () => {
           priority
           className="absolute w-full h-dvh md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom"
         />
-        <div className="container flex flex-col items-center justify-between">
-          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
-            Let AI Build the Resume That Builds <br className="hidden md:block" /> Your Career
-          </h1>
-          <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-normal text-center text-white my-3 capitalize">
-            Easy to use templates, AI Powered Suggestions, and one click download.
-          </p>
-          {/* buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-10 mt-3 md:mt-5">
-            <CTA
-              btn
-              text="Create Resume"
-              bgColor="bg-primary hover:bg-none"
-              txtColor="text-white"
-              border="border border-white"
-            />
-            <CTA
-              btn
-              text=" Import Resume"
-              bgColor="bg-transparent hover:bg-primary"
-              txtColor="text-white"
-              border="border border-white"
-            />
-            <CTA
-              btn
-              text="ATS Checker"
-              bgColor="bg-transparent hover:bg-primary"
-              txtColor="text-white"
-              border="border border-white"
-            />
-          </div>
-
-          {/* image section */}
-          <div className="w-full hidden md:flex justify-center items-center py-6 md:py-10 overflow-hidden">
-            {/* Main laptop mockup */}
-            <div className="w-full md:w-[70%] relative">
-              <Image
-                src={banner}
-                alt="Laptop"
-                priority
-                className="w-full"
+        <div className="container">
+          <div className="flex flex-col items-center justify-between">
+            <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
+              Let AI Build the Resume That Builds <br className="hidden md:block" /> Your Career
+            </h1>
+            <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-normal text-center text-white my-3 capitalize">
+              Easy to use templates, AI Powered Suggestions, and one click download.
+            </p>
+            {/* buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-10 mt-3 md:mt-5">
+              <CTA
+                btn
+                text="Create Resume"
+                bgColor="bg-primary hover:bg-none"
+                txtColor="text-white"
+                border="border border-white"
               />
+              <CTA
+                btn
+                text=" Import Resume"
+                bgColor="bg-transparent hover:bg-primary"
+                txtColor="text-white"
+                border="border border-white"
+              />
+              <CTA
+                btn
+                text="ATS Checker"
+                bgColor="bg-transparent hover:bg-primary"
+                txtColor="text-white"
+                border="border border-white"
+              />
+            </div>
 
-              {/* Robot on left */}
-              <div className="w-[15%] md:w-[20%] absolute -z-10 -rotate-45 top-5 -left-3 md:-left-8 xl:-left-12 2xl:-left-16 transform -scale-x-[1]">
+            {/* image section */}
+            <div className="w-full hidden md:flex justify-center items-center py-6 md:py-10 overflow-hidden">
+              {/* Main laptop mockup */}
+              <div className="w-full md:w-[70%] relative">
                 <Image
-                  src={robo_1}
-                  alt="Robot Left"
-                  priority
-                  unoptimized
-                  className="w-[full]"
-                />
-              </div>
-
-              {/* Robot on right */}
-              <div className="w-[15%] absolute z-20 bottom-3 right-2">
-                <Image
-                  src={robo_2}
-                  alt="Robot Right"
-                  priority
-                  unoptimized
-                  className="w-full"
-                />
-              </div>
-              {/* Resume preview popup */}
-              <div className="absolute z-30 animate-diagonalFloat rounded-md w-[22%] md:w-[25%] left-5 top-32 md:top-40 2xl:top-60">
-                <Image
-                  src={headerTemp}
-                  alt="Resume Preview"
+                  src={banner}
+                  alt="Laptop"
                   priority
                   className="w-full"
                 />
-              </div>
 
-              {/* Toggle controls */}
-              <div className="absolute z-30 animate-float w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px] top-28 right-4 md:top-40 2xl:top-52 lg:right-5 2xl:right-10">
-                <Image
-                  src={improveText}
-                  alt="Toggles"
-                  priority
-                  className="w-full"
-                />
+                {/* Robot on left */}
+                <div className="w-[15%] md:w-[20%] absolute -z-10 -rotate-45 top-0 xl:top-5 -left-7 lg:-left-8 xl:-left-12 2xl:-left-16 transform -scale-x-[1]">
+                  <Image
+                    src={robo_1}
+                    alt="Robot Left"
+                    priority
+                    unoptimized
+                    className="w-[full]"
+                  />
+                </div>
+
+                {/* Robot on right */}
+                <div className="w-[15%] absolute z-20 bottom-3 right-1">
+                  <Image
+                    src={robo_2}
+                    alt="Robot Right"
+                    priority
+                    unoptimized
+                    className="w-full"
+                  />
+                </div>
+                {/* Resume preview popup */}
+                <div className="absolute z-30 animate-diagonalFloat rounded-md w-[22%] md:w-[25%] top-24 lg:top-32 xl:top-40 2xl:top-52 left-5">
+                  <Image
+                    src={headerTemp}
+                    alt="Resume Preview"
+                    priority
+                    className="w-full"
+                  />
+                </div>
+
+                {/* Toggle controls */}
+                <div className="absolute z-30 animate-float w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px] top-24 lg:top-32 xl:top-40 2xl:top-52 right-4 lg:right-5 2xl:right-10">
+                  <Image
+                    src={improveText}
+                    alt="Toggles"
+                    priority
+                    className="w-full"
+                  />
+                </div>
               </div>
             </div>
           </div>

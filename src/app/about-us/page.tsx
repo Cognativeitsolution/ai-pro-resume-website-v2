@@ -1,18 +1,8 @@
-import {
-    InnerBanner,
-    Features,
-    Counter,
-    Stepper,
-    Client,
-} from "@/components";
 import React from "react";
-import {
-    BannerData,
-    ClientData,
-    CounterData,
-    FeaturesData,
-    StepperData,
-} from "./data";
+// =================
+import { InnerBanner, Features, Counter, Stepper, Client, Reviews, } from "@/components";
+// =================
+import { BannerData, ClientData, CounterData, FeaturesData, StepperData, } from "./data";
 
 export default function Page() {
     return (
@@ -22,6 +12,7 @@ export default function Page() {
             <Counter data={CounterData} />
             <Stepper data={StepperData} />
             <Client data={ClientData} />
+            <Reviews />
         </>
     );
 }
