@@ -136,3 +136,39 @@ export const ClientData = {
 
 }
 
+export const blogsData = [
+    {
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Rabia Shahwaiz',
+        author_designation: 'Mern Stack Developer',
+    },
+    {
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Farooq Lead',
+        author_designation: 'Sr. React Developer',
+    },
+    {
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Rimsha Naeem',
+        author_designation: 'Frontend Developer',
+    },
+]
+

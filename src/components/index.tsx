@@ -23,7 +23,7 @@ const Client = dynamic(() => import("./client/Client"));
 const Welcome = dynamic(() => import("./welcome/Welcome"));
 const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
 const ContactUs = dynamic(() => import("./contactUs/CountactUs"));
-
+const Blogs = dynamic(() => import("./blog/Blogs"));
 export {
   AutoPlaySlider,
   AutoScrollSlider,
@@ -47,5 +47,6 @@ export {
   Client,
   PrivacyFeatures,
   ContactUs,
-  Welcome
+  Welcome,
+  Blogs
 };
