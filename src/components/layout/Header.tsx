@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-//========== Import Components
-// import { CTA } from "@/components";
 //========== Import Icons
 import { IoMdArrowDropdown, IoMdClose } from "react-icons/io";
 import { HiBars3 } from "react-icons/hi2";
@@ -59,31 +57,27 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 px-5 xl:px-0 ${isFixed
-          ? "fixed top-0 left-0 w-full duration-1000 ease-in-out"
-          : "absolute duration-1000 ease-in-out bg-transparent shadow-md lg:shadow-none"
-        }`}
-    >
-      <div
-        className={`container h-full flex items-center rounded-md ${isFixed
-            ? "duration-1000 ease-in-out bg-white/90 shadow-md"
-            : "duration-1000 ease-in-out bg-white shadow-md lg:shadow-none"
-          }`}
-      >
-        <nav className="w-full h-full flex items-center justify-between mx-auto bg-transparent px-4">
+    <header className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 px-4 xl:px-0 ${isFixed
+      ? "fixed top-0 left-0 w-full duration-1000 ease-in-out"
+      : "absolute duration-1000 ease-in-out bg-transparent"
+      }`}>
+      <div className={`container h-full flex items-center rounded-md ${isFixed
+        ? "duration-1000 ease-in-out bg-white/90 shadow-md"
+        : "duration-1000 ease-in-out bg-white"
+        }`}>
+        <nav className="w-full h-full flex items-center justify-between mx-auto bg-transparent md:px-4">
           <div className="w-full lg:w-auto h-full flex flex-wrap items-center justify-between">
             <Link
               href="/"
-              className="h-full flex items-center cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px]"
+              className="h-full flex items-center cursor-pointer w-[100px] lg:w-[160px] xl:w-[180px]"
             >
               <Image src={logo} alt="Logo" />
             </Link>
           </div>
           <div
             className={`w-[80%] lg:w-auto h-[100vh] lg:h-full flex items-center fixed top-0 z-50 lg:static bg-[#484848] lg:bg-transparent ${isMenuOpen
-                ? "left-0 duration-700 ease-in-out"
-                : "left-[-100%] duration-700 ease-in-out"
+              ? "left-0 duration-700 ease-in-out"
+              : "left-[-100%] duration-700 ease-in-out"
               }`}
             id="navbar-default"
           >
@@ -102,8 +96,8 @@ const Header = () => {
                 </Link>
                 <div
                   className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute z-10 lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen1
-                      ? "left-0 duration-700 ease-in-out"
-                      : "left-[-100%]"
+                    ? "left-0 duration-700 ease-in-out"
+                    : "left-[-100%]"
                     }`}
                 >
                   <div className="w-full flex lg:hidden items-center justify-between mb-5">
@@ -163,8 +157,8 @@ const Header = () => {
                 </Link>
                 <div
                   className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen2
-                      ? "left-0 duration-700 ease-in-out"
-                      : "left-[-100%]"
+                    ? "left-0 duration-700 ease-in-out"
+                    : "left-[-100%]"
                     }`}
                 >
                   <div className="w-full flex lg:hidden items-center justify-between mb-5">
@@ -234,8 +228,8 @@ const Header = () => {
                 </Link>
                 <div
                   className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute z-10 lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen3
-                      ? "left-0 duration-700 ease-in-out"
-                      : "left-[-100%]"
+                    ? "left-0 duration-700 ease-in-out"
+                    : "left-[-100%]"
                     }`}
                 >
                   <div className="w-full flex lg:hidden items-center justify-between mb-5">
@@ -305,8 +299,8 @@ const Header = () => {
                 </Link>
                 <div
                   className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen4
-                      ? "left-0 duration-700 ease-in-out"
-                      : "left-[-100%]"
+                    ? "left-0 duration-700 ease-in-out"
+                    : "left-[-100%]"
                     }`}
                 >
                   <div className="w-full flex lg:hidden items-center justify-between mb-5">
@@ -439,7 +433,7 @@ const Header = () => {
             <div className="relative cursor-pointer">
               <div
                 style={{ minHeight: "20px", minWidth: "20px" }}
-                className="select-none absolute max-h-8 max-w-8 text-primary font-bold flex justify-center items-center text-xs  top-[-10px] right-[-10px] bg-white text-hamzaPrimary rounded-full shadow-lg border border-hamzaPrimary"
+                className="select-none absolute max-h-8 max-w-8 text-primary font-bold flex justify-center items-center text-xs top-[-10px] right-[-10px] bg-white text-hamzaPrimary rounded-full shadow-lg border border-hamzaPrimary"
               >
                 10
               </div>
@@ -450,7 +444,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="block lg:hidden w-max-9 ml-4">
+          <div className="block lg:hidden w-max-9 ml-5">
             {isMenuOpen ? (
               <IoMdClose
                 className="text-[30px] cursor-pointer"
