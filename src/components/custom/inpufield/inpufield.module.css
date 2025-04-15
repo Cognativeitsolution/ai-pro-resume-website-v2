@@ -6,6 +6,8 @@
   .floatLabelInput input:not(:placeholder-shown) + label {
     transform: translateY(-1.5rem) scale(0.75);
     background-color: white;
+    /* background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 72%); */
+    background: linear-gradient(to top, #ffffff, #ffffff, #ffffff,  rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 
