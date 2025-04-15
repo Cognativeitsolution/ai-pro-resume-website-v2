@@ -1,5 +1,8 @@
 import React from "react";
+// ===============
 import ServiceCard from "./ServiceCard";
+import { CTA } from "@/components";
+// ===============
 import prof_cover_writing from "../../../public/images/prof_cover_writing.svg";
 import prof_cover_review from "../../../public/images/prof_cover_review.svg";
 import prof_resume_writing from "../../../public/images/prof_resume_writing.svg";
@@ -67,10 +70,14 @@ const ServiceSection = () => {
           letters. Our experts analyze your documents and provide suggestions
           based on your job positions and career.
         </p>
-        <div className="mt-5 text-center">
-          <button className="px-2 sm:px-4 py-1 font-semibold text-[16px] sm:text-[18px] rounded-md bg-primary text-white">
-            Explore All Services
-          </button>
+        <div className="mt-5 flex justify-center">
+          <CTA
+            btn
+            text="Explore All Services"
+            bgColor="bg-primary hover:bg-PrimaryDark"
+            txtColor="text-white"
+            border="border-0"
+          />
         </div>
         {/* service cards */}
         <div className="my-8">

@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useForm, Controller } from "react-hook-form";
 // ================
+import { CTA } from "@/components";
+// ================
 import { IoCaretForwardOutline } from "react-icons/io5";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterest } from "react-icons/fa";
 // ================
@@ -90,7 +92,7 @@ const Footer = () => {
                   <span className="text-white">Latest News</span>
                 </h3>
               </div>
-              <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+              <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto">
                 <Controller
                   name="email"
                   control={control}
@@ -99,14 +101,17 @@ const Footer = () => {
                       {...field}
                       type="email"
                       placeholder="Email"
-                      className="py-2 outline-none bg-transparent text-white border-b-[2px] border-white w-full md:w-52 placeholder-white"
+                      className="w-full lg:w-60 h-[40px] p-[5px] outline-none bg-transparent text-white border-b-[2px] border-white placeholder-white"
                     />
                   )}
                 />
-
-                <button className="bg-white text-[#9885FF] px-4 py-2 rounded font-semibold hover:bg-blue-100">
-                  Subscribe
-                </button>
+                <CTA
+                  btn
+                  text="Subscribe"
+                  bgColor="bg-white hover:bg-black"
+                  txtColor="text-hamzaPrimary hover:text-white"
+                  border="border-0"
+                />
               </div>
             </div>
           </form>

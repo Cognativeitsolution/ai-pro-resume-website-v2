@@ -1,5 +1,7 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+// ===============
+import { CTA } from "@/components";
 // ============
 import banner from "/public/images/banner.svg";
 import robo_1 from "/public/images/robo_1.gif";
@@ -27,15 +29,27 @@ const Banner = () => {
           </p>
           {/* buttons */}
           <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-10 mt-3 md:mt-5">
-            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] rounded-md bg-primary text-white">
-              Create Resume
-            </button>
-            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] border border-white text-white rounded-md hover:bg-primary">
-              Import Resume
-            </button>
-            <button className="w-[180px] sm:w-auto px-4 py-1 font-semibold text-[18px] border border-white text-white hover:bg-primary rounded-md">
-              ATS Checker
-            </button>
+            <CTA
+              btn
+              text="Create Resume"
+              bgColor="bg-primary hover:bg-none"
+              txtColor="text-white"
+              border="border border-white"
+            />
+            <CTA
+              btn
+              text=" Import Resume"
+              bgColor="bg-transparent hover:bg-primary"
+              txtColor="text-white"
+              border="border border-white"
+            />
+            <CTA
+              btn
+              text="ATS Checker"
+              bgColor="bg-transparent hover:bg-primary"
+              txtColor="text-white"
+              border="border border-white"
+            />
           </div>
 
           {/* image section */}
@@ -55,6 +69,7 @@ const Banner = () => {
                   src={robo_1}
                   alt="Robot Left"
                   priority
+                  unoptimized
                   className="w-[full]"
                 />
               </div>
@@ -65,6 +80,7 @@ const Banner = () => {
                   src={robo_2}
                   alt="Robot Right"
                   priority
+                  unoptimized
                   className="w-full"
                 />
               </div>
