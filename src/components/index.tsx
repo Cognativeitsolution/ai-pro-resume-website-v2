@@ -6,12 +6,16 @@ const Header = dynamic(() => import("./layout/Header"));
 const Footer = dynamic(() => import("./layout/Footer"));
 const CTA = dynamic(() => import("./custom/CTA"));
 const Banner = dynamic(() => import("./banner/Banner"));
-const ExploreTemplates = dynamic(() => import("./exploreTemplates/ExploreTemplates"));
+const ExploreTemplates = dynamic(
+  () => import("./exploreTemplates/ExploreTemplates")
+);
 const VideoSection = dynamic(() => import("./videoSection/VideoSection"));
 const Steps = dynamic(() => import("./steps/Steps"));
 const Ats = dynamic(() => import("./ATS/Ats"));
 const ResumeFeatures = dynamic(() => import("./resumeFeatures/ResumeFeatures"));
-const FindResumeTemplates = dynamic(() => import("./findResume/FindResumeTemplates"));
+const FindResumeTemplates = dynamic(
+  () => import("./findResume/FindResumeTemplates")
+);
 const ServiceSection = dynamic(() => import("./serviceSection/ServiceSection"));
 const Reviews = dynamic(() => import("./reviews/Reviews"));
 const Faq = dynamic(() => import("./faq/Faq"));
@@ -23,6 +27,8 @@ const Client = dynamic(() => import("./client/Client"));
 const Welcome = dynamic(() => import("./welcome/Welcome"));
 const PrivacyFeatures = dynamic(() => import("./Features/PrivacyFeatures"));
 const ContactUs = dynamic(() => import("./contactUs/CountactUs"));
+const Content = dynamic(() => import("./servicepage/Content"));
+const ServicesSection = dynamic(() => import("./servicepage/ServicesSection"));
 
 export {
   AutoPlaySlider,
@@ -47,5 +53,7 @@ export {
   Client,
   PrivacyFeatures,
   ContactUs,
-  Welcome
+  Welcome,
+  Content,
+  ServicesSection,
 };
