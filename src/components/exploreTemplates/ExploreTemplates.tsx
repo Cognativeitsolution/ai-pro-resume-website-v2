@@ -65,9 +65,9 @@ const ExploreTemplates = () => {
             for in a candidate.
           </p>
 
-          <div className="p-5">
+          <div className="mt-6 md:mt-8">
             {/* Tabs */}
-            <div className="flex mb-5 items-center justify-center gap-[20px] lg:gap-[50px] flex-wrap">
+            <div className="flex items-center justify-center gap-3 md:gap-[12px] lg:gap-[50px] flex-wrap mb-5">
               {(Object.keys(tabDisplayMap) as TabKey[]).map((tabId) => (
                 <button
                   key={tabId}
@@ -83,7 +83,7 @@ const ExploreTemplates = () => {
             </div>
 
             {/* Tab Images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5 md:my-10">
               {imagesData[activeTab].map((image) => (
                 <div key={image.id} className="w-full">
                   <Image
@@ -98,7 +98,7 @@ const ExploreTemplates = () => {
             </div>
 
             {/* View All Button */}
-            <div className="mt-8 lg:mt-10 flex justify-center">
+            <div className="mt-10 flex justify-center">
               <CTA
                 btn
                 text="View All"
