@@ -1,5 +1,8 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+// ===============
+import { CTA } from "@/components";
+// ===============
 import home_page_video from "/public/images/home_page_video.svg";
 
 const VideoSection = () => {
@@ -19,10 +22,14 @@ const VideoSection = () => {
             magic of our resume parser tool. It fetches all the data from your
             file and transfers them to creative resume maker.
           </p>
-          <div className="mt-7 text-center">
-            <button className="px-2 sm:px-4 py-1 font-semibold text-[16px] sm:text-[18px] rounded-md bg-primary text-white">
-              Let’s Build Your Resume
-            </button>
+          <div className="mt-7 flex justify-center">
+            <CTA
+              btn
+              text="Let’s Build Your Resume"
+              bgColor="bg-primary hover:bg-PrimaryDark"
+              txtColor="text-white"
+              border="border-0"
+            />
           </div>
           <div className="mt-6 flex items-center justify-center text-center">
             <Image src={home_page_video} alt="video" className="w-full" />

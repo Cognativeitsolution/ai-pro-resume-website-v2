@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 // ===============
-import { AutoPlaySlider } from "@/components";
+import { AutoPlaySlider, CTA } from "@/components";
 // ===============
 import Template1 from "media/resume_template_images/template_3.webp";
 import Template2 from "media/resume_template_images/template_2.webp";
@@ -99,10 +99,14 @@ const FindResumeTemplates = () => {
                 })}
               </AutoPlaySlider>
               {/* View All Button */}
-              <div className="mt-5 text-center">
-                <button className="px-4 py-1 bg-white text-[#6A55DD] border border-[#6A55DD] font-medium rounded">
-                  View All
-                </button>
+              <div className="mt-5 flex justify-center">
+                <CTA
+                  btn
+                  text="View All"
+                  bgColor="bg-white hover:bg-primary"
+                  txtColor="text-hamzaPrimary hover:text-white"
+                  border="border-2 border-hamzaPrimary"
+                />
               </div>
             </div>
           </div>

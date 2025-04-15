@@ -1,5 +1,8 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+// ===============
+import { CTA } from "@/components";
+// ===============
 import check_1 from "../../../public/images/check_1.svg";
 
 interface ResumeFeatureCardProps {
@@ -21,9 +24,9 @@ const ResumeFeaturesCard = ({
 }: ResumeFeatureCardProps) => {
   return (
     <>
-      <div className={`flex flex-col ${ reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}>
+      <div className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}>
         {/* Image Section */}
-        <div className={`w-full lg:w-1/2 flex flex-shrink-0 ${ reverse ? "justify-center lg:justify-end" : "justify-center lg:justify-start"}`}>
+        <div className={`w-full lg:w-1/2 flex flex-shrink-0 ${reverse ? "justify-center lg:justify-end" : "justify-center lg:justify-start"}`}>
           <Image src={image} alt={title} className="w-[500px] h-auto" />
         </div>
 
@@ -47,9 +50,15 @@ const ResumeFeaturesCard = ({
               </li>
             ))}
           </ul>
-          <button className="px-4 py-2 bg-primary text-white font-semibold rounded transition mt-2 sm:mt-4">
-            {buttonText}
-          </button>
+          <div className="mt-4 sm:mt-8">
+            <CTA
+              btn
+              text={buttonText}
+              bgColor="bg-primary hover:bg-PrimaryDark"
+              txtColor="text-white"
+              border="border-0"
+            />
+          </div>
         </div>
       </div>
     </>

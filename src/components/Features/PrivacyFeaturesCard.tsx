@@ -1,5 +1,7 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+// ===============
+import { CTA } from "@/components";
 
 interface FeatureCardProps {
     image: any;
@@ -47,9 +49,13 @@ const PrivacyFeaturesCard = ({
                     )}
                     {btn && (
                         <div className={`col-span-12 lg:col-span-6 flex justify-center`}>
-                            <button className="px-4 py-2 bg-primary text-white font-semibold rounded transition">
-                                {buttonText}
-                            </button>
+                            <CTA
+                                btn
+                                text={buttonText}
+                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                txtColor="text-white"
+                                border="border-0"
+                            />
                         </div>
                     )}
                 </div>
