@@ -19,7 +19,7 @@ export default function Page() {
     return (
         <>
             <InnerBanner {...BannerData} />
-            <Blogs />
+            <Blogs data={blogsData} />
             <Client data={ClientData} />
             <Reviews />
         </>

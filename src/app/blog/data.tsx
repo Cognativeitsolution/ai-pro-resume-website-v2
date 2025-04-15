@@ -14,7 +14,8 @@ import Client8 from "media/images/client-8.svg";
 import Client9 from "media/images/client-9.svg";
 import Client10 from "media/images/client-10.svg";
 import Client11 from "media/images/client-11.svg";
-
+import blog1 from "media/images/blog1.jpg";
+import author1 from "media/images/author1.jpg";
 
 
 export const BannerData = {
@@ -133,42 +134,134 @@ export const ClientData = {
         </>
     ),
     clientList: clientList
-
 }
 
 export const blogsData = [
     {
+        id: 1,
         title: "Our Valuable Clients",
         description: (
             <>
-                Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
+                Our Clients are our top priority and we are committed to providing them best service.
             </>
         ),
         date: '10 Nov 2025',
         author_name: 'Rabia Shahwaiz',
         author_designation: 'Mern Stack Developer',
+        image: blog1,
+        author_image: author1
     },
     {
+        id: 2,
         title: "Our Valuable Clients",
         description: (
             <>
-                Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
+                Our Clients are our top priority and we are committed to providing them best service.
             </>
         ),
         date: '10 Nov 2025',
         author_name: 'Farooq Lead',
         author_designation: 'Sr. React Developer',
+        image: blog1,
+        author_image: author1
     },
     {
+        id: 3,
         title: "Our Valuable Clients",
         description: (
             <>
-                Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
+                Our Clients are our top priority and we are committed to providing them best service.
             </>
         ),
         date: '10 Nov 2025',
         author_name: 'Rimsha Naeem',
         author_designation: 'Frontend Developer',
+        image: blog1,
+        author_image: author1
+    },
+    {
+        id: 4,
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Rabia Shahwaiz',
+        author_designation: 'Mern Stack Developer',
+        image: blog1,
+        author_image: author1
+    },
+    {
+        id: 5,
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Farooq Lead',
+        author_designation: 'Sr. React Developer',
+        image: blog1,
+        author_image: author1
+    },
+    {
+        id: 6,
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Rimsha Naeem',
+        author_designation: 'Frontend Developer',
+        image: blog1,
+        author_image: author1
+    },
+    {
+        id: 7,
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Rabia Shahwaiz',
+        author_designation: 'Mern Stack Developer',
+        image: blog1,
+        author_image: author1
+    },
+    {
+        id: 8,
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients e our top priority and we are commiare our top priority and we are commie our top priority and we are committed to providing them best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Farooq Lead',
+        author_designation: 'Sr. React Developer',
+        image: blog1,
+        author_image: author1
+    },
+    {
+        id: 9,
+        title: "Our Valuable Clients",
+        description: (
+            <>
+                Our Clients are our top priority and we are committed to providing them best service.
+            </>
+        ),
+        date: '10 Nov 2025',
+        author_name: 'Rimsha Naeem',
+        author_designation: 'Frontend Developer',
+        image: blog1,
+        author_image: author1
     },
 ]
 
