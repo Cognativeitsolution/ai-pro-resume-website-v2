@@ -25,7 +25,7 @@ export default function ContactUsForm() {
         <>
             <form onSubmit={handleSubmit(handleRegisterSubmit)}
             >
-                <div className='grid grid-cols-2 gap-6'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-6'>
                     {/* Name */}
                     <div className="flex flex-col ">
                         <Controller
@@ -38,7 +38,7 @@ export default function ContactUsForm() {
                                     <AppInputField
                                         label="Name*"
                                         type="text"
-                                        className="w-full"
+                                        className="w-full lg:mt-2"
                                         error={!!errors.name}
                                         errorMessage={errors.name?.message}
                                         aria-invalid={errors.name ? "true" : "false"}
@@ -63,7 +63,7 @@ export default function ContactUsForm() {
                                     <AppInputField
                                         label="Phone*"
                                         type="text"
-                                        className="w-full"
+                                        className="w-full lg:mt-2"
                                         error={!!errors.phone}
                                         errorMessage={errors.phone?.message}
                                         aria-invalid={errors.phone ? "true" : "false"}
@@ -92,7 +92,7 @@ export default function ContactUsForm() {
                                 <AppInputField
                                     label="Email*"
                                     type="text"
-                                    className="w-full"
+                                    className="w-full lg:mt-2"
                                     error={!!errors.email}
                                     errorMessage={errors.email?.message}
                                     aria-label={errors?.email ? "Email error" : ""}
@@ -115,7 +115,7 @@ export default function ContactUsForm() {
                                     <AppInputField
                                         label="Message*"
                                         type="textarea"
-                                        className="w-full"
+                                        className="w-full lg:mt-2"
                                         error={!!errors.message}
                                         errorMessage={errors.message?.message}
                                         aria-invalid={errors.message ? "true" : "false"}
@@ -129,13 +129,14 @@ export default function ContactUsForm() {
                     </div>
                 </div>
 
-                <div className='w-full flex justify-end mt-2'>
+                <div className='w-full lg:flex lg:justify-end mt-2'>
                     <CTA
                         btn
                         text="Submit"
                         bgColor="bg-transparent hover:bg-primary"
                         txtColor="text-indigo-500 hover:text-white"
                         border="border border-indigo-500 hover:border-white"
+                        width="w-full lg:w-max"
                     />
                 </div>
 

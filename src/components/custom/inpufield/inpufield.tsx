@@ -32,7 +32,7 @@ export default function AppInputField({
     const isTextArea = type === "textarea";
 
     return (
-        <div className={`mt-2 ${className}`}>
+        <div className={`${className}`}>
             <div className={`relative flex ${styles.floatLabelInput}`}>
                 {leftIcon && <span className="mr-2">{leftIcon}</span>}
 
