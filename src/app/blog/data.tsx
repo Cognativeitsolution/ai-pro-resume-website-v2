@@ -15,6 +15,8 @@ import Client9 from "media/images/client-9.svg";
 import Client10 from "media/images/client-10.svg";
 import Client11 from "media/images/client-11.svg";
 import blog1 from "media/images/blog1.jpg";
+import blog2 from "media/images/blog2.jpg";
+import blog3 from "media/images/blog3.jpg";
 import author1 from "media/images/author1.jpg";
 
 
@@ -162,7 +164,7 @@ export const blogsData = [
         date: '10 Nov 2025',
         author_name: 'Farooq Lead',
         author_designation: 'Sr. React Developer',
-        image: blog1,
+        image: blog2,
         author_image: author1
     },
     {
@@ -176,7 +178,7 @@ export const blogsData = [
         date: '10 Nov 2025',
         author_name: 'Rimsha Naeem',
         author_designation: 'Frontend Developer',
-        image: blog1,
+        image: blog3,
         author_image: author1
     },
     {
@@ -204,7 +206,7 @@ export const blogsData = [
         date: '10 Nov 2025',
         author_name: 'Farooq Lead',
         author_designation: 'Sr. React Developer',
-        image: blog1,
+        image: blog2,
         author_image: author1
     },
     {
