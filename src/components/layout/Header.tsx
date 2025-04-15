@@ -82,9 +82,11 @@ const Header = () => {
             id="navbar-default"
           >
             <ul className="w-full h-full flex lg:items-center flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-6 xl:space-x-10 rtl:space-x-reverse p-5 lg:p-0 relative lg:static">
-              <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
-                <Image src={logo} alt="Logo" />
-              </Link>
+              <li>
+                <Link href="/" className="cursor-pointer w-[120px] lg:w-[160px] xl:w-[180px] block lg:hidden">
+                  <Image src={logo} alt="Logo" />
+                </Link>
+              </li>
               <li className="lg:h-full flex lg:items-center group lg:relative">
                 <Link
                   href="#"
@@ -351,20 +353,20 @@ const Header = () => {
               </li>
               <li className="lg:h-full flex lg:items-center">
                 <Link
-                  href="about-us"
+                  href="/services"
                   className="lg:h-full flex lg:items-center text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100"
                   onClick={toggleMenu}
                 >
-                  About
+                  Services
                 </Link>
               </li>
               <li className="lg:h-full flex lg:items-center">
                 <Link
-                  href="contact-us"
+                  href="/pricing"
                   className="lg:h-full flex lg:items-center text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100"
                   onClick={toggleMenu}
                 >
-                  Contact
+                  Pricing
                 </Link>
               </li>
             </ul>
