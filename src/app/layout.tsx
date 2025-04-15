@@ -1,4 +1,4 @@
-import { primary } from "./configs/fonts";
+import { primary } from "@/app/configs/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
 
