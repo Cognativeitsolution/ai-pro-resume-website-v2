@@ -1,11 +1,13 @@
 import React from 'react'
+import Image from 'next/image';
 import { BsGithub, BsInstagram } from 'react-icons/bs'
 import { FaFacebook } from 'react-icons/fa'
 import { LiaLinkedinIn } from 'react-icons/lia'
 import { AiTwotoneMail } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
-import ContactUsForm from './ContactUsForm'
+import ContactUsForm from './ContactUsForm';
+import Map from "media/contact_us/map.svg"
 
 export default function CountactUs() {
     return (
@@ -13,7 +15,7 @@ export default function CountactUs() {
             <section className="pb-5 md:py-10">
                 <div className="container">
                     <div className='grid md:grid-cols-12 gap-2 lg:gap-6'>
-                        <div className='md:col-span-6 lg:col-span-5 xl:col-span-4 backdrop-blur-none rounded-xl md:px-4 lg:px-6 pb-4 md:py-4 '>
+                        <div className='md:col-span-6 lg:col-span-5 xl:col-span-4 backdrop-blur-none rounded-xl lg:px-6 pb-4 md:py-4 '>
                             <h5 className='font-semibold capitalize text-[24px] text-zinc-950'>Contact Info</h5>
                             <div className='py-5 flex flex-col gap-y-6'>
                                 <div className='flex items-center justify-start gap-4'>
@@ -40,11 +42,9 @@ export default function CountactUs() {
                                     </div>
                                     <div>
                                         <h6 className='text-[16px] leading-[26px] text-indigo-500 font-medium '>Address:</h6>
-                                        <p className='text-gray-800 text-base text-[16px] leading-[14px]'>989 Derry Rd E # 403 Mississauga, ON. L5T 2J8 Canada</p>
+                                        <p className='text-gray-800 text-base text-[16px] leading-[17px]'>989 Derry Rd E # 403 Mississauga, ON. L5T 2J8 Canada</p>
                                     </div>
                                 </div>
-
-
                             </div>
                             <h5 className='font-semibold capitalize text-[24px] text-zinc-950'>Social Info</h5>
                             <div className='py-4 flex gap-x-2'>
@@ -62,10 +62,13 @@ export default function CountactUs() {
                                 </div>
                             </div>
                         </div>
-                        <div className='md:col-span-6 lg:col-span-7 xl:col-span-8 bg-indigo-200/20 border-2 border-white backdrop-blur-none rounded-xl px-6 lg:px-8 py-4'>
+                        <div className='md:col-span-6 lg:col-span-7 xl:col-span-8 bg-indigo-200/20 border-2 border-white backdrop-blur-none rounded-xl px-4 md:px-6 lg:px-8 py-4'>
                             <h5 className='font-semibold uppercase text-[26px] text-zinc-950'>Let's <span className='text-indigo-500'>Connect</span></h5>
                             <ContactUsForm />
                         </div>
+                    </div>
+                    <div className='mx-auto xl:w-10/12 mt-5'>
+                        <Image src={Map} alt='map' className='w-full h-full' />
                     </div>
                 </div>
             </section>

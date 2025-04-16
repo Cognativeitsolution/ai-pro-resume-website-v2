@@ -19,12 +19,13 @@ type propsType = {
 };
 
 
-let imageBaseUrl = "https://backend.aiproresume.com/public/images/"
+let imageBaseUrl = process.env.NEXT_PUBLIC_image_baseURL
 
 
 export default function Client(props: propsType) {
     const { data } = props
     const [our_clients, set_our_clients] = useState<any>([]);
+    const [imgSize, setImgSize] = useState({ width: 100, height: 100 });
 
 
     useEffect(() => {
@@ -33,6 +34,23 @@ export default function Client(props: propsType) {
                 set_our_clients(res?.data?.clients);
             }
         });
+
+        const handleResize = () => {
+            const width = window.innerWidth;
+            if (width < 520) {
+                setImgSize({ width: 60, height: 60 });
+            } else if (width < 768) {
+                setImgSize({ width: 100, height: 100 });
+            } else {
+                setImgSize({ width: 120, height: 120 });
+            }
+        };
+
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
 
@@ -50,22 +68,17 @@ export default function Client(props: propsType) {
 
 
                 <div className='flex flex-wrap justify-center mx-auto gap-[10px] sm:gap-[30px] lg:gap-[50px]'>
-                    {our_clients?.length > 0 ? our_clients?.map((client: any) => (
+                    {our_clients?.length > 0 && our_clients.map((client: any) => (
                         <div key={client?.id} className="bg-indigo-200/20 backdrop-blur-none border border-white rounded-lg px-5 py-2">
                             <Image
                                 src={imageBaseUrl + client?.image}
                                 alt={client?.name}
-                                className='mx-auto'
-                                width={120}
-                                height={120}
+                                className='mx-auto object-contain'
+                                width={imgSize.width}
+                                height={imgSize.height}
                             />
                         </div>
-                    )) : null}
-                    {/* {data?.clientList?.map((item: any, index: any) => (
-                        <div key={index} className="">
-                            <Image src={item?.image} alt={item?.alt} className='mx-auto' />
-                        </div>
-                    ))} */}
+                    ))}
                 </div>
             </div>
         </div>
