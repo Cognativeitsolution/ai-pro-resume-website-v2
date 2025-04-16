@@ -1,19 +1,16 @@
 import { Faq, InnerBanner } from "@/components";
 import React from "react";
-import { BannerData } from "./data";
-import { faqs } from "../data";
+import { BannerData, faqs } from "./data";
+
 import PricingCard from "./PricingCard";
+import CoinsPurchaseSection from "./CoinsPurchaseSection";
 
 export default function Page() {
   return (
     <>
       <InnerBanner {...BannerData} />
-      <PricingCard
-        content={{
-          title: "",
-          para: "",
-        }}
-      />
+      <PricingCard/>
+      <CoinsPurchaseSection/>
       <Faq data={faqs} />
     </>
   );
