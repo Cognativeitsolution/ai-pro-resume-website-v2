@@ -1,9 +1,8 @@
+import { primary } from "@/app/configs/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
-
 //==================
 import { Footer, Header } from "@/components";
-// import { primary } from "./configs/fonts";
 //==================
 
 //========= Meta Data
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-primary bg-secondary`}>
+      <body className={`${primary.variable} font-primary bg-secondary`}>
         <Header />
         {children}
         <Footer />
