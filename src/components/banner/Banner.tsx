@@ -13,16 +13,16 @@ import banner_bg_2 from "/public/images/banner_bg_2.svg";
 const Banner = () => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden pb-6">
+      <section className="h-full bg-PrimaryDark md:bg-none relative z-10 overflow-hidden pb-6">
         <Image
           src={banner_bg_2}
           alt="banner_bg_2"
           priority
-          className="absolute w-full h-dvh md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom"
+          className="absolute w-full h-full md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom hidden md:block"
         />
         <div className="container">
-          <div className="flex flex-col items-center justify-between">
-            <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
+          <div className="flex flex-col items-center justify-between pt-36 pb-10 md:py-0 mt-0 md:mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
+            <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white">
               Let AI Build the Resume That Builds <br className="hidden md:block" /> Your Career
             </h1>
             <p className="text-[16px] lg:text-[18px] xl:text-[20px] font-normal text-center text-white my-3 capitalize">

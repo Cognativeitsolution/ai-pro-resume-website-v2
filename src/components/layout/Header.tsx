@@ -25,7 +25,7 @@ const Header = () => {
   // ========= Header Fixed
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 0) {
         setIsFixed(true);
       } else {
         setIsFixed(false);
@@ -57,14 +57,8 @@ const Header = () => {
   };
 
   return (
-    <header className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 px-4 xl:px-0 ${isFixed
-      ? "fixed top-0 left-0 w-full duration-1000 ease-in-out"
-      : "absolute duration-1000 ease-in-out bg-transparent"
-      }`}>
-      <div className={`container h-full flex items-center rounded-md ${isFixed
-        ? "duration-1000 ease-in-out bg-white/90 shadow-md"
-        : "duration-1000 ease-in-out bg-white"
-        }`}>
+    <header className={`w-full z-[999] rounded-none h-[60px] lg:h-[80px] flex items-center mt-8 px-4 xl:px-0 fixed top-0 left-0 duration-1000 ease-in-out`}>
+      <div className={`container h-full flex items-center rounded-md duration-1000 ease-in-out bg-white/90 shadow-md`}>
         <nav className="w-full h-full flex items-center justify-between mx-auto bg-transparent md:px-4">
           <div className="w-full lg:w-auto h-full flex flex-wrap items-center justify-between">
             <Link
@@ -89,7 +83,7 @@ const Header = () => {
               </li>
               <li className="lg:h-full flex lg:items-center group lg:relative">
                 <Link
-                  href="#"
+                  href="javascript:;"
                   className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100"
                   onClick={toggleMegaMenu1}
                 >
@@ -150,7 +144,7 @@ const Header = () => {
               </li>
               <li className="lg:h-full flex lg:items-center group lg:relative">
                 <Link
-                  href="#"
+                  href="javascript:;"
                   className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100"
                   onClick={toggleMegaMenu2}
                 >
@@ -178,7 +172,7 @@ const Header = () => {
                   <ul className="flex flex-col space-y-10 lg:space-y-5 w-full">
                     <li className="cursor-pointer">
                       <Link
-                        href="javascript:;"
+                        href="/resume-templates"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -188,7 +182,7 @@ const Header = () => {
                     </li>
                     <li className="cursor-pointer">
                       <Link
-                        href="javascript:;"
+                        href="/resume-examples"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -198,7 +192,7 @@ const Header = () => {
                     </li>
                     <li className="cursor-pointer">
                       <Link
-                        href="resume-format"
+                        href="/resume-format"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -208,7 +202,7 @@ const Header = () => {
                     </li>
                     <li className="cursor-pointer">
                       <Link
-                        href="how-to-write-resume"
+                        href="/how-to-write-resume"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -221,7 +215,7 @@ const Header = () => {
               </li>
               <li className="lg:h-full flex lg:items-center group lg:relative">
                 <Link
-                  href="#"
+                  href="javascript:;"
                   className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100"
                   onClick={toggleMegaMenu3}
                 >
@@ -249,7 +243,7 @@ const Header = () => {
                   <ul className="flex flex-col space-y-10 lg:space-y-5 w-full">
                     <li className="cursor-pointer">
                       <Link
-                        href="javascript:;"
+                        href="/cover-letter-templates"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -259,7 +253,7 @@ const Header = () => {
                     </li>
                     <li className="cursor-pointer">
                       <Link
-                        href="javascript:;"
+                        href="/cover-letter-examples"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -269,7 +263,7 @@ const Header = () => {
                     </li>
                     <li className="cursor-pointer">
                       <Link
-                        href="cover-letter-format"
+                        href="/cover-letter-format"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -279,7 +273,7 @@ const Header = () => {
                     </li>
                     <li className="cursor-pointer">
                       <Link
-                        href="how-to-write-cover-letter"
+                        href="/how-to-write-cover-letter"
                         className="text-[16px] lg:text-[12px] xl:text-[15px] font-medium font-poppins text-[#b8b8b8] hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                         onClick={toggleMenu}
                       >
@@ -292,7 +286,7 @@ const Header = () => {
               </li>
               <li className="lg:h-full flex lg:items-center group lg:relative">
                 <Link
-                  href="#"
+                  href="javascript:;"
                   className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium font-poppins text-white lg:text-black hover:text-primary-100"
                   onClick={toggleMegaMenu4}
                 >

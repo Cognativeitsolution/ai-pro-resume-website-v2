@@ -26,7 +26,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        hamzaPrimary: "#9885FF",
+        hamzaPrimary: "#7f6afc",
       },
       backgroundImage: {
         primary: "linear-gradient(to right, #9885FF,#79A9FF)",

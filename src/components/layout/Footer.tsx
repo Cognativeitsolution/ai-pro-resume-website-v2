@@ -52,10 +52,10 @@ const Footer = () => {
     {
       heading: "Support",
       items: [
-        { name: "About Us", href: "/about" },
-        { name: "Contact Us", href: "/contact" },
+        { name: "About Us", href: "/about-us" },
+        { name: "Contact Us", href: "/contact-us" },
         { name: "Careers", href: "/careers" },
-        { name: "Terms & Conditions", href: "/terms" },
+        { name: "Terms & Conditions", href: "/terms-and-conditions" },
         { name: "Privacy Policy", href: "/privacy-policy" },
       ],
     },
