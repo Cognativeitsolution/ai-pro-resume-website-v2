@@ -4,7 +4,6 @@ import professional from "../../../public/images/20+professionally.svg";
 import resume_parser from "../../../public/images/resume_parser.svg";
 
 export const BannerData = {
-  user: { token: "exampleToken" },
   title: (
     <>
       Let's Perfect Your Resume
@@ -15,12 +14,9 @@ export const BannerData = {
   description: (
     <>
       Writing a professional cover letter and resume can be challenging, and
-      there's no guarantee they'll pass ATS checks.
-      <br className="hidden lg:block" /> AI Pro Resume is here to help with
+      there's no guarantee they'll pass ATS checks. AI Pro Resume is here to help with
       expert resume and cover letter writing services. We also offer reviews to
-      enhance
-      <br className="hidden lg:block" />
-      your documents, providing tailored suggestions based on your job position
+      enhance your documents, providing tailored suggestions based on your job position
       and career goals.
     </>
   ),

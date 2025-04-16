@@ -3,22 +3,8 @@ import aboutCounter from "media/about_us/about-counter.svg";
 import aboutCounter1 from "media/images/about-counter-1.svg";
 import aboutCounter2 from "media/images/about-counter-2.svg";
 import aboutCounter3 from "media/images/about-counter-3.svg";
-import Client1 from "media/images/client-1.svg";
-import Client2 from "media/images/client-2.svg";
-import Client3 from "media/images/client-3.svg";
-import Client4 from "media/images/client-4.svg";
-import Client5 from "media/images/client-5.svg";
-import Client6 from "media/images/client-6.svg";
-import Client7 from "media/images/client-7.svg";
-import Client8 from "media/images/client-8.svg";
-import Client9 from "media/images/client-9.svg";
-import Client10 from "media/images/client-10.svg";
-import Client11 from "media/images/client-11.svg";
-
-
 
 export const BannerData = {
-    user: { token: "exampleToken" },
     title: (
         <>
             Turning Job Applications into
@@ -28,8 +14,7 @@ export const BannerData = {
     subtitle: "About us",
     description: (
         <>
-            AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format
-            <br className="hidden lg:block" /> to expert tips, we have all that assist you in landing your dream interview.
+            AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format to expert tips, we have all that assist you in landing your dream interview.
         </>
     ),
 };
@@ -79,7 +64,6 @@ export const CounterData = {
         </>
     ),
     counterlist: CounterList
-
 }
 
 const stepperList = [
@@ -111,20 +95,6 @@ export const StepperData = {
 
 }
 
-const clientList = [
-    { image: Client1, alt: "our-client 1" },
-    { image: Client2, alt: "our-client 2" },
-    { image: Client3, alt: "our-client 3" },
-    { image: Client4, alt: "our-client 4" },
-    { image: Client5, alt: "our-client 5" },
-    { image: Client6, alt: "our-client 6" },
-    { image: Client7, alt: "our-client 7" },
-    { image: Client8, alt: "our-client 8" },
-    { image: Client9, alt: "our-client 9" },
-    { image: Client10, alt: "our-client 10" },
-    { image: Client11, alt: "our-client 11" },
-];
-
 export const ClientData = {
     title: "Our Valuable Clients",
     description: (
@@ -132,7 +102,5 @@ export const ClientData = {
             Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
         </>
     ),
-    clientList: clientList
-
 }
 

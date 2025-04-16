@@ -30,7 +30,7 @@ const Reviews = () => {
           <h3 className="font-normal text-[18px] md:text-[22px] text-center">
             Reviews
           </h3>
-          <h4 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-8">
+          <h4 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4 md:mb-8">
             Your Resume Is An Extension Of Yourself – Make <br className="hidden md:block" /> One That’s Truly You
           </h4>
           <div className="relative">

@@ -22,7 +22,7 @@ const ResumeFeaturesCard = ({
 }: ResumeFeatureCardProps) => {
   return (
     <>
-      <div className={`grid grid-cols-12 items-center gap-y-6 lg:gap-12 xl:gap-20 lg:py-6 xl:py-10 `}>
+      <div className={`grid grid-cols-12 items-center gap-y-6 lg:gap-12 xl:gap-20 lg:py-6 xl:py-10 mb-4 xl:mb-0`}>
         {reverse ?
           <div className={`col-span-12 xl:col-span-6 order-last flex justify-center lg:justify-start lg:order-first`}>
             <div className="flex items-center w-full xl:min-w-[550px] ">

@@ -59,7 +59,7 @@ export default function AppInputField({
                         onChange={onChange}
                         className={`peer w-full border rounded-md py-3 px-3 block appearance-none leading-normal transition-all duration-200
                         ${readOnly ? 'text-primaryGray cursor-not-allowed focus:border-primaryBlue' : 'focus:text-primaryBlue focus:outline-primaryBlue outline-none'}
-                        ${error ? 'border-red-500 focus:border-red-500 focus:outline-red-500 outline-none' : 'border-slate-300 focus:border-primaryBlue'}`}
+                        ${error ? 'border-red-500 focus:border-red-500 ' : 'border-slate-300 focus:border-primaryBlue'}`}
                         {...rest}
                     />
                 )}

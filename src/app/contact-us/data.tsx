@@ -1,7 +1,4 @@
-
-
 export const BannerData = {
-    user: { token: "exampleToken" },
     title: (
         <>
             Turning Job Applications into
@@ -11,8 +8,7 @@ export const BannerData = {
     subtitle: "Contact us",
     description: (
         <>
-            AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format
-            <br className="hidden lg:block" /> to expert tips, we have all that assist you in landing your dream interview.
+            AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format to expert tips, we have all that assist you in landing your dream interview.
         </>
     ),
 };

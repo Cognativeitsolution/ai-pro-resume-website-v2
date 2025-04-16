@@ -1,8 +1,8 @@
-import { Content, Faq, InnerBanner, ServicesSection } from "@/components";
 import React from "react";
+// =============
+import { Content, Faq, InnerBanner, ServicesSection } from "@/components";
 import { BannerData } from "./data";
 import { faqs } from "../data";
-import ServiceSection from "../../components/servicepage/ServicesSection";
 
 export default function Page() {
   return (
