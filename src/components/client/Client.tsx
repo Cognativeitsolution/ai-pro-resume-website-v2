@@ -74,8 +74,8 @@ export default function Client(props: propsType) {
                                 src={imageBaseUrl + client?.image}
                                 alt={client?.name}
                                 className='mx-auto object-contain'
-                                width={imgSize.width}
-                                height={imgSize.height}
+                                width={imgSize?.width}
+                                height={imgSize?.height}
                             />
                         </div>
                     ))}
