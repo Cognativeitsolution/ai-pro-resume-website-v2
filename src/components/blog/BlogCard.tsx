@@ -27,6 +27,7 @@ const BlogCard = ({
     id,
 }: Blog) => {
     const router = useRouter();
+
     const goToBlogDetail = () => {
         console.log(id);
         router.push(`/blog/${id}`)
