@@ -10,7 +10,8 @@ const api = axios.create({
 
 // Attach token if available
 api.interceptors.request.use((config) => {
-  const token = Cookies.get("userToken");
+  // const token = Cookies.get("userToken");
+  const token = Cookies.set("usertoken", "7293|QuUmoD4hHFVRyCkZg02CULc84dLsvzSyuiBtMVv97a4522ab");
   console.log(token, "my token");
 
   if (token) {
