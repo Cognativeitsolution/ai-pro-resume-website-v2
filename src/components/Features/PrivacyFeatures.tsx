@@ -11,7 +11,7 @@ const Features = (props: propsType) => {
 
   return (
     <>
-      <section className="py-5 lg:py-10">
+      <section className="py-5 md:py-10">
         <div className="container mx-auto ">
           {data?.map((item: any, index: any) => (
             <PrivacyFeaturesCard

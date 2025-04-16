@@ -55,7 +55,7 @@ const ExploreTemplates = () => {
 
   return (
     <>
-      <section className="py-5 md:py-10">
+      <section className="py-5 md:pb-10 md:pt-0 lg:py-10">
         <div className="container">
           <h2 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold text-center">
             Explore professional Resume templates

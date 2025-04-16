@@ -1,18 +1,18 @@
 import React from "react";
 // =================
-import { Client, Counter, InnerBanner, PrivacyFeatures, Reviews } from "@/components";
-import Welcome from "@/components/welcome/Welcome";
+import { Client, Counter, InnerBanner, PrivacyFeatures, Reviews, ServiceSection, Welcome } from "@/components";
 // =================
-import { BannerData, FeaturesData, } from "./data";
+import { BannerData, FeaturesData, WelcomeData } from "./data";
 import { ClientData, CounterData } from "../about-us/data";
 
 export default function Page() {
     return (
         <>
             <InnerBanner {...BannerData} />
-            <Welcome />
+            <Welcome data={WelcomeData} />
             <PrivacyFeatures data={FeaturesData} />
             <Counter data={CounterData} />
+            <ServiceSection />
             <Client data={ClientData} />
             <Reviews />
         </>
