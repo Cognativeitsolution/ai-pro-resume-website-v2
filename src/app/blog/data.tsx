@@ -28,7 +28,7 @@ export const BannerData = {
             <br className="hidden lg:block" /> Opportunities
         </>
     ),
-    subtitle: "About us",
+    subtitle: "Our Blogs",
     description: (
         <>
             AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format

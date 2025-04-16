@@ -1,8 +1,10 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import verifiedIcon from "../../../public/images/verified.png";
+import { useRouter } from 'next/navigation';
 
 type Blog = {
+    id?: any;
     title: string;
     description: string;
     date: string;
@@ -22,9 +24,16 @@ const BlogCard = ({
     author_designation,
     author_image,
     verified = false,
+    id,
 }: Blog) => {
+    const router = useRouter();
+    const goToBlogDetail = () => {
+        console.log(id);
+        router.push(`/blog/${id}`)
+    }
+
     return (
-        <div className="mx-auto flex flex-col rounded-2xl bg-white/30 border-2 border-white overflow-hidden shadow-lg">
+        <div onClick={goToBlogDetail} className="mx-auto flex flex-col rounded-2xl bg-white/30 border-2 border-white overflow-hidden shadow-lg">
             <div className="h-[300px]">
                 <Image
                     src={image}
