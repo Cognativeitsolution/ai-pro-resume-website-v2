@@ -4,6 +4,8 @@ import React from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 // =================
 import { CTA } from "@/components";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type Job = {
     id: number;
@@ -18,13 +20,15 @@ type JobCardsProps = {
 };
 
 const JobCards = ({ jobs }: JobCardsProps) => {
+    const route = useRouter()
+    const goToApplyNow = (page: any) => {
+        route.push(`/apply-now/${page}`)
+    }
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-0 md:px-4">
             {jobs.map((job) => (
-                <div
-                    key={job.id}
-                    className="w-full h-full p-4 md:p-6 flex flex-col justify-between mx-auto rounded-2xl bg-indigo-200/20 backdrop-blur-none border-2 border-white"
-                >
+                <div key={job.id} onClick={() => goToApplyNow(job?.id)}
+                    className="w-full h-full p-4 md:p-6 flex flex-col justify-between mx-auto rounded-2xl bg-indigo-200/20 backdrop-blur-none border-2 border-white">
                     <div className="flex flex-col justify-center items-center gap-2 mb-10">
                         <h4 className="text-[24px] leading-[34px] font-medium text-center">
                             {job.title}

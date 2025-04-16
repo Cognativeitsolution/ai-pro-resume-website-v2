@@ -1,10 +1,13 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { Controller, useForm } from "react-hook-form";
 import AppInputField from '../custom/inpufield/inpufield';
 import CTA from '../custom/CTA';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactUsForm() {
+    const [captchaError, setCaptchaError] = useState("");
+    const [verified, setVerified] = useState<any>(false);
     const {
         handleSubmit,
         control,
@@ -12,7 +15,28 @@ export default function ContactUsForm() {
         formState: { errors },
     } = useForm({ mode: "onChange" });
 
+    const handleCheckCaptcha = () => {
+        setVerified(true);
+        setCaptchaError("");
+    };
+
+    const resetRecaptchaValue = () => {
+        setVerified(null);
+    };
+
+    const TIMEOUT_DURATION = 1 * 60 * 1000;
+    let timeoutId: any;
+
+    const handleRecaptchaTimeout = () => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(resetRecaptchaValue, TIMEOUT_DURATION);
+    };
+
     const handleRegisterSubmit = async (formData: any) => {
+        if (!verified) {
+            setCaptchaError("Please verify the ReCAPTCHA.");
+            return
+        }
         const credentials = {
             name: formData?.name,
             email: formData?.email,
@@ -129,17 +153,28 @@ export default function ContactUsForm() {
                     </div>
                 </div>
 
-                <div className='w-full lg:flex lg:justify-end mt-2'>
-                    <CTA
-                        btn
-                        text="Submit"
-                        bgColor="bg-transparent hover:bg-primary"
-                        txtColor="text-indigo-500 hover:text-white"
-                        border="border border-indigo-500 hover:border-white"
-                        width="w-full lg:w-max"
-                    />
+                <div className='w-full lg:flex lg:justify-between lg:mt-2'>
+                    <div className="flex flex-col items-start mb-4">
+                        <ReCAPTCHA
+                            sitekey={process.env.NEXT_PUBLIC_captcha_sitekey ?? ""}
+                            onChange={() => {
+                                handleCheckCaptcha();
+                                handleRecaptchaTimeout();
+                            }}
+                        />
+                        <span className="text-red-500 text-sm">{captchaError}</span>
+                    </div>
+                    <div>
+                        <CTA
+                            btn
+                            text="Submit"
+                            bgColor="bg-transparent hover:bg-primary"
+                            txtColor="text-indigo-500 hover:text-white"
+                            border="border border-indigo-500 hover:border-white"
+                            width="w-full lg:w-max"
+                        />
+                    </div>
                 </div>
-
 
             </form >
         </>
