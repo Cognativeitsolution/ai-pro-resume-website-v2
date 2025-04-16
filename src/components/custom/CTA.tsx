@@ -28,9 +28,9 @@ const CTA: React.FC<CTAProps> = ({
     handleClick,
     width,
 }) => {
-    const baseClasses = `${bgColor} ${txtColor} ${border} ${width ? width : "w-max"} w-max h-[40px] px-4 rounded-md flex items-center`;
+    const baseClasses = `${bgColor} ${txtColor} ${border} ${width ? width : "w-max"}  h-[40px] px-4 rounded-md flex items-center justify-center`;
     const content = (
-        <span className="text-[16px] xl:text-[18px] font-semibold tracking-wide">
+        <span className="text-[16px] font-semibold tracking-wide">
             {text}
         </span>
     );
