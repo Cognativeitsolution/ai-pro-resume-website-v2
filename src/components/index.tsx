@@ -30,6 +30,7 @@ const ContactUs = dynamic(() => import("./contactUs/CountactUs"));
 const Content = dynamic(() => import("./servicepage/Content"));
 const ServicesSection = dynamic(() => import("./servicepage/ServicesSection"));
 const CareerJobs = dynamic(() => import("./careerJobs/CareerJobs"));
+const BlogDetail = dynamic(() => import("./blog/BlogDetail"));
 
 const Blogs = dynamic(() => import("./blog/Blogs"));
 export {
@@ -59,5 +60,6 @@ export {
   Content,
   ServicesSection,
   CareerJobs,
-  Blogs
+  Blogs,
+  BlogDetail
 };

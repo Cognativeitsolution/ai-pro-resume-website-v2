@@ -28,7 +28,7 @@ export const BannerData = {
             <br className="hidden lg:block" /> Opportunities
         </>
     ),
-    subtitle: "Our Blogs",
+    subtitle: "Blog Detail",
     description: (
         <>
             AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format
@@ -267,5 +267,30 @@ export const blogsData = [
     },
 ]
 
-
+export const blogsVerticalTabsData = [
+    {
+        id: '#head1',
+        name: "Lorem ipsum dolor sit amet",
+    },
+    {
+        id: '#head2',
+        name: "Lorem ipsum dolor sit is of them",
+    },
+    {
+        id: '#head3',
+        name: "Lorem ipsum dolor sit ",
+    },
+    {
+        id: '#head4',
+        name: "Lorem ipsum dolor sit amet",
+    },
+    {
+        id: '#head5',
+        name: "Lorem ipsum dolor sit is of them",
+    },
+    {
+        id: '#head6',
+        name: "Lorem ipsum dolor sit ",
+    },
+]
 

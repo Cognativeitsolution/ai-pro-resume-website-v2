@@ -1,16 +1,21 @@
 'use client';
 
+import { Client, InnerBanner, Reviews, BlogDetail } from '@/components';
 import { useParams } from 'next/navigation';
+import { BannerData, ClientData } from './data';
 
-const BlogDetail = () => {
+const page = () => {
     const params = useParams();
     console.log(params);
 
     return (
-        <div>
-            Blog detail page for ID: <strong>{params.blogId}</strong>
-        </div>
+        <>
+            <InnerBanner {...BannerData} />
+            <BlogDetail />
+            <Client data={ClientData} />
+            <Reviews />
+        </>
     );
 };
 
-export default BlogDetail;
+export default page;
