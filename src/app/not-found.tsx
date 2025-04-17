@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
    <>
    
-   <div className="relative bg-PrimaryDark h-dvh flex items-center justify-center flex-col">
+   <div className=" bg-PrimaryDark h-dvh flex items-center justify-center flex-col relative">
         <div className="container relative mx-auto">
           {/* All main */}
           <div className="w-[80%] mx-auto flex justify-center items-center flex-col gap-4">
