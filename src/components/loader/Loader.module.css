@@ -1,0 +1,31 @@
+.loader {
+    font-size: 48px;
+    color: #882ac7;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .loader::after {
+    content: 'AI Pro Resume';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #9885FF;
+    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: animloader 3s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      height: 100%;
+    }
+    50% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }

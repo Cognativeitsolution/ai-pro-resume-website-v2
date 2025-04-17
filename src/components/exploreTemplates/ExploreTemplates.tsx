@@ -4,11 +4,11 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ===============
-import creativeinfusion from "/public/images/Creativeinfusion.svg";
-import innovativeedge from "/public/images/Creativeinfusion.svg";
-import fresherresume from "/public/images/fresherResume.svg";
-import sleeksimplicity from "/public/images/SleekSimplicity.svg";
-import brightfuture from "/public/images/BrightFuture.svg";
+import creativeinfusion from "/public/images/Creativeinfusion.webp";
+import innovativeedge from "/public/images/Creativeinfusion.webp";
+import fresherresume from "/public/images/fresherResume.webp";
+import sleeksimplicity from "/public/images/SleekSimplicity.webp";
+import brightfuture from "/public/images/BrightFuture.webp";
 
 type TabKey = "creative" | "food" | "management" | "it";
 
@@ -91,6 +91,7 @@ const ExploreTemplates = () => {
                     alt={`Image ${image.id}`}
                     width={500}
                     height={300}
+                    priority
                     className="w-full h-auto rounded-lg cursor-pointer transition-transform duration-300 hover:scale-110"
                   />
                 </div>

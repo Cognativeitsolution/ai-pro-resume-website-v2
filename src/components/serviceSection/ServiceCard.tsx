@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import tick from "../../../public/images/doubleTick.svg";
+import tick from "../../../public/images/doubleTick.webp";
 
 interface ServiceCardProps {
   image: any;

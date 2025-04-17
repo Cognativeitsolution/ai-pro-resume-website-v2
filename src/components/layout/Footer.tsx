@@ -10,8 +10,8 @@ import { CTA } from "@/components";
 import { IoCaretForwardOutline } from "react-icons/io5";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterest } from "react-icons/fa";
 // ================
-import footer_bg from "/public/images/Footer_bg.svg";
-import footer_logo from "/public/images/footer_logo.svg";
+import footer_bg from "/public/images/Footer_bg.webp";
+import footer_logo from "/public/images/footer_logo.webp";
 
 
 const Footer = () => {
@@ -85,7 +85,7 @@ const Footer = () => {
         <div className="relative z-10 px-5 xl:px-0 pt-20">
           {/* Newsletter Box */}
           <form onSubmit={handleSubmit(onSubscribe)}>
-            <div className="bg-primary container rounded-xl px-12 py-8 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[50px]">
+            <div className="bg-primary container rounded-xl px-8 md:px-12 py-8 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[50px]">
               <div className="mb-4 md:mb-0">
                 <h3 className="text-[24px] lg:text-[36px] font-bold leading-tight text-white">
                   Keep Up to date with <br />
@@ -119,7 +119,7 @@ const Footer = () => {
           {/* Footer Links */}
           <div className="grid grid-cols-1 xl:grid-cols-5 gap-y-10 gap-5 container text-sm">
             {/* Logo and Socials */}
-            <div className="flex xl:flex-col items-center xl:items-start justify-between gap-5 sm:gap-0">
+            <div className="flex flex-col md:flex-row xl:flex-col items-start md:items-center xl:items-start justify-between gap-6 md:gap-5 sm:gap-0">
               <div className="w-[125px] xl:w-[150px]">
                 <Image
                   src={footer_logo}

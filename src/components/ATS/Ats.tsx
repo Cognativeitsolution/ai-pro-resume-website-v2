@@ -3,8 +3,8 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ===============
-import ats_bg from "/public/images/ats_bg.svg";
-import ats_score from "/public/images/ats_score.svg";
+import ats_bg from "/public/images/ats_bg.webp";
+import ats_score from "/public/images/ats_score.webp";
 import robo_2 from "../../../public/images/robo_2.gif";
 
 const Ats = () => {

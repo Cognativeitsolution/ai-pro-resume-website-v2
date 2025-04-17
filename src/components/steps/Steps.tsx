@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import choose_template from "/public/images/choose_template.svg";
-import enlist from "/public/images/enlist.svg";
-import download_resume from "/public/images/download_resume.svg";
+import choose_template from "/public/images/choose_template.webp";
+import enlist from "/public/images/enlist.webp";
+import download_resume from "/public/images/download_resume.webp";
 
 const Steps = () => {
   return (

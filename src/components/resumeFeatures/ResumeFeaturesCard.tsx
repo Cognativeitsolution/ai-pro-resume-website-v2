@@ -3,7 +3,7 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ===============
-import check_1 from "../../../public/images/check_1.svg";
+import check_1 from "../../../public/images/check_1.webp";
 
 interface ResumeFeatureCardProps {
   image: any;

@@ -3,10 +3,10 @@ import React from "react";
 import ServiceCard from "./ServiceCard";
 import { CTA } from "@/components";
 // ===============
-import prof_cover_writing from "../../../public/images/prof_cover_writing.svg";
-import prof_cover_review from "../../../public/images/prof_cover_review.svg";
-import prof_resume_writing from "../../../public/images/prof_resume_writing.svg";
-import prof_resume_review from "../../../public/images/prof_resume_review.svg";
+import prof_cover_writing from "../../../public/images/prof_cover_writing.webp";
+import prof_cover_review from "../../../public/images/prof_cover_review.webp";
+import prof_resume_writing from "../../../public/images/prof_resume_writing.webp";
+import prof_resume_review from "../../../public/images/prof_resume_review.webp";
 
 const ServiceSection = () => {
   const ServiceData = [
@@ -80,7 +80,7 @@ const ServiceSection = () => {
           />
         </div>
         {/* service cards */}
-        <div className="my-8">
+        <div className="mt-8">
           <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ServiceData.map((item, idx) => (
               <ServiceCard

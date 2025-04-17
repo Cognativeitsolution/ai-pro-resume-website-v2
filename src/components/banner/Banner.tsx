@@ -3,12 +3,12 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ============
-import banner from "/public/images/banner.svg";
+import banner from "/public/images/banner.webp";
 import robo_1 from "/public/images/robo_1.gif";
 import robo_2 from "/public/images/robo_2.gif";
-import headerTemp from "/public/images/header-template.svg";
-import improveText from "/public/images/header-improvetext.svg";
-import banner_bg_2 from "/public/images/banner_bg_2.svg";
+import headerTemp from "/public/images/header-template.webp";
+import improveText from "/public/images/header-improvetext.webp";
+import banner_bg_2 from "/public/images/banner_bg_2.webp";
 
 const Banner = () => {
   return (
@@ -85,6 +85,7 @@ const Banner = () => {
                     className="w-full"
                   />
                 </div>
+                
                 {/* Resume preview popup */}
                 <div className="absolute z-30 animate-diagonalFloat rounded-md w-[22%] md:w-[25%] top-24 lg:top-32 xl:top-40 2xl:top-52 left-5">
                   <Image
