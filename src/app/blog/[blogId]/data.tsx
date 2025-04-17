@@ -271,26 +271,56 @@ export const blogsVerticalTabsData = [
     {
         id: '#head1',
         name: "Lorem ipsum dolor sit amet",
+        description: (
+            <>
+                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
     },
     {
         id: '#head2',
-        name: "Lorem ipsum dolor sit is of them",
+        name: "Our Benefits",
+        description: (
+            <>
+                Lorem ipsum dolor sitc eget aliquam sit.I am massa gravida aliquam non massa vulputa auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
     },
     {
         id: '#head3',
-        name: "Lorem ipsum dolor sit ",
+        name: "Explore professional Resume templates",
+        description: (
+            <>
+                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
     },
     {
         id: '#head4',
-        name: "Lorem ipsum dolor sit amet",
+        name: "Explore professional Resume templates",
+        description: (
+            <>
+                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
     },
     {
         id: '#head5',
         name: "Lorem ipsum dolor sit is of them",
+        description: (
+            <>
+                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
     },
     {
         id: '#head6',
         name: "Lorem ipsum dolor sit ",
+        description: (
+            <>
+                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
     },
 ]
 
