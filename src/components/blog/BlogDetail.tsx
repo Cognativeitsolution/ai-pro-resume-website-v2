@@ -28,7 +28,7 @@ const BlogDetail = () => {
 
                         <div id="head1" className=''>
                             <div className="flex items-center w-full xl:min-w-[550px] mb-5">
-                                <Image src={blogImg} alt={blogImg} className="h-auto w-full" />
+                                <Image src={blogImg} alt="" className="h-auto w-full" />
                             </div>
 
                             <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
@@ -39,20 +39,20 @@ const BlogDetail = () => {
                             <div className='flex md:flex-row flex-col justify-around md:items-center gap-4 py-9 px-2 xl:px-5'>
                                 <div className='flex gap-3 items-center'>
                                     <div className='bg-hamzaPrimary/20 backdrop-blur-sm p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center'>
-                                        <Image src={BlogHand} alt={BlogHand} />
+                                        <Image src={BlogHand} alt="" />
                                     </div>
                                     <h3 className='md:max-w-24 font-semibold'>Lorem ipsum dolor sit</h3>
                                 </div>
 
                                 <div className='flex gap-4 items-center'>
                                     <div className='bg-hamzaPrimary/20 backdrop-blur-sm p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center'>
-                                        <Image src={BlogHand} alt={BlogHand} />
+                                        <Image src={BlogHand} alt="" />
                                     </div>
                                     <h3 className='md:max-w-24 font-semibold'>Lorem ipsum dolor sit</h3>
                                 </div>
                                 <div className='flex gap-4 items-center'>
                                     <div className='bg-hamzaPrimary/20 backdrop-blur-sm p-3 rounded-full w-[45px] h-[45px] flex items-center justify-center'>
-                                        <Image src={BlogHand} alt={BlogHand} />
+                                        <Image src={BlogHand} alt="" />
                                     </div>
                                     <h3 className='md:max-w-24 font-semibold'>Lorem ipsum dolor sit</h3>
                                 </div>
