@@ -31,7 +31,7 @@ export default function AutoPlaySlider(props: propsType) {
     Autoplay({ delay: 5000, stopOnFocusIn: false, stopOnInteraction: false }),
   ];
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { dragFree: true, loop: true, ...options },
+    { align: "center", dragFree: true, loop: true, ...options },
     plugins // Ensure `plugins` has a valid type
   );
 

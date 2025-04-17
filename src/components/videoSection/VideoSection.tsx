@@ -3,7 +3,7 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ===============
-import home_page_video from "/public/images/home_page_video.svg";
+import home_page_video from "/public/images/home_page_video.webp";
 
 const VideoSection = () => {
   return (

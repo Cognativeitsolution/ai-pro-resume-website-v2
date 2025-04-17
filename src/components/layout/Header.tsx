@@ -9,8 +9,8 @@ import { HiBars3 } from "react-icons/hi2";
 import { FaAngleDoubleLeft, FaAngleDown, FaTimes, } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 //========== Import Images
-import logo from "/public/images/headerLogo.svg";
-import profile from "/public/images/profileicon.svg";
+import logo from "/public/images/headerLogo.webp";
+import profile from "/public/images/profileicon.webp";
 import coin from "/public/images/dollar.webp";
 
 const Header = () => {

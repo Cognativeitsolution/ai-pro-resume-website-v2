@@ -36,7 +36,7 @@ const FindResumeTemplates = () => {
     <>
       <section className="py-5 md:py-10">
         <div className="container">
-          <div className="border-2 border-white rounded-2xl py-10 bg-white/50">
+          <div className="border-2 border-white rounded-2xl px-4 md:px-0 py-10 bg-white/50">
             <p className="text-[24px] md:text-[32px] font-semibold text-center">
               Find the Perfect Resume Example for Your Field
             </p>
@@ -47,10 +47,10 @@ const FindResumeTemplates = () => {
               personalized.
             </p>
 
-            <div className="mt-5">
+            <div className="mt-0 md:mt-5">
               <AutoPlaySlider
-                options={{ align: "center" }}
-                arrowPosition="mt-0 mb-8"
+                options={{ align: "start" }}
+                arrowPosition="!mt-2 mb-5 md:mb-8"
               >
                 {templates.map((template, index) => {
                   const isPurchased = userPurchasedTemplates.some(

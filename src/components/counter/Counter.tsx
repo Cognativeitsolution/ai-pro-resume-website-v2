@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { ReactNode } from "react";
-import miniLogoShade from "media/images/mini-logo-shade.svg";
+import miniLogoShade from "media/images/mini-logo-shade.webp";
 import AnimatedCounter from "./AnimatedCounter";
 
 type CounterItem = {

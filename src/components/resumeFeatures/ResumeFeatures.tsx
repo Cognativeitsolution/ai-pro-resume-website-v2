@@ -1,9 +1,9 @@
 import React from "react";
 import ResumeFeaturesCard from "./ResumeFeaturesCard";
-import grammer from "../../../public/images/grammer.svg";
-import tailored from "../../../public/images/tailored.svg";
-import professional from "../../../public/images/20+professionally.svg";
-import resume_parser from "../../../public/images/resume_parser.svg";
+import grammer from "../../../public/images/grammer.webp";
+import tailored from "../../../public/images/tailored.webp";
+import professional from "../../../public/images/20+professionally.webp";
+import resume_parser from "../../../public/images/resume_parser.webp";
 
 const ResumeFeatures = () => {
   const featuresData = [

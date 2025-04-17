@@ -1,7 +1,8 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import verifiedIcon from "../../../public/images/verified.png";
 import { useRouter } from 'next/navigation';
+// =====================
+import verifiedIcon from "../../../public/images/verified.webp";
 
 type Blog = {
     id?: any;

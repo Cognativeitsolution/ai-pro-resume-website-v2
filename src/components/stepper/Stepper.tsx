@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import stepperBg from "media/images/stepper_bg.svg";
+import stepperBg from "media/images/stepper_bg.webp";
 
 type StepperItem = {
   title: string;

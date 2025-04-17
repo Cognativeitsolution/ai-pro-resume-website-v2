@@ -3,8 +3,8 @@
 import { AutoPlaySlider, CTA } from "@/components";
 import ReviewCard from "./ReviewCard";
 // ===============
-import reviewImage from "../../../public/images/reviews.svg";
-import reviewAvatar from "../../../public/images/reviewAvatar.svg";
+import reviewImage from "../../../public/images/reviews.webp";
+import reviewAvatar from "../../../public/images/reviewAvatar.webp";
 
 const Reviews = () => {
 

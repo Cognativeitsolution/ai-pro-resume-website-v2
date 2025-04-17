@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import inner_banner_bg from "media/images/inner-banner_bg.svg";
+import inner_banner_bg from "media/images/inner-banner_bg.webp";
 
 type BannerProps = {
   title?: string | React.ReactNode;
