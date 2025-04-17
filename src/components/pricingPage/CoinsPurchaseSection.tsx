@@ -113,7 +113,7 @@ const CoinsPurchaseSection = () => {
             
             )}
             <div className="mb-4">
-               <div className="mx-auto px-2 sm:px-4 space-y-8">
+               <div className="mx-auto px-2 sm:px-4 space-y-4">
                        {HowToPurchaseCoins.map((item, index) => (
                          <div key={index} className="w-full">
                            <h3 className="text-[22px] md:text-[30px] 2xl:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[44px] font-semibold mb-2">
@@ -135,20 +135,21 @@ const CoinsPurchaseSection = () => {
                            </ul>
                          </div>
                        ))}
+                        <p className="text-xl sm:text-3xl font-bold font-Lexend">Referrals:</p>
+            
+            <p className="font-Lexend text-base">
+              If you do not want to purchase the coins, you can earn coins
+              through referrals. Invite your friends to join AI Pro Resume,
+              and you will earn coins when they sign up using your referral
+              link. You can use them to unlock parser tokens and premium
+              services. You will receive 3 coins for 10 referrals, 4 coins
+              for 20 referrals, and 6 coins for 30 referrals.
+            </p>
                      </div>
                 
          
 
-              <p className="text-xl sm:text-3xl font-bold font-Lexend my-2">Referrals:</p>
-            
-                <p className="font-Lexend text-base">
-                  If you do not want to purchase the coins, you can earn coins
-                  through referrals. Invite your friends to join AI Pro Resume,
-                  and you will earn coins when they sign up using your referral
-                  link. You can use them to unlock parser tokens and premium
-                  services. You will receive 3 coins for 10 referrals, 4 coins
-                  for 20 referrals, and 6 coins for 30 referrals.
-                </p>
+             
              
             </div>
           </div>
