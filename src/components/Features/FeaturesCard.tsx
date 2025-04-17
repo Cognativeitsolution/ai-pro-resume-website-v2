@@ -5,6 +5,7 @@ import { CTA } from "@/components";
 
 interface ResumeFeatureCardProps {
   image: any;
+  video: any;
   title: string;
   description: string;
   features?: string[];
@@ -14,6 +15,7 @@ interface ResumeFeatureCardProps {
 
 const ResumeFeaturesCard = ({
   image,
+  video,
   title,
   description,
   features,
@@ -26,7 +28,15 @@ const ResumeFeaturesCard = ({
         {reverse ?
           <div className={`col-span-12 xl:col-span-6 order-last flex justify-center lg:justify-start lg:order-first`}>
             <div className="flex items-center w-full xl:min-w-[550px] ">
-              <Image src={image} alt={title} className="w-full h-auto" />
+              {video ? (
+                <video className="w-full rounded-lg">
+                  <source src={video} type="video/mp4" />
+                  <source src="movie.ogg" type="video/ogg" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : image ? (
+                <Image src={image} alt={title} className="w-full h-auto" />
+              ) : null}
             </div>
           </div> : null}
 
@@ -49,7 +59,15 @@ const ResumeFeaturesCard = ({
         {reverse ? null :
           <div className={`col-span-12 xl:col-span-6 flex justify-center`}>
             <div className="flex items-center w-full xl:min-w-[550px] ">
-              <Image src={image} alt={title} className="h-auto w-full" />
+              {video ? (
+                <video className="w-full rounded-lg">
+                  <source src={video} type="video/mp4" />
+                  <source src="movie.ogg" type="video/ogg" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : image ? (
+                <Image src={image} alt={title} className="w-full h-auto" />
+              ) : null}
             </div>
           </div>}
       </div>
