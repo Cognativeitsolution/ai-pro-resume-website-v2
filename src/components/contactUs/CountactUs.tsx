@@ -16,7 +16,7 @@ export default function CountactUs() {
                 <div className="container">
                     <div className='grid md:grid-cols-12 gap-2 lg:gap-6'>
                         <div className='md:col-span-6 lg:col-span-5 xl:col-span-4 backdrop-blur-none rounded-xl lg:px-6 pb-4 md:py-4 '>
-                            <h5 className='font-semibold capitalize text-[24px] text-zinc-950'>Contact Info</h5>
+                            <h5 className='font-semibold capitalize text-[28px] text-zinc-950'>Contact Info</h5>
                             <div className='py-5 flex flex-col gap-y-6'>
                                 <div className='flex items-center justify-start gap-4'>
                                     <div className='bg-hamzaPrimary/20 backdrop-blur-sm rounded-lg  w-[55px] h-[55px] flex items-center justify-center'>
