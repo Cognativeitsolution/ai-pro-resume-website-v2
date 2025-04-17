@@ -1,9 +1,8 @@
 .cardsMainDiv {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
 }
 
 .cards {
@@ -28,6 +27,36 @@
 .redscrollbar {
   scrollbar-width: thin;
   scrollbar-color: #6d25c4 #f1f1f1;
+}
+
+.discountbadge {
+  background: red;
+  width: 30px;
+  height: 30px;
+
+  text-align: center;
+}
+.discountbadge:before,
+.discountbadge:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background: red;
+}
+.discountbadge:before {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+.discountbadge:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
 }
 
 @media only screen and (max-width: 1099px) {

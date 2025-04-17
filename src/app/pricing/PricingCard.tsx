@@ -89,7 +89,7 @@ const PricingCard = () => {
   return (
     <section className="py-5 md:py-10">
       <div className="container">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between">
           <div className="w-full">
             <div className={`${styles.cardsMainDiv}`}>
               {packages.map((pkg, index) => (
