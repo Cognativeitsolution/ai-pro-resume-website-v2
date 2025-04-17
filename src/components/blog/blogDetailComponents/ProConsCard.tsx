@@ -9,7 +9,7 @@ export default function ProConsCard() {
             <div className='relative pt-10 mt-10'>
                 <div className='flex items-end gap-4 absolute -top-1 left-6  z-20'>
                     <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full border border-[#B9B9FF] bg-white z-10">
-                        <Image src={prosIcon} alt={prosIcon} />
+                        <Image src={prosIcon} alt="" />
                     </div>
                     <h3 className="text-2xl font-bold text-[#A78BFA]">Pros</h3>
                 </div>
@@ -32,7 +32,7 @@ export default function ProConsCard() {
             <div className='relative pt-10 mt-10'>
                 <div className='flex items-end gap-4 absolute -top-1 left-6  z-10'>
                     <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full border border-[#B9B9FF] bg-white z-20">
-                        <Image src={consImg} alt={consImg} />
+                        <Image src={consImg} alt="" />
                     </div>
                     <h3 className="text-2xl font-bold text-[#A78BFA]">Cons</h3>
                 </div>
