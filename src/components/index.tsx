@@ -31,6 +31,11 @@ const Content = dynamic(() => import("./servicepage/Content"));
 const ServicesSection = dynamic(() => import("./servicepage/ServicesSection"));
 const CareerJobs = dynamic(() => import("./careerJobs/CareerJobs"));
 const BlogDetail = dynamic(() => import("./blog/BlogDetail"));
+const CoinsPurchaseSection = dynamic(() => import("./pricingPage/CoinsPurchaseSection"));
+const PaymentSection = dynamic(() => import("./pricingPage/PaymentSection"));
+const PricingCard = dynamic(() => import("./pricingPage/PricingCard"));
+const StripeSeperateComponent = dynamic(() => import("./pricingPage/StripeSeperateComponent"));
+
 const Blogs = dynamic(() => import("./blog/Blogs"));
 const ApplyNowForm = dynamic(() => import("./applyNowForm/ApplyNowForm"));
 
@@ -63,5 +68,9 @@ export {
   CareerJobs,
   Blogs,
   BlogDetail,
-  ApplyNowForm
+  ApplyNowForm,
+  CoinsPurchaseSection,
+  PricingCard,
+  StripeSeperateComponent,
+  PaymentSection
 };
