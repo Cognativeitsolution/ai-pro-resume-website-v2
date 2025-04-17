@@ -88,6 +88,7 @@ const BlogDetail = () => {
                                 <Image src={Blogtemplates} alt='blog image' />
                             </div>
                         </div>
+
                         <ProConsCard />
 
                     </div>
