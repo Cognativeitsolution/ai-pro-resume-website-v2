@@ -11,7 +11,10 @@ import CustomSelect from '../custom/customSelect/CustomSelect';
 export default function ApplyNowForm() {
     const [captchaError, setCaptchaError] = useState("");
     const [verified, setVerified] = useState<any>(false);
-    const [fileName, setFileName] = useState("");
+    const [fileData, setFileData] = useState<{ name: string; file: File | null }>({
+        name: "",
+        file: null,
+    });
     const [experienceData, setExperienceData] = useState<any>([
         { id: "1", name: "1-2 years" },
         { id: "2", name: "3-5 years" },
@@ -50,38 +53,60 @@ export default function ApplyNowForm() {
         timeoutId = setTimeout(resetRecaptchaValue, TIMEOUT_DURATION);
     };
 
-    const handleRegisterSubmit = async (formData: any) => {
-        if (!verified) {
-            setCaptchaError("Please verify the ReCAPTCHA.");
-            return
+    const handleFileChange = (e: any) => {
+        const file = e.target.files[0];
+        if (file) {
+            setFileData({
+                name: file.name,
+                file: file,
+            });
+        } else {
+            setFileData({
+                name: "",
+                file: null,
+            });
         }
+    };
+
+    const handleClick = () => {
+        console.log("Creatimg account");
+    };
+
+    const handleRegisterSubmit = async (formData: any) => {
+        // if (!verified) {
+        //     setCaptchaError("Please verify the ReCAPTCHA.");
+        //     return
+        // }
         const credentials = {
             firstname: formData?.firstname,
             lastname: formData?.lastname,
             email: formData?.email,
-            phone: formData?.phone,
-            experienceData: formData?.experienceData,
-            degreeData: formData?.degreeData,
+            contact: formData?.contact,
+            file: fileData.file,
+            // experienceData: formData?.experienceData,
+            // degreeData: formData?.degreeData,
+            experienceData: formData?.experience,
+            degreeData: formData?.degree,
             major: formData?.major,
             message: formData?.message,
         }
+
+        console.log(credentials, "credentials")
     }
 
-    const handleFileChange = (e: any) => {
-        setFileName(e.target.files[0]?.name || "");
-    };
+
 
     return (
-        <section className="pb-5 md:py-10">
+        <section className="py-5 md:py-10">
             <div className="container">
                 <div className="grid">
                     <div className='bg-indigo-200/20 border-2 border-white backdrop-blur-none rounded-xl px-4 md:px-6 lg:px-8 py-4'>
                         <h5 className='font-semibold text-[26px] text-zinc-950'>Tell us about <span className='text-indigo-500'>Yourself.</span></h5>
                         <form onSubmit={handleSubmit(handleRegisterSubmit)}
                         >
-                            <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6'>
+                            <div className='flex flex-wrap justify-between'>
                                 {/*First Name */}
-                                <div className="flex flex-col ">
+                                <div className="w-full lg:w-[49%] ">
                                     <Controller
                                         name='firstname'
                                         control={control}
@@ -106,7 +131,7 @@ export default function ApplyNowForm() {
                                 </div>
 
                                 {/*Last Name */}
-                                <div className="flex flex-col ">
+                                <div className="w-full lg:w-[49%] ">
                                     <Controller
                                         name='lastname'
                                         control={control}
@@ -131,7 +156,7 @@ export default function ApplyNowForm() {
                                 </div>
 
                                 {/* Phone Number   */}
-                                <div className="flex flex-col">
+                                <div className="w-full lg:w-[49%]">
                                     <Controller
                                         name="contact"
                                         control={control}
@@ -148,7 +173,7 @@ export default function ApplyNowForm() {
                                 </div>
 
                                 {/* Email */}
-                                <div className="flex flex-col">
+                                <div className="w-full lg:w-[49%]">
                                     <Controller
                                         name='email'
                                         control={control}
@@ -170,7 +195,7 @@ export default function ApplyNowForm() {
                                 </div>
                             </div>
 
-                            <div className='grid grid-cols-1 gap-4 mt-4'>
+                            <div className='flex w-full gap-4 mt-4'>
                                 {/* Upload */}
                                 <label htmlFor="uploadFile1"
                                     className="bg-white border-[1.2px] border-dashed border-[#CBD5E1] font-semibold text-base rounded w-full h-52 flex 
@@ -187,13 +212,14 @@ export default function ApplyNowForm() {
                                         onChange={handleFileChange}
                                         className="hidden"
                                     />
-                                    <p className="text-xs font-medium text-slate-400 mt-2">pdf, doc, docx</p>
+                                    <p className="text-xs font-medium text-slate-400 mt-2">{fileData.name ? `${fileData.name}` : "pdf, doc, docx"}</p>
+
                                 </label>
                             </div>
 
-                            <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 mt-2'>
+                            <div className='flex flex-wrap justify-between mt-2'>
                                 {/* Select Experience */}
-                                <div className="flex flex-col">
+                                <div className="w-full lg:w-[49%]">
 
                                     <Controller
                                         name="experience"
@@ -213,7 +239,7 @@ export default function ApplyNowForm() {
                                     />
                                 </div>
                                 {/* Select Degree */}
-                                <div className="flex flex-col">
+                                <div className="w-full lg:w-[49%]">
 
                                     <Controller
                                         name="degree"
@@ -234,9 +260,9 @@ export default function ApplyNowForm() {
                                 </div>
                             </div>
 
-                            <div className='grid grid-cols-1 gap-4 mt-2 '>
+                            <div className='flex flex-col gap-4 mt-2 '>
                                 {/*Major */}
-                                <div className="flex flex-col ">
+                                <div className="">
                                     <Controller
                                         name='major'
                                         control={control}
@@ -261,7 +287,7 @@ export default function ApplyNowForm() {
                                 </div>
 
                                 {/* Message */}
-                                <div className="flex flex-col ">
+                                <div className="">
                                     <Controller
                                         name='message'
                                         control={control}
@@ -286,8 +312,8 @@ export default function ApplyNowForm() {
                                 </div>
                             </div>
 
-                            <div className='w-full lg:flex lg:justify-between lg:mt-2'>
-                                <div className="flex flex-col items-start mb-4 ">
+                            <div className='w-full lg:flex lg:justify-end lg:my-2'>
+                                {/* <div className="w-full lg:w-[49%] items-start mb-4 ">
                                     <ReCAPTCHA
                                         sitekey={process.env.NEXT_PUBLIC_captcha_sitekey ?? ""}
                                         onChange={() => {
@@ -296,7 +322,7 @@ export default function ApplyNowForm() {
                                         }}
                                     />
                                     <span className="text-red-500 text-sm">{captchaError}</span>
-                                </div>
+                                </div> */}
                                 <div>
                                     <CTA
                                         btn
@@ -305,6 +331,8 @@ export default function ApplyNowForm() {
                                         txtColor="text-indigo-500 hover:text-white"
                                         border="border border-indigo-500 hover:border-white"
                                         width="w-full lg:w-max"
+                                        // handleClick={handleClick}
+                                        type="submit"
                                     />
                                 </div>
                             </div>
