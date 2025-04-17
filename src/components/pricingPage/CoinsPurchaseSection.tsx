@@ -6,7 +6,7 @@ import styles from "./pricing.module.css";
 import PaymentSection from './PaymentSection';
 import { HowToPurchaseCoins } from '../../app/pricing/data';
 import Image from 'next/image';
-import check_1 from "../../../public/images/check_1.svg"
+import check_1 from "../../../public/images/check_1.webp"
 
 interface Plan {
     id: string;

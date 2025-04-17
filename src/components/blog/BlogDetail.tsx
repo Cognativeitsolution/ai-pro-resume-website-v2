@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import VerticalTabs from './blogDetailComponents/VerticalTabs'
 import { blogsVerticalTabsData } from '@/app/blog/[blogId]/data';
 import Image from 'next/image';
-import blogImg from '../../../public/images/blogImg.svg'
-import BlogOurBenefits from '../../../public/images/ourBenefitsImg.svg'
-import Blogtemplates from '../../../public/images/blogGroup.svg'
-import BlogHand from '../../../public/images/handblog.svg'
+import blogImg from '../../../public/images/blogImg.webp'
+import BlogOurBenefits from '../../../public/images/ourBenefitsImg.webp'
+import Blogtemplates from '../../../public/images/blogGroup.webp'
+import BlogHand from '../../../public/images/handblog.webp'
 
 import { FaFacebook } from 'react-icons/fa';
 import ProConsCard from './blogDetailComponents/ProConsCard';

@@ -7,7 +7,7 @@ import { AiTwotoneMail } from "react-icons/ai";
 import { MdLocalPhone } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import ContactUsForm from './ContactUsForm';
-import Map from "media/contact_us/map.svg"
+import Map from "media/contact_us/map.webp"
 
 export default function CountactUs() {
     return (

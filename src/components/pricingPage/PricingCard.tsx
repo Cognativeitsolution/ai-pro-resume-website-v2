@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./pricing.module.css";
-import check_1 from "../../../public/images/check_1.svg";
+import check_1 from "../../../public/images/check_1.webp";
 import { CTA } from "@/components";
 
 const packages = [

@@ -1,6 +1,6 @@
 import React from 'react'
-import prosIcon from '../../../../public/images/pros.svg';
-import consImg from '../../../../public/images/cons.svg';
+import prosIcon from '../../../../public/images/pros.webp';
+import consImg from '../../../../public/images/cons.webp';
 import Image from 'next/image';
 
 export default function ProConsCard() {
