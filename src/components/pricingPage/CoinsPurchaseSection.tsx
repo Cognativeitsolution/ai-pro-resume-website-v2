@@ -3,6 +3,10 @@
 import React, { useState } from 'react'
 import { RiCoinsFill } from 'react-icons/ri';
 import styles from "./pricing.module.css";
+import PaymentSection from './PaymentSection';
+import { HowToPurchaseCoins } from '../../app/pricing/data';
+import Image from 'next/image';
+import check_1 from "../../../public/images/check_1.svg"
 
 interface Plan {
     id: string;
@@ -19,7 +23,7 @@ interface Plan {
 const CoinsPurchaseSection = () => {
 
     const [coinPlans, setCoinPlans] = useState<any[]>([
-        { id: 1, coins: 5, price: "10.00", discount: 0, duration: 90 },
+        { id: 1, coins: 5, price: "10.00", discount: 0, duration: 90 , tax_type:"GST", tax:"13" },
     
         { id: 2, coins: 10, price: "20.00", discount: 0, duration: 90 },
     
@@ -38,10 +42,10 @@ const CoinsPurchaseSection = () => {
   <>
   
   <div className='container'>
-        <div className="w-full flex flex-col gap-[10px] justify-center items-center p-5 px-6 py-8 mb-[30px] bg-white/30 border-2 border-white rounded-2xl">
+        <div className="w-full flex flex-col gap-[10px] justify-center items-center px-2 sm:px-6 py-8 mb-[30px] bg-white/30 border-2 border-white rounded-2xl">
           <div className="mb-4 text-center">
             <p className="text-3xl font-bold font-Lexend mb-2">Buy Coins</p>
-            <div className="container">
+           
               <p className="font-Lexend text-base text-left">
                 Our flexible coin packages allow you to purchase resume parser
                 tokens and more. With these coins, you can select the package
@@ -51,7 +55,7 @@ const CoinsPurchaseSection = () => {
                 registration, you will receive two coins and 5 parser tries as
                 part of the default-free package.
               </p>
-            </div>
+    
           </div>
 
           <div className="flex flex-col items-center gap-4 container">
@@ -59,8 +63,8 @@ const CoinsPurchaseSection = () => {
               {coinPlans?.map((plan, index) => (
                 <div
                   key={index}
-                  className={`cursor-pointer rounded-lg hover:bg-PrimaryDark hover:text-white hover:font-medium border-2 shadow-[0px_0px_30px_rgb(220,220,230)] text-lg font-Lexend w-[120px] h-[100px] flex items-center justify-center relative flex-col ${selectedPlan?.id === plan.id
-                    ? "bg-primary text-white"
+                  className={`cursor-pointer rounded-lg hover:bg-primary hover:text-white hover:font-medium border-2 shadow-[0px_0px_30px_rgb(220,220,230)] text-lg font-Lexend w-[120px] h-[100px] flex items-center justify-center relative flex-col ${selectedPlan?.id === plan.id
+                    ? "bg-PrimaryDark text-white"
                     : "bg-white"
                     }`}
                   onClick={() => setSelectedPlan(plan)}
@@ -91,54 +95,52 @@ const CoinsPurchaseSection = () => {
                     setIsProceeding(true);
                   
                   }}
-                  className={`w-[200px] font-Lexend rounded-xl p-2 ${selectedPlan ? "bg-primaryBlue" : "bg-gray-200"
-                    }   text-black`}
+                  className={`w-[200px] font-Lexend rounded-xl p-2 ${selectedPlan ? "bg-primary" : "bg-PrimaryDark"
+                    }   text-white`}
                 >
                   Proceed To Checkout
                 </button>
               </div>
             ) : (
-              <div
-                id="paymentProccedSection"
-                className={`  rounded-md transition-[0.5s] overflow-hidden w-full xl:max-w-[70%] m-auto`}
-              >
+             
                 <div
-                  id="paymentProccedSection"
-                  className={`  rounded-md transition-[0.5s] overflow-hidden w-full xl:max-w-[90%] m-auto`}
+                  
+                  className={`rounded-2xl w-full xl:max-w-[90%] m-auto p-5`}
                 >
-                  {/* Payment Section */}
-                  {/* <PaymentSection /> */}
+             
+                  <PaymentSection selectedPlan={selectedPlan}/>
                 </div>
-              </div>
+            
             )}
             <div className="mb-4">
-              <p className="text-3xl font-bold font-Lexend mb-2">
-                How to purchase coins?
-              </p>
-              <div className="container">
-                <p className="font-Lexend text-base">
-                  <ul className="list-inside list-disc">
-                    <li>Select your preferred coin package and click on it.</li>
-                    <li>Now press the process to checkout button.</li>
-                    <li>
-                      A dropdown appears; select your desired payment method.
-                    </li>
-                    <li>You can pay through a card or use a PayPal account.</li>
-                    <li>Enter all the details and click on Pay Now.</li>
-                    <li>
-                      Once you are done with the payment, you will get the
-                      coins.
-                    </li>
-                    <li>
-                      In the header, you can see the coin icon along with the
-                      number of coins you purchased.
-                    </li>
-                  </ul>
-                </p>
-              </div>
+               <div className="mx-auto px-2 sm:px-4 space-y-8">
+                       {HowToPurchaseCoins.map((item, index) => (
+                         <div key={index} className="w-full">
+                           <h3 className="text-[22px] md:text-[30px] 2xl:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[44px] font-semibold mb-2">
+                             {item.title}
+                           </h3>
+                           <ul className="mb-4 space-y-3">
+                             {item.features.map((feature, idx) => (
+                               <li key={idx} className="flex items-start gap-4">
+                                 <Image
+                                   src={check_1}
+                                   alt="bullet"
+                                   width={15}
+                                   height={15}
+                                   className="mt-[5px]"
+                                 />
+                                 <p>{feature}</p>
+                               </li>
+                             ))}
+                           </ul>
+                         </div>
+                       ))}
+                     </div>
+                
+         
 
-              <p className="text-3xl font-bold font-Lexend my-2">Referrals:</p>
-              <div className="container">
+              <p className="text-xl sm:text-3xl font-bold font-Lexend my-2">Referrals:</p>
+            
                 <p className="font-Lexend text-base">
                   If you do not want to purchase the coins, you can earn coins
                   through referrals. Invite your friends to join AI Pro Resume,
@@ -147,7 +149,7 @@ const CoinsPurchaseSection = () => {
                   services. You will receive 3 coins for 10 referrals, 4 coins
                   for 20 referrals, and 6 coins for 30 referrals.
                 </p>
-              </div>
+             
             </div>
           </div>
         </div>

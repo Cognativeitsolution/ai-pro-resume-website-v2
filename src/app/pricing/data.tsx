@@ -40,3 +40,23 @@ export const faqs = {
   title: "FREQUENTLY ASKED QUESTIONS",
   faqlist: PricingPagefaqsList
 }
+
+export const HowToPurchaseCoins = [
+  {
+    title:
+      "How to purchase coins?",
+    features: [
+      "Select your preferred coin package and click on it.",
+      "Now press the process to checkout button.",
+      "A dropdown appears; select your desired payment method.",
+      "You can pay through a card or use a PayPal account.",
+      "Enter all the details and click on Pay Now.",
+      "Once you are done with the payment, you will get the coins.",
+      "In the header, you can see the coin icon along with the number of coins you purchased."
+    ],
+  }
+]
+  
+  
+
+
