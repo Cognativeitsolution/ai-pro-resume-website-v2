@@ -25,7 +25,7 @@ const VerticalTabs = ({ tabsData, setSection }: tabsData) => {
     }, [])
 
     return (
-        <div className='p-8 rounded-2xl bg-white shadow-md'>
+        <div className='p-4 xl:p-8 rounded-2xl bg-white shadow-md'>
             <h3 className='text-xl mb-4 font-semibold'>In This Guide</h3>
             {tabsData?.length && tabsData.map((data) => (
                 <Link
