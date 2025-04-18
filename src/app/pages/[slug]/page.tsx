@@ -68,6 +68,7 @@ const Page = () => {
                 <meta name="keywords" content={show_pages?.meta_keywords} />
             </Head>
             <InnerBanner
+                subtitle={show_pages?.title || BannerData.subtitle}
                 title={show_pages?.heading || BannerData.title}
                 description={show_pages?.short_description || BannerData.description}
             />
