@@ -33,11 +33,10 @@ const ExploreTemplates = ({ data }: ExploreTemplatesProps) => {
       <section className="py-5 md:pb-10 md:pt-0 lg:py-10">
         <div className="container">
           <h2 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold text-center">
-            {data.title} Explore professional Resume templates
+            {data.title}
           </h2>
           <p className="font-normal text-center mt-5 text-[16px] lg:text-[18px]">
-            {data.description}Our professional resume templates are based on what employers look
-            for in a candidate.
+            {data.description}
           </p>
 
           <div className="mt-6 md:mt-8">

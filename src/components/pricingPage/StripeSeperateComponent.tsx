@@ -195,10 +195,7 @@ const StripeSeperateComponent = (props: Props) => {
 
       <form onSubmit={handleSubmit(handleStripe)} className="flex flex-col gap-6">
         <div className="font-Lexend">
-          <label
-            htmlFor="name"
-            className={`${errors.name ? "text-red-500" : "text-gray-700"} block `}
-          >
+          <label htmlFor="name" className={`${errors.name ? "text-red-500" : "text-gray-700"} block `}>
             Name*
           </label>
           <Controller
@@ -212,8 +209,7 @@ const StripeSeperateComponent = (props: Props) => {
                   type="text"
                   id="name"
                   name="name"
-                  className={`${errors.name ? "border-red-500" : "border-white"
-                    } bg-white/50 border-2 py-2 px-2  w-full placeholder:text-[20px] placeholder:text-black rounded-lg text-[20px] focus-visible:outline-none`}
+                  className={`${errors.name ? "border-red-500" : "border-white"} bg-white/50 border-2 py-2 px-2 w-full placeholder:text-[20px] placeholder:text-gray-500 rounded-lg text-[20px] text-gray-500 focus-visible:outline-none`}
                   placeholder="Cardholder Name"
                 />
                 {errors.name && (
@@ -222,21 +218,14 @@ const StripeSeperateComponent = (props: Props) => {
                   </span>
                 )}
               </div>
-
-
             )}
           />
         </div>
 
-        <div className="">
-          <label
-            htmlFor="email"
-            className={`${errors.email ? "text-red-500" : "text-gray-700"
-              } block `}
-          >
+        <div>
+          <label htmlFor="email" className={`${errors.email ? "text-red-500" : "text-gray-700"} block `}>
             Email*
           </label>
-
           <Controller
             name="email"
             control={control}
@@ -248,8 +237,7 @@ const StripeSeperateComponent = (props: Props) => {
                   type="email"
                   id="email"
                   name="email"
-                  className={`${errors.email ? "border-red-500" : "border-white"
-                    } bg-white/50 border-2 py-2 px-2  w-full placeholder:text-[20px] placeholder:text-black rounded-lg text-[20px] focus-visible:outline-none`}
+                  className={`${errors.email ? "border-red-500" : "border-white"} bg-white/50 border-2 py-2 px-2 w-full placeholder:text-[20px] placeholder:text-gray-500 rounded-lg text-[20px] text-gray-500 focus-visible:outline-none`}
                   placeholder="Cardholder Email"
                 />
                 {errors.email && (
@@ -263,14 +251,9 @@ const StripeSeperateComponent = (props: Props) => {
         </div>
 
         <div className=" w-full">
-          <label
-            htmlFor="address"
-            className={`${errors.address ? "text-red-500" : "text-gray-700"
-              } block `}
-          >
+          <label htmlFor="address" className={`${errors.address ? "text-red-500" : "text-gray-700"} block `}>
             Address
           </label>
-
           <Controller
             name="address"
             control={control}
@@ -280,8 +263,7 @@ const StripeSeperateComponent = (props: Props) => {
                   {...field}
                   type="text"
                   id="address"
-                  className={`${errors.address ? "border-red-500" : "border-white"
-                    } bg-white/50 border-2 py-2 px-2  w-full placeholder:text-[20px] placeholder:text-black rounded-lg text-[20px] focus-visible:outline-none`}
+                  className={`${errors.address ? "border-red-500" : "border-white"} bg-white/50 border-2 py-2 px-2 w-full placeholder:text-[20px] placeholder:text-gray-500 rounded-lg text-[20px] text-gray-500 focus-visible:outline-none`}
                   placeholder="Complete Address"
                 />
                 {errors.address && (
@@ -295,14 +277,9 @@ const StripeSeperateComponent = (props: Props) => {
         </div>
 
         <div className=" w-full">
-          <label
-            htmlFor="postal_code"
-            className={`${errors.address ? "text-red-500" : "text-gray-700"
-              } block `}
-          >
+          <label htmlFor="postal_code" className={`${errors.address ? "text-red-500" : "text-gray-700"} block `}>
             Postal Code
           </label>
-
           <Controller
             name="postal_code"
             control={control}
@@ -312,8 +289,7 @@ const StripeSeperateComponent = (props: Props) => {
                   {...field}
                   type="text"
                   id="postal_code"
-                  className={`${errors.postal_code ? "border-red-500" : "border-white"
-                    } bg-white/50 border-2 py-2 px-2  w-full placeholder:text-[20px] placeholder:text-black rounded-lg text-[20px] focus-visible:outline-none`}
+                  className={`${errors.postal_code ? "border-red-500" : "border-white"} bg-white/50 border-2 py-2 px-2 w-full placeholder:text-[20px] placeholder:text-gray-500 rounded-lg text-[20px] text-gray-500 focus-visible:outline-none`}
                   placeholder="123456"
                 />
                 {errors.postal_code && (
@@ -326,12 +302,8 @@ const StripeSeperateComponent = (props: Props) => {
           />
         </div>
 
-        <div className="">
-          <label
-            htmlFor="cardNumber"
-            className={`${errors.cardNumber ? "text-red-500" : "text-gray-700"
-              } block`}
-          >
+        <div>
+          <label htmlFor="cardNumber" className={`${errors.cardNumber ? "text-red-500" : "text-gray-700"} block`}>
             Card Number*
           </label>
           <Controller
@@ -345,9 +317,7 @@ const StripeSeperateComponent = (props: Props) => {
                 <CardNumberElement
                   {...field}
                   id="cardNumber"
-                  options={elementOptions}
-                  className={`${errors.cardNumber ? "border-red-500" : "border-white"
-                    }  border-2 py-2 px-2 bg-white/50 rounded-lg`}
+                  options={elementOptions} className={`${errors.cardNumber ? "border-red-500" : "border-white"} border-2 py-2 px-2 bg-white/50 rounded-lg`}
                 />
                 {errors.cardNumber && (
                   <span className="text-red-500 w-full left-0 -bottom-5 text-sm absolute">
@@ -361,14 +331,9 @@ const StripeSeperateComponent = (props: Props) => {
 
         <div className="flex items-center gap-4">
           <div className=" w-full">
-            <label
-              htmlFor="cardExpiry"
-              className={`${errors.cardExpiry ? "text-red-500" : "text-gray-700"
-                } block`}
-            >
+            <label htmlFor="cardExpiry" className={`${errors.cardExpiry ? "text-red-500" : "text-gray-700"} block`} >
               Expiry Date*
             </label>
-
             <Controller
               name="cardExpiry"
               control={control}
@@ -381,8 +346,7 @@ const StripeSeperateComponent = (props: Props) => {
                     {...field}
                     id="cardExpiry"
                     options={elementOptions}
-                    className={`${errors.cardExpiry ? "border-red-500" : "border-white"
-                      }  border-2 py-2 px-2 bg-white/50 rounded-lg`}
+                    className={`${errors.cardExpiry ? "border-red-500" : "border-white"} border-2 py-2 px-2 bg-white/50 rounded-lg`}
                   />
                   {errors.cardExpiry && (
                     <span className="text-red-500 w-full left-0 -bottom-5 text-sm absolute">
@@ -395,14 +359,9 @@ const StripeSeperateComponent = (props: Props) => {
           </div>
 
           <div className=" w-full">
-            <label
-              htmlFor="cardCvc"
-              className={`${errors.cardCvc ? "text-red-500" : "text-gray-700"
-                } block`}
-            >
+            <label htmlFor="cardCvc" className={`${errors.cardCvc ? "text-red-500" : "text-gray-700"} block`}>
               CVC
             </label>
-
             <Controller
               name="cardCvc"
               control={control}
@@ -415,8 +374,7 @@ const StripeSeperateComponent = (props: Props) => {
                     {...field}
                     id="cardCvc"
                     options={elementOptions}
-                    className={`${errors.cardCvc ? "border-red-500" : "border-white"
-                      }  border-2 py-2 px-2 bg-white/50 rounded-lg`}
+                    className={`${errors.cardCvc ? "border-red-500" : "border-white"} border-2 py-2 px-2 bg-white/50 rounded-lg`}
                   />
                   {errors.cardCvc && (
                     <span className="text-red-500 w-full left-0 -bottom-5 text-sm absolute">
@@ -429,16 +387,14 @@ const StripeSeperateComponent = (props: Props) => {
           </div>
         </div>
 
-        <div className="">
-          <span className="text-[15px] text-muted py-4">
+        <div>
+          <span className="text-[14px] py-4">
             Cardholders please enter your details with confidence, unlocking a
             seamless path to elevate your resume-building experience.
           </span>
         </div>
 
-
         <CTA btn text='Pay Now' txtColor='text-white' bgColor='bg-PrimaryDark hover:bg-primary' border='border-0' width='w-full' />
-
         {error && <p className="text-red-500">{error}</p>}
       </form>
 

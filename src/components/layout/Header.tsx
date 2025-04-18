@@ -223,7 +223,7 @@ const Header = () => {
                   <FaAngleDown className="mt-[1px]" />
                 </Link>
                 <div
-                  className={`w-full lg:w-[230px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute z-10 lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen3
+                  className={`w-full lg:w-[250px] h-full lg:h-auto flex flex-col lg:flex-row items-center gap-5 lg:gap-10 p-5 rounded-none lg:rounded-xl bg-black absolute z-10 lg:-z-10 top-0 lg:top-[102%] lg:left-[0%] lg:group-hover:top-[100%] lg:invisible group-hover:visible lg:opacity-0 group-hover:opacity-90 duration-700 lg:duration-[1s] ease-in-ou ${isMegaMenuOpen3
                     ? "left-0 duration-700 ease-in-out"
                     : "left-[-100%]"
                     }`}
