@@ -1,16 +1,17 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "./pricing.module.css";
-import check_1 from "media/images/check_1.webp";
+// ============
 import { CTA } from "@/components";
+// ============
+import styles from "./pricing.module.css";
+// ============
+import check_1 from "media/images/check_1.webp";
 
 const packages = [
   {
     Pckgname: "Free",
     price: "Life Time Access",
-    mblSpc: "my-10 md:my-0",
     features: [
       "Unlimited PDF Downloads",
       "Spell & Grammar Checker (5 Tries)",
@@ -30,7 +31,6 @@ const packages = [
   {
     Pckgname: "Most Popular",
     price: "1-MONTH/ $ 15.59",
-    mblSpc: "my-10 md:my-0",
     features: [
       "Spell & Grammar Checker (20 Tries)",
       "6 Fonts & Color Themes",
@@ -49,7 +49,6 @@ const packages = [
   {
     Pckgname: "Premium",
     price: "$6-MONTHS / $ 29.99",
-    mblSpc: "my-10 md:my-0",
     features: [
       "5 Premium Resume & Cover Letter Templates",
       "Unlimited Resume & Cover Letter Examples",
@@ -93,21 +92,13 @@ const PricingCard = () => {
           <div className="w-full">
             <div className={`${styles.cardsMainDiv}`}>
               {packages.map((pkg, index) => (
-                <div
-                  key={index}
-                  className={`relative ${pkg.mblSpc ?? ""} h-full ${styles.cards
-                    }`}
-                >
-                  <div
-                    className={`relative flex flex-col justify-center py-5 h-auto rounded-[20px] border-2 border-white bg-indigo-200/20 backdrop-blur-none`}
-                  >
+                <div key={index} className={`relative h-full ${styles.cards }`}>
+                  <div className={`relative flex flex-col justify-center py-5 h-auto rounded-[20px] border-2 border-white bg-indigo-200/20 backdrop-blur-none`}>
                     <div className={`px-6 pb-4`}>
-                      <h3
-                        className={`text-[30px] font-bold leading-tight mb-2`}
-                      >
+                      <h3 className={`text-[30px] font-semibold leading-tight mb-2`}>
                         {pkg.Pckgname}
                       </h3>
-                      <h4 className={`text-[20px] font-bold`}>{pkg.price}</h4>
+                      <h4 className={`text-[20px] font-semibold`}>{pkg.price}</h4>
                     </div>
                     <div className="flex items-center justify-center mt-[10px] w-[90%] mx-auto">
                       <CTA
@@ -159,7 +150,7 @@ const PricingCard = () => {
           </div>
         </div>
         {packageDetailText && (
-          <div className="mt-8 text-black font-medium text-[15px] mx-auto text-center w-[100%] sm:w-[80%] bg-indigo-200/20 border-2 border-white rounded-xl p-2 tracking-wider">
+          <div className="mt-8 text-black font-medium text-[15px] mx-auto text-justify md:text-center w-[100%] sm:w-[80%] bg-indigo-200/20 border-2 border-white rounded-xl p-4 tracking-wider">
             {packageDetailText}
           </div>
         )}

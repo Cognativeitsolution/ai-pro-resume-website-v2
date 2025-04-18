@@ -60,6 +60,11 @@
 }
 
 @media only screen and (max-width: 1099px) {
+
+  .cardsMainDiv {
+    row-gap: 30px;
+  }
+
   .cards {
     max-width: 48%;
   }
@@ -68,6 +73,5 @@
 @media only screen and (max-width: 767px) {
   .cards {
     max-width: 100%;
-    margin-bottom: 50px;
   }
 }
