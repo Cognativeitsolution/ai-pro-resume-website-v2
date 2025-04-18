@@ -5,7 +5,7 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ===============
-import check_1 from "../../../public/images/check_1.webp";
+import check_1 from "media/images/check_1.webp";
 
 interface ServiceLayoutProps {
   image: any;
@@ -31,17 +31,15 @@ const ServiceLayout = ({
   return (
     <>
       <div
-        className={`flex flex-col ${
-          reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-        } gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}
+        className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+          } gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}
       >
         {/* Image Section */}
         <div
-          className={`w-full lg:w-1/2 flex flex-shrink-0 ${
-            reverse
-              ? "justify-center lg:justify-end"
-              : "justify-center lg:justify-start"
-          }`}
+          className={`w-full lg:w-1/2 flex flex-shrink-0 ${reverse
+            ? "justify-center lg:justify-end"
+            : "justify-center lg:justify-start"
+            }`}
         >
           <Image
             src={image}

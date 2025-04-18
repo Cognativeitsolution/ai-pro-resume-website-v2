@@ -13,6 +13,7 @@ import {
     ClientData,
     blogsData,
 } from "./data";
+import { reviewData } from "../data";
 
 export default function Page() {
 
@@ -21,7 +22,7 @@ export default function Page() {
             <InnerBanner {...BannerData} />
             <Blogs data={blogsData} />
             <Client data={ClientData} />
-            <Reviews />
+            <Reviews data={reviewData} />
         </>
     );
 }

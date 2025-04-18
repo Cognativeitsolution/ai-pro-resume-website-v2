@@ -3,6 +3,7 @@ import React from "react";
 import { InnerBanner, Client, Reviews, CareerJobs, } from "@/components";
 // =================
 import { BannerData, CareerData, ClientData, } from "./data";
+import { reviewData } from "../data";
 
 export default function Page() {
     return (
@@ -10,7 +11,7 @@ export default function Page() {
             <InnerBanner {...BannerData} />
             <CareerJobs data={CareerData} />
             <Client data={ClientData} />
-            <Reviews />
+            <Reviews data={reviewData} />
         </>
     );
 }

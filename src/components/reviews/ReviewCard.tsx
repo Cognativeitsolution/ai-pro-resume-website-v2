@@ -5,21 +5,21 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 
 
-interface ReviewCardProps {
-  id: number;
+type ReviewCardProps = {
+  id?: number;
   text: string;
   author: string;
   role: string;
   avatar: any;
 }
 
-const ReviewCard: React.FC<ReviewCardProps> = ({
+const ReviewCard = ({
   id,
   text,
   author,
   role,
   avatar,
-}) => {
+}: ReviewCardProps) => {
   return (
     <div key={id}>
       <div className="flex flex-col items-center justify-center gap-2 mb-3">

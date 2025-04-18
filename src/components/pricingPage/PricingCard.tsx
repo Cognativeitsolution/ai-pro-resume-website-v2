@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./pricing.module.css";
-import check_1 from "../../../public/images/check_1.webp";
+import check_1 from "media/images/check_1.webp";
 import { CTA } from "@/components";
 
 const packages = [
@@ -95,9 +95,8 @@ const PricingCard = () => {
               {packages.map((pkg, index) => (
                 <div
                   key={index}
-                  className={`relative ${pkg.mblSpc ?? ""} h-full ${
-                    styles.cards
-                  }`}
+                  className={`relative ${pkg.mblSpc ?? ""} h-full ${styles.cards
+                    }`}
                 >
                   <div
                     className={`relative flex flex-col justify-center py-5 h-auto rounded-[20px] border-2 border-white bg-indigo-200/20 backdrop-blur-none`}

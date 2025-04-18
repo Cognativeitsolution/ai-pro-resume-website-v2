@@ -10,8 +10,8 @@ import { CTA } from "@/components";
 import { IoCaretForwardOutline } from "react-icons/io5";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterest } from "react-icons/fa";
 // ================
-import footer_bg from "/public/images/Footer_bg.webp";
-import footer_logo from "/public/images/footer_logo.webp";
+import footer_bg from "media/images/Footer_bg.webp";
+import footer_logo from "media/images/footer_logo.webp";
 
 
 const Footer = () => {
@@ -72,12 +72,13 @@ const Footer = () => {
   };
   return (
     <>
-      <footer className="relative text-white mt-4 md:mt-10">
+      <footer className="relative text-white mt-0 lg:mt-10">
         {/* Background Image */}
         <Image
           src={footer_bg}
           alt="Footer Background"
           fill={true}
+          priority
           className="block -z-10 object-cover object-top"
         />
 
