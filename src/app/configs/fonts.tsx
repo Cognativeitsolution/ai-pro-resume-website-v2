@@ -29,7 +29,6 @@ const primary = localFont({
     },
   ],
   variable: "--font-primary",
-
   display: "swap",
 });
 

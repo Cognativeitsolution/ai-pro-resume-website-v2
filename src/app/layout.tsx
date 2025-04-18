@@ -37,7 +37,7 @@ export default function RootLayout({ children }: any) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${primary.variable} font-primary bg-secondary`}>
         <ConditionalLayout>
-          <main>{children}</main>
+          {children}
         </ConditionalLayout>
       </body>
     </html>
