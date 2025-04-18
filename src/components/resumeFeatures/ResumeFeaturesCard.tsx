@@ -1,43 +1,40 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 // ===============
 import { CTA } from "@/components";
 // ===============
-import check_1 from "../../../public/images/check_1.webp";
+import check_1 from "media/images/check_1.webp";
 
-interface ResumeFeatureCardProps {
-  image: any;
+type ResumeFeatureCardProps = {
+  image: StaticImageData;
   title: string;
   description: string;
-  features: string[];
+  features: any[];
   buttonText: string;
   reverse?: boolean;
-}
+};
 
-const ResumeFeaturesCard = ({
-  image,
-  title,
-  description,
-  features,
-  buttonText,
-  reverse = false,
-}: ResumeFeatureCardProps) => {
+type propsType = {
+  data: ResumeFeatureCardProps;
+};
+
+const ResumeFeaturesCard = ({ data }: propsType) => {
   return (
     <>
-      <div className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}>
+      <div className={`flex flex-col ${data.reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 rounded-xl p-0 lg:p-2 items-start`}>
         {/* Image Section */}
-        <div className={`w-full lg:w-1/2 flex flex-shrink-0 ${reverse ? "justify-center lg:justify-end" : "justify-center lg:justify-start"}`}>
-          <Image src={image} alt={title} className="w-[500px] h-auto" />
+        <div className={`w-full lg:w-1/2 flex flex-shrink-0 ${data.reverse ? "justify-center lg:justify-end" : "justify-center lg:justify-start"}`}>
+          <Image src={data.image} alt={data.title} className="w-[500px] h-auto" />
         </div>
 
         {/* Description Section */}
         <div className="w-full lg:w-1/2">
           <h3 className="text-[26px] md:text-[30px] 2xl:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[44px] font-semibold mb-4">
-            {title}
+            {data.title}
           </h3>
-          <p className="text-[16px] font-normal mb-4">{description}</p>
+          <p className="text-[16px] font-normal mb-4">{data.description}</p>
           <ul className="mb-4 space-y-3">
-            {features.map((feature, idx) => (
+            {data.features.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">
                 <Image
                   src={check_1}
@@ -46,14 +43,14 @@ const ResumeFeaturesCard = ({
                   height={15}
                   className="mt-[5px]"
                 />
-                <p>{feature}</p>
+                <p>{item}</p>
               </li>
             ))}
           </ul>
           <div className="mt-4 sm:mt-8">
             <CTA
               btn
-              text={buttonText}
+              text={data.buttonText}
               bgColor="bg-primary hover:bg-PrimaryDark"
               txtColor="text-white"
               border="border-0"

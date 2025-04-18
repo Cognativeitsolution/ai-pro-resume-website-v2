@@ -1,35 +1,41 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
 // ===============
 import { AutoPlaySlider, CTA } from "@/components";
 // ===============
-import Template1 from "media/resume_template_images/template_3.webp";
-import Template2 from "media/resume_template_images/template_2.webp";
-import Template3 from "media/resume_template_images/template_3.webp";
 import brand from "media/images/brand.webp";
 import premium from "media/images/premium.webp";
 
-type Template = {
+type TemplateItem = {
   id: number;
   image: any;
-  is_paid: number;
+  is_paid?: number;
+  alt?: string | undefined
 };
 
-const FindResumeTemplates = () => {
+type TemplateData = {
+  title: string;
+  description: string | ReactNode;
+  templateList?: TemplateItem[];
+};
 
-  const [templates, setTemplates] = useState<Template[]>([
-    { id: 1, image: Template1, is_paid: 0 },
-    { id: 2, image: Template2, is_paid: 1 },
-    { id: 3, image: Template3, is_paid: 0 },
-    { id: 1, image: Template1, is_paid: 0 },
-    { id: 2, image: Template2, is_paid: 1 },
-    { id: 3, image: Template3, is_paid: 0 },
-  ]);
-  const [userPurchasedTemplates, setUserPurchasedTemplates] = useState<
-    Template[]
-  >([]);
+type propsType = {
+  data: TemplateData;
+};
+
+const FindResumeTemplates = ({ data }: propsType) => {
+
+  const [templates, setTemplates] = useState<TemplateItem[]>([]);
+  const [userPurchasedTemplates, setUserPurchasedTemplates] = useState<TemplateItem[]>([]);
+
+  // Initialize templates from props
+  useEffect(() => {
+    if (data.templateList && data.templateList.length > 0) {
+      setTemplates(data.templateList);
+    }
+  }, [data.templateList]);
 
 
   return (
@@ -38,13 +44,10 @@ const FindResumeTemplates = () => {
         <div className="container">
           <div className="border-2 border-white rounded-2xl px-4 md:px-0 py-10 bg-white/50">
             <p className="text-[24px] md:text-[32px] font-semibold text-center">
-              Find the Perfect Resume Example for Your Field
+              {data.title}
             </p>
             <p className="font-normal px-0 lg:px-40 text-[16px] text-center">
-              To save you time and effort, we have introduced creative resume
-              examples. These great resume examples are pre-written. You just have
-              to click on them and add minor details to make your resume more
-              personalized.
+              {data.description}
             </p>
 
             <div className="mt-0 md:mt-5">
@@ -76,7 +79,7 @@ const FindResumeTemplates = () => {
                         ) : (
                           template.is_paid === 1 && (
                             <div
-                              className="flex bg-gradient-to-r from-[#01B2AC] to-[#0072B1] w-[150px] h-8 absolute left-[-35px] top-6 text-white -rotate-45 justify-center items-center z-50"
+                              className="flex bg-gradient-to-r from-[#01B2AC] to-[#0072B1] w-[150px] h-8 absolute left-[-35px] sm:left-[-11px] top-6 text-white -rotate-45 justify-center items-center z-50"
                               style={{
                                 clipPath:
                                   "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
@@ -90,8 +93,8 @@ const FindResumeTemplates = () => {
 
                         <Image
                           src={template.image}
-                          alt="My Image"
-                          className="shadow-[0px_0px_3px_rgba(0,0,0,1)] rounded-xl w-[100%] sm:w-[90%] p-2 lg:p-0"
+                          alt={template.alt || "resume template"}
+                          className="shadow-[0px_0px_3px_rgba(0,0,0,1)] bg-white rounded-xl w-[98%] sm:w-[90%] sm:p-2 lg:p-0"
                         />
                       </div>
                     </div>

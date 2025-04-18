@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import tick from "../../../public/images/doubleTick.webp";
+import tick from "media/images/doubleTick.webp";
 
-interface ServiceCardProps {
+type ServiceCardProps = {
   image: any;
+  alt?: string;
   title: string;
   services: string[];
 }

@@ -4,6 +4,7 @@ import { Client, Counter, InnerBanner, PrivacyFeatures, Reviews, ServiceSection,
 // =================
 import { BannerData, FeaturesData, WelcomeData } from "./data";
 import { ClientData, CounterData } from "../about-us/data";
+import { reviewData, serviceSectionData } from "../data";
 
 export default function Page() {
     return (
@@ -12,9 +13,9 @@ export default function Page() {
             <Welcome data={WelcomeData} />
             <PrivacyFeatures data={FeaturesData} />
             <Counter data={CounterData} />
-            <ServiceSection />
+            <ServiceSection data={serviceSectionData} />
             <Client data={ClientData} />
-            <Reviews />
+            <Reviews data={reviewData} />
         </>
     );
 }

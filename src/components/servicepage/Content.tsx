@@ -1,7 +1,7 @@
 import React from "react";
 import { ServicePageContent } from "../../app/services/data";
 import Image from "next/image";
-import check_1 from "../../../public/images/check_1.webp";
+import check_1 from "media/images/check_1.webp";
 
 const Content = () => {
   return (

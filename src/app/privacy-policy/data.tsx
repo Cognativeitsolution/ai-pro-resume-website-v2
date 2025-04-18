@@ -1,12 +1,12 @@
-import image1 from "/public/privacyPolicy/image-1.webp";
-import image2 from "/public/privacyPolicy/image-2.webp";
-import image3 from "/public/privacyPolicy/image-3.webp";
-import image4 from "/public/privacyPolicy/image-4.webp";
-import image5 from "/public/privacyPolicy/image-5.webp";
-import image6 from "/public/privacyPolicy/image-6.webp";
-import image7 from "/public/privacyPolicy/image-7.webp";
-import image8 from "/public/privacyPolicy/image-8.webp";
-import image9 from "/public/privacyPolicy/image-9.webp";
+import image1 from "media/privacyPolicy/image-1.webp";
+import image2 from "media/privacyPolicy/image-2.webp";
+import image3 from "media/privacyPolicy/image-3.webp";
+import image4 from "media/privacyPolicy/image-4.webp";
+import image5 from "media/privacyPolicy/image-5.webp";
+import image6 from "media/privacyPolicy/image-6.webp";
+import image7 from "media/privacyPolicy/image-7.webp";
+import image8 from "media/privacyPolicy/image-8.webp";
+import image9 from "media/privacyPolicy/image-9.webp";
 
 export const BannerData = {
     title: (

@@ -9,9 +9,9 @@ import { HiBars3 } from "react-icons/hi2";
 import { FaAngleDoubleLeft, FaAngleDown, FaTimes, } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 //========== Import Images
-import logo from "/public/images/headerLogo.webp";
-import profile from "/public/images/profileicon.webp";
-import coin from "/public/images/dollar.webp";
+import logo from "media/images/headerLogo.webp";
+import profile from "media/images/profileicon.webp";
+import coin from "media/images/dollar.webp";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);

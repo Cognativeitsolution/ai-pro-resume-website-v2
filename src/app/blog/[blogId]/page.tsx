@@ -3,6 +3,7 @@
 import { Client, InnerBanner, Reviews, BlogDetail } from '@/components';
 import { useParams } from 'next/navigation';
 import { BannerData, ClientData } from './data';
+import { reviewData } from '@/app/data';
 
 const page = () => {
     const params = useParams();
@@ -13,7 +14,7 @@ const page = () => {
             <InnerBanner {...BannerData} />
             <BlogDetail />
             <Client data={ClientData} />
-            <Reviews />
+            <Reviews data={reviewData} />
         </>
     );
 };
