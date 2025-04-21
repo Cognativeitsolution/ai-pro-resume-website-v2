@@ -31,7 +31,7 @@ const BlogCard = ({
     }
 
     return (
-        <div onClick={goToBlogDetail} className="mx-auto flex flex-col rounded-2xl bg-white/30 border-2 border-white overflow-hidden shadow-lg">
+        <div onClick={goToBlogDetail} className="cursor-pointer mx-auto flex flex-col rounded-2xl bg-white/30 border-2 border-white overflow-hidden shadow-lg">
             <div className="h-[300px]">
                 <Image
                     src={image}
