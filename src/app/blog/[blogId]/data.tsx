@@ -18,6 +18,20 @@ import blog1 from "media/images/blog1.webp";
 import blog2 from "media/images/blog2.webp";
 import blog3 from "media/images/blog3.webp";
 import author1 from "media/images/author1.webp";
+// ======================
+import blogImg from 'media/images/blogImg.webp'
+import BlogOurBenefits from 'media/images/ourBenefitsImg.webp'
+import BlogHand from 'media/images/handblog.webp'
+import Temp1 from 'media/resume_template_images/Template_16.webp'
+import Temp2 from 'media/resume_template_images/Template_17.webp'
+import Temp3 from 'media/resume_template_images/Template_18.webp'
+import Temp4 from 'media/resume_template_images/Template_19.webp'
+import Temp5 from 'media/resume_template_images/Template_8.webp'
+import Temp6 from 'media/resume_template_images/Template_11.webp'
+import Temp7 from 'media/resume_template_images/Template_10.webp'
+import Temp8 from 'media/resume_template_images/Template_7.webp'
+import pros from 'media/images/pros.webp';
+import cons from 'media/images/cons.webp';
 
 
 export const BannerData = {
@@ -267,10 +281,36 @@ export const blogsData = [
     },
 ]
 
-export const blogsVerticalTabsData = [
+const blogsVerticalTabsData = [
     {
-        id: '#head1',
-        name: "Lorem ipsum dolor sit amet",
+        id: 'head1',
+        mainImage: blogImg,
+        title: "Lorem ipsum dolor sit amet",
+        description: (
+            <>
+                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+            </>
+        ),
+        points: [
+            {
+                icon: BlogHand,
+                para: "Lorem ipsum dolor sit"
+            },
+            {
+                icon: BlogHand,
+                para: "Lorem ipsum dolor sit"
+            },
+            {
+                icon: BlogHand,
+                para: "Lorem ipsum dolor sit"
+            },
+        ],
+
+    },
+    {
+        id: 'head2',
+        title: "Our Benefits",
+        paraImage: BlogOurBenefits,
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
@@ -278,35 +318,30 @@ export const blogsVerticalTabsData = [
         ),
     },
     {
-        id: '#head2',
-        name: "Our Benefits",
-        description: (
-            <>
-                Lorem ipsum dolor sitc eget aliquam sit.I am massa gravida aliquam non massa vulputa auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-    },
-    {
-        id: '#head3',
-        name: "Explore professional Resume templates",
+        id: 'head3',
+        title: "Blog Feature",
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
             </>
         ),
-    },
-    {
-        id: '#head4',
-        name: "Explore professional Resume templates",
-        description: (
+        quickTip: `Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo Amet facilisis neque dictumst nulla nunc eget aliquam sit.`,
+        description2: (
             <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+                Lorem ipsum neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
             </>
         ),
     },
     {
-        id: '#head5',
-        name: "Blog Features",
+        id: 'head4',
+        title: "Explore professional Resume templates",
+        gridImages: [
+            Temp1, Temp2, Temp3, Temp4, Temp5, Temp6, Temp7, Temp8
+        ]
+    },
+    {
+        id: 'head5',
+        title: "Blog Features",
         description: (
             <>
                 Lorem ipsum dolor sit amet consecteturlisis neque dictumstd dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
@@ -314,8 +349,8 @@ export const blogsVerticalTabsData = [
         ),
     },
     {
-        id: '#head6',
-        name: "Lorem ipsum dolor sit ",
+        id: 'head6',
+        title: "Lorem ipsum dolor sit",
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
@@ -323,8 +358,8 @@ export const blogsVerticalTabsData = [
         ),
     },
     {
-        id: '#head7',
-        name: "Lorem ipsum dolor sit ",
+        id: 'head7',
+        title: "Lorem ipsum dolor sit",
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
@@ -333,11 +368,30 @@ export const blogsVerticalTabsData = [
     },
 ]
 
-export const breadCrumbsItems = [
+const breadCrumbsItems = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
     { label: 'Cover Letter Template' }
 ]
+const prosItems = {
+    icon: pros,
+    title: "Pros",
+    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
+    isPro: true,
+}
+const consItems = {
+    icon: cons,
+    title: "Cons",
+    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
+    isPro: false,
+}
 
-export const prosText = `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`
-export const constText = `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`  
+export const blogDetailData = {
+    prosItemsData: prosItems,
+    consItemsData: consItems,
+    breadCrumbsItems: breadCrumbsItems,
+    blogsVerticalTabsData: blogsVerticalTabsData
+}
+
+
+

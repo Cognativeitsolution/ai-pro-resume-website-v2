@@ -4,42 +4,50 @@ import React, { useEffect, useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
 type blogsVerticalTabsDat = {
-    name?: any;
+    title?: any;
     id?: any;
 }
 type tabsData = {
     tabsData?: blogsVerticalTabsDat[];
-    setSection?: any;
+    setSectionId?: any;
     heading?: string;
 };
-const VerticalTabs = ({ heading, tabsData, setSection }: tabsData) => {
-    const [selectedTab, setSelectedTab] = useState<any>()
+const VerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
+    const [selectedTab, setSelectedTab] = useState<any>('#head1')
     const handleSelectedTab = (selectedId: any) => {
-        console.log(selectedId, 'selectedId')
         setSelectedTab(selectedId)
-        setSection(selectedId)
+        setSectionId(selectedId)
     }
     useEffect(() => {
-        setSelectedTab('#head1')
-    }, [])
+        if (tabsData && tabsData.length > 0) {
+            const firstTabId = tabsData[0].id;
+            setSelectedTab(firstTabId);
+            setSectionId(firstTabId);
+        }
+    }, [tabsData]);
 
     return (
         <>
-            <div className='p-4 xl:p-8 rounded-md bg-white shadow-md '>
+            <div className='p-4 xl:p-8 rounded-lg border-white border bg-indigo-200/20 backdrop-blur-none shadow-md '>
                 <h3 className='text-xl mb-4 font-semibold'>{heading}</h3>
-                <div className='divide-y-[1px]'>
-                    {tabsData?.length && tabsData.map((data) => (
-                        <Link
-                            key={data?.id}
-                            href={data?.id}
-                            scroll={true}
-                            onClick={() => handleSelectedTab(data?.id)}
-                            className={`flex gap-6 cursor-pointer py-3 mb-1 items-center ${selectedTab === data?.id ? 'bg-hamzaPrimary rounded-full ps-5 text-white' : ''}`}
-                        >
-                            <span className='text-lg font-light'><FaAngleDoubleRight /></span>
-                            <p>{data?.name}</p>
-                        </Link>
-                    ))}
+                <div className='divide-y-[1.5px] divide-[#ffffff]'>
+                    {tabsData?.length && tabsData.map((data, index) => {
+                        const lastTab = index === tabsData?.length - 1;
+                        return (
+                            <Link
+                                key={data?.id}
+                                href={`#${data.id}`}
+                                scroll={true}
+                                onClick={() => handleSelectedTab(data?.id)}
+                                className={`flex pt-3 ${lastTab ? 'pb-3 mb-0' : 'pb-3'}
+                                gap-6 cursor-pointer  items-center
+                                ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 text-white' : ''}`}
+                            >
+                                <span className='text-lg font-light'><FaAngleDoubleRight /></span>
+                                <p>{data?.title}</p>
+                            </Link>
+                        )
+                    })}
                 </div>
 
             </div>
