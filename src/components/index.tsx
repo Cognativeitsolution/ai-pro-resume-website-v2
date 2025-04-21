@@ -38,6 +38,10 @@ const StripeSeperateComponent = dynamic(() => import("./pricingPage/StripeSepera
 
 const Blogs = dynamic(() => import("./blog/Blogs"));
 const ApplyNowForm = dynamic(() => import("./applyNowForm/ApplyNowForm"));
+const ProConsCard = dynamic(() => import("./blog/blogDetailComponents/ProConsCard"));
+const QuickTips = dynamic(() => import("./blog/blogDetailComponents/QuickTips"));
+const BreadCrumbs = dynamic(() => import("./blog/blogDetailComponents/BreadCrumbs"));
+const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalTabs"));
 
 export {
   AutoPlaySlider,
@@ -72,5 +76,9 @@ export {
   CoinsPurchaseSection,
   PricingCard,
   StripeSeperateComponent,
-  PaymentSection
+  PaymentSection,
+  ProConsCard,
+  QuickTips,
+  BreadCrumbs,
+  VerticalTabs
 };

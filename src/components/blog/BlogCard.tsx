@@ -2,8 +2,6 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 // =====================
-import verifiedIcon from "../../../public/images/verified.webp";
-
 type Blog = {
     id?: any;
     title: string;
@@ -13,7 +11,6 @@ type Blog = {
     author_name: string;
     author_designation: string;
     author_image?: any;
-    verified?: boolean;
 };
 
 const BlogCard = ({
@@ -24,7 +21,6 @@ const BlogCard = ({
     author_name,
     author_designation,
     author_image,
-    verified = false,
     id,
 }: Blog) => {
     const router = useRouter();
@@ -59,13 +55,6 @@ const BlogCard = ({
                         <div>
                             <p className="text-sm text-indigo-500 flex items-center font-semibold">
                                 {author_name}
-                                {verified && (
-                                    <Image
-                                        src={verifiedIcon}
-                                        alt="Verified icon"
-                                        className="w-5 h-5 ms-1 rounded-full shadow-sm border-2 border-white"
-                                    />
-                                )}
                             </p>
                             <p className="text-xs text-gray-900">{author_designation}</p>
                         </div>

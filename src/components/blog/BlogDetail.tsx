@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import VerticalTabs from './blogDetailComponents/VerticalTabs'
-import { blogsVerticalTabsData } from '@/app/blog/[blogId]/data';
+import { blogsVerticalTabsData, breadCrumbsItems, constText, prosText } from '@/app/blog/[blogId]/data';
 import Image from 'next/image';
 import blogImg from 'media/images/blogImg.webp'
 import blogAiImage from 'media/images/AiBlogImg.webp'
@@ -9,25 +8,21 @@ import BlogOurBenefits from 'media/images/ourBenefitsImg.webp'
 import Blogtemplates from 'media/images/blogGroup.webp'
 import IconContact from 'media/images/Icon.webp'
 import BlogHand from 'media/images/handblog.webp'
-import ProConsCard from './blogDetailComponents/ProConsCard';
-import QuickTips from './blogDetailComponents/QuickTips';
-import BreadCrumbs from './blogDetailComponents/BreadCrumbs';
-
+import { BreadCrumbs, ProConsCard, QuickTips, VerticalTabs } from '@/components'
 
 const BlogDetail = () => {
     const [section, setSection] = useState();
 
     // console.log(blogsVerticalTabsData, "i am parent page section");
-
     return (
         <section className="py-5 md:py-10">
             <div className="container">
-                <div><BreadCrumbs /></div>
+                <BreadCrumbs items={breadCrumbsItems} />
                 <div className='relative grid lg:grid-cols-12 gap-4 xl:gap-6'>
 
                     <div className="lg:col-span-5 xl:col-span-4 static">
                         <div className="sticky top-32 overflow-y-auto">
-                            <VerticalTabs tabsData={blogsVerticalTabsData} setSection={setSection} />
+                            <VerticalTabs heading="In This Guide" tabsData={blogsVerticalTabsData} setSection={setSection} />
                             <div className="relative  mt-4 hidden lg:block"
                             >
                                 <Image
@@ -51,10 +46,9 @@ const BlogDetail = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <div className='lg:col-span-7 xl:col-span-8 pr-2'>
+                    <div className='lg:col-span-7 xl:col-span-8'>
 
                         <div id="head1" className=''>
                             <div className="flex items-center w-full xl:min-w-[550px] mb-5">
@@ -143,7 +137,7 @@ const BlogDetail = () => {
                             </div>
                         </div>
 
-                        <ProConsCard />
+                        <ProConsCard prosDesc={prosText} consDesc={constText} />
                     </div>
 
                 </div>
