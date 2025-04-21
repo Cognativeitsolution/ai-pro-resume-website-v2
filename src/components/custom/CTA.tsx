@@ -57,37 +57,3 @@ const CTA = ({
 };
 
 export default CTA;
-
-
-
-{/* <div className="flex flex-col justify-center items-center gap-2 my-5">
-                    <CTA
-                        number
-                        text="Call Now"
-                        bgColor="bg-primary hover:bg-PrimaryDark"
-                        txtColor="text-white"
-                        border="border-2 border-hamzaPrimary"
-                    />
-                    <CTA
-                        email
-                        text="Email Us"
-                        bgColor="bg-white hover:bg-primary"
-                        txtColor="text-hamzaPrimary hover:text-white"
-                        border="border-2 border-hamzaPrimary"
-                    />
-                    <CTA
-                        link
-                        text="Visit Page"
-                        href="https://example.com"
-                        bgColor="bg-primary"
-                        txtColor="text-white"
-                        border="border-0"
-                    />
-                    <CTA
-                        btn
-                        text="Submit Form"
-                        bgColor="bg-white hover:bg-black"
-                        txtColor="text-hamzaPrimary hover:text-white"
-                        border="border-0"
-                    />
-                </div> */}

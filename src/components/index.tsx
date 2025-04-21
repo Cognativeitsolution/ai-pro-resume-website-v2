@@ -3,19 +3,17 @@ import dynamic from "next/dynamic";
 const AutoPlaySlider = dynamic(() => import("./slider/AutoPlaySlider"));
 const AutoScrollSlider = dynamic(() => import("./slider/AutoScrollSlider"));
 const Header = dynamic(() => import("./layout/Header"));
+const MainHeader = dynamic(() => import("./layout/MainHeader"));
+const ReferHeader = dynamic(() => import("./layout/ReferHeader"));
 const Footer = dynamic(() => import("./layout/Footer"));
 const CTA = dynamic(() => import("./custom/CTA"));
 const Banner = dynamic(() => import("./banner/Banner"));
-const ExploreTemplates = dynamic(
-  () => import("./exploreTemplates/ExploreTemplates")
-);
+const ExploreTemplates = dynamic(() => import("./exploreTemplates/ExploreTemplates"));
 const VideoSection = dynamic(() => import("./videoSection/VideoSection"));
 const Steps = dynamic(() => import("./steps/Steps"));
 const Ats = dynamic(() => import("./ATS/Ats"));
 const ResumeFeatures = dynamic(() => import("./resumeFeatures/ResumeFeatures"));
-const FindResumeTemplates = dynamic(
-  () => import("./findResume/FindResumeTemplates")
-);
+const FindResumeTemplates = dynamic(() => import("./findResume/FindResumeTemplates"));
 const ServiceSection = dynamic(() => import("./serviceSection/ServiceSection"));
 const Reviews = dynamic(() => import("./reviews/Reviews"));
 const Faq = dynamic(() => import("./faq/Faq"));
@@ -35,7 +33,6 @@ const CoinsPurchaseSection = dynamic(() => import("./pricingPage/CoinsPurchaseSe
 const PaymentSection = dynamic(() => import("./pricingPage/PaymentSection"));
 const PricingCard = dynamic(() => import("./pricingPage/PricingCard"));
 const StripeSeperateComponent = dynamic(() => import("./pricingPage/StripeSeperateComponent"));
-
 const Blogs = dynamic(() => import("./blog/Blogs"));
 const ApplyNowForm = dynamic(() => import("./applyNowForm/ApplyNowForm"));
 const ProConsCard = dynamic(() => import("./blog/blogDetailComponents/ProConsCard"));
@@ -47,6 +44,8 @@ export {
   AutoPlaySlider,
   AutoScrollSlider,
   Header,
+  MainHeader,
+  ReferHeader,
   Footer,
   CTA,
   Banner,

@@ -1,5 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+// ===============
+import { useReferHeader } from "@/context/ReferHeaderContext";
+// ===============
 import inner_banner_bg from "media/images/inner-banner_bg.webp";
 
 type BannerProps = {
@@ -10,9 +14,10 @@ type BannerProps = {
 
 const InnerBanner = (props: BannerProps) => {
   const { title, subtitle, description } = props;
+  const { showReferHeader } = useReferHeader();
   return (
     <>
-      <section className={`h-full bg-PrimaryDark md:bg-none relative z-10 overflow-hidden `}>
+      <section className={`h-full bg-PrimaryDark md:bg-none relative z-10 overflow-hidden`}>
         <Image
           src={inner_banner_bg}
           alt="banner_bg_2"
@@ -20,7 +25,7 @@ const InnerBanner = (props: BannerProps) => {
           className="absolute w-full h-full -z-10 object-cover !2xl:object-fill object-bottom hidden md:block"
         />
         <div className="container mx-auto">
-          <div className=" flex flex-col items-center justify-between pt-36 pb-16 md:pt-40 md:pb-40 lg:pt-48 lg:pb-56">
+          <div className={`flex flex-col items-center justify-between pb-10 md:pb-40 lg:pb-56 ${showReferHeader ? 'pt-40 lg:pt-48' : 'pt-[7.5rem] lg:pt-44'}`}>
             <p className="font-normal text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
               {subtitle}
             </p>

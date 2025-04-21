@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
+import { useReferHeader } from "@/context/ReferHeaderContext";
 // ============
 import banner from "media/images/banner.webp";
 import robo_1 from "media/images/robo_1.gif";
@@ -17,6 +19,7 @@ type BannerProps = {
 
 const Banner = (props: BannerProps) => {
   const { title, description } = props;
+  const { showReferHeader } = useReferHeader();
   return (
     <>
       <section className="h-full bg-PrimaryDark md:bg-none relative z-10 overflow-hidden pb-6">
@@ -27,7 +30,7 @@ const Banner = (props: BannerProps) => {
           className="absolute w-full h-full md:h-[75%] -z-10 object-cover !2xl:object-fill object-bottom hidden md:block"
         />
         <div className="container">
-          <div className="flex flex-col items-center justify-between pt-36 pb-10 md:py-0 mt-0 md:mt-[120px] lg:mt-[170px] 2xl:mt-[180px]">
+          <div className={`flex flex-col items-center justify-between ${showReferHeader ? 'pt-40' : 'pt-32'} pb-8 md:py-0 mt-0 ${showReferHeader ? 'md:mt-[140px] lg:mt-[170px] 2xl:mt-[180px]' : 'md:mt-[120px] lg:mt-[150px] 2xl:mt-[160px]'}`}>
             <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white">
               {title}
             </h1>

@@ -1,8 +1,7 @@
 export const BannerData = {
     title: (
         <>
-            Walk towards Your Future with AI Professional
-            <br className="hidden lg:block" />Resume Career Opportunities
+            Walk towards Your Future with AI Professional Resume Career Opportunities
         </>
     ),
     subtitle: "Apply Now",

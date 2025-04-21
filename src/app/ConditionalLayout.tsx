@@ -1,15 +1,17 @@
 "use client";
 // =============
 import { useEffect, useState, ReactNode } from "react";
+// =============
 import { Footer, Header } from "@/components";
 import Loader from "@/components/loader/MainLoader";
+import { ReferHeaderProvider } from "@/context/ReferHeaderContext";
 import { OldAPI } from "@/services/oldService";
 
 interface ConditionalLayoutProps {
     children: ReactNode;
 }
 
-const LOADER_DELAY = 2000; // milliseconds
+const LOADER_DELAY = 3000; // milliseconds
 
 const ConditionalLayout = ({ children }: ConditionalLayoutProps) => {
     const [isLoading, setIsLoading] = useState(true);
@@ -32,11 +34,11 @@ const ConditionalLayout = ({ children }: ConditionalLayoutProps) => {
     // }, []);
 
     return (
-        <>
+        <ReferHeaderProvider>
             <Header />
             {isLoading ? <Loader /> : children}
             <Footer />
-        </>
+        </ReferHeaderProvider>
     );
 };
 

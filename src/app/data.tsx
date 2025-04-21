@@ -1,10 +1,4 @@
 // ===============
-import creativeinfusion from "media/images/Creativeinfusion.webp";
-import innovativeedge from "media/images/Creativeinfusion.webp";
-import fresherresume from "media/images/fresherResume.webp";
-import sleeksimplicity from "media/images/SleekSimplicity.webp";
-import brightfuture from "media/images/BrightFuture.webp";
-// ===============
 import home_page_video from "media/images/home_page_video.webp";
 // ===============
 import choose_template from "media/images/choose_template.webp";
@@ -20,9 +14,12 @@ import tailored from "media/images/tailored.webp";
 import professional from "media/images/20+professionally.webp";
 import resume_parser from "media/images/resume_parser.webp";
 // ===============
-import Template1 from "media/resume_template_images/template_3.webp";
+import Template1 from "media/resume_template_images/template_1.webp";
 import Template2 from "media/resume_template_images/template_2.webp";
 import Template3 from "media/resume_template_images/template_3.webp";
+import Template4 from "media/resume_template_images/template_4.webp";
+import Template5 from "media/resume_template_images/template_5.webp";
+import Template6 from "media/resume_template_images/template_6.webp";
 // ===============
 import prof_cover_writing from "media/images/prof_cover_writing.webp";
 import prof_cover_review from "media/images/prof_cover_review.webp";
@@ -56,32 +53,32 @@ const tabDisplayMap = {
 
 const templatesData = {
     creative: [
-        { id: 1, src: creativeinfusion },
-        { id: 2, src: innovativeedge },
-        { id: 3, src: fresherresume },
-        { id: 4, src: sleeksimplicity },
-        { id: 5, src: brightfuture },
+        { id: 1, src: Template1 },
+        { id: 2, src: Template2 },
+        { id: 3, src: Template3 },
+        { id: 4, src: Template4 },
+        { id: 5, src: Template5 },
     ],
     food: [
-        { id: 7, src: innovativeedge },
-        { id: 6, src: creativeinfusion },
-        { id: 8, src: fresherresume },
-        { id: 9, src: sleeksimplicity },
-        { id: 10, src: brightfuture },
+        { id: 7, src: Template2 },
+        { id: 6, src: Template1 },
+        { id: 8, src: Template3 },
+        { id: 9, src: Template4 },
+        { id: 10, src: Template5 },
     ],
     management: [
-        { id: 13, src: fresherresume },
-        { id: 11, src: creativeinfusion },
-        { id: 12, src: innovativeedge },
-        { id: 14, src: sleeksimplicity },
-        { id: 15, src: brightfuture },
+        { id: 13, src: Template3 },
+        { id: 11, src: Template1 },
+        { id: 12, src: Template2 },
+        { id: 14, src: Template4 },
+        { id: 15, src: Template5 },
     ],
     it: [
-        { id: 19, src: sleeksimplicity },
-        { id: 16, src: creativeinfusion },
-        { id: 17, src: innovativeedge },
-        { id: 18, src: fresherresume },
-        { id: 20, src: brightfuture },
+        { id: 19, src: Template4 },
+        { id: 16, src: Template1 },
+        { id: 17, src: Template2 },
+        { id: 18, src: Template3 },
+        { id: 20, src: Template5 },
     ],
 };
 
@@ -193,9 +190,9 @@ const findResumeTemplates = [
     { id: 1, image: Template1, is_paid: 0 },
     { id: 2, image: Template2, is_paid: 1 },
     { id: 3, image: Template3, is_paid: 0 },
-    { id: 1, image: Template1, is_paid: 0 },
-    { id: 2, image: Template2, is_paid: 1 },
-    { id: 3, image: Template3, is_paid: 0 },
+    { id: 1, image: Template4, is_paid: 0 },
+    { id: 2, image: Template5, is_paid: 1 },
+    { id: 3, image: Template6, is_paid: 0 },
 ]
 
 export const findResumeData = {
