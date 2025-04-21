@@ -22,14 +22,14 @@ import author1 from "media/images/author1.webp";
 import blogImg from 'media/images/blogImg.webp'
 import BlogOurBenefits from 'media/images/ourBenefitsImg.webp'
 import BlogHand from 'media/images/handblog.webp'
-import Temp1 from 'media/resume_template_images/Template_16.webp'
-import Temp2 from 'media/resume_template_images/Template_17.webp'
-import Temp3 from 'media/resume_template_images/Template_18.webp'
-import Temp4 from 'media/resume_template_images/Template_19.webp'
-import Temp5 from 'media/resume_template_images/Template_8.webp'
-import Temp6 from 'media/resume_template_images/Template_11.webp'
-import Temp7 from 'media/resume_template_images/Template_10.webp'
-import Temp8 from 'media/resume_template_images/Template_7.webp'
+import Temp1 from 'media/resume_template_images/template_16.webp'
+import Temp2 from 'media/resume_template_images/template_17.webp'
+import Temp3 from 'media/resume_template_images/template_18.webp'
+import Temp4 from 'media/resume_template_images/template_19.webp'
+import Temp5 from 'media/resume_template_images/template_8.webp'
+import Temp6 from 'media/resume_template_images/template_11.webp'
+import Temp7 from 'media/resume_template_images/template_10.webp'
+import Temp8 from 'media/resume_template_images/template_7.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
 
