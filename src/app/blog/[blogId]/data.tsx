@@ -20,11 +20,7 @@ import blog3 from "media/images/blog3.webp";
 import author1 from "media/images/author1.webp";
 // ======================
 import blogImg from 'media/images/blogImg.webp'
-
-import blogAiImage from 'media/images/AiBlogImg.webp'
 import BlogOurBenefits from 'media/images/ourBenefitsImg.webp'
-import Blogtemplates from 'media/images/blogGroup.webp'
-import IconContact from 'media/images/Icon.webp'
 import BlogHand from 'media/images/handblog.webp'
 import Temp1 from 'media/resume_template_images/Template_16.webp'
 import Temp2 from 'media/resume_template_images/Template_17.webp'

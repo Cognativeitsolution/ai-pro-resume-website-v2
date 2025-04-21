@@ -1,13 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-// import { blogsVerticalTabsData, breadCrumbsItems, constText, prosText } from '@/app/blog/[blogId]/data';
 import Image from 'next/image';
-import blogImg from 'media/images/blogImg.webp'
 import blogAiImage from 'media/images/AiBlogImg.webp'
-import BlogOurBenefits from 'media/images/ourBenefitsImg.webp'
-import Blogtemplates from 'media/images/blogGroup.webp'
 import IconContact from 'media/images/Icon.webp'
-import BlogHand from 'media/images/handblog.webp'
 import { BreadCrumbs, ProConsCard, QuickTips, VerticalTabs } from '@/components'
 
 type BlogsPiontData = {
@@ -29,11 +24,6 @@ type BreadCrumbsItems = {
     href?: string
 };
 
-// type ProConsItems = {
-//     prosText?: string
-//     constText?: string
-// };
-
 type BlogDetailData = {
     prosItemsData?: any,
     consItemsData?: any,
@@ -49,6 +39,7 @@ type propsType = {
 const BlogDetail = (props: propsType) => {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
+    console.log(sectionId, "sectionId");
 
     useEffect(() => {
         setSectionId("#head1")
