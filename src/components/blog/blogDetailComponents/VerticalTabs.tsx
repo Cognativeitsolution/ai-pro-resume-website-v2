@@ -9,15 +9,15 @@ type blogsVerticalTabsDat = {
 }
 type tabsData = {
     tabsData?: blogsVerticalTabsDat[];
-    setSection?: any;
+    setSectionId?: any;
     heading?: string;
 };
-const VerticalTabs = ({ heading, tabsData, setSection }: tabsData) => {
+const VerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
     const [selectedTab, setSelectedTab] = useState<any>()
     const handleSelectedTab = (selectedId: any) => {
         console.log(selectedId, 'selectedId')
         setSelectedTab(selectedId)
-        setSection(selectedId)
+        setSectionId(selectedId)
     }
     useEffect(() => {
         setSelectedTab('#head1')
@@ -31,7 +31,7 @@ const VerticalTabs = ({ heading, tabsData, setSection }: tabsData) => {
                     {tabsData?.length && tabsData.map((data) => (
                         <Link
                             key={data?.id}
-                            href={data?.id}
+                            href={`#${data.id}`}
                             scroll={true}
                             onClick={() => handleSelectedTab(data?.id)}
                             className={`flex gap-6 cursor-pointer py-3 mb-1 items-center ${selectedTab === data?.id ? 'bg-hamzaPrimary rounded-full ps-5 text-white' : ''}`}

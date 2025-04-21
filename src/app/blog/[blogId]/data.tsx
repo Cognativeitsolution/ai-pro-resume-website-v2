@@ -287,7 +287,7 @@ export const blogsData = [
 
 const blogsVerticalTabsData = [
     {
-        id: '#head1',
+        id: 'head1',
         mainImage: blogImg,
         title: "Lorem ipsum dolor sit amet",
         description: (
@@ -312,46 +312,39 @@ const blogsVerticalTabsData = [
 
     },
     {
-        id: '#head2',
+        id: 'head2',
         title: "Our Benefits",
         paraImage: BlogOurBenefits,
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-                Lorem ipsum dolor sitc eget aliquam sit.I am massa gravida aliquam non massa vulputa auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
             </>
         ),
     },
     {
-        id: '#head3',
+        id: 'head3',
         title: "Blog Feature",
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
             </>
         ),
-        quickTip: true,
+        quickTip: `Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo Amet facilisis neque dictumst nulla nunc eget aliquam sit.`,
         description2: (
             <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
+                Lorem ipsum neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
             </>
         ),
-
     },
     {
-        id: '#head4',
+        id: 'head4',
         title: "Explore professional Resume templates",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
         gridImages: [
             Temp1, Temp2, Temp3, Temp4, Temp5, Temp6, Temp7, Temp8
         ]
     },
     {
-        id: '#head5',
+        id: 'head5',
         title: "Blog Features",
         description: (
             <>
@@ -360,8 +353,8 @@ const blogsVerticalTabsData = [
         ),
     },
     {
-        id: '#head6',
-        title: "Lorem ipsum dolor sit ",
+        id: 'head6',
+        title: "Lorem ipsum dolor sit",
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
@@ -369,8 +362,8 @@ const blogsVerticalTabsData = [
         ),
     },
     {
-        id: '#head7',
-        title: "Lorem ipsum dolor sit ",
+        id: 'head7',
+        title: "Lorem ipsum dolor sit",
         description: (
             <>
                 Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
@@ -389,7 +382,6 @@ const prosItems = {
     title: "Pros",
     description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
     isPro: true,
-
 }
 const consItems = {
     icon: cons,
@@ -397,7 +389,6 @@ const consItems = {
     description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
     isPro: false,
 }
-
 
 export const blogDetailData = {
     prosItemsData: prosItems,
