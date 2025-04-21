@@ -2,7 +2,7 @@
 export const metadata = {
     // Title & Descriptions
     title: "Unlock Global Jb Opportunities with AI Pro Resume",
-    descripotion:
+    description:
         "Feeling stuck in your job search? Let AI Pro Resume guide you! Create a professional resume and submit it to over 100 global companies awaiting your application.",
 
     // Canonical
