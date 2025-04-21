@@ -4,20 +4,20 @@ import React, { useEffect, useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
 type blogsVerticalTabsDat = {
-    title?: any;
+    name?: any;
     id?: any;
 }
 type tabsData = {
     tabsData?: blogsVerticalTabsDat[];
-    setSectionId?: any;
+    setSection?: any;
     heading?: string;
 };
-const VerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
+const VerticalTabs = ({ heading, tabsData, setSection }: tabsData) => {
     const [selectedTab, setSelectedTab] = useState<any>()
     const handleSelectedTab = (selectedId: any) => {
         console.log(selectedId, 'selectedId')
         setSelectedTab(selectedId)
-        setSectionId(selectedId)
+        setSection(selectedId)
     }
     useEffect(() => {
         setSelectedTab('#head1')
@@ -25,19 +25,19 @@ const VerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
 
     return (
         <>
-            <div className='p-4 xl:p-8 rounded-md bg-white/50 border-2 border-white shadow-md '>
+            <div className='p-4 xl:p-8 rounded-md bg-white shadow-md '>
                 <h3 className='text-xl mb-4 font-semibold'>{heading}</h3>
                 <div className='divide-y-[1px]'>
                     {tabsData?.length && tabsData.map((data) => (
                         <Link
                             key={data?.id}
-                            href={`#${data.id}`}
+                            href={data?.id}
                             scroll={true}
                             onClick={() => handleSelectedTab(data?.id)}
-                            className={`flex gap-6 cursor-pointer py-3 mb-1 items-center ${selectedTab === data?.id ? 'bg-primary rounded-full ps-5 text-white' : ''}`}
+                            className={`flex gap-6 cursor-pointer py-3 mb-1 items-center ${selectedTab === data?.id ? 'bg-hamzaPrimary rounded-full ps-5 text-white' : ''}`}
                         >
                             <span className='text-lg font-light'><FaAngleDoubleRight /></span>
-                            <p>{data?.title}</p>
+                            <p>{data?.name}</p>
                         </Link>
                     ))}
                 </div>
