@@ -117,11 +117,11 @@ const PricingCard = () => {
                         typeof feature === "string" ? (
                           <li
                             key={i}
-                            className="flex items-center gap-3 my-2 xl:my-3 font-normal tracking-wider"
+                            className="flex items-start gap-3 my-2 xl:my-3 font-normal tracking-wider"
                           >
                             <Image
                               src={check_1}
-                              className={`w-[3%]`}
+                              className={`w-[10px] mt-[5px]`}
                               alt="Tick"
                             />
                             <span className={`text-[15px] font-medium`}>
