@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
 type blogsVerticalTabsDat = {
-    name?: any;
+    title?: any;
     id?: any;
 }
 type tabsData = {
@@ -37,7 +37,7 @@ const VerticalTabs = ({ heading, tabsData, setSection }: tabsData) => {
                             className={`flex gap-6 cursor-pointer py-3 mb-1 items-center ${selectedTab === data?.id ? 'bg-hamzaPrimary rounded-full ps-5 text-white' : ''}`}
                         >
                             <span className='text-lg font-light'><FaAngleDoubleRight /></span>
-                            <p>{data?.name}</p>
+                            <p>{data?.title}</p>
                         </Link>
                     ))}
                 </div>

@@ -49,7 +49,7 @@ const Page = () => {
 
             OldAPI.get(`/page/${slug}`)
                 .then((res) => {
-                    console.log("res", res.data);
+                    console.log("res page", res.data);
                     set_show_pages(res.data);
                 })
                 .catch((err) => {
@@ -63,9 +63,9 @@ const Page = () => {
 
         <>
             <Head>
-                <title>{show_pages?.title} | AI Pro Resume</title>
-                <meta name="description" content={show_pages?.meta_description} />
-                <meta name="keywords" content={show_pages?.meta_keywords} />
+                <title>{show_pages?.title} 3333 </title>
+                <meta name="description" content={`${show_pages?.meta_description} 3333`} />
+                <meta name="keywords" content={`${show_pages?.meta_keywords} 3333`} />
             </Head>
             <InnerBanner
                 subtitle={show_pages?.title || BannerData.subtitle}
