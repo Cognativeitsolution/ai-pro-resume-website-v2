@@ -29,7 +29,7 @@ type BlogDetailData = {
     consItemsData?: any,
     breadCrumbsItems?: BreadCrumbsItems[]
     blogsVerticalTabsData?: BlogsVerticalTabsData[]
-
+    headingTab?: any[]
 };
 
 type propsType = {
@@ -39,7 +39,11 @@ type propsType = {
 const BlogDetail = (props: propsType) => {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
-    console.log(sectionId, "sectionId");
+    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+    const toggleExpand = (index: number) => {
+        setExpandedIndex(prev => (prev === index ? null : index));
+    };
 
     useEffect(() => {
         setSectionId("#head1")
@@ -124,7 +128,7 @@ const BlogDetail = (props: propsType) => {
                                     </div>
                                 )}
                                 {blog.gridImages && (
-                                    <div className='grid grid-cols-4 gap-6'>
+                                    <div className='grid grid-cols-4 gap-6 mb-4'>
                                         {blog?.gridImages?.map((grid: any, index: any) => (
                                             <div className='rounded-lg shadow-xl border overflow-hidden' key={index}>
                                                 <Image src={grid} alt="" />
@@ -135,11 +139,47 @@ const BlogDetail = (props: propsType) => {
                                 {blog?.quickTip &&
                                     <QuickTips description={blog?.quickTip} />
                                 }
-                                {blog.description2 && <p className="text-[16px] lg:text-[18px] text-justify">
+                                {blog.description2 && <p className="text-[16px] lg:text-[18px] text-justify mb-2">
                                     {blog?.description2}
                                 </p>}
+                                {blog?.headingTab && (
+                                    <div className='mb-2 divide-y'>
+                                        {blog.headingTab.map((tabs: any, index: number) => (
+                                            <div key={index}>
+                                                <div className='flex py-2'>
+                                                    <div className='relative after:absolute after:left-0 after:top-4 
+                                    after:h-[1.2px] after:w-[15px] after:bg-black'></div>
+                                                    <div className='pl-6 w-full'>
+                                                        <div className='flex justify-between items-center w-full mb-2'>
+                                                            <h4 className='text-hamzaPrimary text-2xl'>{tabs.heading}</h4>
+                                                            <button
+                                                                onClick={() => toggleExpand(index)}
+                                                                className='px-4 py-1 italic bg-indigo-400/20 text-indigo-700'
+                                                            >
+                                                                {expandedIndex === index ? 'show less' : 'show more'}
+                                                            </button>
+                                                        </div>
+                                                        <p className='text-sm'>{tabs.description}</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* ✅ Detail content now outside the inner flex div and full-width */}
+                                                {expandedIndex === index && (
+                                                    <div className='px-6 pb-4 text-[15px] text-gray-700'>
+                                                        <p>
+                                                            {/* Replace this with actual detail content */}
+                                                            This is the detailed explanation of <strong>{tabs.heading}</strong> resume format. You can place anything here like bullet points, examples, etc.
+                                                        </p>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                             </div>
                         ))}
+
                         {data?.prosItemsData &&
                             <ProConsCard
                                 title={data?.prosItemsData.title}
