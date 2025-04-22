@@ -41,6 +41,8 @@ const BreadCrumbs = dynamic(() => import("./blog/blogDetailComponents/BreadCrumb
 const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalTabs"));
 const Search = dynamic(() => import("./resume-examples/Search"));
 const Categories = dynamic(() => import("./resume-examples/Categories"));
+const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
+const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
 
 export {
   AutoPlaySlider,
@@ -83,5 +85,7 @@ export {
   BreadCrumbs,
   VerticalTabs,
   Search,
-  Categories
+  Categories,
+  IconSlider,
+  ShowAllTemplates,
 };
