@@ -1,4 +1,3 @@
-import Link from "next/link";
 import template_1 from "../../../public/resume_template_images/template_1.webp";
 import template_2 from "../../../public/resume_template_images/template_2.webp";
 import template_3 from "../../../public/resume_template_images/template_3.webp";
@@ -6,10 +5,8 @@ import template_4 from "../../../public/resume_template_images/template_4.webp";
 import template_5 from "../../../public/resume_template_images/template_5.webp";
 import template_6 from "../../../public/resume_template_images/template_6.webp";
 import template_7 from "../../../public/resume_template_images/template_7.webp";
-import template_8 from "../../../public/resume_template_images/template_8.webp";
 import template_9 from "../../../public/resume_template_images/template_9.webp";
 import template_10 from "../../../public/resume_template_images/template_10.webp";
-import template_11 from "../../../public/resume_template_images/template_11.webp";
 import template_12 from "../../../public/resume_template_images/template_12.webp";
 import template_13 from "../../../public/resume_template_images/template_13.webp";
 import template_14 from "../../../public/resume_template_images/template_14.webp";
@@ -23,8 +20,6 @@ import icon5 from "media/customerIcons/snagajob.webp";
 import icon6 from "media/customerIcons/alison.webp";
 // ===============
 
-
-
 export const BannerData = {
   title: (
     <>
@@ -34,13 +29,20 @@ export const BannerData = {
     </>
   ),
   subtitle: "Resume Examples",
-  description:"AI Pro Resume is your ultimate destination for creating professional resumes and cover letters. To save you time and effort, we have introduced creative resume examples. These great resume examples are pre-written. You just have to click on them and add minor details to make your resume more personalized. We offer professional resume templates that assist you in landing the interview. Whether you are starting your career or a seasoned professional, AI Pro Resume ensures your resume shines in the crowd.",
+  description: "AI Pro Resume is your ultimate destination for creating professional resumes and cover letters. To save you time and effort, we have introduced creative resume examples. These great resume examples are pre-written. You just have to click on them and add minor details to make your resume more personalized. We offer professional resume templates that assist you in landing the interview. Whether you are starting your career or a seasoned professional, AI Pro Resume ensures your resume shines in the crowd.",
   subdesc: true,
   linkText: "Cover letter Examples",
   href: "/cover-letter-examples",
-
 };
 
+// ==========================
+const customerIcons = [icon1, icon2, icon3, icon4, icon5, icon6, icon1, icon2, icon3, icon4, icon5, icon6];
+
+export const IconData = {
+  title: "Our customers were hired by:",
+  icons: customerIcons
+};
+// ==========================
 const ResumeExamplesPagefaqsList = [
   {
     question: "What Makes Us The Best Resume Maker In The Market?",
@@ -68,7 +70,7 @@ export const faqs = {
   title: "FREQUENTLY ASKED QUESTIONS",
   faqlist: ResumeExamplesPagefaqsList,
 };
-
+// ==========================
 export const ResumeCategories = [
   {
     id: "#head1",
@@ -80,7 +82,7 @@ export const ResumeCategories = [
         of innovation with creativity...
       </>
     ),
-    images: [template_2, template_3, template_4,template_2, template_3, template_4],
+    images: [template_2, template_3, template_4, template_2, template_3, template_4],
   },
   {
     id: "#head2",

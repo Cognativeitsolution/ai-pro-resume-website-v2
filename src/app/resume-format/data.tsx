@@ -1,7 +1,7 @@
 // ======================
 import Temp1 from 'media/resume_template_images/Template_16.webp'
 import Temp3 from 'media/resume_template_images/Template_18.webp'
-import Temp5 from 'media/resume_template_images/Template_8.webp'
+import Temp5 from 'media/resume_template_images/template_8.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
 
