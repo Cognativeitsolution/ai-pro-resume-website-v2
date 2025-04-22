@@ -5,11 +5,12 @@ import React, { useEffect, useState } from "react";
 import { ResumeCategories } from "../../app/resume-examples/data";
 import { AutoPlaySlider } from "@/components";
 import { OldAPI } from "@/services/oldService";
+import axios from "axios";
 
 type categories = {
   cover_letter_description: string;
   icon: string;
-  id: number;
+  id: any;
   name: string;
   parent_id: number;
   short_description: string;
@@ -86,6 +87,24 @@ const Categories = () => {
       });
   }, []);
 
+  const chk_temp = (cat_id: number, cat_name: string, cat_des: string) => {
+    setIsfilter(true);
+
+    // axios
+    //   .get(global.baseurl + "/front-resume-templates?category_id=" + cat_id)
+    //   .then((response) => {
+    //     set_templates(response.data.data.resume_examples);
+
+    //     setSelectedCatName(cat_name);
+    //     setSelectedCatDesc(cat_des);
+    //     setJobPositionDetails();
+    //     setIsloading(false);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  };
+
   return (
     <>
       <section className="py-5 md:py-10">
@@ -94,19 +113,30 @@ const Categories = () => {
             {/* Tabs */}
             <div className="w-full h-full lg:w-1/4 border-2 border-white bg-indigo-200/20 rounded-xl p-4">
               <div className="divide-y-[1.5px] divide-[#ffffff]">
-                {Categories.map((cat) => (
-                  <button
-                    key={cat.id}
-                    className={`block w-full text-left px-4 py-3 font-medium transition-all ${
-                      activeCategory?.id === cat.id
-                        ? "bg-PrimaryDark text-white rounded-lg"
-                        : ""
-                    }`}
-                    onClick={() => setActiveCategory(cat)}
-                  >
-                    {cat.name}
-                  </button>
-                ))}
+                <h1 className="text-2xl py-4 px-4 text-hamzaPrimary">
+                  Categories
+                </h1>
+               
+                {Categories?.sort((a, b) => a.name.localeCompare(b.name)).map(
+                  (category, index) => (
+                    <div
+                      key={index}
+                      id={category.id}
+                      onClick={() => {
+                        chk_temp(
+                          category.id,
+                          category.name,
+                          category.short_description
+                        );
+                      }}
+                      className={`flex gap-2 font-Lexend justify-start items-center p-2 text-slate-900 cursor-pointer  hover:text-hamzaPrimary my-2`}
+                    >
+                      <p className="font-Lexend text-lg pl-2">
+                        {category.name}
+                      </p>
+                    </div>
+                  )
+                )}
               </div>
             </div>
 
