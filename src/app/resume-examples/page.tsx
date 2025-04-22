@@ -1,14 +1,15 @@
 import React from "react";
-import {  Categories, Faq, InnerBanner, Search } from "@/components";
-import { BannerData, faqs } from "./data";
+import { Categories, Faq, IconSlider, InnerBanner, Search } from "@/components";
+import { BannerData, faqs, IconData } from "./data";
 
 
 export default function Page() {
   return (
     <>
       <InnerBanner {...BannerData} />
-      <Search/>
-      <Categories/>
+      <IconSlider {...IconData} />
+      <Search />
+      <Categories />
       <Faq data={faqs} />
     </>
   );
