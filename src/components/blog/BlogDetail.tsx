@@ -39,11 +39,11 @@ type propsType = {
 const BlogDetail = (props: propsType) => {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
+    // const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
-    const toggleExpand = (index: number) => {
-        setExpandedIndex(prev => (prev === index ? null : index));
-    };
+    // const toggleExpand = (index: number) => {
+    //     setExpandedIndex(prev => (prev === index ? null : index));
+    // };
 
     useEffect(() => {
         setSectionId("#head1")
@@ -153,27 +153,29 @@ const BlogDetail = (props: propsType) => {
                                                     ></div>
                                                     <div className="pl-6 w-full">
                                                         <div className="flex justify-between items-center w-full mb-2">
-                                                            <h4 className="text-hamzaPrimary text-2xl">{tabs.heading}</h4>
-                                                            <button
+                                                            <h4 className="text-hamzaPrimary text-2xl">{tabs.heading}:</h4>
+                                                            {/* <button
                                                                 onClick={() => toggleExpand(index)}
                                                                 className="px-4 py-1 italic bg-indigo-400/20 text-indigo-700"
                                                             >
                                                                 {expandedIndex === index ? "show less" : "show more"}
-                                                            </button>
+                                                            </button> */}
                                                         </div>
                                                         <p className="text-sm">{tabs.description}</p>
                                                     </div>
                                                 </div>
 
-                                                {expandedIndex === index ? (
-                                                    <div className='grid grid-cols-12 gap-4 pl-6'>
+                                                {/* {expandedIndex === index ? ( */}
+                                                <>
+                                                    <h5 className="text-hamzaPrimary text-2xl pt-4">{tabs.heading} Resume Format:</h5>
+                                                    <div className='grid grid-cols-12 gap-4 pl-6 py-4'>
                                                         <div className='col-span-4'>
                                                             <div className='rounded-lg shadow-xl border overflow-hidden ' key={index}>
                                                                 <Image src={tabs.image} alt="" />
                                                             </div>
                                                         </div>
                                                         <div className='col-span-8 py-6'>
-                                                            <h4 className="text-hamzaPrimary text-2xl mb-4 font-semibold">Best For:</h4>
+                                                            <h6 className="text-hamzaPrimary text-2xl mb-4 font-semibold">Best For:</h6>
                                                             <ul className='list-disc pl-6'>
                                                                 {tabs.list?.map((tabs: any, index: number) => (
                                                                     <li key={index} className='mb-4 text-sm'>
@@ -183,10 +185,20 @@ const BlogDetail = (props: propsType) => {
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                ) : null}
+                                                </>
+                                                {/* ) : null} */}
                                             </div>
                                         ))}
                                     </div>
+                                )}
+                                {blog?.Tabs && (
+                                    <>
+                                        {blog?.Tabs?.map((tabs: any, index: number) => (
+                                            <div className='p-2 bg-indigo-200/20 backdrop-blur-none border-4 rounded-md'>
+                                                {tabs?.heading}
+                                            </div>
+                                        ))}
+                                    </>
                                 )}
                             </div>
                         ))}

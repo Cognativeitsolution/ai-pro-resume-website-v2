@@ -1,15 +1,7 @@
 // ======================
-import blogImg from 'media/images/blogImg.webp'
-import BlogOurBenefits from 'media/images/ourBenefitsImg.webp'
-import BlogHand from 'media/images/handblog.webp'
 import Temp1 from 'media/resume_template_images/Template_16.webp'
-import Temp2 from 'media/resume_template_images/Template_17.webp'
 import Temp3 from 'media/resume_template_images/Template_18.webp'
-import Temp4 from 'media/resume_template_images/Template_19.webp'
 import Temp5 from 'media/resume_template_images/Template_8.webp'
-import Temp6 from 'media/resume_template_images/Template_11.webp'
-import Temp7 from 'media/resume_template_images/Template_10.webp'
-import Temp8 from 'media/resume_template_images/Template_7.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
 
@@ -28,105 +20,36 @@ export const BannerData = {
     ),
 };
 
-const blogsVerticalTabsData = [
+const VerticalTabsData = [
     {
-        id: '#head1',
-        mainImage: blogImg,
-        title: "Lorem ipsum dolor sit amet",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-        points: [
-            {
-                icon: BlogHand,
-                para: "Lorem ipsum dolor sit"
-            },
-            {
-                icon: BlogHand,
-                para: "Lorem ipsum dolor sit"
-            },
-            {
-                icon: BlogHand,
-                para: "Lorem ipsum dolor sit"
-            },
-        ],
+        id: 'head1',
+        title: "3 Most Popular Resume Formats",
+    },
+    {
+        id: 'head2',
+        title: "Reverse-Chronological Resume Format ",
+    },
+    {
+        id: 'head3',
+        title: "3 Most Popular Resume Formats",
+    },
+    {
+        id: 'head4',
+        title: "3 Most Popular Resume Formats",
+    },
+    {
+        id: 'head5',
+        title: "3 Most Popular Resume Formats",
+    },
 
-    },
-    {
-        id: '#head2',
-        title: "Our Benefits",
-        paraImage: BlogOurBenefits,
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-                Lorem ipsum dolor sitc eget aliquam sit.I am massa gravida aliquam non massa vulputa auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-    },
-    {
-        id: '#head3',
-        title: "Blog Feature",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-        quickTip: true,
-        description2: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-
-    },
-    {
-        id: '#head4',
-        title: "Explore professional Resume templates",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-        gridImages: [
-            Temp1, Temp2, Temp3, Temp4, Temp5, Temp6, Temp7, Temp8
-        ]
-    },
-    {
-        id: '#head5',
-        title: "Blog Features",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consecteturlisis neque dictumstd dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-    },
-    {
-        id: '#head6',
-        title: "Lorem ipsum dolor sit ",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-    },
-    {
-        id: '#head7',
-        title: "Lorem ipsum dolor sit ",
-        description: (
-            <>
-                Lorem ipsum dolor sit amet consectetur. Odio blandit eget tellus mi neque lorem leo. Amet facilisis neque dictumst nulla nunc eget aliquam sit. Pulvinar mauris hendrerit sit euismod dui nam. Ultricies vitae quam massa gravida aliquam non massa vulputate. Diam eget semper vitae ultricies mi auctor volutpat. Et morbi odio quis ipsum mattis turpis sed nibh vitae. Nisl diam justo risus in. Praesent orci sed erat pretium suspendisse leo. Sit sit orci urna consectetur sapien magnis mattis porttitor. Fermentum nulla convallis urna quam eget vel turpis. Maecenas nec libero lacus integer scelerisque consectetur ac interdum. Massa faucibus nec enim nibh sem elit felis. Donec id sed vulputate adipiscing blandit pellentesque in ultrices. Ipsum elementum ultrices quis quis lacus.
-            </>
-        ),
-    },
 ]
 
-const breadCrumbsItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Cover Letter Template' }
-]
+// const breadCrumbsItems = [
+//     { label: 'Home', href: '/' },
+//     { label: 'Blog', href: '/blog' },
+//     { label: 'Cover Letter Template' }
+// ]
+
 const prosItems = {
     icon: pros,
     title: "Pros",
@@ -134,6 +57,7 @@ const prosItems = {
     isPro: true,
 
 }
+
 const consItems = {
     icon: cons,
     title: "Cons",
@@ -141,11 +65,39 @@ const consItems = {
     isPro: false,
 }
 
-export const blogDetailData = {
+export const resumeFormatData = {
     // prosItemsData: prosItems,
     // consItemsData: consItems,
-    breadCrumbsItems: breadCrumbsItems,
-    blogsVerticalTabsData: blogsVerticalTabsData
+    // breadCrumbsItems: breadCrumbsItems,
+    DynVerticalTabsData: VerticalTabsData
+}
+
+const faqsList = [
+    {
+        question: "What is the best format for resume 2025? ",
+        answer:
+            "In 2025, resumes are likely to be modern with a professional format that emphasizes key skills and experiences. Of course, visual elements will come into play a bit more than in earlier formats, but clarity and readability above everything else. ",
+    },
+    {
+        question: "What is the top rated resume format? ",
+        answer:
+            "The best generic resume format can be different for every person, but what is often most recommended is a reverse chronological format, which shows the work experience in descending order so that the employer can see the latest achievements more easily.  ",
+    },
+    {
+        question: "What is the biodata format for 2025? ",
+        answer:
+            "The biodata format includes all the important personal info, professional experience related to the job applied for, educational background, skills, and achievements presented as concisely as possible. The biodata format should match the type of job being applied for and the specific career stage of the candidate. ",
+    },
+    {
+        question: "What is the best resume format for 15 years experience?",
+        answer:
+            "For a candidate who has nearly 15 years of work experience, reverse chronological and combined resume formatting will be the best format for resume. This style of resume emphasizes skills and accomplishments, followed by a detailed work history, which allows more senior professionals to highlight their vast experience effectively. ",
+    },
+];
+
+export const faqs = {
+    title: "Frequently Asked Questions (FAQs) ",
+    faqlist: faqsList
 }
 
 

@@ -1,16 +1,18 @@
 'use client';
 
-import { InnerBanner, Reviews, BlogDetail } from '@/components';
-import { BannerData, blogDetailData } from './data';
-import { reviewData } from '@/app/data';
+import { InnerBanner, Faq } from '@/components';
+import { BannerData, resumeFormatData, faqs } from './data';
+import ResumeFormatComp from '@/components/resume-format/ResumeFormatComp';
+
 
 const page = () => {
 
     return (
         <>
             <InnerBanner {...BannerData} />
-            <BlogDetail data={blogDetailData} />
-            <Reviews data={reviewData} />
+            {/* <BlogDetail data={resumeFormatData} /> */}
+            <ResumeFormatComp data={resumeFormatData} />
+            <Faq data={faqs} />
         </>
     );
 };
