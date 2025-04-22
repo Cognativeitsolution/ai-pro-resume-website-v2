@@ -14,35 +14,31 @@ import template_12 from "../../../public/resume_template_images/template_12.webp
 import template_13 from "../../../public/resume_template_images/template_13.webp";
 import template_14 from "../../../public/resume_template_images/template_14.webp";
 import template_15 from "../../../public/resume_template_images/template_15.webp";
+// ===============
+import icon1 from "media/customerIcons/saudi.webp";
+import icon2 from "media/customerIcons/aerotek.webp";
+import icon3 from "media/customerIcons/geti.webp";
+import icon4 from "media/customerIcons/ladders.webp";
+import icon5 from "media/customerIcons/snagajob.webp";
+import icon6 from "media/customerIcons/alison.webp";
+// ===============
+
+
 
 export const BannerData = {
   title: (
     <>
-      Find The Perfect Resume Example
-      <br className="hidden lg:block" /> for Your Field
+      Find the Perfect Resume
+      Example <br className="hidden lg:block" />
+      for Your Field
     </>
   ),
   subtitle: "Resume Examples",
-  description: (
-    <>
-      AI Pro Resume is your ultimate destination for creating professional
-      resumes and cover letters. To save you time and effort, we have introduced
-      creative resume examples. These great resume examples are pre-written. You
-      just have to click on them and add minor details to make your resume more
-      personalized. We offer professional resume templates that assist you in
-      landing the interview. Whether you are starting your career or a seasoned
-      professional, AI Pro Resume ensures your resume shines in the crowd.
-    </>
-  ),
-  subdesc: (
-    <>
-      Click here to check our{" "}
-      <Link className="font-semibold" href={"/"}>
-        Cover Letter Examples
-      </Link>
-    </>
-  ),
-  button: "Import Resume",
+  description:"AI Pro Resume is your ultimate destination for creating professional resumes and cover letters. To save you time and effort, we have introduced creative resume examples. These great resume examples are pre-written. You just have to click on them and add minor details to make your resume more personalized. We offer professional resume templates that assist you in landing the interview. Whether you are starting your career or a seasoned professional, AI Pro Resume ensures your resume shines in the crowd.",
+  subdesc: true,
+  linkText: "Cover letter Examples",
+  href: "/cover-letter-examples",
+
 };
 
 const ResumeExamplesPagefaqsList = [
@@ -84,7 +80,7 @@ export const ResumeCategories = [
         of innovation with creativity...
       </>
     ),
-    images: [template_2, template_3, template_4],
+    images: [template_2, template_3, template_4,template_2, template_3, template_4],
   },
   {
     id: "#head2",
