@@ -67,7 +67,7 @@ export default function HowToWriteResume(props: propsType) {
                     <div className="lg:col-span-5 xl:col-span-4 static">
                         <div className="sticky top-32 overflow-y-auto">
                             <DynVerticalTabs heading="Table Of Content"
-                                tabsData={data.DynVerticalTabsData}
+                                tabsData={data?.DynVerticalTabsData}
                                 setSectionId={setSectionId} />
                             <div className="relative  mt-4 hidden lg:block"
                             >
@@ -104,11 +104,11 @@ export default function HowToWriteResume(props: propsType) {
                             </p>
                             <p className='mt-3'>Selecting the correct resume formats and templates is tough, but making one from scratch is also time-consuming, especially if you don't know where to start.</p>
 
-                            <ProConsCard
+                            {/* <ProConsCard
                                 isPro={true}
                                 title="PRO TIP"
                                 icon={IconContact}
-                                description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next." />
+                                description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next." /> */}
 
                             <p className='my-8'>
                                 So, to cater to that, we have brought you this straightforward guide with plenty of resume expert tips and examples that will increase your chances of getting recruiters' attention and eventually help you get the job you have been looking for.
@@ -121,11 +121,11 @@ export default function HowToWriteResume(props: propsType) {
                             </h2>
                             <DynPoints includedPoints={BlogIncludedPoints} />
 
-                            <ProConsCard
+                            {/* <ProConsCard
                                 isPro={true}
                                 title="PRO TIP"
                                 icon={IconContact}
-                                description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next." />
+                                description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next." /> */}
                         </div>
 
                         <div className=' ' id='head1'>
@@ -173,7 +173,7 @@ export default function HowToWriteResume(props: propsType) {
                             </div>
 
 
-                            <div >
+                            <div>
                                 <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                     2. Fetch Important Skills & Keywords
                                 </h2>

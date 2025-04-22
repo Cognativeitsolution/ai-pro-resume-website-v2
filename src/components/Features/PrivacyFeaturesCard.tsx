@@ -30,7 +30,7 @@ const PrivacyFeaturesCard = ({
                         {title}
                     </h3>
                     {Array.isArray(description) ? (
-                        description.map((para: string, idx: number) => (
+                        description?.map((para: string, idx: number) => (
                             <p key={idx} className="text-[16px] text-justify md:text-left mb-2">
                                 {para}
                             </p>
