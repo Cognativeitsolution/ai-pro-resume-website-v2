@@ -347,6 +347,36 @@ const MainHeader = () => {
                                     Pricing
                                 </Link>
                             </li>
+                            <ol className="w-full h-full flex flex-col space-y-10 lg:hidden">
+                                <li>
+                                    <Link
+                                        href="/profile"
+                                        className="text-[20px] lg:text-[16px] font-medium text-white lg:text-black hover:text-primary-100"
+                                        onClick={toggleMenu}
+                                    >
+                                        Profile
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/dashboard"
+                                        className="text-[20px] lg:text-[16px] font-medium text-white lg:text-black hover:text-primary-100"
+                                        onClick={toggleMenu}
+                                    >
+                                        Dashboard
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={"/login"}
+                                        onClick={() => { console.log("Logout clicked"); toggleMenu(); }}
+                                        className="text-[20px] lg:text-[16px] font-medium text-white lg:text-black hover:text-primary-100"
+
+                                    >
+                                        Logout
+                                    </Link>
+                                </li>
+                            </ol>
                         </ul>
                     </div>
                     <div className="flex items-center justify-center gap-4">
@@ -374,20 +404,20 @@ const MainHeader = () => {
                                     <div className="py-2 text-sm text-gray-700">
                                         <Link
                                             href="/profile"
-                                            className="block px-4 py-2 hover:bg-primary hover:text-white font-semibold"
+                                            className="block px-4 py-2 font-semibold"
                                         >
                                             Profile
                                         </Link>
                                         <Link
                                             href="/dashboard"
-                                            className="block px-4 py-2 hover:bg-primary hover:text-white font-semibold"
+                                            className="block px-4 py-2 font-semibold"
                                         >
                                             Dashboard
                                         </Link>
                                         <Link
                                             href={"/login"}
                                             onClick={() => console.log("Logout clicked")}
-                                            className="block px-4 py-2 hover:bg-primary hover:text-white font-semibold"
+                                            className="block px-4 py-2 font-semibold"
                                         >
                                             Logout
                                         </Link>
