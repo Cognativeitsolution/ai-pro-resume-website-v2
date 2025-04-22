@@ -39,7 +39,7 @@ type propsType = {
 const BlogDetail = (props: propsType) => {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
     const toggleExpand = (index: number) => {
         setExpandedIndex(prev => (prev === index ? null : index));
@@ -143,40 +143,51 @@ const BlogDetail = (props: propsType) => {
                                     {blog?.description2}
                                 </p>}
                                 {blog?.headingTab && (
-                                    <div className='mb-2 divide-y'>
+                                    <div className="mb-2 divide-y">
                                         {blog.headingTab.map((tabs: any, index: number) => (
                                             <div key={index}>
-                                                <div className='flex py-2'>
-                                                    <div className='relative after:absolute after:left-0 after:top-4 
-                                    after:h-[1.2px] after:w-[15px] after:bg-black'></div>
-                                                    <div className='pl-6 w-full'>
-                                                        <div className='flex justify-between items-center w-full mb-2'>
-                                                            <h4 className='text-hamzaPrimary text-2xl'>{tabs.heading}</h4>
+                                                <div className="flex py-2">
+                                                    <div
+                                                        className="relative after:absolute after:left-0 after:top-4 
+                                                                    after:h-[1.2px] after:w-[15px] after:bg-black"
+                                                    ></div>
+                                                    <div className="pl-6 w-full">
+                                                        <div className="flex justify-between items-center w-full mb-2">
+                                                            <h4 className="text-hamzaPrimary text-2xl">{tabs.heading}</h4>
                                                             <button
                                                                 onClick={() => toggleExpand(index)}
-                                                                className='px-4 py-1 italic bg-indigo-400/20 text-indigo-700'
+                                                                className="px-4 py-1 italic bg-indigo-400/20 text-indigo-700"
                                                             >
-                                                                {expandedIndex === index ? 'show less' : 'show more'}
+                                                                {expandedIndex === index ? "show less" : "show more"}
                                                             </button>
                                                         </div>
-                                                        <p className='text-sm'>{tabs.description}</p>
+                                                        <p className="text-sm">{tabs.description}</p>
                                                     </div>
                                                 </div>
 
-                                                {/* ✅ Detail content now outside the inner flex div and full-width */}
-                                                {expandedIndex === index && (
-                                                    <div className='px-6 pb-4 text-[15px] text-gray-700'>
-                                                        <p>
-                                                            {/* Replace this with actual detail content */}
-                                                            This is the detailed explanation of <strong>{tabs.heading}</strong> resume format. You can place anything here like bullet points, examples, etc.
-                                                        </p>
+                                                {expandedIndex === index ? (
+                                                    <div className='grid grid-cols-12 gap-4 pl-6'>
+                                                        <div className='col-span-4'>
+                                                            <div className='rounded-lg shadow-xl border overflow-hidden ' key={index}>
+                                                                <Image src={tabs.image} alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <div className='col-span-8 py-6'>
+                                                            <h4 className="text-hamzaPrimary text-2xl mb-4 font-semibold">Best For:</h4>
+                                                            <ul className='list-disc pl-6'>
+                                                                {tabs.list?.map((tabs: any, index: number) => (
+                                                                    <li key={index} className='mb-4 text-sm'>
+                                                                        {tabs}
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                )}
+                                                ) : null}
                                             </div>
                                         ))}
                                     </div>
                                 )}
-
                             </div>
                         ))}
 

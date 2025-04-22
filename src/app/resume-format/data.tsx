@@ -41,31 +41,38 @@ const blogsVerticalTabsData = [
         headingTab: [
             {
                 heading: "Reverse-Chronological:",
-                description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. "
+                description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+                image: Temp5,
+                list: [
+                    "Candidates who have a steady working history and have not taken any long breaks  ",
+                    "Job seekers with a consistent and progressive work history, particularly those in traditional careers where experience is valued, such as managerial-level skills or a specialist in a particular field.  ",
+                    "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
+                    "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
+                ]
             },
             {
                 heading: "Functional:",
-                description: "This format shows your skills rather than your previous working experience and qualifications. It focuses on your abilities rather than your career background. "
+                description: "This format shows your skills rather than your previous working experience and qualifications. It focuses on your abilities rather than your career background. ",
+                image: Temp3,
+                list: [
+                    "Candidates who have a steady working history and have not taken any long breaks  ",
+                    "Job seekers with a consistent and progressive work history, particularly those in traditional careers where experience is valued, such as managerial-level skills or a specialist in a particular field.  ",
+                    "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
+                    "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
+                ]
             },
             {
                 heading: "Combination:",
-                description: "It is evident by the name that this format is a mix of reverse-chronological and functional resume format.  This template has a skills summary section and work experience, and equally accentuates both.  "
+                description: "It is evident by the name that this format is a mix of reverse-chronological and functional resume format.  This template has a skills summary section and work experience, and equally accentuates both.  ",
+                image: Temp1,
+                list: [
+                    "Candidates who have a steady working history and have not taken any long breaks  ",
+                    "Job seekers with a consistent and progressive work history, particularly those in traditional careers where experience is valued, such as managerial-level skills or a specialist in a particular field.  ",
+                    "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
+                    "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
+                ]
             },
         ]
-        // points: [
-        //     {
-        //         icon: BlogHand,
-        //         para: "Lorem ipsum dolor sit"
-        //     },
-        //     {
-        //         icon: BlogHand,
-        //         para: "Lorem ipsum dolor sit"
-        //     },
-        //     {
-        //         icon: BlogHand,
-        //         para: "Lorem ipsum dolor sit"
-        //     },
-        // ],
 
     },
     {
