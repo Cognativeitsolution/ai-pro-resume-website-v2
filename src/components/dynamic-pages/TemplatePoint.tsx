@@ -31,9 +31,9 @@ export default function TemplatePoint({ data }: PropsType) {
                             <p className="text-base pb-2">{tab.description}</p>
                             <ul className=''>
                                 {tab.list?.map((item: string, i: number) => (
-                                    <div className="flex pb-2">
+                                    <div className="flex pb-2" key={i}>
                                         <div className="relative after:absolute after:left-0 after:top-4 
-                                       after:h-[1.2px] after:w-[15px] after:bg-black" />  <li key={i} className='mb-4 text-xl font-semibold pl-6'>{item}</li>
+                                       after:h-[1.2px] after:w-[15px] after:bg-black" />  <li className='mb-4 text-xl font-semibold pl-6'>{item}</li>
                                     </div>
                                 ))}
                             </ul>
