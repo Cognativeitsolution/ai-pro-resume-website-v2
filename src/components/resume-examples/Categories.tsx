@@ -74,6 +74,7 @@ const Categories = () => {
   const [top_categories, set_top_categories] = useState<TopCategories[]>([]);
   const [activeCategory, setActiveCategory] = useState(Categories[0]);
   const [isfilter, setIsfilter] = useState<any>(false);
+  const [exp_img, setExp_img] = useState<any>([]);
 
   useEffect(() => {
     OldAPI.get("template-categories")
@@ -81,6 +82,7 @@ const Categories = () => {
         console.log(res);
         setCategories(res.data.categories);
         set_top_categories(res.data.top_categories);
+        setExp_img(res.data.image_url);
       })
       .catch((err) => {
         console.log(err);
@@ -116,7 +118,6 @@ const Categories = () => {
                 <h1 className="text-2xl py-4 px-4 text-hamzaPrimary">
                   Categories
                 </h1>
-               
                 {Categories?.sort((a, b) => a.name.localeCompare(b.name)).map(
                   (category, index) => (
                     <div
@@ -154,68 +155,98 @@ const Categories = () => {
                           </h1>
                         </div>
                       </div>
-                      {top_categories.resume_examples.length ? (
-                        <div className="flex justify-start items-start flex-wrap ">
-                          {top_categories.resume_examples?.map(
-                            (resume_examples, idx) => {
-                              return (
-                                <div
-                                  key={idx}
-                                  className="w-full sm:w-[50%] md:w-[33%]"
-                                >
-                                  <div
-                                    className="dd_btn4 flex justify-normal items-start px-6 py-8 lg:p-2 text-slate-600 cursor-pointer flex-wrap mt-2 "
-                                    id={
-                                      "bborder_box3_" + resume_examples.id + idx
+                      {top_categories.resume_examples.length < 4 ? (
+                        <div className="flex justify-start items-start flex-wrap">
+                          {top_categories.resume_examples.map(
+                            (resume_examples, idx) => (
+                              <div
+                                key={idx}
+                                className="w-full sm:w-[50%] md:w-[33%]"
+                              >
+                                <div className="flex justify-normal items-start px-6 py-8 lg:p-2 text-slate-600 cursor-pointer flex-wrap mt-2">
+                                  <Image
+                                    src={
+                                      exp_img +
+                                      "/" +
+                                      resume_examples.preview_image
                                     }
-                                  >
-                                    <div className="cl_hover2 lg:m-4  ">
-                                      <div className="relative">
-                                        <div
-                                          className="relative bborder_box"
-                                          id={
-                                            "bborder_box_" +
-                                            resume_examples.id +
-                                            idx
-                                          }
-                                        >
+                                    alt="example_image"
+                                    width={300}
+                                    height={300}
+                                  />
+                                  <div className="relative w-full">
+                                    <p className="text-md text-black text-center mt-4 max-w-[160px] truncate mx-auto">
+                                      {resume_examples.resume_name}
+                                    </p>
+                                    <span className="mt-2">
+                                      {resume_examples.job_positions.map(
+                                        (position, posIdx) => (
                                           <div
-                                            className="absolute border border-solid border-[#01B2AC] rounded-xl w-full h-full z-10"
-                                            id={
-                                              "bborder_box2_" +
-                                              resume_examples.id +
-                                              idx
-                                            }
-                                          ></div>
-                                        </div>
-
-                                        <p className="cl_inner2 duration-300 transition-all Montserrat text-md text-black text-center mt-4 max-w-[160px] truncate mx-auto">
-                                          {resume_examples.resume_name}
-                                        </p>
-                                        <span className="mt-2">
-                                          {resume_examples?.job_positions.map(
-                                            (position, posIdx) => (
-                                              <div
-                                                key={posIdx}
-                                                className="bg-[#0072b1] flex items-center justify-center text-white text-xs font-semibold px-4 py-1 rounded mt-2"
-                                              >
-                                                <span className="max-w-[160px] truncate mx-auto">
-                                                  {position.name}
-                                                </span>
-                                              </div>
-                                            )
-                                          )}
-                                        </span>
-                                      </div>
-                                    </div>
+                                            key={posIdx}
+                                            className="bg-[#0072b1] flex items-center justify-center text-white text-xs font-semibold px-4 py-1 rounded mt-2"
+                                          >
+                                            <span className="max-w-[160px] truncate mx-auto">
+                                              {position.name}
+                                            </span>
+                                          </div>
+                                        )
+                                      )}
+                                    </span>
                                   </div>
                                 </div>
-                              );
-                            }
+                              </div>
+                            )
                           )}
                         </div>
                       ) : (
-                        ""
+                        <AutoPlaySlider
+                          wrapperClasses="mt-4"
+                          options={{ slidesToScroll: 1 }}
+                          arrows={true}
+                          arrowPosition="justify-end"
+                        >
+                          {top_categories.resume_examples.map(
+                            (resume_examples, idx) => (
+                              <div
+                                key={idx}
+                                className="pl-5 min-w-[90%] sm:min-w-[50%] md:min-w-[33%] box-border"
+                              >
+                                <div className="flex justify-normal items-start px-6 py-8 lg:p-2 text-slate-600 cursor-pointer flex-wrap mt-2">
+                                  <Image
+                                    src={
+                                      exp_img +
+                                      "/" +
+                                      resume_examples.preview_image
+                                    }
+                                    alt="example_image"
+                                    width={300}
+                                    height={300}
+                                  />
+
+                                  <div className="relative w-full">
+                                    <p className="text-md text-black text-center mt-4 max-w-[160px] truncate mx-auto">
+                                      {resume_examples.resume_name}
+                                    </p>
+                                    <span className="mt-2">
+                                      {resume_examples.job_positions.map(
+                                        (position, posIdx) => (
+                                          <div
+                                            key={posIdx}
+                                            className="bg-[#0072b1] flex items-center justify-center text-white text-xs font-semibold px-4 py-1 rounded mt-2"
+                                          >
+                                            <span className="max-w-[160px] truncate mx-auto">
+                                              {position.name}
+                                            </span>
+                                          </div>
+                                        )
+                                      )}
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                          )}
+                        </AutoPlaySlider>
                       )}
 
                       <br />
@@ -236,27 +267,6 @@ const Categories = () => {
                   ></p>
                 </>
               )}
-
-              {/* <AutoPlaySlider
-                options={{ align: "start" }}
-                arrowPosition="!mt-2 mb-5 md:mb-8"
-              >
-                {activeCategory.images.map((img, index) => (
-                  <div
-                    key={index}
-                    className="grow-0 shrink-0 basis-[100%] md:basis-[50%] xl:basis-1/3 pl-5"
-                  >
-                    <div key={index} className="rounded-lg w-full sm:w-[300px]">
-                      <Image
-                        key={index}
-                        src={img}
-                        priority
-                        alt={`${activeCategory.name} Template ${index + 1}`}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </AutoPlaySlider> */}
             </div>
           </div>
         </div>
