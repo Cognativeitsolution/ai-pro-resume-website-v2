@@ -23,25 +23,32 @@ export const BannerData = {
 const VerticalTabsData = [
     {
         id: 'head1',
-        title: "3 Most Popular Resume Formats",
+        title: "How To Write A Good Resume in 2025?",
     },
     {
         id: 'head2',
-        title: "Reverse-Chronological Resume Format ",
+        title: "This blog will include",
     },
     {
         id: 'head3',
-        title: "3 Most Popular Resume Formats",
+        title: "How to Write a Resume: Step-By-Step Guide",
     },
     {
         id: 'head4',
-        title: "3 Most Popular Resume Formats",
+        title: "How To Write A Good Resume: 6 Steps",
     },
     {
         id: 'head5',
-        title: "3 Most Popular Resume Formats",
+        title: "Some Professional Resume Examples For You To Check Out",
     },
-
+    {
+        id: 'head6',
+        title: "Final Thoughts",
+    },
+    {
+        id: 'head7',
+        title: "Frequently Asked Questions (FAQs)",
+    },
 ]
 
 // const breadCrumbsItems = [
@@ -53,7 +60,7 @@ const VerticalTabsData = [
 const prosItems = {
     icon: pros,
     title: "Pros",
-    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
+    description: [`Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`],
     isPro: true,
 
 }
@@ -61,15 +68,23 @@ const prosItems = {
 const consItems = {
     icon: cons,
     title: "Cons",
-    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
+    description: [`Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`],
     isPro: false,
 }
+export const BlogIncludedPoints = [
+    { id: 1, point: 'How to Write a Resume: Step-By-Step Guide ' },
+    { id: 2, point: 'Tips on how to write a good resume' },
+    { id: 3, point: 'Examples of a job-winning resume' },
+    { id: 4, point: 'An AI-powered tool to create a resume quickly' },
+    { id: 14, point: 'How to Write a Resume: Step-By-Step Guide' },
+    { id: 24, point: 'Tips on how to write a good resume' }
+]
 
 export const resumeFormatData = {
     // prosItemsData: prosItems,
     // consItemsData: consItems,
     // breadCrumbsItems: breadCrumbsItems,
-    DynVerticalTabsData: VerticalTabsData
+    DynVerticalTabsData: VerticalTabsData,
 }
 
 const faqsList = [
