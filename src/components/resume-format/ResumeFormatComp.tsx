@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import blogAiImage from 'media/images/AiBlogImg.webp'
 import IconContact from 'media/images/Icon.webp'
-import { BreadCrumbs, ProConsCard, QuickTips, DynVerticalTabs } from '@/components'
+import { BreadCrumbs, ProConsCard, QuickTips, DynVerticalTabs, CollapseTab, TemplatePoint } from '@/components'
 import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
+import TipPro from 'media/images/TipPro.webp'
 
 type PiontData = {
     icon: any
@@ -19,6 +20,13 @@ type DynVerticalTabsData = {
     gridImages?: any[]
     quickTip?: any
 };
+type TemplatePointTabItems = {
+    heading?: string
+    description?: React.ReactNode
+    // points?: PiontData[]
+    // gridImages?: any[]
+    // quickTip?: any
+};
 
 type BreadCrumbsItems = {
     label?: string
@@ -29,6 +37,9 @@ type BlogDetailData = {
     prosItemsData?: any,
     consItemsData?: any,
     // breadCrumbsItems?: BreadCrumbsItems[]
+    CollapseTab?: any,
+    templatePoint?: any,
+    TemplatePointTab?: any,
     DynVerticalTabsData?: DynVerticalTabsData[]
     headingTab?: any[]
 };
@@ -85,16 +96,61 @@ export default function ResumeFormatComp(props: propsType) {
                         </div>
                     </div>
                     <div className='lg:col-span-7 xl:col-span-8'>
-                        <div className='h-[90vh] border-4 border-rose-950' id='head1'>
+
+                        <div className='' id='head0'>
                             <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                 3 Most Popular Resume Formats
                             </h2>
+                            <CollapseTab data={data.CollapseTab} />
                         </div>
-                        <div className='h-[90vh] border-4 border-green-950' id='head2'>
-                            <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
+
+
+                        {data?.TemplatePointTab?.map((items: any, index: number) => (
+                            <div className='mb-8' id={`head${index + 1}`} key={index}>
+                                <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
+                                    {items.heading}
+                                </h2>
+                                <p className="text-[16px] lg:text-[18px] text-justify">
+                                    {items.description}
+                                </p>
+                                <ProConsCard
+                                    title={items.titlePro}
+                                    icon={TipPro}
+                                    description={items.descriptionPro}
+                                    isTip={true}
+                                />
+                                <TemplatePoint data={items.TemplatePointTab} />
+
+                                <ProConsCard
+                                    title={items?.prosItemsData?.title}
+                                    icon={items?.prosItemsData?.icon}
+                                    description={items?.prosItemsData?.description}
+                                    isPro={true}
+                                />
+
+                                <ProConsCard
+                                    title={items?.consItemsData?.title}
+                                    icon={items?.consItemsData?.icon}
+                                    description={items?.consItemsData?.description}
+
+                                />
+                            </div>
+                        ))}
+                        {/* <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                 Reverse-Chronological Resume Format
                             </h2>
-                        </div>
+                            <p className="text-[16px] lg:text-[18px] text-justify">
+                                A reverse chronological resume format is also known as a chronological resume format. It focuses on your recent working experience, followed by the rest of your job experience in reverse order.
+                            </p>
+                            <ProConsCard
+                                title="PRO TIP"
+                                icon={TipPro}
+                                description=" This format is the most popular one out of all formats. Most job seekers start with this one."
+                                isTip={true}
+                            />
+                            <TemplatePoint data={data.CollapseTab} /> */}
+
+
                     </div>
                 </div>
             </div>

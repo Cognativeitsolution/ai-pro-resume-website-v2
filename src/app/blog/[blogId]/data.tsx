@@ -376,13 +376,15 @@ const breadCrumbsItems = [
 const prosItems = {
     icon: pros,
     title: "Pros",
-    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
+    description: [
+        "Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history."],
     isPro: true,
 }
 const consItems = {
     icon: cons,
     title: "Cons",
-    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
+    description: [
+        `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`],
     isPro: false,
 }
 

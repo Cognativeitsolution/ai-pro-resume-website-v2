@@ -22,23 +22,23 @@ export const BannerData = {
 
 const VerticalTabsData = [
     {
-        id: 'head1',
+        id: 'head0',
         title: "3 Most Popular Resume Formats",
     },
     {
-        id: 'head2',
+        id: 'head1',
         title: "Reverse-Chronological Resume Format ",
     },
     {
+        id: 'head2',
+        title: "Functional Resume Format s",
+    },
+    {
         id: 'head3',
-        title: "3 Most Popular Resume Formats",
+        title: "Combination Resume Format",
     },
     {
         id: 'head4',
-        title: "3 Most Popular Resume Formats",
-    },
-    {
-        id: 'head5',
         title: "3 Most Popular Resume Formats",
     },
 
@@ -53,24 +53,141 @@ const VerticalTabsData = [
 const prosItems = {
     icon: pros,
     title: "Pros",
-    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
-    isPro: true,
-
+    description: [
+        "With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  ",
+        "With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  ",
+        "With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  ",
+        "With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  ",
+    ],
+    // description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
 }
 
 const consItems = {
     icon: cons,
     title: "Cons",
-    description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
-    isPro: false,
+    description: [
+        `With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  `,
+        `Job seekers entering a completely new industry can take advantage of this generic resume format as it will assist them in shedding light on the relevant skills and experience from their past work. `,
+        `If you've had a diverse career path or have crucial gaps in your employment, this format can help downplay those and divert employers' attention toward your actual capabilities.`,
+        `You can customize the skills section to focus on the abilities most relevant to the target job, increasing your chances of getting noticed.`,
+        `The work history section provides context and concrete examples of how you've used your skills in previous roles.`,
+
+    ],
+
 }
 
+const CollapseTabData = [
+    {
+        heading: "Reverse-Chronological Resume Forma",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: Temp5,
+        list: [
+            "Candidates who have a steady working history and have not taken any long breaks  ",
+            "Job seekers with a consistent and progressive work history, particularly those in traditional careers where experience is valued, such as managerial-level skills or a specialist in a particular field.  ",
+            "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
+            "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
+        ]
+    },
+    {
+        heading: "Functional Resume Forma",
+        description: "This format shows your skills rather than your previous working experience and qualifications. It focuses on your abilities rather than your career background. ",
+        image: Temp3,
+        list: [
+            "Candidates who have a steady working history and have not taken any long breaks  ",
+            "Job seekers with a consistent and progressive work history, particularly those in traditional careers where experience is valued, such as managerial-level skills or a specialist in a particular field.  ",
+            "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
+            "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
+        ]
+    },
+    {
+        heading: "Combination Resume Format",
+        description: "It is evident by the name that this format is a mix of reverse-chronological and functional resume format.  This template has a skills summary section and work experience, and equally accentuates both.  ",
+        image: Temp1,
+        list: [
+            "Candidates who have a steady working history and have not taken any long breaks  ",
+            "Job seekers with a consistent and progressive work history, particularly those in traditional careers where experience is valued, such as managerial-level skills or a specialist in a particular field.  ",
+            "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
+            "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
+        ]
+    },
+]
+
+const TemplatePointTabData = [
+    {
+        heading: "Reverse-Chronological",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        titlePro: "PRO TIP",
+        descriptionPro: ["This format is the most popular one out of all formats. Most job seekers start with this one."],
+        TemplatePointTab: [
+            {
+                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
+                image: Temp5,
+                list: [
+                    "Contact Information",
+                    "Resume summary ",
+                    "Skills summary ",
+                    "Work History",
+                    "Optional Sections",
+                ]
+            }
+        ],
+        prosItemsData: prosItems,
+        consItemsData: consItems,
+    },
+    {
+        heading: "Reverse-Chronological",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        titlePro: "PRO TIP",
+        descriptionPro: ["This format is the most popular one out of all formats. Most job seekers start with this one."],
+        TemplatePointTab: [
+            {
+                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
+                image: Temp5,
+                list: [
+                    "Contact Information",
+                    "Resume summary ",
+                    "Skills summary ",
+                    "Work History",
+                    "Optional Sections",
+                ]
+            }
+        ],
+        prosItemsData: prosItems,
+        consItemsData: consItems,
+    },
+    {
+        heading: "Reverse-Chronological",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        titlePro: "PRO TIP",
+        descriptionPro: ["This format is the most popular one out of all formats. Most job seekers start with this one."],
+        TemplatePointTab: [
+            {
+                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
+                image: Temp5,
+                list: [
+                    "Contact Information",
+                    "Resume summary ",
+                    "Skills summary ",
+                    "Work History",
+                    "Optional Sections",
+                ]
+            }
+        ],
+        prosItemsData: prosItems,
+        consItemsData: consItems,
+    },
+
+]
+
 export const resumeFormatData = {
-    // prosItemsData: prosItems,
-    // consItemsData: consItems,
+
     // breadCrumbsItems: breadCrumbsItems,
-    DynVerticalTabsData: VerticalTabsData
+    CollapseTab: CollapseTabData,
+    DynVerticalTabsData: VerticalTabsData,
+    TemplatePointTab: TemplatePointTabData
 }
+
+
 
 const faqsList = [
     {

@@ -41,6 +41,7 @@ const BreadCrumbs = dynamic(() => import("./blog/blogDetailComponents/BreadCrumb
 const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalTabs"));
 const CollapseTab = dynamic(() => import("./dynamic-pages/CollapseTab"));
 const DynVerticalTabs = dynamic(() => import("./dynamic-pages/DynVerticalTabs"));
+const TemplatePoint = dynamic(() => import("./dynamic-pages/TemplatePoint"));
 
 export {
   AutoPlaySlider,
@@ -84,4 +85,5 @@ export {
   VerticalTabs,
   CollapseTab,
   DynVerticalTabs,
+  TemplatePoint
 };
