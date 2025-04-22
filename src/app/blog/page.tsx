@@ -1,8 +1,5 @@
 import {
     InnerBanner,
-    Features,
-    Counter,
-    Stepper,
     Client,
     Blogs,
     Reviews,

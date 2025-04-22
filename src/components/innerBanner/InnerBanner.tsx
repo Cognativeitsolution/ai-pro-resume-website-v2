@@ -12,15 +12,14 @@ import { FaArrowRightLong } from "react-icons/fa6";
 type BannerProps = {
   title?: string | ReactNode;
   subtitle?: string;
-  description?: string | string[];
+  description?: string | ReactNode;
   subdesc?: boolean;
   linkText?: string;
   href?: string;
-  icons?: any[];
 };
 
 const InnerBanner = (props: BannerProps) => {
-  const { title, subtitle, description, subdesc, linkText, href, icons = [] } = props;
+  const { title, subtitle, description, subdesc, linkText, href } = props;
   const { showReferHeader } = useReferHeader();
   return (
     <>
@@ -33,23 +32,15 @@ const InnerBanner = (props: BannerProps) => {
         />
         <div className="container mx-auto">
           <div className={`flex flex-col items-center justify-between pb-10 md:pb-40 lg:pb-56 ${showReferHeader ? 'pt-40 lg:pt-48' : 'pt-[7.5rem] lg:pt-44'}`}>
-            <p className="font-normal text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
+            <p className="text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
               {subtitle}
             </p>
             <h1 className="text-[30px] md:text-[40px] lg:text-[50px] leading-[30px] md:leading-[50px] lg:leading-[60px] font-semibold text-center text-white mt-1 mb-1 sm:mb-3 max-w-3xl">
               {title}
             </h1>
-            {Array.isArray(description) ? (
-              description.map((para: string, idx: number) => (
-                <p key={idx} className="text-[16px] lg:text-[18px] text-center text-white mt-3 w-full md:w-[80%] mb-2">
-                  {para}
-                </p>
-              ))
-            ) : (
-              <p className="text-[16px] lg:text-[18px] text-center text-white mt-3 w-full md:w-[80%]">
-                {description}
-              </p>
-            )}
+            <p className="text-[16px] lg:text-[18px] text-center text-white mt-3 w-full md:w-[80%]">
+              {description}
+            </p>
             {/* Conditional subdesc rendering */}
             {subdesc && (
               <div className="flex flex-col gap-8 mt-5">
@@ -73,22 +64,6 @@ const InnerBanner = (props: BannerProps) => {
                     border="border border-white"
                   />
                 </div>
-                {icons.length > 0 && (
-                  <div className="flex flex-col justify-center items-center gap-4 pb-6">
-                    <p className="text-[16px] lg:text-[18px] text-white font-semibold">Our customers were hired by:</p>
-                    <div className="flex flex-wrap items-center justify-center gap-8">
-                      {icons.map((src, index) => (
-                        <Image
-                          key={index}
-                          src={src}
-                          alt="Customer Icon"
-                          priority
-                          className="aspect-[15/4] object-contain w-[150px] invert"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             )}
           </div>

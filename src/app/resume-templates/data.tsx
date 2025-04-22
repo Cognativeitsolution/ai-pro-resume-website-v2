@@ -1,13 +1,10 @@
-// ===============
 import icon1 from "media/customerIcons/saudi.webp";
 import icon2 from "media/customerIcons/aerotek.webp";
 import icon3 from "media/customerIcons/geti.webp";
 import icon4 from "media/customerIcons/ladders.webp";
 import icon5 from "media/customerIcons/snagajob.webp";
 import icon6 from "media/customerIcons/alison.webp";
-// ===============
-
-const customerIcons = [icon1, icon2, icon3, icon4, icon5, icon6];
+// ==========================
 
 export const BannerData = {
   title: (
@@ -16,16 +13,19 @@ export const BannerData = {
     </>
   ),
   subtitle: "Resume Templates",
-  description: [
-    "Curriculum templates are the key that makes your resume stand out. AI Pro Resumes offers the best professional resume templates that are ATS-friendly and customizable. To create a professional resume, select from your preferred best resume templates, insert all the details, and download in PDF format.",
-    "We have templates for all. Whether you are looking for a basic resume template, a simple modern resume template, a resume portfolio template, or an outdoor professional guiding resume template, we have got you covered. Let’s now catch the recruiter's attention with a clean simple resume template!"
-  ],
+  description: "We have templates for all. Whether you are looking for a basic resume template, a simple modern resume template, a resume portfolio template, or an outdoor professional guiding resume template, we have got you covered. AI Pro Resumes offers the best professional resume templates that are ATS-friendly and customizable. Let’s now catch the recruiter's attention with a clean simple resume template!",
   subdesc: true,
   linkText: "Cover letter Templates",
   href: "/cover-letter-templates",
+};
+// ==========================
+const customerIcons = [icon1, icon2, icon3, icon4, icon5, icon6, icon1, icon2, icon3, icon4, icon5, icon6];
+
+export const IconData = {
+  title: "Our customers were hired by:",
   icons: customerIcons
 };
-
+// ==========================
 const ResumeExamplesPagefaqsList = [
   {
     question: "What Makes Us The Best Resume Maker In The Market?",

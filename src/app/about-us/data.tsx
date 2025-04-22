@@ -1,8 +1,15 @@
-import aboutVideo from "media/about_us/about-video.webp";
+import icon1 from "media/reviewIcons/icon1.webp";
+import icon2 from "media/reviewIcons/icon2.webp";
+import icon3 from "media/reviewIcons/icon3.webp";
+import icon4 from "media/reviewIcons/icon4.webp";
+import icon5 from "media/reviewIcons/icon5.webp";
+import icon6 from "media/reviewIcons/icon6.webp";
+// ==========================
 import aboutCounter from "media/about_us/about-counter.webp";
 import aboutCounter1 from "media/images/about-counter-1.webp";
 import aboutCounter2 from "media/images/about-counter-2.webp";
 import aboutCounter3 from "media/images/about-counter-3.webp";
+// ==========================
 
 export const BannerData = {
     title: (
@@ -12,13 +19,19 @@ export const BannerData = {
         </>
     ),
     subtitle: "About us",
-    description: (
-        <>
-            AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format to expert tips, we have all that assist you in landing your dream interview.
-        </>
-    ),
+    description: "AI Pro Resume is an all-in-one platform offering everything a job hunter needs. From easy resume format to expert tips, we have all that assist you in landing your dream interview."
 };
 
+// ==========================
+const customerIcons = [icon1, icon2, icon3, icon4, icon5, icon6, icon1, icon2, icon3, icon4, icon5, icon6];
+
+export const IconData = {
+    title: "Trusted by Clients Worldwide",
+    icons: customerIcons,
+    anyClass:"invert"
+};
+
+// ==========================
 export const FeaturesData = [
     {
         // image: aboutVideo,
@@ -39,6 +52,7 @@ export const FeaturesData = [
 
 ];
 
+// ==========================
 const CounterList = [
     {
         icon: aboutCounter1.src,
@@ -67,6 +81,7 @@ export const CounterData = {
     counterlist: CounterList
 }
 
+// ==========================
 const stepperList = [
     {
         title: "Our Mission",
@@ -96,6 +111,7 @@ export const StepperData = {
 
 }
 
+// ==========================
 export const ClientData = {
     title: "Our Valuable Clients",
     description: (

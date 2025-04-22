@@ -19,38 +19,41 @@ type Job = {
   slug: string;
 };
 
-type propsType = {
+type Props = {
   data: CareerProps;
 };
 
-const CareerJobs = ({ data }: propsType) => {
+const CareerJobs = ({ data }: Props) => {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [showLoader, setShowLoader] = useState(true);
+
   const jobsPerPage = 9;
-
-  useEffect(() => {
-    OldAPI.get("show-jobs")
-      .then((res) => {
-        console.log(res, "res");
-        setJobs(res.data);
-        setShowLoader(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching jobs:", error);
-        setJobs([]);
-        setShowLoader(false);
-      });
-  }, []);
-
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
   const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
   const totalPages = Math.ceil(jobs.length / jobsPerPage);
 
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const res = await OldAPI.get("show-jobs");
+        if (Array.isArray(res?.data)) {
+          setJobs(res.data);
+        } else {
+          console.warn("Unexpected jobs response:", res);
+          setJobs([]);
+        }
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+        setJobs([]);
+      } finally {
+        setShowLoader(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
 
   useEffect(() => {
     if (jobs.length > 0) {
@@ -61,30 +64,32 @@ const CareerJobs = ({ data }: propsType) => {
   return (
     <section className="py-5 md:py-10">
       <div className="container">
-        <div className="mb-5 md:mb-10">
-          <h2 className="text-center text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold">
-            {data.title}
-          </h2>
-        </div>
+        {data.title && (
+          <div className="mb-5 md:mb-10">
+            <h2 className="text-center text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold">
+              {data.title}
+            </h2>
+          </div>
+        )}
 
-        {/* Conditional Rendering for Loader, Data, or No Data */}
         <div className="mt-10 min-h-[200px] flex justify-center items-center">
+          {/* Loader */}
           {showLoader ? (
             <CustomLoader size={50} color="#9885FF" text="Fetching Jobs..." />
           ) : jobs.length > 0 ? (
             <div className="grid grid-cols-1 gap-8">
-              <div>
+              {data.apply && (
                 <h3 className="text-[24px] leading-[34px] font-semibold text-hamzaPrimary">
                   {data.apply}
                 </h3>
-              </div>
+              )}
               {/* Job Cards */}
               <JobCards jobs={currentJobs} />
               {/* Pagination */}
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                onPageChange={handlePageChange}
+                onPageChange={setCurrentPage}
               />
             </div>
           ) : (
