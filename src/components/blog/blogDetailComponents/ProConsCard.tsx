@@ -24,7 +24,7 @@ export default function ProConsCard({ description, title, icon, isPro, isTip }: 
                     <div className={`flex items-start gap-4 p-4 rounded-2xl shadow-sm w-[97%] sm:w-[98%] h-[98%] z-20 ${isPro ? "bg-green-100 border border-green-600" : isTip ? "bg-indigo-100 border border-indigo-600" : "bg-red-100 border border-red-600"} `}>
                         <div className='mt-10 '>
                             {description && (
-                                description.map((item: any, index: number) => {
+                                description?.map((item: any, index: number) => {
                                     return <p key={index} className="text-sm text-gray-800 p-2">{item}</p>;
                                 })
                             )}

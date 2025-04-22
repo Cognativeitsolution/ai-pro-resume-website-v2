@@ -6,11 +6,7 @@ export const BannerData = {
             <br className="hidden lg:block" /> Explore Rewarding opportunities with AI Pro Resume
         </>
     ),
-    description: (
-        <>
-            Join our dynamic team at AI Pro Resume and be at the forefront ofartificial intelligence innovation. With cutting-edge technology and a collaborative, forward-thinking work atmosphere, you can shape the future of resumes and job success.
-        </>
-    ),
+    description: "Join our dynamic team at AI Pro Resume and be at the forefront ofartificial intelligence innovation. With cutting-edge technology and a collaborative, forward-thinking work atmosphere, you can shape the future of resumes and job success."
 };
 
 

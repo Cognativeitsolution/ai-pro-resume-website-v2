@@ -42,6 +42,10 @@ const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalT
 const CollapseTab = dynamic(() => import("./dynamic-pages/CollapseTab"));
 const DynVerticalTabs = dynamic(() => import("./dynamic-pages/DynVerticalTabs"));
 const TemplatePoint = dynamic(() => import("./dynamic-pages/TemplatePoint"));
+const Search = dynamic(() => import("./resume-examples/Search"));
+const Categories = dynamic(() => import("./resume-examples/Categories"));
+const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
+const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
 
 export {
   AutoPlaySlider,
@@ -85,5 +89,9 @@ export {
   VerticalTabs,
   CollapseTab,
   DynVerticalTabs,
-  TemplatePoint
+  TemplatePoint,
+  Search,
+  Categories,
+  IconSlider,
+  ShowAllTemplates,
 };

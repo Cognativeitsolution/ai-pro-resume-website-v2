@@ -37,11 +37,7 @@ export const bannerData = {
         </>
     ),
     subtitle: "About us",
-    description: (
-        <>
-            Easy to use templates, AI Powered Suggestions, and one click download.
-        </>
-    ),
+    description: "Easy to use templates, AI Powered Suggestions, and one click download.",
 };
 
 const tabDisplayMap = {
