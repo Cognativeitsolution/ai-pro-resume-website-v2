@@ -39,6 +39,8 @@ const ProConsCard = dynamic(() => import("./blog/blogDetailComponents/ProConsCar
 const QuickTips = dynamic(() => import("./blog/blogDetailComponents/QuickTips"));
 const BreadCrumbs = dynamic(() => import("./blog/blogDetailComponents/BreadCrumbs"));
 const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalTabs"));
+const Search = dynamic(() => import("./resume-examples/Search"));
+const Categories = dynamic(() => import("./resume-examples/Categories"));
 
 export {
   AutoPlaySlider,
@@ -79,5 +81,7 @@ export {
   ProConsCard,
   QuickTips,
   BreadCrumbs,
-  VerticalTabs
+  VerticalTabs,
+  Search,
+  Categories
 };

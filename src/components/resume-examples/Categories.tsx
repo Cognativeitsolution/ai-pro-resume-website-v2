@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-import { ResumeCategories } from "./data";
+import { ResumeCategories } from "../../app/resume-examples/data";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
