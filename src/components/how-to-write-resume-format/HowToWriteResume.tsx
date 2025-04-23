@@ -290,7 +290,7 @@ export default function HowToWriteResume(props: propsType) {
                                                             {sec?.desc}
                                                         </p>
 
-                                                        {sec?.includedFieldsRight?.length ? <TemplatePoint data={sec?.includedFieldsRight} /> : null}
+                                                        {/* {sec?.includedFieldsRight?.length ? <TemplatePoint data={sec?.includedFieldsRight} /> : null} */}
                                                         {sec?.includedSections?.length ? sec.includedSections.map((dataa, index) => (
                                                             <div className="flex py-2" key={index}>
                                                                 <div className="relative after:absolute after:left-0 after:top-4 after:h-[1.2px] after:w-[15px] after:bg-black" />
