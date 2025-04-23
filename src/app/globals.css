@@ -11,3 +11,23 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.bgPrimary {
+  background: linear-gradient(to right, #9885ff, #79a9ff);
+}
+.bgPrimaryDark {
+  background: radial-gradient(
+    95.2% 351.86% at 100.99% 0%,
+    #7d16c4 0%,
+    #3358c3 81.2%,
+    #3358c3 100%
+  );
+}
+.bgSecondary {
+  background: linear-gradient(
+    90deg,
+    rgba(207, 199, 255, 0.6) 0%,
+    rgba(211, 211, 211, 0.1) 50%,
+    rgba(212, 228, 255, 1) 100%
+  );
+}

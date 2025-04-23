@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${primary.variable} font-primary bg-secondary`}>
+      <body className={`${primary.variable} font-primary bgSecondary`}>
         <ConditionalLayout>
           {children}
         </ConditionalLayout>

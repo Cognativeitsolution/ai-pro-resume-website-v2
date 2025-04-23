@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 type WelcomeData = {
-    title: string;
+    title: string | ReactNode;
     description: string[];
 };
 
