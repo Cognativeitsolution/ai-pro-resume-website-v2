@@ -44,7 +44,7 @@ const DynVerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
                                 ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 text-white' : ''}`}
                             >
                                 <span className='text-lg font-light'><FaAngleDoubleRight /></span>
-                                <p>{data?.title}</p>
+                                <p className=''>{data?.title}</p>
                             </Link>
                         )
                     })}

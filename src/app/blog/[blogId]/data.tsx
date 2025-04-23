@@ -342,11 +342,6 @@ const blogsVerticalTabsData = [
     },
 ]
 
-const breadCrumbsItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Cover Letter Template' }
-]
 const prosItems = {
     icon: pros,
     title: "Pros",
@@ -365,7 +360,6 @@ const consItems = {
 export const blogDetailData = {
     prosItemsData: prosItems,
     consItemsData: consItems,
-    breadCrumbsItems: breadCrumbsItems,
     blogsVerticalTabsData: blogsVerticalTabsData
 }
 

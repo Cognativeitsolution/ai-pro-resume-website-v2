@@ -2,6 +2,8 @@
 
 import React, { ReactNode, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import ProConsCard from "../blog/blogDetailComponents/ProConsCard";
+import TipPro from 'media/images/TipPro.webp'
 
 type FaqItem = {
   question: string | ReactNode;
@@ -12,6 +14,8 @@ type FaqData = {
   title: string;
   description?: ReactNode;
   faqlist: FaqItem[];
+  titlePro?: string;
+  descriptionPro?: string;
 };
 
 type propsType = {
@@ -63,6 +67,16 @@ const Faq = (props: propsType) => {
                     <div className="py-2 px-1 text-[16px] lg:text-[18px">
                       {faq.answer}
                     </div>
+                    {faq?.titlePro && faq?.descriptionPro &&
+                      <div className="mb-6">
+                        <ProConsCard
+                          title={faq?.titlePro}
+                          icon={TipPro}
+                          description={faq?.descriptionPro}
+                          isTip={true}
+                        />
+                      </div>
+                    }
                   </div>
                 </div>
               ))}
