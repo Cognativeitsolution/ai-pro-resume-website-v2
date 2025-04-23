@@ -12,7 +12,7 @@ type ProsConsType = {
 export default function ProConsCard({ description, title, icon, isPro, isTip }: ProsConsType) {
     return (
         <>
-            <div className='relative pt-10 mt-10'>
+            <div className='relative pt-10 mt-5'>
                 <div className='flex items-end gap-4 absolute -top-1 left-6  z-20'>
                     <div className={`w-[90px] h-[90px] flex items-center justify-center rounded-full overflow-hidden border ${isPro ? "border-green-600" : isTip ? "border-indigo-600" : "border-red-600"} z-10`}>
                         <Image src={icon} alt="blog detail" />

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import blogAiImage from 'media/images/AiBlogImg.webp'
 import IconContact from 'media/images/Icon.webp'
 import { BreadCrumbs, ProConsCard, QuickTips, VerticalTabs } from '@/components'
+import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
 
 type BlogsPiontData = {
     icon: any
@@ -51,7 +52,7 @@ const BlogDetail = (props: propsType) => {
     return (
         <section className="py-5 md:py-10">
             <div className="container">
-                <BreadCrumbs items={data.breadCrumbsItems} />
+                <DynBreadCrumbs />
                 <div className='relative grid lg:grid-cols-12 gap-4 xl:gap-6'>
 
                     <div className="lg:col-span-5 xl:col-span-4 static">
@@ -212,12 +213,14 @@ const BlogDetail = (props: propsType) => {
                             />
                         }
                         {data?.consItemsData &&
-                            <ProConsCard
-                                title={data?.consItemsData.title}
-                                icon={data?.consItemsData.icon}
-                                description={data?.consItemsData.description}
-                                isPro={data?.consItemsData.isPro}
-                            />
+                            <div className='pt-4'>
+                                <ProConsCard
+                                    title={data?.consItemsData.title}
+                                    icon={data?.consItemsData.icon}
+                                    description={data?.consItemsData.description}
+                                    isPro={data?.consItemsData.isPro}
+                                />
+                            </div>
                         }
                     </div>
                 </div>
