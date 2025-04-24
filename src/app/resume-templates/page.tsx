@@ -1,4 +1,4 @@
-import { Faq, IconSlider, InnerBanner, PrivacyFeatures, Search, ShowAllTemplates, Welcome } from "@/components";
+import { Faq, IconSlider, InnerBanner, PrivacyFeatures, ShowAllTemplates, Welcome } from "@/components";
 import { BannerData, faqs, FeaturesData, IconData, WelcomeData } from "./data";
 
 export default function Page() {
@@ -6,7 +6,6 @@ export default function Page() {
     <>
       <InnerBanner {...BannerData} />
       <IconSlider {...IconData} />
-      <Search />
       <ShowAllTemplates />
       <Welcome data={WelcomeData} />
       <PrivacyFeatures data={FeaturesData} />
