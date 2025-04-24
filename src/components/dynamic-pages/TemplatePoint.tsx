@@ -6,10 +6,11 @@ type CollapseTabItem = {
     heading?: any;
     description?: any;
     image?: any;
-    list?: {
-        text?: any;
-        subList?: any[];
-    }[];
+    list?: (string | { text?: any; subList?: any[] })[];
+    // list?: {
+    //     text?: any;
+    //     subList?: any[];
+    // }[];
 };
 
 type PropsType = {
