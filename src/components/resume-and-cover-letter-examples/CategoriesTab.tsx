@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import { categories } from "./ResumeCategories";
 
   type TabsProps = {
@@ -7,6 +9,12 @@ import { categories } from "./ResumeCategories";
   };
 
 const CategoriesTab: React.FC<TabsProps> = ({categories,onCategoryClick}) => {
+  const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
+
+  const handleCategoryClick = (id: number, name: string, description: string) => {
+    setSelectedCategoryId(id); // Set the clicked category's ID
+    onCategoryClick(id, name, description); // Call the parent function
+  };
   return (
     <>
       <div className="w-full h-full xl:w-1/4 border-2 border-white bg-indigo-200/20 rounded-xl p-4 xl:sticky overflow-y-auto top-32 z-0">
@@ -25,9 +33,9 @@ const CategoriesTab: React.FC<TabsProps> = ({categories,onCategoryClick}) => {
                     category.short_description
                   )
                 }
-                className={`flex gap-2 font-Lexend justify-start items-center p-2 text-slate-900 cursor-pointer hover:text-hamzaPrimary my-2`}
+                className={`flex gap-2 bg-white/30 hover:bg-primary rounded-xl font-Lexend justify-start items-center p-2 text-slate-900 cursor-pointer hover:text-white my-2`}
               >
-                <p className="font-Lexend text-lg pl-2">{category.name}</p>
+                <p className="font-Lexend text-[16px] pl-2">{category.name}</p>
               </div>
             ))}
         </div>
