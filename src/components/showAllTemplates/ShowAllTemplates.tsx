@@ -9,12 +9,13 @@ type TemplateType = {
     id: number;
     image: string;
     name: string;
-    price: string;
+    is_paid: number;
 };
 
 const ShowAllTemplates = () => {
-    const [templates, setTemplates] = useState<TemplateType[]>([]);
     const [showLoader, setShowLoader] = useState(true);
+    const [templates, setTemplates] = useState<TemplateType[]>([]);
+    const [userPurchasedTemplates, setUserPurchasedTemplates] = useState<TemplateType[]>([]);
 
     useEffect(() => {
         const fetchTemplates = async () => {
@@ -41,7 +42,10 @@ const ShowAllTemplates = () => {
             {showLoader ? (
                 <CustomLoader size={50} color="#9885FF" text="Fetching Templates..." />
             ) : templates.length ? (
-                <TemplatesCard templates={templates} />
+                <TemplatesCard
+                    templates={templates}
+                    userPurchasedTemplates={userPurchasedTemplates}
+                />
             ) : (
                 <p className="text-center text-xl font-semibold text-hamzaPrimary">
                     No Templates Found!
