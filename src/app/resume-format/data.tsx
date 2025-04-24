@@ -22,33 +22,35 @@ export const BannerData = {
 
 const VerticalTabsData = [
     {
-        id: 'head0',
-        title: "3 Most Popular Resume Formats",
-    },
-    {
         id: 'head1',
-        title: "Reverse-Chronological Resume Format ",
+        title: "3 Most Popular Resume Formats",
     },
     {
         id: 'head2',
-        title: "Functional Resume Format s",
+        title: "Reverse-Chronological Resume Format ",
     },
     {
         id: 'head3',
-        title: "Combination Resume Format",
+        title: "Functional Resume Formats",
     },
     {
         id: 'head4',
-        title: "3 Most Popular Resume Formats",
+        title: "Combination Resume Format",
+    },
+    {
+        id: 'head5',
+        title: "Resume Formatting Tips For Writing A Perfect Resume ",
+    },
+    {
+        id: 'head6',
+        title: "Resume Templates That You Can Use To Grab an Employer’s Attention ",
+    },
+    {
+        id: 'head7',
+        title: "The Bottom Line",
     },
 
 ]
-
-// const breadCrumbsItems = [
-//     { label: 'Home', href: '/' },
-//     { label: 'Blog', href: '/blog' },
-//     { label: 'Cover Letter Template' }
-// ]
 
 const prosItems = {
     icon: pros,
@@ -59,7 +61,6 @@ const prosItems = {
         "With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  ",
         "With this best resume format, you can showcase your major skills and qualifications upfront while also detailing your work history and providing a detailed view of your qualifications.  ",
     ],
-    // description: `Some templates also mention skills summary alongside the working experience to accentuate both. This template is perfectly useful for people who have a variety of skills and diversity in career history.`,
 }
 
 const consItems = {
@@ -78,7 +79,7 @@ const consItems = {
 
 const CollapseTabData = [
     {
-        heading: "Reverse-Chronological Resume Forma",
+        heading: "Reverse-Chronological Resume Format",
         description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
         image: Temp5,
         list: [
@@ -89,7 +90,7 @@ const CollapseTabData = [
         ]
     },
     {
-        heading: "Functional Resume Forma",
+        heading: "Functional Resume Format",
         description: "This format shows your skills rather than your previous working experience and qualifications. It focuses on your abilities rather than your career background. ",
         image: Temp3,
         list: [
@@ -109,6 +110,37 @@ const CollapseTabData = [
             "This perfect format emphasizes your work experiences, which is perfect for candidates who want to progress to a higher-level position.",
             "This format is best for ATS. The chronological resume format is friendly with ATS software, which can help you in getting your resume selected for a second screening. ",
         ]
+    },
+]
+
+const ResumeFormateTips = [
+    {
+        heading: "What Margin Is Good In A Resume?",
+        description: "It is recommended to use the standard margin size, which is 0.5 to 1 inch on all sides. Relying on your needs, you can adjust the Margins to between 0.5 and 1 inch. Also,  it is better to avoid large margin sizes, as they are too large and can make your resume look empty and unimpressive. ",
+    },
+    {
+        heading: "Leverage White Space In Your Resume",
+        description: `Leveraging white space on a resume can make it easier to read and give content "breathing room." A recruiter may not read a cluttered resume, as studies show they only spend about 7.4 seconds reviewing one. White space can make content more readable and easier to consume.`,
+    },
+    {
+        heading: "What's the appropriate font for a resume?",
+        description: `Choosing a professional font can convey attention to detail and professionalism. For example, a font like Arial might be better suited for a resume in finance, while Comic Sans might leave a bad impression for a more professional job. Most recruiters like clean, professional fonts such as Calibri, Helvetica, or Times New Roman. You can also use different fonts to emphasize certain areas, like a serif font for headings and a sans serif font for the resume's body. `,
+    },
+    {
+        heading: "Use Bullet Points for A Structured Look",
+        description: `You need to use bullet points in your resume to make it look clean, structured, and easy for hiring managers to read. `,
+    },
+    {
+        heading: "Use an appropriate color in your Resume",
+        description: `It is important to understand the industry you are applying to to choose the right colors for your resume. Choose subtle colors for more corporate and serious fields, and a little vibrant colors for more creative fields.  `,
+    },
+    {
+        heading: "Quantify Your Achievements",
+        description: `As you write your experience in reverse order, focus on accomplishments and responsibilities using action verbs and quantifiable results.`,
+    },
+    {
+        heading: "Incorporate Keywords",
+        description: `To make sure your resume passes through the Applicant Tracking System (ATS), you need to use relevant keywords and those that are mentioned in the job description throughout your resume. `,
     },
 ]
 
@@ -135,7 +167,7 @@ const TemplatePointTabData = [
         consItemsData: consItems,
     },
     {
-        heading: "Reverse-Chronological",
+        heading: "Functional",
         description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
         titlePro: "PRO TIP",
         descriptionPro: ["This format is the most popular one out of all formats. Most job seekers start with this one."],
@@ -156,7 +188,7 @@ const TemplatePointTabData = [
         consItemsData: consItems,
     },
     {
-        heading: "Reverse-Chronological",
+        heading: "Combination",
         description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
         titlePro: "PRO TIP",
         descriptionPro: ["This format is the most popular one out of all formats. Most job seekers start with this one."],
@@ -179,12 +211,31 @@ const TemplatePointTabData = [
 
 ]
 
-export const resumeFormatData = {
+const TemplateData = [
+    {
+        heading: "Reverse-Chronological Resume Format",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: Temp1,
+    },
+    {
+        heading: "Reverse-Chronological Resume Format",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: Temp3,
+    },
+    {
+        heading: "Reverse-Chronological Resume Format",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: Temp5,
+    },
+];
 
-    // breadCrumbsItems: breadCrumbsItems,
+
+export const resumeFormatData = {
     CollapseTab: CollapseTabData,
     DynVerticalTabsData: VerticalTabsData,
-    TemplatePointTab: TemplatePointTabData
+    TemplatePointTab: TemplatePointTabData,
+    ResumeFormateTips: ResumeFormateTips,
+    TemplateData: TemplateData
 }
 
 
@@ -199,6 +250,8 @@ const faqsList = [
         question: "What is the top rated resume format? ",
         answer:
             "The best generic resume format can be different for every person, but what is often most recommended is a reverse chronological format, which shows the work experience in descending order so that the employer can see the latest achievements more easily.  ",
+        titlePro: "PRO TIP",
+        descriptionPro: ["Moreover, for more top-rated resume formats that you can use to create your resume, visit AI Pro Resume and select your preferred resume template and cover letter examples to create a well-structured, sleek, and eye-catching CV. "]
     },
     {
         question: "What is the biodata format for 2025? ",

@@ -3,10 +3,10 @@
 import React, { ReactNode, useState } from 'react';
 
 type CollapseTabItem = {
-    heading: string;
-    description: string;
-    image: string;
-    list: string[];
+    heading?: string;
+    description?: string;
+    image?: any;
+    list?: string[];
 };
 
 type PropsType = {
@@ -21,13 +21,13 @@ export default function TemplatePoint({ data }: PropsType) {
         <div className="my-6 divide-y">
             {data?.map((tab: any, index: number) => (
                 <div key={index}>
-                    <div className='grid grid-cols-12 gap-4 pl-6 py-4'>
-                        <div className='col-span-5'>
-                            <div className='rounded-lg flex mx-auto justify-center'>
-                                <Image src={tab.image} alt={`${tab.heading} Resume`} width={300} height={400} />
+                    <div className='grid xl:grid-cols-12 gap-4 pl-6 py-4'>
+                        <div className='xl:col-span-5'>
+                            <div className='flex mx-auto justify-center '>
+                                <Image src={tab.image} alt={`${tab.heading} Resume`} width={300} height={400} className='rounded-lg  border overflow-hidden shadow-md' />
                             </div>
                         </div>
-                        <div className='col-span-7 py-6'>
+                        <div className='xl:col-span-7 py-6'>
                             <p className="text-base pb-2">{tab.description}</p>
                             <ul className=''>
                                 {tab.list?.map((item: string, i: number) => (
