@@ -3,10 +3,10 @@
 import React, { ReactNode, useState } from 'react';
 
 type CollapseTabItem = {
-    heading: string;
-    description: string;
-    image: string;
-    list: string[];
+    heading?: string;
+    description?: string;
+    image?: any;
+    list?: string[];
 };
 
 type PropsType = {
