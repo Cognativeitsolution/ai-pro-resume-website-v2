@@ -206,18 +206,19 @@ export const resumeIncludedSection = [
         title: "Skills",
         desc: "Another important section of your resume is the skills section. It is a quick way for the recruiter to know what you are capable of. This section can be a really good element if you don't have much work experience, are fresher, or are looking to switch your industry. The skills section is often divided into two categories, as you already know: ",
         img: TemplateImage1,
-        hardSoftSkills: [
+        includedSections: [
             {
                 id: 1,
                 title: "Hard Skills:",
+                innerDesc: "Technical skills include data analysis, coding, or graphic design",
             },
             {
                 id: 2,
                 title: "Soft Skills:",
-                // skillImg: TemplateImage1,
+                innerDesc: "This category includes your interpersonal qualities like teamwork, problem-solving, and time management.",
+                img: TemplateImage1,
             }
-        ],
-        proTip: true,
+        ]
     },
     {
         id: 6,

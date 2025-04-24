@@ -304,18 +304,25 @@ export default function HowToWriteResume(props: propsType) {
                                                                     <p className="text-base">
                                                                         {dataa.innerDesc}
                                                                     </p>
+                                                                    <div className='border mx-auto flex justify-center'>
+                                                                        <Image
+                                                                            className='rounded-xl border-red-600 border overflow-hidden shadow-lg'
+                                                                            src={TemlateImage}
+                                                                            alt='Template image'
+                                                                            width={200}
+                                                                            height={200}
+                                                                        />
+                                                                    </div>
 
-                                                                    <Image className='rounded-xl border overflow-hidden shadow-lg' src={TemlateImage} alt='Template image'
-                                                                        width={200} height={200} />
                                                                 </div>
                                                             </div>
                                                         )) : null}
-                                                        <ProConsCard
+                                                        {sec?.proTip && <ProConsCard
                                                             title="PRO TIP"
                                                             icon={TipPro}
                                                             description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next."
                                                             isTip={true}
-                                                        />
+                                                        />}
 
                                                     </div>
                                                 </div>
