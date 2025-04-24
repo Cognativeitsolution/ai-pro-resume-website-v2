@@ -42,8 +42,9 @@ const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalT
 const CollapseTab = dynamic(() => import("./dynamic-pages/CollapseTab"));
 const DynVerticalTabs = dynamic(() => import("./dynamic-pages/DynVerticalTabs"));
 const TemplatePoint = dynamic(() => import("./dynamic-pages/TemplatePoint"));
-const Search = dynamic(() => import("./resume-examples/Search"));
-const Categories = dynamic(() => import("./resume-examples/Categories"));
+const Search = dynamic(() => import("./resume-and-cover-letter-examples/Search"));
+const ResumeCategories = dynamic(() => import("./resume-and-cover-letter-examples/ResumeCategories"));
+const CoverLetterCategories = dynamic(() => import("./resume-and-cover-letter-examples/CoverLetterCategories"));
 const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
 const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
 
@@ -91,7 +92,8 @@ export {
   DynVerticalTabs,
   TemplatePoint,
   Search,
-  Categories,
+  ResumeCategories,
+  CoverLetterCategories,
   IconSlider,
   ShowAllTemplates,
 };

@@ -1,7 +1,12 @@
 import React from "react";
-import { ResumeCategories, Faq, IconSlider, InnerBanner, Search } from "@/components";
+import {
+  Faq,
+  IconSlider,
+  InnerBanner,
+  Search,
+  CoverLetterCategories,
+} from "@/components";
 import { BannerData, faqs, IconData } from "./data";
-
 
 export default function Page() {
   return (
@@ -9,7 +14,7 @@ export default function Page() {
       <InnerBanner {...BannerData} />
       <IconSlider {...IconData} />
       <Search />
-      <ResumeCategories />
+      <CoverLetterCategories />
       <Faq data={faqs} />
     </>
   );
