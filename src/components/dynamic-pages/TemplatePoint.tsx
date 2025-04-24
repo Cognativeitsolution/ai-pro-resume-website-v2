@@ -6,7 +6,10 @@ type CollapseTabItem = {
     heading?: string;
     description?: string;
     image?: any;
-    list?: string[];
+    list?: {
+        text: string;
+        subList?: string[];
+    }[];
 };
 
 type PropsType = {
@@ -27,17 +30,35 @@ export default function TemplatePoint({ data }: PropsType) {
                                 <Image src={tab.image} alt={`${tab.heading} Resume`} width={300} height={400} className='rounded-lg  border overflow-hidden shadow-md' />
                             </div>
                         </div>
-                        <div className='xl:col-span-7 py-6'>
+                        <div className="xl:col-span-7 py-6">
                             <p className="text-base pb-2">{tab.description}</p>
-                            <ul className=''>
-                                {tab.list?.map((item: string, i: number) => (
-                                    <div className="flex pb-2" key={i}>
-                                        <div className="relative after:absolute after:left-0 after:top-4 
-                                       after:h-[1.2px] after:w-[15px] after:bg-black" />  <li className='mb-4 text-xl font-semibold pl-6'>{item}</li>
-                                    </div>
+                            <ul>
+                                {tab.list?.map((item: any, i: number) => (
+                                    <li key={i} className="mb-4 text-xl font-semibold pl-6 relative">
+                                        <div
+                                            className="absolute left-0 top-4 h-[1.2px] w-[15px] bg-black"
+                                            style={{ content: '""' }}
+                                        />
+                                        {item.text || item}
+                                        {item?.subList && (
+                                            <ul className="pl-6 mt-2 ">
+                                                {item.subList.map((subItem: any, j: number) => (
+                                                    <li key={j} className="mb-2 text-base relative">
+                                                        <div
+                                                            className="absolute -left-6 top-3 h-[1.2px] w-[15px] bg-black"
+                                                            style={{ content: '""' }}
+                                                        />
+                                                        {subItem}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
+
+
                     </div>
                 </div >
             ))

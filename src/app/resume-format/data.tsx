@@ -23,33 +23,48 @@ export const BannerData = {
 const VerticalTabsData = [
     {
         id: 'head1',
-        title: "3 Most Popular Resume Formats",
+        title: "Best Resume Formats to Impress in 2025 ",
     },
     {
         id: 'head2',
-        title: "Reverse-Chronological Resume Format ",
+        title: "This blog will include",
     },
     {
         id: 'head3',
-        title: "Functional Resume Formats",
+        title: "3 Most Popular Resume Formats",
     },
     {
         id: 'head4',
-        title: "Combination Resume Format",
+        title: "Reverse-Chronological Resume Format ",
     },
     {
         id: 'head5',
-        title: "Resume Formatting Tips For Writing A Perfect Resume ",
+        title: "Functional Resume Formats",
     },
     {
         id: 'head6',
-        title: "Resume Templates That You Can Use To Grab an Employer’s Attention ",
+        title: "Combination Resume Format",
     },
     {
         id: 'head7',
+        title: "Resume Formatting Tips For Writing A Perfect Resume ",
+    },
+    {
+        id: 'head8',
+        title: "Resume Templates That You Can Use To Grab an Employer’s Attention ",
+    },
+    {
+        id: 'head9',
         title: "The Bottom Line",
     },
 
+]
+
+const BlogIncludedPoints = [
+    { id: 1, point: '3 Common Resume Formats  ' },
+    { id: 2, point: 'Pros & Cons of each format' },
+    { id: 3, point: 'Resume Formatting Tips' },
+    { id: 4, point: 'Professional Resume Examples' },
 ]
 
 const prosItems = {
@@ -155,11 +170,19 @@ const TemplatePointTabData = [
                 description: "Here is how you can structure a Chronological or Hybrid Resume: ",
                 image: Temp5,
                 list: [
-                    "Contact Information",
-                    "Resume summary ",
-                    "Skills summary ",
-                    "Work History",
-                    "Optional Sections",
+                    { text: "Contact Information" },
+                    { text: "Resume summary " },
+                    { text: "Skills summary " },
+                    { text: "Work History" },
+                    {
+                        text: "Optional Sections",
+                        subList: [
+                            "Contact Information",
+                            "Resume summary ",
+                            "Skills summary ",
+                            "Work History",
+                        ]
+                    },
                 ]
             }
         ],
@@ -229,16 +252,14 @@ const TemplateData = [
     },
 ];
 
-
 export const resumeFormatData = {
     CollapseTab: CollapseTabData,
     DynVerticalTabsData: VerticalTabsData,
     TemplatePointTab: TemplatePointTabData,
     ResumeFormateTips: ResumeFormateTips,
-    TemplateData: TemplateData
+    TemplateData: TemplateData,
+    BlogIncludedPoints: BlogIncludedPoints,
 }
-
-
 
 const faqsList = [
     {
