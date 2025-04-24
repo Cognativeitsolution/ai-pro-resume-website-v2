@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { OldAPI } from "@/services/oldService";
 import TemplatesCard from "./TemplatesCard";
 import CustomLoader from "../loader/CustomLoader";
+import SearchBar from "../custom/searchBar/SearchBar";
 
 type TemplateType = {
     id: number;
@@ -17,6 +18,7 @@ const ShowAllTemplates = () => {
     const [showLoader, setShowLoader] = useState(true);
     const [templates, setTemplates] = useState<TemplateType[]>([]);
     const [userPurchasedTemplates, setUserPurchasedTemplates] = useState<TemplateType[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>(""); // State for the search term
     const pathname = usePathname();
 
     useEffect(() => {
@@ -47,24 +49,37 @@ const ShowAllTemplates = () => {
         };
 
         fetchTemplates();
-    }, [pathname]); 
+    }, [pathname]);
+
+    // Filter templates based on search term
+    const filteredTemplates = templates.filter((template) =>
+        template.name.toLowerCase().includes(searchTerm.toLowerCase()) // Ensure case-insensitive search
+    );
 
     return (
-        <section className="py-5 md:py-10">
-            {/* Loader */}
-            {showLoader ? (
-                <CustomLoader size={50} color="#9885FF" text="Fetching Templates..." />
-            ) : templates.length ? (
-                <TemplatesCard
-                    templates={templates}
-                    userPurchasedTemplates={userPurchasedTemplates}
-                />
-            ) : (
-                <p className="text-center text-xl font-semibold text-hamzaPrimary">
-                    No Templates Found!
-                </p>
-            )}
-        </section>
+        <>
+            <SearchBar
+                placeholder="Search with Creative, Modern, Professional etc"
+                showDropdown={false}
+                onSearchChange={(e) => setSearchTerm(e.target.value)}
+                value={searchTerm}
+            />
+            <section className="py-5 md:py-10">
+                {/* Loader */}
+                {showLoader ? (
+                    <CustomLoader size={50} color="#9885FF" text="Fetching Templates..." />
+                ) : filteredTemplates.length ? (
+                    <TemplatesCard
+                        templates={filteredTemplates} // Pass filtered templates
+                        userPurchasedTemplates={userPurchasedTemplates}
+                    />
+                ) : (
+                    <p className="text-center text-xl font-semibold text-hamzaPrimary">
+                        No Templates Found!
+                    </p>
+                )}
+            </section>
+        </>
     );
 };
 
