@@ -5,6 +5,15 @@ import TemplateImage2 from 'media/resume_template_images/template_2.webp'
 import TemplateImage3 from 'media/resume_template_images/template_3.webp'
 import TemplateImage1 from 'media/resume_template_images/template_1.webp'
 
+import CertificationsSec from 'media/images/CertificationsSec.webp'
+import WorkExp from 'media/images/WorkExp.webp'
+import EducationSec from 'media/images/EducationSec.webp'
+import CareerObjective from 'media/images/CareerObjective.webp'
+import ContactInfoSec from 'media/images/ContactInfoSec.webp'
+import ProfessionalSummary from 'media/images/ProfessionalSummary.webp'
+import SkillsSec from 'media/images/SkillsSec.webp'
+import TipPro from 'media/images/TipPro.webp'
+
 export const BannerData = {
     title: (
         <>
@@ -38,14 +47,10 @@ const VerticalTabsData = [
     },
     {
         id: 'head5',
-        title: "Some Professional Resume Examples For You To Check Out",
-    },
-    {
-        id: 'head6',
         title: "Final Thoughts",
     },
     {
-        id: 'head7',
+        id: 'head6',
         title: "Frequently Asked Questions (FAQs)",
     },
 ]
@@ -74,9 +79,15 @@ export const BlogIncludedPoints = [
     { id: 1, point: 'How to Write a Resume: Step-By-Step Guide ' },
     { id: 2, point: 'Tips on how to write a good resume' },
     { id: 3, point: 'Examples of a job-winning resume' },
-    { id: 4, point: 'An AI-powered tool to create a resume quickly' },
-    { id: 14, point: 'How to Write a Resume: Step-By-Step Guide' },
-    { id: 24, point: 'Tips on how to write a good resume' }
+    { id: 4, point: 'An AI-powered tool to create a resume quickly' }
+]
+export const ResumeIncludedSixPoints = [
+    { id: 1, point: 'Identifying your audience ' },
+    { id: 2, point: 'Fetch important skills ' },
+    { id: 3, point: 'Different Resume formats And Choosing the right one ' },
+    { id: 4, point: 'Sections every resume must include ' },
+    { id: 5, point: 'Writing tips for a winning resume ' },
+    { id: 6, point: 'A quick word about the AI-powered resume builder ' }
 ]
 export const LookInToKeyWords = [
     { id: 1, point: 'How to Write a Resume: Step-By-Step Guide', subHead: 'Action Verbs' },
@@ -97,6 +108,13 @@ export const resumeFormatData = {
     DynVerticalTabsData: VerticalTabsData,
 }
 
+export const LookInTo5Points = [
+    { id: 1, point: 'Tailor your resume to make it fit for the job you are applying for', subHead: 'Positioning' },
+    { id: 2, point: 'present your unique and memorable identity', subHead: 'Personal branding:' },
+    { id: 3, point: 'a quick summary of what you want and offer.', subHead: 'Pitch:' },
+    { id: 4, point: 'visual design and structure of your resume. It should be concise and clear.', subHead: 'Presentation:' },
+    { id: 5, point: 'accurate information, as well as proofreading of the resume.', subHead: 'Professionalism:' }
+]
 const faqsList = [
     {
         question: "What is the best format for resume 2025? ",
@@ -129,17 +147,17 @@ export const resumeIncludedSection = [
         id: 1,
         title: "Contact Information",
         desc: "his is the simplest yet most crucial part of your resume. Make sure it's clear and easy to find.",
-        img: TemplateImage1,
         includedFieldsRight: [
             {
-                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
-                image: TemplateImage1,
+                description: "What to Include:",
                 list: [
                     "Full Name",
                     "Phone Number",
                     "Professional email address",
                     "LinkedIn profile (optional) "
-                ]
+                ],
+                image: ContactInfoSec,
+
             }
         ],
     },
@@ -147,19 +165,18 @@ export const resumeIncludedSection = [
         id: 2,
         title: "Professional Summary or Career Objective ",
         desc: "The second and most important element of a resume is a professional summary or career objective that goes right on top of your resume. It is short and direct and tells the recruiter in quick snippets. Thus, make sure it is creative and includes all the right characteristics of an appealing resume; let's talk about both separately, how it should be, and who it is best for: ",
-        img: TemplateImage1,
         includedSections: [
             {
                 id: 1,
                 title: "Professional Summary",
                 innerDesc: "This is a quick overview of your experience as well as your skills. It's excellent for experienced professionals who like to underline their accomplishments.",
-                img: TemplateImage1,
+                img: ProfessionalSummary,
             },
             {
                 id: 2,
                 title: "Career Objective",
                 innerDesc: "If you're new to the workforce or switching careers, an objective statement can outline your goals and how you can contribute to the company.",
-                img: TemplateImage1,
+                img: CareerObjective,
             }
         ]
     },
@@ -167,12 +184,10 @@ export const resumeIncludedSection = [
         id: 3,
         title: "Work Experience",
         desc: "The third most important section of a resume is obviously your work experience. This section should show your career progression and what you've achieved in each role. You can use bullet points to make the work experience clear and easy to read.",
-        img: TemplateImage1,
-
         includedFieldsRight: [
             {
-                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
-                image: TemplateImage1,
+                description: "What to Include for Each Job:",
+                image: WorkExp,
                 list: [
                     "Job title",
                     "Employer name ",
@@ -187,11 +202,10 @@ export const resumeIncludedSection = [
         id: 4,
         title: "Education",
         desc: "The 'Education' section of your resume is extremely important as it can be a great point to stand out from your competitors. It is important when you don't have much experience in the field, and it can work wonders for you when it comes to getting a job. Thus, you need to have your academic qualifications in reverse order, starting with the most recent degree or course.",
-        img: TemplateImage1,
         includedFieldsRight: [
             {
-                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
-                image: TemplateImage1,
+                description: "What to Include:",
+                image: EducationSec,
                 list: [
                     "Degree",
                     "Institution name",
@@ -199,13 +213,17 @@ export const resumeIncludedSection = [
                 ]
             }
         ],
-        proTip: true,
+        proTip: {
+            icon: TipPro,
+            title: "PRO TIP",
+            description: [`If you're a recent graduate, you can also add relevant coursework or projects.`],
+            isPro: true,
+        }
     },
     {
         id: 5,
         title: "Skills",
         desc: "Another important section of your resume is the skills section. It is a quick way for the recruiter to know what you are capable of. This section can be a really good element if you don't have much work experience, are fresher, or are looking to switch your industry. The skills section is often divided into two categories, as you already know: ",
-        img: TemplateImage1,
         includedSections: [
             {
                 id: 1,
@@ -216,9 +234,17 @@ export const resumeIncludedSection = [
                 id: 2,
                 title: "Soft Skills:",
                 innerDesc: "This category includes your interpersonal qualities like teamwork, problem-solving, and time management.",
-                img: TemplateImage1,
+                img: SkillsSec,
+
             }
-        ]
+        ],
+        proTip: {
+            icon: TipPro,
+            title: "PRO TIP",
+            description: [`Match your skills to the ones mentioned in the job description, as it can help the recruiter find your resume relevant. Plus, it can be a great way to pass the ATS system because it passes your resume by detecting relevant keywords and phrases from the job description.`],
+            isPro: true,
+        }
+
     },
     {
         id: 6,
@@ -227,16 +253,73 @@ export const resumeIncludedSection = [
         img: TemplateImage1,
         includedFieldsRight: [
             {
-                description: "Here is how you can structure a Chronological or Hybrid Resume: ",
-                image: TemplateImage1,
+                description: "What to Include:",
+                image: CertificationsSec,
                 list: [
                     "Certifications (e.g., Google Analytics, Certified Scrum Master)",
                     "Awards (e.g., 'Top Sales Performer 2022')",
                 ]
             }
         ],
-        proTip: true,
     },
 ]
 
 
+
+export const HowToWriteResumeFormateTips = [
+    {
+        heading: "Keep It Relevant:",
+        description: "Tailor your resume for each job application. Highlight experiences and skills that match the role.",
+    },
+    {
+        heading: "Use Keywords:",
+        description: `Many businesses employ applicant tracking systems (ATS) to scan resumes. Adding related keywords will help you pass this filter.`,
+    },
+    {
+        heading: "Quantify Achievements:",
+        description: `Numbers make your accomplishments more tangible and credible.`,
+    },
+    {
+        heading: "Be Honest:",
+        description: `Don't stretch or lie about your skills or experience.`,
+    },
+    {
+        heading: "Proofread your resume:",
+        description: `The most important thing after you are done making your resume is to check for grammar and spelling mistakes; otherwise, you might leave a bad impression on your employers.`,
+    },
+    {
+        heading: "Add a cover letter:",
+        description: `To give further details about your experience to help hiring managers understand how your skills align with the job role.`,
+    }
+]
+
+export const HowToWriteResmTemplateData = [
+    {
+        heading: "Creative Infusion Template",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: TemplateImage1,
+    },
+    {
+        heading: "Professional Polished Resume Template",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: TemplateImage2,
+    },
+    {
+        heading: "Classic Professional",
+        description: "This format shows your work history or experience in a reverse chronological format. For instance, you need to mention your recent work experience. ",
+        image: TemplateImage3,
+    },
+];
+
+export const tipListItems = [
+    { id: 1, point: 'Use professional fonts like Arial, Calibri, or Times New Roman', subHead: 'Font:' },
+    { id: 2, point: 'TUse 10–12 points for body text and slightly larger for headings.', subHead: 'Font Size:' },
+    { id: 3, point: 'Keep plenty of white space to make it easy to read.', subHead: 'Spacing:' },
+    { id: 4, point: 'Use these for lists to improve clarity', subHead: 'Bullet Points:' }
+]
+export const consListItems = [
+    { id: 1, point: 'Double-check everything, especially contact details.', subHead: 'Spelling Errors:' },
+    { id: 2, point: 'Stick to 1–2 pages', subHead: 'Too Much Information:' },
+    { id: 3, point: 'Ensure everything aligns neatly and looks polished.', subHead: 'Unprofessional Formatting:' },
+    { id: 4, point: 'Avoid personal information like your age, photo, or hobbies unless requested.', subHead: 'Irrelevant Details:' }
+]

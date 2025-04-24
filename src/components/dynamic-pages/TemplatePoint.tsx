@@ -3,12 +3,12 @@
 import React, { ReactNode, useState } from 'react';
 
 type CollapseTabItem = {
-    heading?: string;
-    description?: string;
+    heading?: any;
+    description?: any;
     image?: any;
     list?: {
-        text: string;
-        subList?: string[];
+        text?: any;
+        subList?: any[];
     }[];
 };
 
@@ -20,8 +20,7 @@ import Image from 'next/image';
 
 export default function TemplatePoint({ data }: PropsType) {
     return (
-
-        <div className="my-6 divide-y">
+        <div className="my-2 divide-y">
             {data?.map((tab: any, index: number) => (
                 <div key={index}>
                     <div className='grid xl:grid-cols-12 gap-4 pl-6 py-4'>
@@ -30,7 +29,7 @@ export default function TemplatePoint({ data }: PropsType) {
                                 <Image src={tab.image} alt={`${tab.heading} Resume`} width={300} height={400} className='rounded-lg  border overflow-hidden shadow-md' />
                             </div>
                         </div>
-                        <div className="xl:col-span-7 py-6">
+                        <div className="xl:col-span-7 py-2">
                             <p className="text-base pb-2">{tab.description}</p>
                             <ul>
                                 {tab.list?.map((item: any, i: number) => (
@@ -61,10 +60,8 @@ export default function TemplatePoint({ data }: PropsType) {
 
                     </div>
                 </div >
-            ))
-            }
-        </div >
-
+            ))}
+        </div>
     );
 }
 

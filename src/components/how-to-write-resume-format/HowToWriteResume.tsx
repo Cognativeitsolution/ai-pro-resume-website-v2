@@ -6,9 +6,12 @@ import IconContact from 'media/images/Icon.webp'
 import { BreadCrumbs, ProConsCard, QuickTips, DynVerticalTabs, CTA, TemplatePoint } from '@/components'
 import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
 import DynPoints from '../dynamic-pages/DynPoints';
-import { BlogIncludedPoints, LookInToKeyWords, LookInToTemplates, resumeIncludedSection } from '@/app/how-to-write-a-resume/data';
+import { BlogIncludedPoints, consListItems, HowToWriteResmTemplateData, HowToWriteResumeFormateTips, LookInTo5Points, LookInToKeyWords, LookInToTemplates, resumeIncludedSection, ResumeIncludedSixPoints, tipListItems } from '@/app/how-to-write-a-resume/data';
 import TemlateImage from "media/resume_template_images/Template_23.webp"
 import TipPro from 'media/images/TipPro.webp'
+import TipProComma from 'media/images/commaIcoon.webp'
+import cons from 'media/images/cons.webp';
+
 
 
 type PiontData = {
@@ -57,11 +60,6 @@ type propsType = {
 export default function HowToWriteResume(props: propsType) {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
-
-    const toggleExpand = (index: number) => {
-        setExpandedIndex(prev => (prev === index ? null : index));
-    };
 
     useEffect(() => {
         setSectionId("#head1")
@@ -103,8 +101,8 @@ export default function HowToWriteResume(props: propsType) {
                     </div>
 
                     <div className='lg:col-span-7 xl:col-span-8'>
-                        <div className=' ' id='head1'>
-                            <h2 className="text-[20px] md:text-[20px] lg:text-[20px] leading-[36px] md:leading-[40px] lg:leading-[50px] mb-2">
+                        <div className='scroll-mt-32' id='head1'>
+                            <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                 How To Write A Good Resume in 2025?
                             </h2>
                             <p className='text-base'>
@@ -123,7 +121,7 @@ export default function HowToWriteResume(props: propsType) {
                             </p>
                         </div>
 
-                        <div className=' ' id='head2'>
+                        <div className='scroll-mt-32' id='head2'>
                             <h2 className="text-[22px] text-center border-b-2 md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-medium mb-4">
                                 This blog will include
                             </h2>
@@ -131,23 +129,22 @@ export default function HowToWriteResume(props: propsType) {
 
                             <ProConsCard
                                 title="Looking for a quick way to make a resume?"
-                                icon={TipPro}
+                                icon={TipProComma}
                                 description="Our AI-powered resume builder is super fast with resume creation. It has more than 30+ resume templates and professional & free cover letter formats that you can quickly customize based on your industry."
                                 isTip={true}
                             />
                             <div className='mt-8 mb-7 flex justify-center'>
                                 <CTA
-                                    bgColor="bg-white hover:bg-primary"
-                                    txtColor="text-hamzaPrimary hover:text-white"
-                                    border="border-2 border-hamzaPrimary"
-                                    text='Create Resume'
                                     btn
-                                    type="button"
+                                    text='Create Resume'
+                                    bgColor="bg-primary hover:bg-PrimaryDark"
+                                    txtColor="text-white"
+                                    border="border-0"
                                 />
                             </div>
                         </div>
 
-                        <div className=' ' id='head1'>
+                        <div className='scroll-mt-32' id='head3'>
                             <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                 How to Write a Resume: Step-By-Step Guide
                             </h2>
@@ -165,7 +162,7 @@ export default function HowToWriteResume(props: propsType) {
                             {/* <DynPoints includedPoints={BlogIncludedPoints} /> */}
                         </div>
 
-                        <div className='' id='head1'>
+                        <div className='scroll-mt-32' id='head4'>
                             <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                 How To Write A Good Resume: 6 Steps
                             </h2>
@@ -177,7 +174,7 @@ export default function HowToWriteResume(props: propsType) {
                                 6 Steps
                             </h2>
 
-                            <DynPoints includedPoints={BlogIncludedPoints} />
+                            <DynPoints includedPoints={ResumeIncludedSixPoints} />
 
                             <div>
                                 <h2 className="mt-5 text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2">
@@ -239,13 +236,15 @@ export default function HowToWriteResume(props: propsType) {
                                     Despite all three best resume layouts, reverse chronological is the most common format, and most recruiters prefer it. It lists your most recent job at the top and works backward, which is why most recruiters prefer it. It is also best for ATS because it makes it easy for the system to parse and show the progress in your career.
                                 </p>
 
-                                <ProConsCard
-                                    title="PRO TIP"
-                                    icon={TipPro}
-                                    description="This best layout for resume is perfect for people with consultant work history or professionals looking to show career growth. "
-                                    isTip={true}
-                                />
-                                <p className='mt-7 text-base font-semibold'>Here is what a reverse chronological resume format looks like:</p>
+                                <div className='mb-7'>
+                                    <ProConsCard
+                                        title="PRO TIP"
+                                        icon={TipPro}
+                                        description="This best layout for resume is perfect for people with consultant work history or professionals looking to show career growth. "
+                                        isTip={true}
+                                    />
+                                </div>
+                                <p className='text-base font-semibold'>Here is what a reverse chronological resume format looks like:</p>
 
                                 <div className='my-5 flex justify-center'>
                                     <Image
@@ -257,27 +256,28 @@ export default function HowToWriteResume(props: propsType) {
                                 <p className='mt-3 text-base'>
                                     However, the reverse chronological form is the most common one, which doesn't mean the other 2 formats are insignificant. If you are someone who explores different careers constantly and has a diverse work history, a combination will work the best for the candidate, as it will put equal focus on the varied and transferable skills that they gained from various job experiences.
                                 </p>
-                                <ProConsCard
-                                    title="PRO TIP"
-                                    icon={TipPro}
-                                    description="On the other hand, a functional format will work best for individuals who recently graduated with a significant career break and want to focus more on skills rather than work experience. "
-                                    isTip={true}
-                                />
+                                <div className='mb-7'>
+                                    <ProConsCard
+                                        title="PRO TIP"
+                                        icon={TipPro}
+                                        description="On the other hand, a functional format will work best for individuals who recently graduated with a significant career break and want to focus more on skills rather than work experience. "
+                                        isTip={true}
+                                    />
+                                </div>
                             </div>
 
                             <div>
-                                <h2 className="mt-7 text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2">
+                                <h2 className="mt-5 text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2">
                                     4. Sections Every Resume Must Include
                                 </h2>
                                 <p className='text-base'>
                                     Regardless of the perfect resume format you choose, there are some sections every resume should have. Let's break them down one by one:
                                 </p>
-
-                                <div>
+                                <div className='py-2'>
                                     {
                                         resumeIncludedSection?.map((sec, index) => (
                                             <>
-                                                <div className="flex py-2">
+                                                <div className="flex">
                                                     <div className="relative after:absolute after:left-0 after:top-4 after:h-[1.2px] after:w-[15px] after:bg-black" />
                                                     <div className="pl-6 w-full">
                                                         <div className="flex justify-between items-center w-full mb-2">
@@ -304,50 +304,173 @@ export default function HowToWriteResume(props: propsType) {
                                                                     <p className="text-base">
                                                                         {dataa.innerDesc}
                                                                     </p>
-                                                                    <div className='border mx-auto flex justify-center'>
+                                                                    {dataa?.img && <div className='mx-auto my-1 flex justify-center w-[400px]'>
                                                                         <Image
-                                                                            className='rounded-xl border-red-600 border overflow-hidden shadow-lg'
-                                                                            src={TemlateImage}
+                                                                            className='rounded-xl  overflow-hidden shadow-lg'
+                                                                            src={dataa?.img}
                                                                             alt='Template image'
-                                                                            width={200}
-                                                                            height={200}
                                                                         />
-                                                                    </div>
+                                                                    </div>}
 
                                                                 </div>
                                                             </div>
                                                         )) : null}
-                                                        {sec?.proTip && <ProConsCard
-                                                            title="PRO TIP"
-                                                            icon={TipPro}
-                                                            description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next."
-                                                            isTip={true}
-                                                        />}
+                                                        {sec?.proTip &&
+                                                            <div className='mb-7'>
+                                                                <ProConsCard
+                                                                    title={sec?.proTip?.title}
+                                                                    icon={sec?.proTip?.icon}
+                                                                    description={sec?.proTip?.description}
+                                                                    isTip={sec?.proTip?.isPro}
+                                                                /></div>
+                                                        }
 
                                                     </div>
                                                 </div>
                                             </>
                                         ))
                                     }
-
-                                    {/* <div className="flex py-2">
-                                                            <div className="relative after:absolute after:left-0 after:top-4 after:h-[1.2px] after:w-[15px] after:bg-black" />
-                                                            <div className="pl-6 w-full">
-                                                                <div className="flex justify-between items-center w-full mb-2">
-                                                                    <h4 className="text-hamzaPrimary text-base font-medium">2. Professional Summary or Career Objective</h4>
-                                                                </div>
-                                                                <p className='text-base'>
-                                                                    The second and most important element of a resume is a professional summary or career objective that goes right on top of your resume. It is short and direct and tells the recruiter in quick snippets. Thus, make sure it is creative and includes all the right characteristics of an appealing resume; let's talk about both separately, how it should be, and who it is best for:                                              </p>
-                                                            </div>
-                                                        </div> */}
-
                                 </div>
+                            </div>
+
+                            <div>
+                                <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold ">
+                                    5. Writing Tips for a Winning Resume
+                                </h2>
+
+                                {HowToWriteResumeFormateTips?.map((items: any, index: number) => (
+                                    <div className='pt-2' key={index}>
+                                        <div className='flex gap-3 text-hamzaPrimary text-lg font-semibold'>
+                                            <div>{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>
+                                            <h5 className="">{items.heading}</h5>
+                                        </div>
+                                        <p className="text-base pl-10">
+                                            {items.description}
+                                        </p>
+                                    </div>
+                                ))}
+
+                                <div className='mb-7'>
+                                    <ProConsCard
+                                        title="How to craft a job-winning cover letter?"
+                                        icon={TipProComma}
+                                        description="Use AI Pro Resume, which offers plenty of the best cover letter examples from which to take inspiration and start crafting yours."
+                                        isTip={true}
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <h2 className="mt-5 text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold">
+                                    6. A Quick Word About Our AI-Powered Resume Builder
+                                </h2>
+                                <p className="text-base">
+                                    If designing and formatting and learning how to write a resume for a job from scratch feels like a challenge, tools like resume makers, which include some incredible platforms such as AI Pro Resume, can make the process easier. These tools offer professional resume templates, help with content with AI suggestions, and ensure ATS-friendly formatting.
+                                </p>
+                                <h2 className="text-[18px] md:text-[24px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold">
+                                    Some Professional Resume Examples For You To Check Out
+                                </h2>
+                                <p className="text-base">
+                                    The following are some of the best resumes built on a robust tool, AI Pro Resume, that offers ATS-friendly templates with the option of AI suggestions, resume examples​, and plenty of customization.
+                                </p>
+                                {HowToWriteResmTemplateData?.map((items: any, index: number) => (
+                                    <div className='' key={index}>
+                                        <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                        <div className='max-w-[380px] mx-auto py-4'>
+                                            <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                        </div>
+                                        <div className="flex justify-center my-6">
+                                            <CTA
+                                                btn
+                                                text="Use This Template"
+                                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                                txtColor="text-white"
+                                                border="border-0"
+                                            />
+                                        </div >
+                                    </div>
+                                ))}
+
+                                <ProConsCard
+                                    title="PRO TIP"
+                                    icon={TipPro}
+                                    description="To build your resume in these or similar templates, head towards AI Pro Resume and boost your chances of getting your much-awaited job opportunity."
+                                    isTip={true}
+                                />
+                            </div>
+                        </div>
+
+                        <div className='scroll-mt-32' id='head5'>
+                            <h2 className="mt-7 font-semibold text-[18px] md:text-[22px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                                Final Thoughts
+                            </h2>
+                            <p className='text-base'>
+                                It's not enough to simply state your qualifications in a well-organized format; a great resume tells a story of your achievements and prospects. With this detailed guide, you should have the tools and knowledge to create a great working resume.
+                            </p>
+                            <p className='mt-3 text-base'>
+                                After all, your resume is your very first step towards getting your dream job. So, you better invest your time in it, pursue the steps mentioned in the blog on how to write a resume to get a job, along with that, use a professional cover letter template, and let your personality, experience, and skills do the talking.
+                            </p>
+                        </div>
+
+                        <div className='scroll-mt-32' id='head6'>
+                            <h2 className=" font-semibold mt-5 text-[18px] md:text-[22px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                                Frequently Asked Questions (FAQs)
+                            </h2>
+
+                            <div>
+                                <h2 className="capitalize font-medium text-[18px] md:text-[22px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                                    How to format a resume that stands out?
+                                </h2>
+
+                                <p className='text-base'>A visually appealing resume grabs attention. However, don't go overboard with fancy fonts or colors.</p>
+
+                                <ProConsCard
+                                    title="Here are some design tips:"
+                                    icon={TipPro}
+                                    itemsList={tipListItems}
+                                    isTip={true}
+                                />
 
                             </div>
 
-                        </div >
-                    </div>
+                            <div className='mt-6'>
+                                <h2 className="capitalize font-medium text-[18px] md:text-[22px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                                    What are the common resume mistakes to avoid?
+                                </h2>
 
+                                <p className='text-base'>
+                                    here are some common mistakes that you should avoid
+                                </p>
+
+                                <ProConsCard
+                                    title="Don’t"
+                                    icon={cons}
+                                    itemsList={consListItems}
+                                    isTip={false}
+                                />
+                            </div>
+
+                            <div className='mt-6'>
+                                <h2 className="capitalize font-medium text-[18px] md:text-[22px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                                    What are the 5 P's of a resume?
+                                </h2>
+
+                                <p className='text-base'>
+                                    The 5 P’s of a resume that highlight the important elements of a resume are as follows:
+                                </p>
+
+                                <h2 className="my-2 font-semibold text-[14px] text-center border-b-2 md:text-[16px] lg:text-[20px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                                    5 P's of a resume
+                                </h2>
+
+                                <DynPoints
+                                    includedPoints={LookInTo5Points}
+                                    defaultColor="black"
+                                    showSeriel={false}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
