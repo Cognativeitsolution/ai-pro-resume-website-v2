@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 // =================
 import { OldAPI } from "@/services/oldService";
 import TemplatesCard from "./TemplatesCard";
@@ -16,11 +17,23 @@ const ShowAllTemplates = () => {
     const [showLoader, setShowLoader] = useState(true);
     const [templates, setTemplates] = useState<TemplateType[]>([]);
     const [userPurchasedTemplates, setUserPurchasedTemplates] = useState<TemplateType[]>([]);
+    const pathname = usePathname();
 
     useEffect(() => {
         const fetchTemplates = async () => {
+            setShowLoader(true);
             try {
-                const res = await OldAPI.get("show-resume-templates");
+                let endpoint = "";
+                if (pathname.includes("cover-letter-templates")) {
+                    endpoint = "show-cover-templates";
+                } else if (pathname.includes("resume-templates")) {
+                    endpoint = "show-resume-templates";
+                } else {
+                    console.warn("No valid API endpoint for pathname:", pathname);
+                    return;
+                }
+
+                const res = await OldAPI.get(endpoint);
                 if (Array.isArray(res?.data)) {
                     setTemplates(res.data);
                 } else {
@@ -34,7 +47,7 @@ const ShowAllTemplates = () => {
         };
 
         fetchTemplates();
-    }, []);
+    }, [pathname]); 
 
     return (
         <section className="py-5 md:py-10">
