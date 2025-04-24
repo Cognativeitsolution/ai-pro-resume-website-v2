@@ -46,6 +46,7 @@ const Search = dynamic(() => import("./resume-examples/Search"));
 const Categories = dynamic(() => import("./resume-examples/Categories"));
 const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
 const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
+const DynMainDiv = dynamic(() => import("./dynamic-pages/DynMainDiv"));
 
 export {
   AutoPlaySlider,
@@ -94,4 +95,5 @@ export {
   Categories,
   IconSlider,
   ShowAllTemplates,
+  DynMainDiv
 };

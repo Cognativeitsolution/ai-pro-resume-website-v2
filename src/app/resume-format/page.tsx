@@ -1,6 +1,6 @@
 'use client';
 import { InnerBanner, Faq } from '@/components';
-import { BannerData, resumeFormatData, faqs } from './data';
+import { BannerData, FormatDetailData, faqs } from './data';
 import ResumeFormatComp from '@/components/resume-format/ResumeFormatComp';
 
 
@@ -9,7 +9,7 @@ const page = () => {
     return (
         <>
             <InnerBanner {...BannerData} />
-            <ResumeFormatComp data={resumeFormatData} />
+            <ResumeFormatComp data={FormatDetailData} />
             <Faq data={faqs} />
         </>
     );
