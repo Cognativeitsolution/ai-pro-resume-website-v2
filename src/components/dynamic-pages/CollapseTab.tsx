@@ -31,18 +31,18 @@ export default function CollapseTab({ data }: PropsType) {
                         </div>
                     </div>
                     <>
-                        <h5 className="text-hamzaPrimary text-2xl pt-4">{tab.heading} Resume Format:</h5>
-                        <div className='grid xl:grid-cols-12 gap-4 pl-6 py-4'>
+                        <h5 className="text-hamzaPrimary text-2xl pt-2 xl:pt-4">{tab.heading} Resume Format:</h5>
+                        <div className='grid xl:grid-cols-12 gap-4 xl:pl-6 py-3 xl:py-4'>
                             <div className='xl:col-span-5'>
                                 <div className='flex mx-auto justify-center '>
                                     <Image src={tab.image} alt={`${tab.heading} Resume`} className='border overflow-hidden shadow-md rounded-lg ' width={300} height={400} />
                                 </div>
                             </div>
-                            <div className='xl:col-span-7 py-6'>
-                                <h6 className="text-hamzaPrimary text-2xl mb-4 font-semibold">Best For:</h6>
+                            <div className='xl:col-span-7 xl:py-6'>
+                                <h6 className="text-hamzaPrimary text-2xl xl:mb-4 font-semibold">Best For:</h6>
                                 <ul className='list-disc pl-6'>
                                     {tab.list?.map((item: string, i: number) => (
-                                        <li key={i} className='mb-4 text-base'>{item}</li>
+                                        <li key={i} className='mb-4 last:mb-0 text-base'>{item}</li>
                                     ))}
                                 </ul>
                             </div>

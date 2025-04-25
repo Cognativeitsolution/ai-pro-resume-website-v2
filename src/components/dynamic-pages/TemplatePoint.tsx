@@ -24,7 +24,7 @@ export default function TemplatePoint({ data }: PropsType) {
         <div className="my-2 divide-y">
             {data?.map((tab: any, index: number) => (
                 <div key={index}>
-                    <div className='grid xl:grid-cols-12 gap-4 pl-6 py-4'>
+                    <div className='grid xl:grid-cols-12 gap-4 xl:pl-6 pt-4 sm:py-4'>
                         <div className='xl:col-span-5'>
                             <div className='flex mx-auto justify-center '>
                                 <Image src={tab.image} alt={`${tab.heading} Resume`} width={300} height={400} className='rounded-lg  border overflow-hidden shadow-md' />
@@ -34,7 +34,7 @@ export default function TemplatePoint({ data }: PropsType) {
                             <p className="text-base pb-2">{tab.description}</p>
                             <ul>
                                 {tab.list?.map((item: any, i: number) => (
-                                    <li key={i} className="mb-4 text-xl font-semibold pl-6 relative">
+                                    <li key={i} className="!mb-0 !last:mb-4 text-xl font-semibold pl-6 relative">
                                         <div
                                             className="absolute left-0 top-4 h-[1.2px] w-[15px] bg-black"
                                             style={{ content: '""' }}
@@ -43,7 +43,7 @@ export default function TemplatePoint({ data }: PropsType) {
                                         {item?.subList && (
                                             <ul className="pl-6 mt-2 ">
                                                 {item.subList.map((subItem: any, j: number) => (
-                                                    <li key={j} className="mb-2 text-base relative">
+                                                    <li key={j} className="!mb-0 !last:mb-2 text-base relative">
                                                         <div
                                                             className="absolute -left-6 top-3 h-[1.2px] w-[15px] bg-black"
                                                             style={{ content: '""' }}

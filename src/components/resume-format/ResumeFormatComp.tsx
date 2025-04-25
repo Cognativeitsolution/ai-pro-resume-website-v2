@@ -158,7 +158,7 @@ export default function ResumeFormatComp(props: propsType) {
                                         isPro={true}
                                     />
                                 </div>
-                                <div className='pt-8'>
+                                <div className=' pt-2 sm:pt-6 md:pt-8'>
                                     <ProConsCard
                                         title={items?.consItemsData?.title}
                                         icon={items?.consItemsData?.icon}
@@ -170,7 +170,7 @@ export default function ResumeFormatComp(props: propsType) {
                         ))}
 
                         <DynMainDiv
-                            id="head6"
+                            id="head7"
                             title={data?.FormatQuesAns?.heading}
                             titleTag="h3"
                             titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold "
@@ -179,43 +179,14 @@ export default function ResumeFormatComp(props: propsType) {
                                 {data?.FormatQuesAns?.list?.map((items: any, index: number) => (
                                     <div className='pt-2' key={index}>
                                         <div className='flex gap-3 text-hamzaPrimary text-2xl pt-2'>
-                                            <div>{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>                                        <h5 className="">{items.heading}</h5>
+                                            <div className='hidden sm:block'>{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>                                        <h5 className="">{items.heading}</h5>
                                         </div>
-                                        <p className="text-base pl-10">
+                                        <p className="text-base sm:pl-10">
                                             {items.description}
                                         </p>
                                     </div>
                                 ))}
                             </div>
-                        </DynMainDiv>
-
-                        <DynMainDiv
-                            id="head7"
-                            title={data?.TemplateData?.heading}
-                            descBase={data?.TemplateData?.description}
-                            titleTag="h4"
-                            titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4"
-                        >
-                            {data?.TemplateData?.list?.map((items: any, index: number) => (
-                                <div className='' key={index}>
-                                    <h5 className="text-[20px] md:text-[25px] lg:text-[30px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                    <p className="text-base">
-                                        {items.description}
-                                    </p>
-                                    <div className='max-w-[380px] mx-auto py-4  '>
-                                        <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
-                                    </div>
-                                    <div className="flex justify-center my-6 ">
-                                        <CTA
-                                            btn
-                                            text="Create Resume"
-                                            bgColor="bg-primary hover:bg-PrimaryDark"
-                                            txtColor="text-white"
-                                            border="border-0"
-                                        />
-                                    </div>
-                                </div>
-                            ))}
                         </DynMainDiv>
 
                         <DynMainDiv

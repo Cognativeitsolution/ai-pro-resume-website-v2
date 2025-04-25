@@ -27,10 +27,10 @@ export default function DynMainDiv({
     CtaText
 }: DynMainDivProps) {
     return (
-        <div className={`scroll-mt-32 border-2 border-rose-950 ${mainDivClass}`} id={id}>
+        <div className={`scroll-mt-32 ${mainDivClass}`} id={id}>
             <TitleTag className={titleClass}>{title}</TitleTag>
 
-            {Array.isArray(description) ? (
+            {description && Array.isArray(description) ? (
                 description?.map((item: any, index: number) => {
                     return <p key={index} className="text-[16px] lg:text-[18px] text-justify">
                         {item}
@@ -41,9 +41,9 @@ export default function DynMainDiv({
                     {description}
                 </p>
             }
-            {Array.isArray(descBase) ? (
+            {descBase && Array.isArray(descBase) ? (
                 descBase?.map((item: any, index: number) => {
-                    return <p key={index} className='text-base border border-rose-950 mt-2 first:mt-0'>{item}</p>;
+                    return <p key={index} className='text-base  mt-2 first:mt-0'>{item}</p>;
                 })
             ) :
                 <p className='text-base'>{descBase}</p>
@@ -51,18 +51,20 @@ export default function DynMainDiv({
 
             {children}
 
-            {Array.isArray(description2) ? (
+            {description2 && Array.isArray(description2) ? (
                 description2?.map((item: any, index: number) => {
-                    return <p key={index} className="text-base mt-2">
+                    return <p key={index} className="text-base mt-8 border-4">
                         {item}
                     </p>;
                 })
-            ) :
-                <p className="text-base mt-2">
+            ) : (
+                description2 && (<p className="text-base mt-8">
                     {description2}
-                </p>
+                </p>)
+            )
+
             }
-            {CtaText && <div className='my-8 flex justify-center border-4'>
+            {CtaText && <div className='my-4 xl:my-8 flex justify-center '>
                 <CTA
                     btn
                     text={CtaText}
