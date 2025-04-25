@@ -15,7 +15,7 @@ const ReferHeader: React.FC<ReferHeaderProps> = ({ isVisible, onClose }) => {
                 <a className="text-indigo-400 font-medium underline" href="/login">Get Refer Link</a>
                 <span> To start with AI PRO RESUME</span>
             </p>
-            <button onClick={onClose}>
+            <button type="button" aria-label="Close" onClick={onClose}>
                 <IoMdClose className="h-6 w-6 text-white" />
             </button>
         </div>

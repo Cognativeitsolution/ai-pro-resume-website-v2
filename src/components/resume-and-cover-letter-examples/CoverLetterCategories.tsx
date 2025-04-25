@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 // =============
 import { OldAPI } from "@/services/oldService";
 import CustomLoader from "../loader/CustomLoader";
@@ -8,9 +9,7 @@ import SliderTemplates from "./SliderTemplates";
 import StaticTemplates from "./StaticTemplates";
 import FilteredCategoryTemplates from "./FilteredCategoryTemplates";
 import SearchBar from "../custom/searchBar/SearchBar";
-import { FaArrowLeft } from "react-icons/fa";
 
-// Type definitions for the categories, resume examples, and top categories
 export type categories = {
   id: number;
   name: string;
@@ -59,7 +58,7 @@ const CoverLetterCategories = () => {
   const [allJobPositions, setAllJobPositions] = useState<job_positions[]>([]);
   const [activeCategoryId, setActiveCategoryId] = useState<number | null>(null);
 
-  // Fetch categories data on component mount
+  // Fetch categories and templates on component mount
   useEffect(() => {
     OldAPI.get("show-categories")
       .then((res) => {
@@ -91,6 +90,7 @@ const CoverLetterCategories = () => {
       });
   };
 
+  // ========Set All Job Positions========
   useEffect(() => {
     if (top_categories.length > 0) {
       const jobMap: { [key: string]: job_positions } = {};
@@ -107,6 +107,7 @@ const CoverLetterCategories = () => {
     }
   }, [top_categories]);
 
+  // ========Handle Job Positon Click========
   const handleJobPositionClick = (jobName: string) => {
     setSearchJob(jobName);
     setIsfilter(true);
@@ -123,7 +124,7 @@ const CoverLetterCategories = () => {
 
     setFrontCoverTemplates(matched);
     setSelectedCatName(jobName);
-    setSelectedCatDesc;
+    setSelectedCatDesc("Filtered By Job Position");
   };
 
   return (
@@ -190,7 +191,7 @@ const CoverLetterCategories = () => {
                           <h1 className="text-xl lg:text-2xl text-hamzaPrimary">
                             {category.name}
                           </h1>
-                          <hr/>
+                          <hr />
                           <div
                             className="text-sm sm:text-lg my-2 text-center sm:text-start"
                             dangerouslySetInnerHTML={{

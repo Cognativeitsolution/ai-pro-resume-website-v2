@@ -1,5 +1,4 @@
 "use client";
-
 import React, { ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
 // ===============
@@ -43,9 +42,9 @@ const FindResumeTemplates = ({ data }: propsType) => {
       <section className="py-5 md:py-10">
         <div className="container">
           <div className="bg-indigo-200/20 backdrop-blur-none border-2 border-white rounded-lg px-4 md:px-0 py-10">
-            <p className="text-[24px] md:text-[32px] font-semibold text-center">
+            <h3 className="text-[24px] md:text-[32px] font-semibold text-center">
               {data.title}
-            </p>
+            </h3>
             <p className="font-normal px-0 lg:px-40 text-[16px] text-center">
               {data.description}
             </p>

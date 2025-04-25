@@ -4,6 +4,8 @@ import Image from "next/image";
 // ===============
 import { FaCrown, FaEye } from 'react-icons/fa';
 import { LiaAwardSolid } from "react-icons/lia";
+// ===============
+import { CTA } from "@/components";
 
 type TemplateType = {
     id: number;
@@ -36,7 +38,7 @@ const TemplatesCard = ({ templates, userPurchasedTemplates }: TemplatesCardProps
                         (purchased) => purchased.id === template.id
                     );
                     return (
-                        <div key={template.id} className="flex flex-col gap-5 p-3 rounded-lg bg-indigo-200/20 backdrop-blur-none border-2 border-white cursor-pointer transition-all duration-700">
+                        <div key={template.id} className="flex flex-col gap-5 p-3 rounded-lg bg-indigo-200/20 backdrop-blur-none border-2 border-white cursor-pointer transition-all duration-1000 group">
                             <div className="flex items-center justify-between">
                                 <p className="text-[16px] lg:text-[18px] font-medium text-zinc-800">
                                     {template.name}
@@ -61,7 +63,7 @@ const TemplatesCard = ({ templates, userPurchasedTemplates }: TemplatesCardProps
                                         </div>
                                     )
                                 )}
-
+                                {/* Templates Images */}
                                 <Image
                                     src={imageBaseUrl + template.image}
                                     alt={template.name}
@@ -69,6 +71,18 @@ const TemplatesCard = ({ templates, userPurchasedTemplates }: TemplatesCardProps
                                     height={400}
                                     className="w-full lg:w-auto h-auto"
                                 />
+                                {/* Templates Before */}
+                                <div className="flex items-center justify-center w-full h-full bg-slate-800/90 absolute top-0 left-0 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                                    <div className="translate-y-56 group-hover:-translate-y-0 transition-all duration-1000">
+                                        <CTA
+                                            btn
+                                            text="Use This Template"
+                                            bgColor="bg-PrimaryDark hover:bg-transparent"
+                                            txtColor="text-white"
+                                            border="border border-white"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     );

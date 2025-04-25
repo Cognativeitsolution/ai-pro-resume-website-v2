@@ -12,7 +12,7 @@ type ServiceCardProps = {
 const ServiceCard = ({ image, title, services }: ServiceCardProps) => {
   return (
     <>
-      <div className="flex flex-col items-center text-center p-6 bg-white/40 hover:bg-white/60 shadow-md rounded-2xl border-[0.5px] hover:border-hamzaPrimary border-white">
+      <div className="flex flex-col items-center text-center p-6 bg-white/40 hover:bg-white/60 shadow-md rounded-2xl border-[0.5px] border-white hover:border-hamzaPrimary transition-all duration-500">
         <div className="w-[80px]">
           <Image src={image} alt={title} className="mb-4" />
         </div>

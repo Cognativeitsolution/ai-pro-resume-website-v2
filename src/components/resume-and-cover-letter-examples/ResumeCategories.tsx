@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 // =============
 import { OldAPI } from "@/services/oldService";
 import CustomLoader from "../loader/CustomLoader";
@@ -8,9 +9,7 @@ import SliderTemplates from "./SliderTemplates";
 import StaticTemplates from "./StaticTemplates";
 import FilteredCategoryTemplates from "./FilteredCategoryTemplates";
 import SearchBar from "../custom/searchBar/SearchBar";
-import { FaArrowLeft } from "react-icons/fa";
 
-// Type definitions for the categories, resume examples, and top categories
 export type categories = {
   id: number;
   name: string;
@@ -49,9 +48,7 @@ const ResumeCategories = () => {
   const [top_categories, setTopCategories] = useState<TopCategories[]>([]);
   const [isfilter, setIsfilter] = useState(false);
   const [exp_img, setExpImg] = useState<any>([]);
-  const [frontResumeTemplates, setFrontResumeTemplates] = useState<
-    resume_examples[]
-  >([]);
+  const [frontResumeTemplates, setFrontResumeTemplates] = useState<resume_examples[]>([]);
   const [selectedCatName, setSelectedCatName] = useState<string>("");
   const [selectedCatDesc, setSelectedCatDesc] = useState<string>("");
   const [showLoader, setShowLoader] = useState(true);
@@ -75,7 +72,7 @@ const ResumeCategories = () => {
       });
   }, []);
 
-  // Function to handle category click and fetch corresponding resume templates
+  // Fetch templates for the selected category
   const chkTemp = (cat_id: number, cat_name: string, cat_desc: string) => {
     setIsfilter(true);
     // setShowLoader(true);
@@ -92,6 +89,7 @@ const ResumeCategories = () => {
       });
   };
 
+  // ========Set All Job Positions========
   useEffect(() => {
     if (top_categories.length > 0) {
       const jobMap: { [key: string]: job_positions } = {};
@@ -107,7 +105,8 @@ const ResumeCategories = () => {
       setAllJobPositions(Object.values(jobMap));
     }
   }, [top_categories]);
-
+  
+  // ========Handle Job Positon Click========
   const handleJobPositionClick = (jobName: string) => {
     setSearchJob(jobName);
     setIsfilter(true);
@@ -124,7 +123,7 @@ const ResumeCategories = () => {
 
     setFrontResumeTemplates(matched);
     setSelectedCatName(jobName);
-    setSelectedCatDesc;
+    setSelectedCatDesc("Filtered By Job Position");
   };
 
   return (
@@ -191,7 +190,7 @@ const ResumeCategories = () => {
                           <h1 className="text-xl lg:text-2xl text-hamzaPrimary">
                             {category.name}
                           </h1>
-                          <hr/>
+                          <hr />
                           <div
                             className="text-sm sm:text-lg my-2 text-center sm:text-start"
                             dangerouslySetInnerHTML={{
