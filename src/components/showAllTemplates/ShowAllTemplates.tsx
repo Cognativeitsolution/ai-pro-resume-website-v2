@@ -58,12 +58,14 @@ const ShowAllTemplates = () => {
 
     return (
         <>
+            {/* Search Bar */}
             <SearchBar
                 placeholder="Search with Creative, Modern, Professional etc"
                 showDropdown={false}
                 onSearchChange={(e) => setSearchTerm(e.target.value)}
                 value={searchTerm}
             />
+            {/* All Templates */}
             <section className="py-5 md:py-10">
                 {/* Loader */}
                 {showLoader ? (
