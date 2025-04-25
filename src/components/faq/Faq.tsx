@@ -4,6 +4,7 @@ import React, { ReactNode, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import ProConsCard from "../blog/blogDetailComponents/ProConsCard";
 import TipPro from 'media/images/TipPro.webp'
+import DynPoints from "../dynamic-pages/DynPoints";
 
 type FaqItem = {
   question: string | ReactNode;
@@ -49,9 +50,9 @@ const Faq = (props: propsType) => {
                     className="flex justify-between items-center"
                     onClick={() => toggle(index)}
                   >
-                    <h4 className="font-semibold text-md sm:text-lg text-black">
+                    <h6 className="font-semibold text-md sm:text-lg text-black">
                       {faq.question}
-                    </h4>
+                    </h6>
                     <IoIosArrowDown
                       className={`transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
                         }`}
@@ -67,16 +68,30 @@ const Faq = (props: propsType) => {
                     <div className="py-2 px-1 text-[16px] lg:text-[18px">
                       {faq.answer}
                     </div>
-                    {faq?.titlePro && faq?.descriptionPro &&
+                    {faq?.titlePro &&
                       <div className="mb-6">
                         <ProConsCard
                           title={faq?.titlePro}
-                          icon={TipPro}
+                          icon={faq?.iconPro}
                           description={faq?.descriptionPro}
-                          isTip={true}
+                          list={faq?.listPro}
+                          isTip={faq?.isTip}
+                          isPro={faq?.isPro}
                         />
                       </div>
                     }
+                    {faq?.pointsHeading &&
+                      <h2 className="my-2 font-semibold text-[14px] text-center border-b-2 md:text-[16px] lg:text-[20px] leading-[36px] md:leading-[40px] lg:leading-[50px]">
+                        {faq?.pointsHeading}
+                      </h2>
+                    }
+
+                    {faq?.points &&
+                      <DynPoints
+                        includedPoints={faq?.points}
+                        defaultColor="black"
+                        showSeriel={false}
+                      />}
                   </div>
                 </div>
               ))}

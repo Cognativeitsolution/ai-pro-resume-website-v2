@@ -40,7 +40,7 @@ const VerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
                                 scroll={true}
                                 onClick={() => handleSelectedTab(data?.id)}
                                 className={`flex pt-3 ${lastTab ? 'pb-3 mb-0' : 'pb-3'}
-                                gap-6 cursor-pointer  items-center
+                                gap-6 cursor-pointer  items-center px-2
                                 ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 text-white' : ''}`}
                             >
                                 <span className='text-lg font-light'><FaAngleDoubleRight /></span>

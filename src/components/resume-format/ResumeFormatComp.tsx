@@ -55,8 +55,7 @@ export default function ResumeFormatComp(props: propsType) {
                             <DynVerticalTabs heading="Table Of Content"
                                 tabsData={data?.DynVerticalTabsData}
                                 setSectionId={setSectionId} />
-                            <div className="mt-4 hidden lg:block relative z-10"
-                            >
+                            <div className="mt-4 hidden lg:block relative z-10">
                                 <Image
                                     src={verticleTabBg}
                                     alt="Resume benefits"
@@ -99,7 +98,7 @@ export default function ResumeFormatComp(props: propsType) {
                             title={data?.TopSection?.heading}
                             descBase={data?.TopSection?.description}
                             titleTag="h2"
-                            titleClass="text-[20px] md:text-[20px] lg:text-[20px] leading-[36px] md:leading-[40px] lg:leading-[50px] mb-2"
+                            titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2"
                         >
                             <ProConsCard
                                 title={data?.TopSection?.titlePro}
@@ -113,7 +112,8 @@ export default function ResumeFormatComp(props: propsType) {
                             id='head2'
                             title={data?.FormatPoints?.heading}
                             titleTag="h2"
-                            titleClass="text-[22px] text-center border-b-2 md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-medium mb-4 capitalize mt-8"
+                            titleClass="text-[22px] text-center border-b-2 md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-medium my-4 capitalize "
+                            CtaText="Create Resume"
                         >
                             <DynPoints includedPoints={data?.FormatPoints?.list} />
                             <ProConsCard
@@ -122,15 +122,6 @@ export default function ResumeFormatComp(props: propsType) {
                                 description={data?.FormatPoints?.descriptionPro}
                                 isTip={data?.FormatPoints?.isTip}
                             />
-                            <div className='mt-8 mb-7 flex justify-center'>
-                                <CTA
-                                    btn
-                                    text="Create Resume"
-                                    bgColor="bg-primary hover:bg-PrimaryDark"
-                                    txtColor="text-white"
-                                    border="border-0"
-                                />
-                            </div>
                         </DynMainDiv>
 
                         <DynMainDiv
@@ -184,16 +175,18 @@ export default function ResumeFormatComp(props: propsType) {
                             titleTag="h3"
                             titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold "
                         >
-                            {data?.FormatQuesAns?.list?.map((items: any, index: number) => (
-                                <div className='pt-2' key={index}>
-                                    <div className='flex gap-3 text-hamzaPrimary text-2xl pt-2'>
-                                        <div>{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>                                        <h5 className="">{items.heading}</h5>
+                            <div className='pb-4'>
+                                {data?.FormatQuesAns?.list?.map((items: any, index: number) => (
+                                    <div className='pt-2' key={index}>
+                                        <div className='flex gap-3 text-hamzaPrimary text-2xl pt-2'>
+                                            <div>{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>                                        <h5 className="">{items.heading}</h5>
+                                        </div>
+                                        <p className="text-base pl-10">
+                                            {items.description}
+                                        </p>
                                     </div>
-                                    <p className="text-base pl-10">
-                                        {items.description}
-                                    </p>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </DynMainDiv>
 
                         <DynMainDiv

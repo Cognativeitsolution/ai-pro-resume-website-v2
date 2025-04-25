@@ -1,4 +1,8 @@
 // ======================
+import TipPro from 'media/images/TipPro.webp'
+import TipProComma from 'media/images/commaIcoon.webp'
+
+
 import Temp1 from 'media/resume_template_images/template_1.webp'
 import Temp2 from 'media/resume_template_images/template_2.webp'
 import Temp3 from 'media/resume_template_images/template_3.webp'
@@ -7,7 +11,7 @@ import Temp5 from 'media/resume_template_images/template_5.webp'
 import Temp6 from 'media/resume_template_images/template_6.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
-import TipPro from 'media/images/TipPro.webp'
+
 
 
 export const BannerData = {
@@ -86,7 +90,7 @@ const FormatPointsData = {
     heading: "This blog will include",
     titlePro: "Need A resume ASAP?",
     descriptionPro: [" Our AI-powered resume builder has features that can help you write a resume in time. With more than 30+ professional resume templates, you can choose the one that is suitable for your industry and begin creating a perfect resume. Also, you can revamp your old resume by importing it on our platform and customizing it the way you want. "],
-    iconPro: TipPro,
+    iconPro: TipProComma,
     isTip: true,
     list: FormatPointsList
 }
@@ -355,7 +359,6 @@ const BottomSectionData = {
     description: "It is important to consider the level of your career and then select a generic resume format based on that. The three best format for resume tell a different story about you to the employers. So be wise about what you want your employer to notice: is it your long history of consistent work experience, your diverse skill sets that you gained as a career changer, or both? With the right resume format and the best cover letter format, you can significantly increase your chances of getting your dream job.",
 }
 
-
 export const FormatDetailData = {
     DynVerticalTabsData: VerticalTabsData,
     TopSection: TopSectionData,
@@ -378,7 +381,9 @@ const faqsList = [
         answer:
             "The best generic resume format can be different for every person, but what is often most recommended is a reverse chronological format, which shows the work experience in descending order so that the employer can see the latest achievements more easily.  ",
         titlePro: "PRO TIP",
-        descriptionPro: ["Moreover, for more top-rated resume formats that you can use to create your resume, visit AI Pro Resume and select your preferred resume template and cover letter examples to create a well-structured, sleek, and eye-catching CV. "]
+        descriptionPro: ["Moreover, for more top-rated resume formats that you can use to create your resume, visit AI Pro Resume and select your preferred resume template and cover letter examples to create a well-structured, sleek, and eye-catching CV. "],
+        iconPro: TipPro,
+        isTip: true
     },
     {
         question: "What is the biodata format for 2025? ",
