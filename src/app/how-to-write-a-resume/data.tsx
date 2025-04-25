@@ -433,22 +433,15 @@ const faqsList = [
         isTip: true
     },
     {
-        question: "What is the top rated resume format? ",
-        answer:
-            "The best generic resume format can be different for every person, but what is often most recommended is a reverse chronological format, which shows the work experience in descending order so that the employer can see the latest achievements more easily.  ",
+        question: "What are the common resume mistakes to avoid? ",
+        answer: "here are some common mistakes that you should avoid",
         titlePro: "Here are some design tips",
         listPro: faqsCons,
         iconPro: TipPro,
     },
     {
-        question: "What is the biodata format for 2025? ",
-        answer:
-            "The biodata format includes all the important personal info, professional experience related to the job applied for, educational background, skills, and achievements presented as concisely as possible. The biodata format should match the type of job being applied for and the specific career stage of the candidate. ",
-    },
-    {
-        question: "What is the best resume format for 15 years experience?",
-        answer:
-            "For a candidate who has nearly 15 years of work experience, reverse chronological and combined resume formatting will be the best format for resume. This style of resume emphasizes skills and accomplishments, followed by a detailed work history, which allows more senior professionals to highlight their vast experience effectively. ",
+        question: "What are the 5 P's of a resume? ",
+        answer: "The 5 P’s of a resume that highlight the important elements of a resume are as follows:",
         pointsHeading: "5 P's of a resume",
         points: faqsPoints
     },
