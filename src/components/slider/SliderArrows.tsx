@@ -53,7 +53,7 @@ export const PrevButton = (props: any) => {
   const { children, ...restProps } = props;
 
   return (
-    <button type="button" {...restProps}>
+    <button type="button" aria-label="PrevButton" {...restProps}>
       <IoArrowBack className="text-primaryGreen text-2xl cursor-pointer transition-all" />
     </button>
   );
@@ -63,7 +63,7 @@ export const NextButton = (props: any) => {
   const { children, ...restProps } = props;
 
   return (
-    <button type="button" {...restProps}>
+    <button type="button" aria-label="NextButton" {...restProps}>
       <IoArrowForward className="text-primaryGreen text-2xl cursor-pointer transition-all" />
     </button>
   );

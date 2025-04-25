@@ -4,7 +4,6 @@ import Image from "next/image";
 // ===============
 import { CTA } from "@/components";
 
-
 type TemplateImage = {
   id: number;
   src: any;
@@ -59,15 +58,18 @@ const ExploreTemplates = ({ data }: ExploreTemplatesProps) => {
             {/* Tab Images */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 my-5 md:my-10">
               {data.templates[activeTab].map((image) => (
-                <div key={image.id} className="w-full shadow-xl rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.08]">
-                  <Image
-                    src={image.src}
-                    alt={`Image ${image.id}`}
-                    width={500}
-                    height={300}
-                    priority
-                    className="w-full h-auto"
-                  />
+                <div key={image.id} className="flex flex-col gap-5 p-3 rounded-lg bg-indigo-200/20 backdrop-blur-none border-2 border-white cursor-pointer hover:scale-110 transition-all duration-700">
+                  <div className="ring-2 ring-zinc-500/20 rounded-lg shadow-lg overflow-hidden relative">
+                    {/* Templates Images */}
+                    <Image
+                      src={image.src}
+                      alt={`Image ${image.id}`}
+                      width={500}
+                      height={300}
+                      priority
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               ))}
             </div>

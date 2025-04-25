@@ -1,5 +1,5 @@
 import React from "react";
-import { ResumeCategories, Faq, IconSlider, InnerBanner, Search } from "@/components";
+import { ResumeCategories, Faq, IconSlider, InnerBanner } from "@/components";
 import { BannerData, faqs, IconData } from "./data";
 
 
@@ -8,7 +8,6 @@ export default function Page() {
     <>
       <InnerBanner {...BannerData} />
       <IconSlider {...IconData} />
-      <Search />
       <ResumeCategories />
       <Faq data={faqs} />
     </>

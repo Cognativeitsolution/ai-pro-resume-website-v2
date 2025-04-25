@@ -11,7 +11,7 @@ interface ConditionalLayoutProps {
     children: ReactNode;
 }
 
-const LOADER_DELAY = 3000; // milliseconds
+const LOADER_DELAY = 4000;
 
 const ConditionalLayout = ({ children }: ConditionalLayoutProps) => {
     const [isLoading, setIsLoading] = useState(true);

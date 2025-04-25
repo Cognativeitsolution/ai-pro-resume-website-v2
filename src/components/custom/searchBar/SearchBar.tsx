@@ -44,7 +44,7 @@ const SearchBar = ({ placeholder, showDropdown, onSearchChange, value, listOfJob
                             type="text"
                             id="search"
                             placeholder={placeholder}
-                            className="text-[16px] font-medium text-hamzaPrimary w-[90%] h-[40px] pl-2 border-0 outline-none"
+                            className="text-[18px] font-medium text-hamzaPrimary w-[90%] h-[40px] pl-2 border-0 outline-none"
                             autoComplete="off"
                             onChange={onSearchChange}
                             value={value}
@@ -58,13 +58,12 @@ const SearchBar = ({ placeholder, showDropdown, onSearchChange, value, listOfJob
                                 if (value.length > 0) {
                                     // Clear search
                                     onSearchChange({ target: { value: "" } } as React.ChangeEvent<HTMLInputElement>);
-                                    onJobSelect?.(""); // Optional: if you want to reset selected job filter
                                     setIsSearch(false); // Hide dropdown
                                 }
                             }}
                         >
                             {value.length > 0 ? (
-                                <AiOutlineClose size={24} className="text-indigo-700/80" />
+                                <AiOutlineClose size={20} className="text-indigo-700/80" />
                             ) : (
                                 <BiSearch size={30} className="text-indigo-700/80" />
                             )}
@@ -73,7 +72,7 @@ const SearchBar = ({ placeholder, showDropdown, onSearchChange, value, listOfJob
                         {/* Drop Down */}
                         {showDropdown && (
                             <div ref={dropdownRef} className={`w-[99%] h-[300px] p-2 bg-white absolute left-1 top-[112%] z-20 ring-2 ring-zinc-500/20 rounded-md shadow-md ${isSearch ? "block" : "hidden"}`}>
-                                <div className="flex flex-col gap-1 px-2 h-full divide-y overflow-y-scroll 
+                                <div className="flex flex-col gap-1 pr-2 h-full divide-y overflow-y-scroll 
                                     [&::-webkit-scrollbar]:w-2 
                                     [&::-webkit-scrollbar-track]:bg-gray-100 
                                     [&::-webkit-scrollbar-track]:rounded-full 
@@ -84,7 +83,7 @@ const SearchBar = ({ placeholder, showDropdown, onSearchChange, value, listOfJob
                                 >
                                     {/* Job suggestions list */}
                                     {listOfJobPositions.map((job, idx) => (
-                                        <span key={idx} className="text-[18px] text-zinc-800 font-medium pt-1 cursor-pointer"
+                                        <span key={idx} className="text-[18px] text-zinc-800 font-medium hover:text-hamzaPrimary hover:bg-indigo-600/20 hover:rounded-md h-[40px] pl-2 py-1 cursor-pointer"
                                             onClick={() => {
                                                 setSearchTerm(job.name); // optional, only for local state
                                                 onSearchChange({ target: { value: job.name } } as React.ChangeEvent<HTMLInputElement>); // <-- this is important
