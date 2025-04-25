@@ -1,15 +1,19 @@
-import { Faq, IconSlider, InnerBanner, PrivacyFeatures, ShowAllTemplates, Welcome } from "@/components";
-import { BannerData, faqs, FeaturesData, IconData, WelcomeData } from "./data";
+'use client';
 
-export default function Page() {
+import { InnerBanner, Faq } from '@/components';
+import { BannerData, resumeFormatData, faqs } from './data';
+import HowToWriteResume from '@/components/how-to-write-resume-format/HowToWriteResume';
+
+
+const page = () => {
+
   return (
     <>
       <InnerBanner {...BannerData} />
-      <IconSlider {...IconData} />
-      <ShowAllTemplates />
-      <Welcome data={WelcomeData} />
-      <PrivacyFeatures data={FeaturesData} />
+      <HowToWriteResume data={resumeFormatData} />
       <Faq data={faqs} />
     </>
   );
-}
+};
+
+export default page;

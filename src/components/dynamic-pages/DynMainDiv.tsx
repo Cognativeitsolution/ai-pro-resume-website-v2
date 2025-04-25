@@ -27,7 +27,7 @@ export default function DynMainDiv({
     CtaText
 }: DynMainDivProps) {
     return (
-        <div className={`scroll-mt-32 ${mainDivClass}`} id={id}>
+        <div className={`scroll-mt-32 py-4 ${mainDivClass}`} id={id}>
             <TitleTag className={titleClass}>{title}</TitleTag>
 
             {description && Array.isArray(description) ? (

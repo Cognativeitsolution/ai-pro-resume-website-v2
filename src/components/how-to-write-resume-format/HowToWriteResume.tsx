@@ -221,7 +221,7 @@ export default function HowToWriteResume(props: propsType) {
                                         </>
                                     }
 
-                                    {/* {step?.IncludedSection?.map((sec: any, index: any) => (
+                                    {step?.IncludedSection?.map((sec: any, index: any) => (
                                         <>
                                             <div className='py-2'>
                                                 <div className="flex">
@@ -277,7 +277,7 @@ export default function HowToWriteResume(props: propsType) {
                                             </div>
                                         </>
                                     ))
-                                    } */}
+                                    }
 
                                     {step?.tips?.map((tip: any, idx: any) => (
                                         <div className='pt-2' key={idx}>
