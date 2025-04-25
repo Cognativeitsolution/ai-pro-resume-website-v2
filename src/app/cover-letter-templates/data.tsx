@@ -33,7 +33,7 @@ export const BannerData = {
 const VerticalTabsData = [
   {
     id: 'head1',
-    title: "How To Write A Good Resume in 2025?",
+    title: "How To Write A Good Cover Letter in 2025?",
   },
   {
     id: 'head2',
@@ -41,11 +41,11 @@ const VerticalTabsData = [
   },
   {
     id: 'head3',
-    title: "How to Write a Resume: Step-By-Step Guide",
+    title: "How to Write a Cover Letter: Step-By-Step Guide",
   },
   {
     id: 'head4',
-    title: "How To Write A Good Resume: 6 Steps",
+    title: "How To Write A Good Cover Letter: 6 Steps",
   },
   {
     id: 'head5',
