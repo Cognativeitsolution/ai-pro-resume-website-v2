@@ -48,6 +48,10 @@ const CoverLetterCategories = dynamic(() => import("./resume-and-cover-letter-ex
 const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
 const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
 const DynMainDiv = dynamic(() => import("./dynamic-pages/DynMainDiv"));
+const YourScore = dynamic(() => import("./ATS-checker/YourScore"));
+const Evaluation = dynamic(() => import("./ATS-checker/Evaluation"));
+const BuildATSfriendlyResume = dynamic(() => import("./ATS-checker/BuildATSfriendlyResume"));
+const ParsedResumeOverview = dynamic(() => import("./ATS-checker/ParsedResumeOverview"));
 
 export {
   AutoPlaySlider,
@@ -97,5 +101,9 @@ export {
   CoverLetterCategories,
   IconSlider,
   ShowAllTemplates,
-  DynMainDiv
+  DynMainDiv,
+  YourScore,
+  Evaluation,
+  ParsedResumeOverview,
+  BuildATSfriendlyResume
 };

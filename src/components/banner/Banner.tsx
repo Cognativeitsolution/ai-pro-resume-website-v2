@@ -59,6 +59,7 @@ const Banner = (props: BannerProps) => {
                 bgColor="bg-transparent hover:bg-primary"
                 txtColor="text-white"
                 border="border border-white"
+                href="/ats-checker"
               />
             </div>
 
