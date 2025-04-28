@@ -192,7 +192,7 @@ const ResumeCategories = () => {
                           </h1>
                           <hr />
                           <div
-                            className="text-sm sm:text-lg my-2 text-center sm:text-start"
+                            className="text-sm sm:text-lg my-2 text-start"
                             dangerouslySetInnerHTML={{
                               __html: category.short_description,
                             }}

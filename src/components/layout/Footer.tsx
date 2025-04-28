@@ -39,14 +39,11 @@ const Footer = () => {
     {
       heading: "Learn",
       items: [
-        { name: "Career Blogs", href: "/blogs" },
+        { name: "Blog", href: "/blog" },
         { name: "Resume Format", href: "/resume-format" },
-        { name: "Create a Cover Format", href: "/cover-format" },
-        { name: "How to write resume", href: "/how-to-write-resume" },
-        {
-          name: "How to write Cover Letter",
-          href: "/how-to-write-cover-letter",
-        },
+        { name: "Create a Cover Format", href: "/cover-letter-format" },
+        { name: "How to write resume", href: "/how-to-a-write-resume" },
+        { name: "How to write Cover Letter", href: "/how-to-write-a-cover-letter"},
       ],
     },
     {
@@ -88,7 +85,7 @@ const Footer = () => {
           <form onSubmit={handleSubmit(onSubscribe)}>
             <div className="bg-primary container rounded-xl px-8 md:px-12 py-8 md:flex justify-between items-center mb-0 xl:mb-10 relative bottom-[50px]">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-[24px] lg:text-[36px] font-bold leading-tight text-white">
+                <h3 className="text-[24px] lg:text-[30px] font-semibold leading-tight text-white">
                   Keep Up to date with <br />
                   <span className="text-white">Latest News</span>
                 </h3>
@@ -110,7 +107,7 @@ const Footer = () => {
                   btn
                   text="Subscribe"
                   bgColor="bg-white hover:bg-black"
-                  txtColor="text-hamzaPrimary hover:text-white"
+                  txtColor="text-zinc-800 hover:text-white"
                   border="border-0"
                 />
               </div>

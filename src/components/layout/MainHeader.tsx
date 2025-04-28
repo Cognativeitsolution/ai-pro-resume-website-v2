@@ -180,7 +180,7 @@ const MainHeader = () => {
                                         </li>
                                         <li className="cursor-pointer">
                                             <Link
-                                                href="/how-to-write-resume"
+                                                href="/how-to-a-write-resume"
                                                 className="text-[20px] lg:text-[16px] font-medium text-slate-100 hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                                                 onClick={toggleMenu}
                                             >
@@ -247,7 +247,7 @@ const MainHeader = () => {
                                         </li>
                                         <li className="cursor-pointer">
                                             <Link
-                                                href="/how-to-write-cover-letter"
+                                                href="/how-to-write-a-cover-letter"
                                                 className="text-[20px] lg:text-[16px] font-medium text-slate-100 hover:text-primary-100 flex items-center gap-5 lg:gap-2"
                                                 onClick={toggleMenu}
                                             >
@@ -263,7 +263,7 @@ const MainHeader = () => {
                                     className="lg:h-full flex items-center gap-[2px] text-[20px] lg:text-[16px] font-medium text-white lg:text-black hover:text-primary-100"
                                     onClick={toggleMegaMenu4}
                                 >
-                                    <span>Blogs</span>
+                                    <span>Blog</span>
                                     <FaAngleDown className="mt-[1px]" />
                                 </Link>
                                 <div
