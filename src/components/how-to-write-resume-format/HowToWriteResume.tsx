@@ -163,9 +163,9 @@ export default function HowToWriteResume(props: propsType) {
                             titleTag="h3"
                             titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2"
                         >
-                            <h3 className="text-[18px] text-center border-b-2 md:text-[24px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
+                            {data?.SixStep?.steptitle && <h3 className="text-[18px] text-center border-b-2 md:text-[24px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
                                 {data?.SixStep?.steptitle}
-                            </h3>
+                            </h3>}
 
                             <DynPoints includedPoints={data?.SixStep?.list} />
 
@@ -197,16 +197,25 @@ export default function HowToWriteResume(props: propsType) {
                                         </div>
                                     )}
                                     {step?.templateCards && (
-                                        <div className="block md:hidden">
+                                        <div className="block md:hidden  ">
                                             <AutoPlaySlider
-                                                options={{ align: "center" }}
-                                                arrowPosition="mt-8 mb-8"
+                                                options={{ align: "start" }}
+                                                arrowPosition="!mt-2 mb-5 md:mb-8"
                                             >
-
-                                                {step.templateCards.map((temp: any, index: any) => (
-                                                    <div key={index} className="grow-0 shrink-0 basis-[100%] pl-5 flex flex-col justify-center items-center gap-4">
-                                                        <div className=' bg-hamzaPrimary/10 px-5 text-lg font-medium text-hamzaPrimary rounded-xl'>{temp?.title}</div>
-                                                        <Image src={temp?.templateImages} alt="Template Image" className='border rounded-lg shadow-lg' width={200} height={100} />
+                                                {step.templateCards.map((temp: any, index: number) => (
+                                                    <div key={index} className="grow-0 shrink-0 basis-full sm:basis-[50%] pl-5">
+                                                        <div className="">
+                                                            <div className="bg-hamzaPrimary/10 px-0 py-2 mb-5 text-center text-base md:text-lg font-medium text-hamzaPrimary rounded-xl">
+                                                                {temp?.title}
+                                                            </div>
+                                                            <div className="">
+                                                                <Image
+                                                                    src={temp?.templateImages}
+                                                                    alt="Template Image"
+                                                                    className="border w-full"
+                                                                />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 ))}
                                             </AutoPlaySlider>
@@ -220,12 +229,12 @@ export default function HowToWriteResume(props: propsType) {
                                                     {tip?.paragraphs &&
                                                         Array.isArray(tip?.paragraphs) ? (
                                                         tip?.paragraphs?.map((item: any, index: number) => {
-                                                            return <p key={index} className='text-base font-semibold'>
+                                                            return <p key={index} className='text-base font-semibold pt-2'>
                                                                 {item}
                                                             </p>;
                                                         })
                                                     ) :
-                                                        <p className='text-base font-semibold'>
+                                                        <p className='text-base font-semibold pt-2'>
                                                             {tip?.paragraphs}
                                                         </p>
                                                     }
@@ -262,7 +271,7 @@ export default function HowToWriteResume(props: propsType) {
                                         </>
                                     }
 
-                                    {/* {step?.IncludedSection?.map((sec: any, index: any) => (
+                                    {step?.IncludedSection?.map((sec: any, index: any) => (
                                         <>
                                             <div className='py-2'>
                                                 <div className="flex">
@@ -281,8 +290,8 @@ export default function HowToWriteResume(props: propsType) {
                                                         {sec?.includedFieldsRight?.length ? <TemplatePoint data={sec?.includedFieldsRight} /> : null}
                                                         {sec?.includedSections?.length ? sec.includedSections.map((data: any, index: any) => (
                                                             <div className="flex py-2" key={index}>
-                                                                <div className="relative after:absolute after:left-0 after:top-4 after:h-[1.2px] after:w-[15px] after:bg-black" />
-                                                                <div className="pl-6 w-full">
+                                                                <div className="relative sm:after:absolute sm:after:left-0 sm:after:top-4 sm:after:h-[1.2px] sm:after:w-[15px] sm:after:bg-black" />
+                                                                <div className="sm:pl-6 w-full">
                                                                     <div className="flex justify-between items-center w-full mb-2">
                                                                         <h4 className="text-black flex gap-2 text-base font-medium">
                                                                             <span>{index + 1}:</span>
@@ -292,7 +301,7 @@ export default function HowToWriteResume(props: propsType) {
                                                                     <p className="text-base">
                                                                         {data.innerDesc}
                                                                     </p>
-                                                                    {data?.img && <div className='mx-auto my-1 flex justify-center w-[400px]'>
+                                                                    {data?.img && <div className='mx-auto my-2 sm:my-1 flex justify-center sm:w-[400px] '>
                                                                         <Image
                                                                             className='rounded-xl  overflow-hidden shadow-lg'
                                                                             src={data?.img}
@@ -358,26 +367,28 @@ export default function HowToWriteResume(props: propsType) {
                                                 ))}
                                             </div>
                                             {step?.resumeExamples?.list && (
+
                                                 <div className="block md:hidden">
                                                     <AutoPlaySlider
-                                                        options={{ align: "center" }}
-                                                        arrowPosition="mt-8 mb-8"
+                                                        options={{ align: "start" }}
+                                                        arrowPosition="!mt-2 mb-5 md:mb-8"
                                                     >
-
-                                                        {step?.resumeExamples?.list?.map((items: any, index: any) => (
-                                                            <div key={index} className="grow-0 shrink-0 basis-[100%] pl-5 flex flex-col justify-center items-center gap-4">
-                                                                <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                                                <div className='max-w-[380px] mx-auto py-4'>
-                                                                    <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
-                                                                </div>
-                                                                <div className="flex justify-center my-6">
-                                                                    <CTA
-                                                                        btn
-                                                                        text="Use This Template"
-                                                                        bgColor="bg-primary hover:bg-PrimaryDark"
-                                                                        txtColor="text-white"
-                                                                        border="border-0"
-                                                                    />
+                                                        {step?.resumeExamples?.list?.map((temp: any, index: number) => (
+                                                            <div key={index} className="grow-0 shrink-0 basis-full  pl-5">
+                                                                <div className="">
+                                                                    <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{temp.heading}</h5>
+                                                                    <div className='max-w-[380px] mx-auto py-4'>
+                                                                        <Image src={temp.image} alt={temp.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                                                    </div>
+                                                                    <div className="flex justify-center my-6">
+                                                                        <CTA
+                                                                            btn
+                                                                            text="Use This Template"
+                                                                            bgColor="bg-primary hover:bg-PrimaryDark"
+                                                                            txtColor="text-white"
+                                                                            border="border-0"
+                                                                        />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -393,7 +404,7 @@ export default function HowToWriteResume(props: propsType) {
                                             icon={step?.bottomTip?.proIcon}
                                             description={step?.bottomTip?.proDescription}
                                             isTip={step?.bottomTip?.isTip} />
-                                    )} */}
+                                    )}
 
                                 </div>
                             ))}

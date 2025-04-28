@@ -427,17 +427,17 @@ const faqsList = [
         question: "How to format a Cover Letter that stands out? ",
         answer:
             "A visually appealing Cover Letter grabs attention. However, don't go overboard with fancy fonts or colors.",
-        titlePro: "Here are some design tips",
-        listPro: faqTip,
-        iconPro: TipPro,
-        isTip: true
+        // titlePro: "Here are some design tips",
+        // listPro: faqTip,
+        // iconPro: TipPro,
+        // isTip: true
     },
     {
         question: "What are the common Cover Letter mistakes to avoid? ",
         answer: "here are some common mistakes that you should avoid",
-        titlePro: "Here are some design tips",
-        listPro: faqsCons,
-        iconPro: TipPro,
+        // titlePro: "Here are some design tips",
+        // listPro: faqsCons,
+        // iconPro: TipPro,
     },
     {
         question: "What are the 5 P's of a Cover Letter? ",
