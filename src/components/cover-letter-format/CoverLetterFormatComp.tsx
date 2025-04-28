@@ -37,7 +37,7 @@ type propsType = {
     data: FormatDetail;
 };
 
-export default function ResumeFormatComp(props: propsType) {
+export default function CoverFormatComp(props: propsType) {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
 
