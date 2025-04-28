@@ -22,10 +22,10 @@ export const BannerData = {
             Tips & Templates 2025
         </>
     ),
-    subtitle: "Top Resume Formats:",
+    subtitle: "Top Cover Letter Formats:",
     description: (
         <>
-            The three top resume formats for 2025 will help you grab employers' attention  <br className="hidden lg:block" />  and enrich your chances of securing your dream job.
+            The three top Cover Letter formats for 2025 will help you grab employers' attention  <br className="hidden lg:block" />  and enrich your chances of securing your dream job.
         </>
     ),
 };
@@ -33,7 +33,7 @@ export const BannerData = {
 const VerticalTabsData = [
     {
         id: 'head1',
-        title: "How To Write A Good Resume in 2025?",
+        title: "How To Write A Good Cover Letter in 2025?",
     },
     {
         id: 'head2',
@@ -41,11 +41,11 @@ const VerticalTabsData = [
     },
     {
         id: 'head3',
-        title: "How to Write a Resume: Step-By-Step Guide",
+        title: "How to Write a Cover Letter: Step-By-Step Guide",
     },
     {
         id: 'head4',
-        title: "How To Write A Good Resume: 6 Steps",
+        title: "How To Write A Good Cover Letter: 6 Steps",
     },
     {
         id: 'head5',
@@ -58,7 +58,7 @@ const VerticalTabsData = [
 ]
 
 const TopSectionData = {
-    heading: "How To Write A Good Resume in 2025?",
+    heading: "How To Write A Good Cover Letter in 2025?",
     description: [
         "There are plenty of guides on how to write a resume online, but not all of them guarantee that your resume will make it to the second interview or even get any attention from the recruiter. But how can you figure out the best resume layouts to build your own?",
         "But you must be wondering which resume would work the best for you? In this guide, we will assist you in deciding the best generic resume format so you can have a roadmap to write your resume further"],
