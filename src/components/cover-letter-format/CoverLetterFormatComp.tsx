@@ -135,38 +135,40 @@ export default function CoverFormatComp(props: propsType) {
                         </DynMainDiv>
 
                         {data?.TemplatePointTab?.map((items: any, index: number) => (
-                            <DynMainDiv
-                                mainDivClass="mb-8"
-                                id={`head${index + 4}`}
-                                title={`${items?.heading} Resume Format:`}
-                                description={items?.description}
-                                titleTag="h3"
-                                titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold "
-                            >
-                                <ProConsCard
-                                    title={items.titlePro}
-                                    icon={items.iconPro}
-                                    description={items.descriptionPro}
-                                    isTip={true}
-                                />
-                                <TemplatePoint data={items.TemplatePointTab} />
-                                <div className=''>
+                            <div key={index}>
+                                <DynMainDiv
+                                    mainDivClass="mb-8"
+                                    id={`head${index + 4}`}
+                                    title={`${items?.heading} Resume Format:`}
+                                    description={items?.description}
+                                    titleTag="h3"
+                                    titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold "
+                                >
                                     <ProConsCard
-                                        title={items?.prosItemsData?.title}
-                                        icon={items?.prosItemsData?.icon}
-                                        description={items?.prosItemsData?.description}
-                                        isPro={true}
+                                        title={items.titlePro}
+                                        icon={items.iconPro}
+                                        description={items.descriptionPro}
+                                        isTip={true}
                                     />
-                                </div>
-                                <div className=' pt-2 sm:pt-6 md:pt-8'>
-                                    <ProConsCard
-                                        title={items?.consItemsData?.title}
-                                        icon={items?.consItemsData?.icon}
-                                        description={items?.consItemsData?.description}
+                                    <TemplatePoint data={items.TemplatePointTab} />
+                                    <div className=''>
+                                        <ProConsCard
+                                            title={items?.prosItemsData?.title}
+                                            icon={items?.prosItemsData?.icon}
+                                            description={items?.prosItemsData?.description}
+                                            isPro={true}
+                                        />
+                                    </div>
+                                    <div className=' pt-2 sm:pt-6 md:pt-8'>
+                                        <ProConsCard
+                                            title={items?.consItemsData?.title}
+                                            icon={items?.consItemsData?.icon}
+                                            description={items?.consItemsData?.description}
 
-                                    />
-                                </div>
-                            </DynMainDiv>
+                                        />
+                                    </div>
+                                </DynMainDiv>
+                            </div>
                         ))}
 
                         <DynMainDiv

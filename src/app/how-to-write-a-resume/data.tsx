@@ -78,7 +78,7 @@ const FormatPointsList = [
 
 const FormatPointsData = {
     heading: "This blog will include",
-    titlePro: "Looking for a quick way to make a resume?",
+    titlePro: "Speed up your resume creation!",
     descriptionPro: [" Our AI-powered resume builder is super fast with resume creation. It has more than 30+ resume templates and professional & free cover letter formats that you can quickly customize based on your industry."],
     iconPro: TipProComma,
     isTip: true,
@@ -89,8 +89,16 @@ const StepGuideData = {
     heading: "How to Write a Resume: Step-By-Step Guide",
     description: [
         "We have divided the resume creation process into steps to help you easily understand the process of creating a perfect resume without missing any important details that can lead to rejection.",
+        "We have divided the resume creation process into steps to help you easily understand the process of creating a perfect resume without missing any important details that can lead to rejection.",
         "Also, this is how a flawless resume looks like:"],
-    image: TemlateImage
+    image: TemlateImage,
+    list: [
+        "Wording and readability analysis",
+        "Eliminate typos and grammatical errors",
+        "Content suggestions based on your job and experience",
+        "Eliminate typos and grammatical errors",
+        "Content suggestions based on your job and experience",
+    ]
 }
 
 const LookInToKeyWords = [
@@ -378,7 +386,7 @@ const sixStepList = [
 const SixStepData = {
     heading: " How To Write A Good Resume: 6 Steps",
     description: "Before diving into each step individually on how to write a resume, we are listing down all the steps for an overview, so that you know what we are going to learn later in the guide:",
-    steptitle: "6 Steps",
+    // steptitle: "6 Steps",
     list: sixStepList,
     sixStepDetail: SixStepDetailData
 }

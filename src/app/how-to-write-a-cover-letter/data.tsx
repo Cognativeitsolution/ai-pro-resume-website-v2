@@ -78,7 +78,7 @@ const FormatPointsList = [
 
 const FormatPointsData = {
     heading: "This blog will include",
-    titlePro: "Looking for a quick way to make a Cover Letter?",
+    titlePro: "Speed up your Cover Letter creation!",
     descriptionPro: [" Our AI-powered Cover Letter builder is super fast with Cover Letter creation. It has more than 30+ Cover Letter templates and professional & free cover letter formats that you can quickly customize based on your industry."],
     iconPro: TipProComma,
     isTip: true,
@@ -378,7 +378,7 @@ const sixStepList = [
 const SixStepData = {
     heading: " How To Write A Good Cover Letter: 6 Steps",
     description: "Before diving into each step individually on how to write a Cover Letter, we are listing down all the steps for an overview, so that you know what we are going to learn later in the guide:",
-    steptitle: "6 Steps",
+    // steptitle: "6 Steps",
     list: sixStepList,
     sixStepDetail: SixStepDetailData
 }

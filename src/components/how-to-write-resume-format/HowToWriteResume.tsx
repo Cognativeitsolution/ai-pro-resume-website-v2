@@ -3,14 +3,11 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import blogAiImage from 'media/images/AiBlogImg.webp'
 import IconContact from 'media/images/Icon.webp'
-import { ProConsCard, DynVerticalTabs, CTA, TemplatePoint, DynMainDiv } from '@/components'
+import { ProConsCard, DynVerticalTabs, CTA, TemplatePoint, DynMainDiv, AutoPlaySlider } from '@/components'
 import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
 import DynPoints from '../dynamic-pages/DynPoints';
-// import { consListItems, HowToWriteResmTemplateData, HowToWriteResumeFormateTips, LookInTo5Points, LookInToKeyWords, LookInToTemplates, resumeIncludedSection, ResumeIncludedSixPoints, tipListItems } from '@/app/how-to-write-a-resume/data';
-import TemlateImage from "media/resume_template_images/Template_23.webp"
 import TipPro from 'media/images/TipPro.webp'
-import TipProComma from 'media/images/commaIcoon.webp'
-import cons from 'media/images/cons.webp';
+import check from "media/images/check_1.webp";
 
 type PiontData = {
     icon: any
@@ -54,7 +51,7 @@ export default function HowToWriteResume(props: propsType) {
         <section className="py-5 md:py-10">
             <div className="container">
                 <DynBreadCrumbs />
-                <div className='relative grid lg:grid-cols-12 gap-4 xl:gap-6'>
+                <div className='relative grid lg:grid-cols-12 gap-6 xl:gap-8'>
 
                     <div className="lg:col-span-5 xl:col-span-4 static">
                         <div className="sticky top-32 overflow-y-auto">
@@ -110,24 +107,52 @@ export default function HowToWriteResume(props: propsType) {
                             CtaText="Create Resume"
                         >
                             <DynPoints includedPoints={data?.FormatPoints?.list} />
-                            <ProConsCard
-                                title={data?.FormatPoints?.titlePro}
-                                icon={data?.FormatPoints?.iconPro}
-                                description={data?.FormatPoints?.descriptionPro}
-                                isTip={data?.FormatPoints?.isTip}
-                            />
+                            <div className='mb-8 '>
+                                <ProConsCard
+                                    title={data?.FormatPoints?.titlePro}
+                                    icon={data?.FormatPoints?.iconPro}
+                                    description={data?.FormatPoints?.descriptionPro}
+                                    isTip={data?.FormatPoints?.isTip}
+                                />
+                            </div>
                         </DynMainDiv>
                         <DynMainDiv
                             id="head3"
                             title={data?.StepGuide?.heading}
-                            descBase={data?.StepGuide?.description}
+                            // descBase={data?.StepGuide?.description}
                             titleTag="h3"
                             titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2"
                         >
-                            <div className='grid grid-cols-12 '>
-                                <div className='col-span-12 mt-5 mb-2 sm:my-5 flex justify-center'>
-                                    <Image className='rounded-xl border overflow-hidden shadow-lg' src={data?.StepGuide?.image} alt={data?.StepGuide?.title}
-                                        width={200} height={200} />
+                            <div className='grid grid-cols-12 mt-5 mb-2 sm:my-5 '>
+                                <div className='col-span-12 xl:col-span-7 flex flex-col justify-center'>
+                                    {data?.StepGuide?.description && Array.isArray(data?.StepGuide?.description) ? (
+                                        data?.StepGuide?.description?.map((item: any, index: number) => {
+                                            return <p key={index} className='text-[15px] lg:text-[16px] text-justify mt-2 first:mt-0'>{item}</p>;
+                                        })
+                                    ) :
+                                        <p className='text-[15px] lg:text-[16px] text-justify'>{data?.StepGuide?.description}</p>
+                                    }
+                                    <ul className="my-3 space-y-3">
+                                        {data?.StepGuide?.list?.map((item: any, idx: any) => (
+                                            <li key={idx} className="flex items-start gap-4">
+                                                <Image
+                                                    src={check}
+                                                    alt="bullet"
+                                                    width={15}
+                                                    height={15}
+                                                    className="mt-[5px]"
+                                                />
+                                                <p className='text-[15px] lg:text-[16px] text-justify'>{item}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className='col-span-12 xl:col-span-5  flex justify-center'>
+
+                                    <div className='max-w-[350px] h-auto mt-3 xl:mt-0'>
+                                        <Image className='rounded-xl border overflow-hidden shadow-lg' src={data?.StepGuide?.image} alt="image"
+                                            width={300} height={400} />
+                                    </div>
                                 </div>
                             </div>
                         </DynMainDiv>
@@ -156,19 +181,35 @@ export default function HowToWriteResume(props: propsType) {
 
                                     {step?.subheading && (
                                         <h6
-                                            className="text-center text-2xl border-b-2 pb-2 my-4">{step?.subheading}</h6>
+                                            className="text-center text-lg md:text-xl lg:text-2xl border-b-2 pb-2 my-4 font-medium">{step?.subheading}</h6>
                                     )}
 
                                     {step?.keywordList && <DynPoints includedPoints={step?.keywordList} />}
 
                                     {step?.templateCards && (
-                                        <div className="grid grid-cols-12 border-4">
+                                        <div className="hidden md:grid md:grid-cols-12 gap-4 ">
                                             {step.templateCards.map((temp: any, index: any) => (
-                                                <div key={index} className='items-center flex justify-center col-span-4 flex-col gap-5'>
+                                                <div key={index} className='items-center flex justify-center md:col-span-4 flex-col gap-5'>
                                                     <div className=' bg-hamzaPrimary/10 px-5 text-lg font-medium text-hamzaPrimary rounded-xl'>{temp?.title}</div>
                                                     <Image src={temp?.templateImages} alt="Template Image" className='border rounded-lg shadow-lg' width={200} height={100} />
                                                 </div>
                                             ))}
+                                        </div>
+                                    )}
+                                    {step?.templateCards && (
+                                        <div className="block md:hidden">
+                                            <AutoPlaySlider
+                                                options={{ align: "center" }}
+                                                arrowPosition="mt-8 mb-8"
+                                            >
+
+                                                {step.templateCards.map((temp: any, index: any) => (
+                                                    <div key={index} className="grow-0 shrink-0 basis-[100%] pl-5 flex flex-col justify-center items-center gap-4">
+                                                        <div className=' bg-hamzaPrimary/10 px-5 text-lg font-medium text-hamzaPrimary rounded-xl'>{temp?.title}</div>
+                                                        <Image src={temp?.templateImages} alt="Template Image" className='border rounded-lg shadow-lg' width={200} height={100} />
+                                                    </div>
+                                                ))}
+                                            </AutoPlaySlider>
                                         </div>
                                     )}
 
@@ -221,7 +262,7 @@ export default function HowToWriteResume(props: propsType) {
                                         </>
                                     }
 
-                                    {step?.IncludedSection?.map((sec: any, index: any) => (
+                                    {/* {step?.IncludedSection?.map((sec: any, index: any) => (
                                         <>
                                             <div className='py-2'>
                                                 <div className="flex">
@@ -297,23 +338,52 @@ export default function HowToWriteResume(props: propsType) {
                                             <p className="text-base">
                                                 {step?.resumeExamples?.description}
                                             </p>
-                                            {step?.resumeExamples?.list?.map((items: any, index: number) => (
-                                                <div className='' key={index}>
-                                                    <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                                    <div className='max-w-[380px] mx-auto py-4'>
-                                                        <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                            <div className='hidden md:block'>
+                                                {step?.resumeExamples?.list?.map((items: any, index: number) => (
+                                                    <div className='' key={index}>
+                                                        <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                                        <div className='max-w-[380px] mx-auto py-4'>
+                                                            <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                                        </div>
+                                                        <div className="flex justify-center my-6">
+                                                            <CTA
+                                                                btn
+                                                                text="Use This Template"
+                                                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                                                txtColor="text-white"
+                                                                border="border-0"
+                                                            />
+                                                        </div >
                                                     </div>
-                                                    <div className="flex justify-center my-6">
-                                                        <CTA
-                                                            btn
-                                                            text="Use This Template"
-                                                            bgColor="bg-primary hover:bg-PrimaryDark"
-                                                            txtColor="text-white"
-                                                            border="border-0"
-                                                        />
-                                                    </div >
+                                                ))}
+                                            </div>
+                                            {step?.resumeExamples?.list && (
+                                                <div className="block md:hidden">
+                                                    <AutoPlaySlider
+                                                        options={{ align: "center" }}
+                                                        arrowPosition="mt-8 mb-8"
+                                                    >
+
+                                                        {step?.resumeExamples?.list?.map((items: any, index: any) => (
+                                                            <div key={index} className="grow-0 shrink-0 basis-[100%] pl-5 flex flex-col justify-center items-center gap-4">
+                                                                <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                                                <div className='max-w-[380px] mx-auto py-4'>
+                                                                    <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                                                </div>
+                                                                <div className="flex justify-center my-6">
+                                                                    <CTA
+                                                                        btn
+                                                                        text="Use This Template"
+                                                                        bgColor="bg-primary hover:bg-PrimaryDark"
+                                                                        txtColor="text-white"
+                                                                        border="border-0"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </AutoPlaySlider>
                                                 </div>
-                                            ))}
+                                            )}
                                         </>
                                     )}
 
@@ -323,13 +393,10 @@ export default function HowToWriteResume(props: propsType) {
                                             icon={step?.bottomTip?.proIcon}
                                             description={step?.bottomTip?.proDescription}
                                             isTip={step?.bottomTip?.isTip} />
-                                    )}
-
+                                    )} */}
 
                                 </div>
                             ))}
-
-
                         </DynMainDiv>
                         {/* <DynMainDiv
                             id="head5"
