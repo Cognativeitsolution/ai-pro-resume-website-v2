@@ -14,7 +14,7 @@ const DynPoints = ({ includedPoints, showSeriel = true, defaultColor = 'hamzaPri
     return (
         <>
             {includedPoints?.length && includedPoints.map((pointData, index) => (
-                <div key={index} className={`flex  ${pointData?.subHead ? "flex-col" : ""} md:flex-row md:gap-4 mb-2 ${pointData?.subHead ? '' : 'text-base sm:text-lg font-medium'}`}>
+                <div key={index} className={`flex  ${pointData?.subHead ? "flex-col" : ""} md:flex-row md:gap-4 my-2 ${pointData?.subHead ? '' : 'text-base sm:text-lg font-medium'}`}>
                     <div className='flex gap-2 '>
                         {showSeriel && <span className={`${pointData?.subHead ? 'text-hamzaPrimary' : 'text-black'}`}>{`${index <= 9 ? '0' : ''}`}{index + 1}:</span>}
                         {pointData?.subHead ? <span className={`text-${defaultColor} font-medium`}>{pointData?.subHead}</span> : ''}
