@@ -36,7 +36,7 @@ const FilteredCategoryTemplates: React.FC<FilteredCategoryDetailsProps> = ({
           className={`${
             templates?.length === 0
               ? ""
-              : "grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-10"
+              : "grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 md:gap-10"
           } `}
         >
           {templates?.length !== 0 ? (

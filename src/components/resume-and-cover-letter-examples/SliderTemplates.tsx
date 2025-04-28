@@ -25,7 +25,7 @@ const SliderTemplates: React.FC<SliderTemplatesProps> = ({ examples, exp_img }) 
         {examples.map((example, idx) => (
           <div
             key={idx}
-            className="grow-0 shrink-0 basis-[100%] md:basis-[50%] xl:basis-1/3 pl-5 min-w-[90%] sm:min-w-[50%] md:min-w-[33%] box-border"
+            className="grow-0 shrink-0 basis-[100%] md:basis-[50%] lg:basis-1/3 pl-5 min-w-[90%] sm:min-w-[50%] md:min-w-[33%] box-border"
           >
             <div className="flex items-center justify-center cursor-pointer flex-wrap mt-2 p-3 rounded-lg bg-indigo-200/20 backdrop-blur-none border-2 border-white transition-all duration-1000 group">
               <div className="ring-2 ring-zinc-500/20 rounded-lg shadow-lg overflow-hidden relative">
