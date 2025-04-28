@@ -51,7 +51,7 @@ const DynMainDiv = dynamic(() => import("./dynamic-pages/DynMainDiv"));
 const HowToWriteResume = dynamic(() => import("./how-to-write-resume-format/HowToWriteResume"));
 const HowToWriteCoverLetter = dynamic(() => import("./how-to-write-cover-letter-format/HowToWriteCoverLetter"));
 const CoverLetterFormatComp = dynamic(() => import("./cover-letter-format/CoverLetterFormatComp"));
-const ResumeFormatComp = dynamic(() => import("./how-to-write-resume-format/HowToWriteResume"));
+const ResumeFormatComp = dynamic(() => import("./resume-format/ResumeFormatComp"));
 
 export {
   AutoPlaySlider,
