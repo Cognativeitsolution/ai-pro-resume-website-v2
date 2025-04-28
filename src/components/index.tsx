@@ -53,6 +53,10 @@ const HowToWriteCoverLetter = dynamic(() => import("./how-to-write-cover-letter-
 const CoverLetterFormatComp = dynamic(() => import("./cover-letter-format/CoverLetterFormatComp"));
 const ResumeFormatComp = dynamic(() => import("./resume-format/ResumeFormatComp"));
 const InterviewQuestionsSeo = dynamic(() => import("./interview-questions-seo/InterviewQuestionsSeo"));
+const YourScore = dynamic(() => import("./ATS-checker/YourScore"));
+const Evaluation = dynamic(() => import("./ATS-checker/Evaluation"));
+const BuildATSfriendlyResume = dynamic(() => import("./ATS-checker/BuildATSfriendlyResume"));
+const ParsedResumeOverview = dynamic(() => import("./ATS-checker/ParsedResumeOverview"));
 
 export {
   AutoPlaySlider,
@@ -107,5 +111,9 @@ export {
   HowToWriteCoverLetter,
   CoverLetterFormatComp,
   ResumeFormatComp,
-  InterviewQuestionsSeo
+  InterviewQuestionsSeo,
+  YourScore,
+  Evaluation,
+  ParsedResumeOverview,
+  BuildATSfriendlyResume
 };
