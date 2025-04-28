@@ -1,8 +1,7 @@
 'use client';
 
-import { InnerBanner, Faq } from '@/components';
+import { InnerBanner, Faq, HowToWriteCoverLetter } from '@/components';
 import { BannerData, resumeFormatData, faqs } from './data';
-import HowToWriteResume from '@/components/how-to-write-resume-format/HowToWriteResume';
 
 
 const page = () => {
@@ -10,7 +9,7 @@ const page = () => {
     return (
         <>
             <InnerBanner {...BannerData} />
-            <HowToWriteResume data={resumeFormatData} />
+            <HowToWriteCoverLetter data={resumeFormatData} />
             <Faq data={faqs} />
         </>
     );

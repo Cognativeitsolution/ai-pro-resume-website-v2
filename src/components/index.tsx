@@ -48,6 +48,10 @@ const CoverLetterCategories = dynamic(() => import("./resume-and-cover-letter-ex
 const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
 const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
 const DynMainDiv = dynamic(() => import("./dynamic-pages/DynMainDiv"));
+const HowToWriteResume = dynamic(() => import("./how-to-write-resume-format/HowToWriteResume"));
+const HowToWriteCoverLetter = dynamic(() => import("./how-to-write-cover-letter-format/HowToWriteCoverLetter"));
+const CoverLetterFormatComp = dynamic(() => import("./cover-letter-format/CoverLetterFormatComp"));
+const ResumeFormatComp = dynamic(() => import("./how-to-write-resume-format/HowToWriteResume"));
 
 export {
   AutoPlaySlider,
@@ -97,5 +101,9 @@ export {
   CoverLetterCategories,
   IconSlider,
   ShowAllTemplates,
-  DynMainDiv
+  DynMainDiv,
+  HowToWriteResume,
+  HowToWriteCoverLetter,
+  CoverLetterFormatComp,
+  ResumeFormatComp
 };

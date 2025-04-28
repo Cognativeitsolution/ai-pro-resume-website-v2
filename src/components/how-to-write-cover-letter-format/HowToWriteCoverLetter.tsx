@@ -3,48 +3,49 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import blogAiImage from 'media/images/AiBlogImg.webp'
 import IconContact from 'media/images/Icon.webp'
-import { BreadCrumbs, ProConsCard, QuickTips, DynVerticalTabs } from '@/components'
+import { ProConsCard, DynVerticalTabs, CTA, TemplatePoint, DynMainDiv } from '@/components'
 import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
+import DynPoints from '../dynamic-pages/DynPoints';
+// import { consListItems, HowToWriteResmTemplateData, HowToWriteResumeFormateTips, LookInTo5Points, LookInToKeyWords, LookInToTemplates, resumeIncludedSection, ResumeIncludedSixPoints, tipListItems } from '@/app/how-to-write-a-resume/data';
+import TemlateImage from "media/resume_template_images/Template_23.webp"
+import TipPro from 'media/images/TipPro.webp'
+import TipProComma from 'media/images/commaIcoon.webp'
+import cons from 'media/images/cons.webp';
 
 type PiontData = {
     icon: any
     para: string
 }
 
-type DynVerticalTabsData = {
+type DynVerticalTabs = {
     id?: string
     name?: string
     description?: React.ReactNode
     points?: PiontData[]
     gridImages?: any[]
-    quickTip?: any
+    quickTip?: any;
 };
 
-type BreadCrumbsItems = {
-    label?: string
-    href?: string
-};
 
 type BlogDetailData = {
-    prosItemsData?: any,
-    consItemsData?: any,
-    // breadCrumbsItems?: BreadCrumbsItems[]
-    DynVerticalTabsData?: DynVerticalTabsData[]
+    DynVerticalTabs?: DynVerticalTabs[]
+    TopSection?: any
+    FormatPoints?: any
+    StepGuide?: any
+    SixStep?: any
     headingTab?: any[]
+    BottomSection?: any
+
 };
 
 type propsType = {
     data: BlogDetailData;
 };
 
+
 export default function HowToWriteCoverLetter(props: propsType) {
     const { data } = props
     const [sectionId, setSectionId] = useState("");
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
-
-    const toggleExpand = (index: number) => {
-        setExpandedIndex(prev => (prev === index ? null : index));
-    };
 
     useEffect(() => {
         setSectionId("#head1")
@@ -58,7 +59,7 @@ export default function HowToWriteCoverLetter(props: propsType) {
                     <div className="lg:col-span-5 xl:col-span-4 static">
                         <div className="sticky top-32 overflow-y-auto">
                             <DynVerticalTabs heading="Table Of Content"
-                                tabsData={data.DynVerticalTabsData}
+                                tabsData={data?.DynVerticalTabs}
                                 setSectionId={setSectionId} />
                             <div className="relative  mt-4 hidden lg:block"
                             >
@@ -84,20 +85,262 @@ export default function HowToWriteCoverLetter(props: propsType) {
                             </div>
                         </div>
                     </div>
+
                     <div className='lg:col-span-7 xl:col-span-8'>
-                        <div className='h-[90vh] border-4 border-rose-950' id='head1'>
-                            <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
-                                3 Most Popular Resume Formats
-                            </h2>
-                        </div>
-                        <div className='h-[90vh] border-4 border-green-950' id='head2'>
-                            <h2 className="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
-                                Reverse-Chronological Resume Format
-                            </h2>
-                        </div>
+                        <DynMainDiv
+                            id="head1"
+                            title={data?.TopSection?.heading}
+                            descBase={data?.TopSection?.description}
+                            description2={data?.TopSection?.description2}
+                            titleTag="h2"
+                            titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2"
+                        >
+                            <ProConsCard
+                                title="PRO TIP"
+                                icon={TipPro}
+                                description="Your resume is like your personal highlight reel—it shows employers what you've achieved, why you're the best fit for the job, and where you hope to go next."
+                                isTip={true}
+                            />
+                        </DynMainDiv>
+                        <DynMainDiv
+                            id="head2"
+                            title={data?.FormatPoints?.heading}
+                            titleTag="h2"
+                            titleClass="text-[22px] text-center border-b-2 md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-medium my-4 capitalize "
+                            CtaText="Create Resume"
+                        >
+                            <DynPoints includedPoints={data?.FormatPoints?.list} />
+                            <ProConsCard
+                                title={data?.FormatPoints?.titlePro}
+                                icon={data?.FormatPoints?.iconPro}
+                                description={data?.FormatPoints?.descriptionPro}
+                                isTip={data?.FormatPoints?.isTip}
+                            />
+                        </DynMainDiv>
+                        <DynMainDiv
+                            id="head3"
+                            title={data?.StepGuide?.heading}
+                            descBase={data?.StepGuide?.description}
+                            titleTag="h3"
+                            titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2"
+                        >
+                            <div className='grid grid-cols-12 '>
+                                <div className='col-span-12 mt-5 mb-2 sm:my-5 flex justify-center'>
+                                    <Image className='rounded-xl border overflow-hidden shadow-lg' src={data?.StepGuide?.image} alt={data?.StepGuide?.title}
+                                        width={200} height={200} />
+                                </div>
+                            </div>
+                        </DynMainDiv>
+                        <DynMainDiv
+                            id="head4"
+                            title={data?.SixStep?.heading}
+                            description={data?.SixStep?.description}
+                            titleTag="h3"
+                            titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2"
+                        >
+                            <h3 className="text-[18px] text-center border-b-2 md:text-[24px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4">
+                                {data?.SixStep?.steptitle}
+                            </h3>
+
+                            <DynPoints includedPoints={data?.SixStep?.list} />
+
+                            {data?.SixStep?.sixStepDetail?.map((step: any, stepIndex: any) => (
+                                <div key={stepIndex}>
+                                    <h5 className="mt-5 text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-2">
+                                        {stepIndex + 1}. {step.title}
+                                    </h5>
+
+                                    {step?.paragraphs?.map((para: any, idx: any) => (
+                                        <p key={idx} className="text-base mt-2 first:mt-0">{para}</p>
+                                    ))}
+
+                                    {step?.subheading && (
+                                        <h6
+                                            className="text-center text-2xl border-b-2 pb-2 my-4">{step?.subheading}</h6>
+                                    )}
+
+                                    {step?.keywordList && <DynPoints includedPoints={step?.keywordList} />}
+
+                                    {step?.templateCards && (
+                                        <div className="grid grid-cols-12 border-4">
+                                            {step.templateCards.map((temp: any, index: any) => (
+                                                <div key={index} className='items-center flex justify-center col-span-4 flex-col gap-5'>
+                                                    <div className=' bg-hamzaPrimary/10 px-5 text-lg font-medium text-hamzaPrimary rounded-xl'>{temp?.title}</div>
+                                                    <Image src={temp?.templateImages} alt="Template Image" className='border rounded-lg shadow-lg' width={200} height={100} />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {step?.proTips &&
+                                        <>
+                                            {step.proTips.map((tip: any, i: number) => (
+                                                <>
+                                                    {tip?.paragraphs &&
+                                                        Array.isArray(tip?.paragraphs) ? (
+                                                        tip?.paragraphs?.map((item: any, index: number) => {
+                                                            return <p key={index} className='text-base font-semibold'>
+                                                                {item}
+                                                            </p>;
+                                                        })
+                                                    ) :
+                                                        <p className='text-base font-semibold'>
+                                                            {tip?.paragraphs}
+                                                        </p>
+                                                    }
+
+                                                    {tip?.image && <div className='my-5 flex justify-center' >
+                                                        <Image
+                                                            className='rounded-xl border dden shadow-lg'
+                                                            src={tip?.image} alt='Template image'
+                                                            width={250} height={250}
+                                                        />
+                                                    </div>}
+
+                                                    {tip?.paragraphs2 &&
+                                                        Array.isArray(tip?.paragraphs2) ? (
+                                                        tip?.paragraphs2?.map((item: any, index: number) => {
+                                                            return <p key={index} className="text-base mt-2">
+                                                                {item}
+                                                            </p>;
+                                                        })
+                                                    ) :
+                                                        <p className="text-base mt-2">
+                                                            {tip?.paragraphs2}
+                                                        </p>
+                                                    }
+                                                    <ProConsCard
+                                                        title={tip?.proTitle}
+                                                        icon={tip?.proIcon}
+                                                        description={tip?.proDescription}
+                                                        isTip={tip?.isTip}
+                                                    />
+                                                </>
+                                            ))}
+
+                                        </>
+                                    }
+
+                                    {step?.IncludedSection?.map((sec: any, index: any) => (
+                                        <>
+                                            <div className='py-2'>
+                                                <div className="flex">
+                                                    <div className="relative after:absolute after:left-0 after:top-4 after:h-[1.2px] after:w-[15px] after:bg-black" />
+                                                    <div className="pl-6 w-full">
+                                                        <div className="flex justify-between items-center w-full mb-2">
+                                                            <h4 className="text-hamzaPrimary flex gap-2 text-base font-medium">
+                                                                <span>{`${index <= 9 ? '0' : ''}`}{index + 1}:</span>
+                                                                <p>{sec?.title}</p>
+                                                            </h4>
+                                                        </div>
+                                                        <p className='text-base'>
+                                                            {sec?.desc}
+                                                        </p>
+
+                                                        {sec?.includedFieldsRight?.length ? <TemplatePoint data={sec?.includedFieldsRight} /> : null}
+                                                        {sec?.includedSections?.length ? sec.includedSections.map((data: any, index: any) => (
+                                                            <div className="flex py-2" key={index}>
+                                                                <div className="relative after:absolute after:left-0 after:top-4 after:h-[1.2px] after:w-[15px] after:bg-black" />
+                                                                <div className="pl-6 w-full">
+                                                                    <div className="flex justify-between items-center w-full mb-2">
+                                                                        <h4 className="text-black flex gap-2 text-base font-medium">
+                                                                            <span>{index + 1}:</span>
+                                                                            <p>{data.title}</p>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <p className="text-base">
+                                                                        {data.innerDesc}
+                                                                    </p>
+                                                                    {data?.img && <div className='mx-auto my-1 flex justify-center w-[400px]'>
+                                                                        <Image
+                                                                            className='rounded-xl  overflow-hidden shadow-lg'
+                                                                            src={data?.img}
+                                                                            alt='Template image'
+                                                                        />
+                                                                    </div>}
+
+                                                                </div>
+                                                            </div>
+                                                        )) : null}
+                                                        {sec?.proTip &&
+                                                            <div className='mb-7'>
+                                                                <ProConsCard
+                                                                    title={sec?.proTip?.title}
+                                                                    icon={sec?.proTip?.icon}
+                                                                    description={sec?.proTip?.description}
+                                                                    isTip={sec?.proTip?.isPro}
+                                                                /></div>
+                                                        }
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    ))
+                                    }
+
+                                    {step?.tips?.map((tip: any, idx: any) => (
+                                        <div className='pt-2' key={idx}>
+                                            <div className='flex gap-3 text-hamzaPrimary text-lg font-semibold'>
+                                                <div>{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}</div>
+                                                <h5>{tip.heading}</h5>
+                                            </div>
+                                            <p className="text-base pl-10">{tip.description}</p>
+                                        </div>
+                                    ))}
+
+                                    {step?.resumeExamples && (
+                                        <>
+                                            <h2 className="text-[18px] md:text-[24px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold">
+                                                {step?.resumeExamples?.title}
+                                            </h2>
+                                            <p className="text-base">
+                                                {step?.resumeExamples?.description}
+                                            </p>
+                                            {step?.resumeExamples?.list?.map((items: any, index: number) => (
+                                                <div className='' key={index}>
+                                                    <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                                    <div className='max-w-[380px] mx-auto py-4'>
+                                                        <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                                    </div>
+                                                    <div className="flex justify-center my-6">
+                                                        <CTA
+                                                            btn
+                                                            text="Use This Template"
+                                                            bgColor="bg-primary hover:bg-PrimaryDark"
+                                                            txtColor="text-white"
+                                                            border="border-0"
+                                                        />
+                                                    </div >
+                                                </div>
+                                            ))}
+                                        </>
+                                    )}
+
+                                    {step?.bottomTip && (
+                                        <ProConsCard
+                                            title={step?.bottomTip?.proTitle}
+                                            icon={step?.bottomTip?.proIcon}
+                                            description={step?.bottomTip?.proDescription}
+                                            isTip={step?.bottomTip?.isTip} />
+                                    )}
+
+
+                                </div>
+                            ))}
+
+
+                        </DynMainDiv>
+                        {/* <DynMainDiv
+                            id="head5"
+                            title={data?.BottomSection?.heading}
+                            description={data?.BottomSection?.description}
+                            titleTag="h5"
+                            titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4"
+                        /> */}
                     </div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }
