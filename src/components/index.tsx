@@ -52,6 +52,7 @@ const HowToWriteResume = dynamic(() => import("./how-to-write-resume-format/HowT
 const HowToWriteCoverLetter = dynamic(() => import("./how-to-write-cover-letter-format/HowToWriteCoverLetter"));
 const CoverLetterFormatComp = dynamic(() => import("./cover-letter-format/CoverLetterFormatComp"));
 const ResumeFormatComp = dynamic(() => import("./resume-format/ResumeFormatComp"));
+const InterviewQuestionsSeo = dynamic(() => import("./interview-questions-seo/InterviewQuestionsSeo"));
 
 export {
   AutoPlaySlider,
@@ -105,5 +106,6 @@ export {
   HowToWriteResume,
   HowToWriteCoverLetter,
   CoverLetterFormatComp,
-  ResumeFormatComp
+  ResumeFormatComp,
+  InterviewQuestionsSeo
 };

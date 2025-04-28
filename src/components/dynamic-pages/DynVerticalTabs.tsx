@@ -39,12 +39,10 @@ const DynVerticalTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
                                 href={`#${data.id}`}
                                 scroll={true}
                                 onClick={() => handleSelectedTab(data?.id)}
-                                className={`flex pt-3 ${lastTab ? 'pb-3 mb-0' : 'pb-3'}
-                                gap-6 cursor-pointer  items-center
-                                ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 text-white' : ''}`}
+                                className={`flex pt-3 ${lastTab ? 'pb-3 mb-0' : 'pb-3'} gap-2 cursor-pointer items-center ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 text-white' : ''}`}
                             >
                                 <span className='text-lg font-light'><FaAngleDoubleRight /></span>
-                                <p className=''>{data?.title}</p>
+                                <p className='px-3'>{data?.title}</p>
                             </Link>
                         )
                     })}
