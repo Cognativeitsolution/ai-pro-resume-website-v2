@@ -324,26 +324,26 @@ const TemplateList = [
         description: `Our "Artistic Flair" template combines a professional appearance with creative elements, making it eye-catching and effective in clearly and organized presenting the candidate's qualifications. This example is one of the best professional resume examples, and is perfect for both serious industries and creative fields.  `,
         image: Temp2,
     },
-    {
-        heading: `Bright Future`,
-        description: `Our "Bright Future" template is visually appealing and effectively organized, making it an excellent choice for a professional resume. `,
-        image: Temp3,
-    },
-    {
-        heading: `Fresher Resume `,
-        description: `Our "Fresher Resume" template is visually appealing and effectively organized, making it an excellent choice for showcasing the candidate's qualifications clearly and effectively. The dark shade makes it perfect for the traditional industry. `,
-        image: Temp4,
-    },
-    {
-        heading: `Elegant Executive`,
-        description: `Our "Elegant Executive" resume template effectively combines a visually attractive design with a clear focus on achievements, making it an excellent choice for professionals seeking executive-level positions.  `,
-        image: Temp5,
-    },
-    {
-        heading: `Innovative Edge`,
-        description: `Our "Innovative Edge" resume template effectively combines a visually striking design with a clear focus on achievements and skills. It is an excellent choice for designing or other creative fields for job seekers seeking to make a strong impression. `,
-        image: Temp6,
-    },
+    // {
+    //     heading: `Bright Future`,
+    //     description: `Our "Bright Future" template is visually appealing and effectively organized, making it an excellent choice for a professional resume. `,
+    //     image: Temp3,
+    // },
+    // {
+    //     heading: `Fresher Resume `,
+    //     description: `Our "Fresher Resume" template is visually appealing and effectively organized, making it an excellent choice for showcasing the candidate's qualifications clearly and effectively. The dark shade makes it perfect for the traditional industry. `,
+    //     image: Temp4,
+    // },
+    // {
+    //     heading: `Elegant Executive`,
+    //     description: `Our "Elegant Executive" resume template effectively combines a visually attractive design with a clear focus on achievements, making it an excellent choice for professionals seeking executive-level positions.  `,
+    //     image: Temp5,
+    // },
+    // {
+    //     heading: `Innovative Edge`,
+    //     description: `Our "Innovative Edge" resume template effectively combines a visually striking design with a clear focus on achievements and skills. It is an excellent choice for designing or other creative fields for job seekers seeking to make a strong impression. `,
+    //     image: Temp6,
+    // },
 ];
 
 const TemplateData = {

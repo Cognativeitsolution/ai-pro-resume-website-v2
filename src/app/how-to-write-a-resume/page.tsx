@@ -1,7 +1,7 @@
 'use client';
 
 import { InnerBanner, Faq, HowToWriteResume } from '@/components';
-import { BannerData, resumeFormatData, faqs } from './data';
+import { BannerData, FormatData, faqs } from './data';
 
 
 const page = () => {
@@ -9,7 +9,7 @@ const page = () => {
     return (
         <>
             <InnerBanner {...BannerData} />
-            <HowToWriteResume data={resumeFormatData} />
+            <HowToWriteResume data={FormatData} />
             <Faq data={faqs} />
         </>
     );

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import verticleTabBg from 'media/images/verticleTabBg.webp'
-import { ProConsCard, DynVerticalTabs, CollapseTab, TemplatePoint, CTA, DynMainDiv } from '@/components'
+import { ProConsCard, DynVerticalTabs, CollapseTab, TemplatePoint, CTA, DynMainDiv, AutoPlaySlider } from '@/components'
 import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
 import TipPro from 'media/images/TipPro.webp'
 import TempBg from 'media/resume_template_images/Template_24.webp'
@@ -198,26 +198,65 @@ export default function CoverFormatComp(props: propsType) {
                             titleTag="h4"
                             titleClass="text-[22px] md:text-[30px] lg:text-[34px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-4"
                         >
-                            {data?.TemplateData?.list?.map((items: any, index: number) => (
-                                <div className='' key={index}>
-                                    <h5 className="text-[20px] md:text-[25px] lg:text-[30px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                    <p className="text-base">
-                                        {items.description}
-                                    </p>
-                                    <div className='max-w-[380px] mx-auto py-4  '>
-                                        <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                            {data?.TemplateData?.list && (
+                                <>
+                                    <div className='hidden md:block'>
+                                        {data?.TemplateData?.list?.map((items: any, index: number) => (
+                                            <div className='' key={index}>
+                                                <h5 className="text-[20px] md:text-[25px] lg:text-[30px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                                <p className="text-base">
+                                                    {items.description}
+                                                </p>
+                                                <div className='max-w-[380px] mx-auto py-4  '>
+                                                    <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                                </div>
+                                                <div className="flex justify-center my-6 ">
+                                                    <CTA
+                                                        btn
+                                                        text="Create Resume"
+                                                        bgColor="bg-primary hover:bg-PrimaryDark"
+                                                        txtColor="text-white"
+                                                        border="border-0"
+                                                    />
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <div className="flex justify-center my-6 ">
-                                        <CTA
-                                            btn
-                                            text="Create Resume"
-                                            bgColor="bg-primary hover:bg-PrimaryDark"
-                                            txtColor="text-white"
-                                            border="border-0"
-                                        />
+                                    <div className="block md:hidden  ">
+                                        <AutoPlaySlider
+                                            options={{ align: "start" }}
+                                            arrowPosition="!mt-2 mb-5 md:mb-8"
+                                        >
+                                            {data?.TemplateData?.list?.map((items: any, index: number) => (
+                                                <div key={index} className="grow-0 shrink-0 basis-full">
+                                                    <div className='pl-5'>
+                                                        <h5 className="text-[20px] md:text-[25px] lg:text-[30px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                                        <p className="text-base">
+                                                            {items.description}
+                                                        </p>
+                                                        <div className='py-4 mx-auto max-w-[300px]'>
+
+                                                            <Image
+                                                                src={items.image} alt={items.heading}
+                                                                className='rounded-lg border overflow-hidden shadow-md '
+                                                            />
+                                                            <div className='mt-4 flex justify-center'>
+                                                                <CTA
+                                                                    btn
+                                                                    text="Use This Template"
+                                                                    bgColor="bg-primary hover:bg-PrimaryDark"
+                                                                    txtColor="text-white"
+                                                                    border="border-0"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </AutoPlaySlider>
                                     </div>
-                                </div>
-                            ))}
+                                </>
+                            )}
                         </DynMainDiv>
 
                         <DynMainDiv

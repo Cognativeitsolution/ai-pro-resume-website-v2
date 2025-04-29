@@ -51,10 +51,6 @@ const VerticalTabsData = [
         id: 'head5',
         title: "Final Thoughts",
     },
-    {
-        id: 'head6',
-        title: "Frequently Asked Questions (FAQs)",
-    },
 ]
 
 const TopSectionData = {
@@ -399,7 +395,7 @@ const BottomSectionData = {
     ],
 }
 
-export const resumeFormatData = {
+export const FormatData = {
     DynVerticalTabs: VerticalTabsData,
     TopSection: TopSectionData,
     FormatPoints: FormatPointsData,
