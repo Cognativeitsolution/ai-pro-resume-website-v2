@@ -54,7 +54,7 @@ const Banner = (props: BannerProps) => {
                 border="border border-white"
               />
               <CTA
-                btn
+                link
                 text="ATS Checker"
                 bgColor="bg-transparent hover:bg-primary"
                 txtColor="text-white"

@@ -4,6 +4,9 @@ import Image from "next/image";
 import evaluation from "../../../public/images/evaluation.svg";
 
 const ParsedResumeOverview = () => {
+  const totalBlocks = 6;
+  const filledBlocks = 5;
+  const score = 83;
   return (
     <>
       <div className="bg-[#ece9fe] p-4 rounded-2xl shadow-md w-full mt-5">
@@ -16,7 +19,7 @@ const ParsedResumeOverview = () => {
         </div>
         <div className="bg-white p-5 rounded-2xl mt-[10px]">
           <div className="flex-1 space-y-4 w-full">
-            <h3 className="text-xl font-bold text-gray-900 leading-snug">
+            <h3 className="text-xl font-semibold text-gray-900 leading-snug">
               How Much of Your Resume Was Parsed?
             </h3>
             <p className="text-gray-500 text-[15px]">
@@ -26,7 +29,26 @@ const ParsedResumeOverview = () => {
               experience—has been successfully parsed and structured for
               automated systems.
             </p>
-            <div>loading compoinent</div>
+            <div className="flex items-center justify-center space-x-2">
+              <div>
+                <p className="text-sm font-semibold text-black">
+                  Resume Parser Score
+                </p>
+                <div className="flex space-x-2 mt-1 px-2 py-1 rounded-full">
+                  {Array.from({ length: totalBlocks }).map((_, idx) => (
+                    <div
+                      key={idx}
+                      className={`w-8 h-3 rounded-full ${
+                        idx < filledBlocks ? "bg-[#a78bfa]" : "bg-gray-200"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+              <span className="text-[#a78bfa] text-md font-semibold mt-6">
+                {score}%
+              </span>
+            </div>
             <p className="text-gray-500 text-[15px]">
               Our resume parser evaluates and extracts your information just
               like a hiring system would. Track the percentage of successfully

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BuildATSfriendlyResume, Evaluation, ParsedResumeOverview, YourScore } from "@/components";
+import { BuildATSfriendlyResume, Clarity, ConcisenessAndImpact, Evaluation, Formatting, GrammerAndSpelling, IssuesFound, JobWinningResume, ParsedResumeOverview, RelevanceOfContent, YourScore } from "@/components";
 
 export default function Page() {
   return (
@@ -16,6 +16,13 @@ export default function Page() {
               <Evaluation />
               <ParsedResumeOverview/>
               <BuildATSfriendlyResume/>
+              <IssuesFound/>
+              <Formatting/>
+              <Clarity/>
+              <GrammerAndSpelling/>
+              <RelevanceOfContent/>
+              <JobWinningResume/>
+              <ConcisenessAndImpact/>
             </div>
           </div>
         </div>
