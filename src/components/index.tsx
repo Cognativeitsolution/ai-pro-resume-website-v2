@@ -56,6 +56,10 @@ const YourScore = dynamic(() => import("./ATS-checker/YourScore"));
 const Evaluation = dynamic(() => import("./ATS-checker/Evaluation"));
 const BuildATSfriendlyResume = dynamic(() => import("./ATS-checker/BuildATSfriendlyResume"));
 const ParsedResumeOverview = dynamic(() => import("./ATS-checker/ParsedResumeOverview"));
+const ParserBanner = dynamic(() => import("./resume-parser/banner/ParserBanner"));
+const UploadParser = dynamic(() => import("./resume-parser/upload/UploadParser"));
+const ParserFeatures = dynamic(() => import("./resume-parser/features/ParserFeatures"));
+const ParserFeatureCard = dynamic(() => import("./resume-parser/features/parserFeatureCard/ParserFeatureCard"));
 
 export {
   AutoPlaySlider,
@@ -113,5 +117,9 @@ export {
   YourScore,
   Evaluation,
   ParsedResumeOverview,
-  BuildATSfriendlyResume
+  BuildATSfriendlyResume,
+  ParserBanner,
+  UploadParser,
+  ParserFeatures,
+  ParserFeatureCard
 };
