@@ -19,7 +19,7 @@ const DynPoints = ({ includedPoints, showSeriel = true, defaultColor = 'hamzaPri
                         {showSeriel && <span className={`${pointData?.subHead ? 'text-hamzaPrimary' : 'text-black'}`}>{`${index <= 9 ? '0' : ''}`}{index + 1}:</span>}
                         {pointData?.subHead ? <span className={`capitalize text-${defaultColor} text-[15px] sm:text-[16px] font-medium`}>{pointData?.subHead}</span> : ''}
                     </div>
-                    <p className='pl-3 md:pl-0 text-[15px] sm:text-[16px] font-normal'>{pointData?.point}</p>
+                    <p className='pl-3 md:pl-0 text-[15px] sm:text-[16px] font-normal first-letter:capitalize'>{pointData?.point}</p>
                 </div>
             ))}
         </>
