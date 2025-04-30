@@ -2,6 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 // ==============
 import { ProConsCard, CTA } from '@/components';
+// ==============
+import tick from "media/images/doubleTick.webp";
+import Tailor from './Tailor';
 
 type ImageData = {
     src: any;
@@ -63,9 +66,18 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                         <p key={idx} className="text-[16px] text-justify md:text-left mb-2">{para}</p>
                     ))}
                     {section1.bulletPoints && (
-                        <ul className="list-disc pl-4 mt-4">
+                        <ul className="pl-1 mt-4">
                             {section1.bulletPoints.map((item, idx) => (
-                                <li key={idx} className="text-[16px] text-left mb-2">{item}</li>
+                                <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                    <Image
+                                        src={tick}
+                                        alt="check"
+                                        width={16}
+                                        height={16}
+                                        className="mt-[7px]"
+                                    />
+                                    {item}
+                                </li>
                             ))}
                         </ul>
                     )}
@@ -96,9 +108,18 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
                         {section2.listItems && (
-                            <ul className='list-disc pl-4 my-4'>
-                                {section2.listItems.map((item, i) => (
-                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                            <ul className='pl-1 my-4'>
+                                {section2.listItems.map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                        <Image
+                                            src={tick}
+                                            alt="check"
+                                            width={16}
+                                            height={16}
+                                            className="mt-[7px]"
+                                        />
+                                        {item}
+                                    </li>
                                 ))}
                             </ul>
                         )}
@@ -120,6 +141,8 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                 </div>
             )}
 
+            <Tailor />
+
             {/* Section 3 */}
             {section3 && (
                 <div className="grid grid-cols-12 gap-5 my-10 scroll-mt-32" id="section3">
@@ -139,9 +162,18 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                             <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section3.innerTitle}</h4>
                         )}
                         {section3.listItems && (
-                            <ul className="list-disc pl-4 my-4">
-                                {section3.listItems.map((item, i) => (
-                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                            <ul className="pl-1 my-4">
+                                {section3.listItems.map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                        <Image
+                                            src={tick}
+                                            alt="check"
+                                            width={16}
+                                            height={16}
+                                            className="mt-[7px]"
+                                        />
+                                        {item}
+                                    </li>
                                 ))}
                             </ul>
                         )}
@@ -184,9 +216,18 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
                         {section4.listItems && (
-                            <ul className='list-disc pl-4 my-4'>
-                                {section4.listItems.map((item, i) => (
-                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                            <ul className='pl-1 my-4'>
+                                {section4.listItems.map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                        <Image
+                                            src={tick}
+                                            alt="check"
+                                            width={16}
+                                            height={16}
+                                            className="mt-[7px]"
+                                        />
+                                        {item}
+                                    </li>
                                 ))}
                             </ul>
                         )}
@@ -217,9 +258,18 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                             <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section5.innerTitle}</h4>
                         )}
                         {section5.listItems && (
-                            <ul className="list-disc pl-4 my-4">
-                                {section5.listItems.map((item, i) => (
-                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                            <ul className="pl-1 my-4">
+                                {section5.listItems.map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                        <Image
+                                            src={tick}
+                                            alt="check"
+                                            width={16}
+                                            height={16}
+                                            className="mt-[7px]"
+                                        />
+                                        {item}
+                                    </li>
                                 ))}
                             </ul>
                         )}

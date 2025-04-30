@@ -2,6 +2,7 @@
 import image1 from 'media/images/ourBenefitsImg.webp'
 import image2 from 'media/images/grammer.webp'
 import image3 from 'media/resume_template_images/template_2.webp'
+import image4 from 'media/images/20+professionally.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
 import TipPro from 'media/images/TipPro.webp';
@@ -42,7 +43,7 @@ const section1Data = {
 const section1Tip = {
   title: "Quick Tip",
   icon: TipPro,
-  description: "Record yourself answering common questions—it helps catch nervous habits and refine responses.",
+  description: "Record yourself answering common questions Recording yourself helps identify nervous habits and areas for improvement. It enhances self-awareness, tone, and delivery. Playback reveals patterns you might miss in the moment. With practice, you’ll sound clearer and more confident.",
   isTip: true
 }
 // ====================== Section 2 Data ======================
@@ -84,7 +85,7 @@ const section3Data = {
 const section3Tip = {
   title: "Pro Tip",
   icon: TipProComma,
-  description: "Bring examples of your work or results. Specific outcomes leave a lasting impression.",
+  description: "Bring examples of your work or results Real examples show your capabilities in action. They provide proof of your impact and contributions. Specific results are more memorable than vague claims. They help interviewers visualize your value.",
   isTip: true
 }
 // ====================== Section 4 Data ======================
@@ -98,7 +99,7 @@ const section4Data = {
     "Demonstrates problem-solving and adaptability",
     "Shows results-driven thinking"
   ],
-  image: { src: image2, alt: "STAR method for interviews" },
+  image: { src: image4, alt: "STAR method for interviews" },
   cta: { text: "Learn the STAR Method" },
 }
 // ====================== Section 5 Data ======================
@@ -126,14 +127,14 @@ const section5Data = {
 const prosData = {
   title: "Pros",
   icon: pros,
-  description: "Provides clarity on strengths, improves confidence, and enhances interview performance.",
+  description: "Provides clarity on strengths, improves confidence, and enhances interview performance Knowing your strengths makes your responses sharper. It boosts self-confidence and reduces hesitation. Clear self-awareness improves how you present yourself. You perform better when you know what you bring to the table.",
   isPro: true
 }
 // ====================== CONS Data ======================
 const consData = {
   title: "Cons",
   icon: cons,
-  description: "Over-preparation can lead to sounding robotic; must be balanced with authenticity.",
+  description: "Over-preparation can lead to sounding robotic; must be balanced with authenticity Too much prep can make answers sound scripted. Interviewers value genuine, conversational responses. Balance preparation with a natural speaking style. Authenticity builds trust and connection.",
   isPro: false
 }
 // ====================== TABS ======================
