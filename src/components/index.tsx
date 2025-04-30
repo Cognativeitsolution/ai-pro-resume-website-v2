@@ -60,6 +60,8 @@ const ParserBanner = dynamic(() => import("./resume-parser/banner/ParserBanner")
 const UploadParser = dynamic(() => import("./resume-parser/upload/UploadParser"));
 const ParserFeatures = dynamic(() => import("./resume-parser/features/ParserFeatures"));
 const ParserFeatureCard = dynamic(() => import("./resume-parser/features/parserFeatureCard/ParserFeatureCard"));
+const ParserGoals = dynamic(() => import("./resume-parser/goals/ParserGoals"));
+const ParserContent = dynamic(() => import("./resume-parser/content/ParserContent"));
 
 export {
   AutoPlaySlider,
@@ -121,5 +123,7 @@ export {
   ParserBanner,
   UploadParser,
   ParserFeatures,
-  ParserFeatureCard
+  ParserFeatureCard,
+  ParserGoals,
+  ParserContent
 };
