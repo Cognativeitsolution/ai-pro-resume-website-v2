@@ -8,12 +8,16 @@ const ReferHeader = dynamic(() => import("./layout/ReferHeader"));
 const Footer = dynamic(() => import("./layout/Footer"));
 const CTA = dynamic(() => import("./custom/CTA"));
 const Banner = dynamic(() => import("./banner/Banner"));
-const ExploreTemplates = dynamic(() => import("./exploreTemplates/ExploreTemplates"));
+const ExploreTemplates = dynamic(
+  () => import("./exploreTemplates/ExploreTemplates")
+);
 const VideoSection = dynamic(() => import("./videoSection/VideoSection"));
 const Steps = dynamic(() => import("./steps/Steps"));
 const Ats = dynamic(() => import("./ATS/Ats"));
 const ResumeFeatures = dynamic(() => import("./resumeFeatures/ResumeFeatures"));
-const FindResumeTemplates = dynamic(() => import("./findResume/FindResumeTemplates"));
+const FindResumeTemplates = dynamic(
+  () => import("./findResume/FindResumeTemplates")
+);
 const ServiceSection = dynamic(() => import("./serviceSection/ServiceSection"));
 const Reviews = dynamic(() => import("./reviews/Reviews"));
 const Faq = dynamic(() => import("./faq/Faq"));
@@ -29,29 +33,59 @@ const Content = dynamic(() => import("./servicepage/Content"));
 const ServicesSection = dynamic(() => import("./servicepage/ServicesSection"));
 const CareerJobs = dynamic(() => import("./careerJobs/CareerJobs"));
 const BlogDetail = dynamic(() => import("./blog/BlogDetail"));
-const CoinsPurchaseSection = dynamic(() => import("./pricingPage/CoinsPurchaseSection"));
+const CoinsPurchaseSection = dynamic(
+  () => import("./pricingPage/CoinsPurchaseSection")
+);
 const PaymentSection = dynamic(() => import("./pricingPage/PaymentSection"));
 const PricingCard = dynamic(() => import("./pricingPage/PricingCard"));
-const StripeSeperateComponent = dynamic(() => import("./pricingPage/StripeSeperateComponent"));
+const StripeSeperateComponent = dynamic(
+  () => import("./pricingPage/StripeSeperateComponent")
+);
 const Blogs = dynamic(() => import("./blog/Blogs"));
 const ApplyNowForm = dynamic(() => import("./applyNowForm/ApplyNowForm"));
-const ProConsCard = dynamic(() => import("./blog/blogDetailComponents/ProConsCard"));
-const QuickTips = dynamic(() => import("./blog/blogDetailComponents/QuickTips"));
-const BreadCrumbs = dynamic(() => import("./blog/blogDetailComponents/BreadCrumbs"));
-const VerticalTabs = dynamic(() => import("./blog/blogDetailComponents/VerticalTabs"));
+const ProConsCard = dynamic(
+  () => import("./blog/blogDetailComponents/ProConsCard")
+);
+const QuickTips = dynamic(
+  () => import("./blog/blogDetailComponents/QuickTips")
+);
+const BreadCrumbs = dynamic(
+  () => import("./blog/blogDetailComponents/BreadCrumbs")
+);
+const VerticalTabs = dynamic(
+  () => import("./blog/blogDetailComponents/VerticalTabs")
+);
 const CollapseTab = dynamic(() => import("./dynamic-pages/CollapseTab"));
-const DynVerticalTabs = dynamic(() => import("./dynamic-pages/DynVerticalTabs"));
+const DynVerticalTabs = dynamic(
+  () => import("./dynamic-pages/DynVerticalTabs")
+);
 const TemplatePoint = dynamic(() => import("./dynamic-pages/TemplatePoint"));
-const ResumeCategories = dynamic(() => import("./resume-and-cover-letter-examples/ResumeCategories"));
-const CoverLetterCategories = dynamic(() => import("./resume-and-cover-letter-examples/CoverLetterCategories"));
+const ResumeCategories = dynamic(
+  () => import("./resume-and-cover-letter-examples/ResumeCategories")
+);
+const CoverLetterCategories = dynamic(
+  () => import("./resume-and-cover-letter-examples/CoverLetterCategories")
+);
 const IconSlider = dynamic(() => import("./iconSlider/IconSlider"));
-const ShowAllTemplates = dynamic(() => import("./showAllTemplates/ShowAllTemplates"));
+const ShowAllTemplates = dynamic(
+  () => import("./showAllTemplates/ShowAllTemplates")
+);
 const DynMainDiv = dynamic(() => import("./dynamic-pages/DynMainDiv"));
-const HowToWriteResume = dynamic(() => import("./how-to-write-resume-format/HowToWriteResume"));
-const HowToWriteCoverLetter = dynamic(() => import("./how-to-write-cover-letter-format/HowToWriteCoverLetter"));
-const CoverLetterFormatComp = dynamic(() => import("./cover-letter-format/CoverLetterFormatComp"));
-const ResumeFormatComp = dynamic(() => import("./resume-format/ResumeFormatComp"));
-const InterviewQuestionsSeo = dynamic(() => import("./interview-questions-seo/InterviewQuestionsSeo"));
+const HowToWriteResume = dynamic(
+  () => import("./how-to-write-resume-format/HowToWriteResume")
+);
+const HowToWriteCoverLetter = dynamic(
+  () => import("./how-to-write-cover-letter-format/HowToWriteCoverLetter")
+);
+const CoverLetterFormatComp = dynamic(
+  () => import("./cover-letter-format/CoverLetterFormatComp")
+);
+const ResumeFormatComp = dynamic(
+  () => import("./resume-format/ResumeFormatComp")
+);
+const InterviewQuestionsSeo = dynamic(
+  () => import("./interview-questions-seo/InterviewQuestionsSeo")
+);
 const YourScore = dynamic(() => import("./ATS-checker/YourScore"));
 const Evaluation = dynamic(() => import("./ATS-checker/Evaluation"));
 const BuildATSfriendlyResume = dynamic(() => import("./ATS-checker/BuildATSfriendlyResume"));
@@ -62,6 +96,22 @@ const ParserFeatures = dynamic(() => import("./resume-parser/features/ParserFeat
 const ParserFeatureCard = dynamic(() => import("./resume-parser/features/parserFeatureCard/ParserFeatureCard"));
 const ParserGoals = dynamic(() => import("./resume-parser/goals/ParserGoals"));
 const ParserContent = dynamic(() => import("./resume-parser/content/ParserContent"));
+const Formatting = dynamic(() => import("./ATS-checker/Formatting"));
+const IssuesFound = dynamic(() => import("./ATS-checker/IssuesFound"));
+const ConcisenessAndImpact = dynamic(
+  () => import("./ATS-checker/ConcisenessAndImpact")
+);
+const GrammerAndSpelling = dynamic(
+  () => import("./ATS-checker/GrammerAndSpelling")
+);
+const Clarity = dynamic(() => import("./ATS-checker/Clarity"));
+const JobWinningResume = dynamic(
+  () => import("./ATS-checker/JobWinningResume")
+);
+const RelevanceOfContent = dynamic(
+  () => import("./ATS-checker/RelevanceOfContent")
+);
+
 
 export {
   AutoPlaySlider,
@@ -125,5 +175,12 @@ export {
   ParserFeatures,
   ParserFeatureCard,
   ParserGoals,
-  ParserContent
+  ParserContent,
+  Formatting,
+  RelevanceOfContent,
+  JobWinningResume,
+  IssuesFound,
+  Clarity,
+  GrammerAndSpelling,
+  ConcisenessAndImpact,
 };
