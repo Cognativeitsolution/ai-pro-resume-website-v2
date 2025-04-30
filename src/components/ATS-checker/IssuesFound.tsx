@@ -47,7 +47,7 @@ const IssuesFound = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3 mt-5 items-center justify-center">
+        <div className="flex flex-col sm:flex sm:flex-row gap-3 mt-5 items-center justify-center">
           <CTA
             link
             text="Fix with AI"

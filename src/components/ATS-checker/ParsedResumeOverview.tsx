@@ -29,12 +29,12 @@ const ParsedResumeOverview = () => {
               experience—has been successfully parsed and structured for
               automated systems.
             </p>
-            <div className="flex items-center justify-center space-x-2">
-              <div>
-                <p className="text-sm font-semibold text-black">
+            <div className="flex items-center justify-center w-full">
+              <div className="">
+                <p className="text-sm text-center sm:text-start font-semibold text-black">
                   Resume Parser Score
                 </p>
-                <div className="flex space-x-2 mt-1 px-2 py-1 rounded-full">
+                <div className="flex space-x-1 sm:space-x-2 mt-1 px-0 sm:px-2 py-1 rounded-full">
                   {Array.from({ length: totalBlocks }).map((_, idx) => (
                     <div
                       key={idx}

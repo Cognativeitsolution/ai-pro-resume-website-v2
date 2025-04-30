@@ -12,7 +12,7 @@ export default function Page() {
             <YourScore />
 
             {/* Content */}
-            <div className="w-full xl:w-3/4 relative top-24">
+            <div className="w-full xl:w-3/4 relative top-0 xl:top-24">
               <Evaluation />
               <ParsedResumeOverview/>
               <BuildATSfriendlyResume/>

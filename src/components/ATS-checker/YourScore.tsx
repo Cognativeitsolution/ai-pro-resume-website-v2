@@ -122,7 +122,7 @@ const YourScore = () => {
 
   return (
     <>
-      <div className="w-full h-full xl:w-1/4 border-2 border-white bg-indigo-200/20 rounded-xl p-4 xl:sticky overflow-y-auto top-32 z-0">
+      <div className="w-full h-full xl:w-1/4 border-2 border-white bg-indigo-200/20 rounded-xl p-4 mt-[110px] xl:mt-0 static xl:sticky overflow-y-auto top-32 z-0">
         <h2 className="text-center text-lg font-semibold mb-4">Your Score</h2>
         {/* Pie Chart */}
         <div className="flex justify-center mb-6">

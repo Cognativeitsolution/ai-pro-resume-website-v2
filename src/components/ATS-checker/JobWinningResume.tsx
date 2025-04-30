@@ -7,17 +7,18 @@ const JobWinningResume = () => {
    <>
    
    <div
-        className="w-full h-52 bg-contain bg-no-repeat bg-center flex items-center justify-between px-8"
+        className="w-full h-auto md:h-52 bg-cover bg-center bg-no-repeat px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 my-5 rounded-2xl"
         style={{
           backgroundImage: `url(${ats.src})`,
         }}
       >
         {/* Left side text */}
-        <h2 className="text-white text-2xl font-semibold">
+        <h2 className="text-white text-lg md:text-2xl font-semibold text-center md:text-left leading-snug">
         Job Winning resume in Minutes
         </h2>
 
         {/* Right side button */}
+        <div className="flex justify-center md:justify-end w-full md:w-auto">
         <CTA
           link
           text="Create New Resume"
@@ -26,6 +27,7 @@ const JobWinningResume = () => {
           txtColor="text-black"
           border="border-2 border-white"
         />
+        </div>
       </div>
    
    </>

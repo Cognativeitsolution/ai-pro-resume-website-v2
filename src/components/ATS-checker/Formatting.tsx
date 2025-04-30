@@ -47,7 +47,7 @@ const Formatting = () => {
             </p>
           </div>
 
-          <div className="flex gap-3 mt-5 items-center justify-center">
+          <div className="flex flex-col sm:flex sm:flex-row gap-3 mt-5 items-center justify-center">
             <CTA
               link
               text="Fix with AI"
@@ -101,10 +101,10 @@ const Formatting = () => {
                   className="w-full rounded-md"
                 />
                 {/* Overlay Content */}
-                <div className="absolute inset-0 w-[70%] h-[40%] mx-auto bg-[#6B4BB8]/70 flex flex-col items-center justify-center px-4 text-white text-center top-[170px]">
-                  <p className="text-sm sm:text-lg font-medium mb-3">
-                    Automatically Create A Longer Version Of My <br /> Resume
-                    With AI PRO Resume
+                <div className="absolute inset-0 w-[80%] sm:w-[70%] h-[70%] md:h-[40%] mx-auto bg-[#6B4BB8]/70 flex flex-col items-center justify-center px-4 text-white text-center top-[20px] lg:top-[170px]">
+                  <p className="text-sm md:text-lg font-medium mb-3 hidden sm:block">
+                    Automatically Create A Longer Version Of My{" "}
+                    <br className="hidden sm:block" /> Resume With AI PRO Resume
                   </p>
                   <CTA
                     link
@@ -121,7 +121,7 @@ const Formatting = () => {
             <div className="flex flex-col md:flex-row items-start justify-between gap-6 p-6 rounded-lg max-w-5xl mx-auto">
               {/* Left Section */}
               <div className="flex-1">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
                   With AI PRO Resume report, you get:
                 </h3>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
