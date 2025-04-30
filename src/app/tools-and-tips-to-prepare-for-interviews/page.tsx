@@ -1,6 +1,6 @@
 'use client';
 import { InnerBanner, Faq } from '@/components';
-import { BannerData, CoverLetterFormatData, faqs } from './data';
+import { BannerData, DynamicSectionData, faqs } from './data';
 import DynamicSection from '@/components/dynamicSection/DynamicSection';
 
 const page = () => {
@@ -8,7 +8,7 @@ const page = () => {
   return (
     <>
       <InnerBanner {...BannerData} />
-      <DynamicSection data={CoverLetterFormatData} />
+      <DynamicSection data={DynamicSectionData} />
       <Faq data={faqs} />
     </>
   );
