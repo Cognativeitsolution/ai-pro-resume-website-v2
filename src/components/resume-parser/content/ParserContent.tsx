@@ -18,7 +18,7 @@ export default function ParserContent({ data, sections = [] }: PropsType) {
     const [activeIndex, setActiveIndex] = useState(0);
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
     const isScrolling = useRef(false);
-    const scrollTimeout = useRef<any>();
+    const scrollTimeout = useRef<any>(null);
     const [activeTab, setActiveTab] = useState(0);
 
     // Generate sample sections if none provided
