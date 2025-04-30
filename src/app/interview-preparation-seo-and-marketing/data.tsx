@@ -1,145 +1,227 @@
-// ======================
-import TipPro from 'media/images/TipPro.webp'
+// ====================== IMAGES ======================
+import image1 from 'media/images/ourBenefitsImg.webp'
+import image2 from 'media/images/grammer.webp'
+import image3 from 'media/resume_template_images/template_2.webp'
+import pros from 'media/images/pros.webp';
+import cons from 'media/images/cons.webp';
+import TipPro from 'media/images/TipPro.webp';
+import TipProComma from 'media/images/commaIcoon.webp';
 
-
+// ====================== BANNER ======================
 export const BannerData = {
     title: (
         <>
-            Tips & Templates 2025
+            Seo and Marketing
         </>
     ),
-    subtitle: "Top Resume Formats:",
-    description: (
-        <>
-            The three top resume formats for 2025 will help you grab employers' attention  <br className="hidden lg:block" />  and enrich your chances of securing your dream job.
-        </>
-    ),
+    subtitle: "Interview Preparation",
+    description: "The three top cover letter formats op cover letter formats for 2025 will help you grab employers' attention and enrich your chances of securing your dream job."
 };
+// ====================== Section 1 Data ======================
+const section1Data = {
+    title: "Essential SEO and Marketing Tools to Prepare for Interviews in 2025",
+    paragraphs: [
+        "Interview preparation for SEO and marketing roles goes beyond just revisiting your portfolio. The right digital tools and data-driven strategies make a significant impact.",
+        "Whether you're applying for a junior SEO role or a senior marketing strategist position, this guide will ensure you stand out with preparation that reflects industry expertise."
+    ],
+    bulletPoints: [
+        "Use SEO platforms like Ahrefs and SEMrush for hands-on demos",
+        "Study company marketing campaigns and digital presence",
+        "Apply the STAR method using real campaign results",
+        "Prepare targeted questions about SEO tools and KPIs",
+        "Leverage schedulers and CRMs for post-interview follow-up"
+    ],
+    image: { src: image1, alt: "SEO interview preparation tools" },
+}
+// ====================== Tip 1 Data ======================
+const section1Tip = {
+    title: "Quick Tip",
+    icon: TipPro,
+    description: "Record your response to SEO scenario-based questions to evaluate clarity and keyword accuracy.",
+    isTip: true
+}
+// ====================== Section 2 Data ======================
+const section2Data = {
+    title: "SEO and Marketing Practice Tools",
+    paragraphs: [
+        "Platforms now simulate SEO audits and campaign strategy walkthroughs. Practicing with real dashboards and case questions helps reinforce your tactical knowledge and communication skills."
+    ],
+    listItems: [
+        "Walk through real campaign audits",
+        "Receive feedback on strategy articulation",
+        "Refine metrics-based storytelling"
+    ],
+    image: { src: image2, alt: "SEO mock interview tool" },
+    cta: { text: "Try Marketing Practice Tools" }
+}
+// ====================== Section 3 Data ======================
+const interviewQuestionList = [
+    {
+        id: 1,
+        title: "What do you like at least about your job?",
+        desc: "Recruiters ask you this question because they want to better understand your reasoning behind leaving your job."
+    },
+    {
+        id: 2,
+        title: "Tell me about yourself.",
+        desc: "This question is all about you, so don’t be afraid to give a more personal answer  strictly professional."
+    },
+    {
+        id: 3,
+        title: "Why are you applying for this position?",
+        desc: "This question is really the hiring manager’s way to learn a bit more about you. Be honest your answer."
+    },
 
-const VerticalTabsData = [
     {
-        id: 'head1',
-        title: "What is SEO and why is it important for digital marketing?",
+        id: 4,
+        title: "What are your strengths and weaknesses?",
+        desc: "A tricky question, try to answer it by tying your strengths and weaknesses to the job you’re applying for."
     },
     {
-        id: 'head2',
-        title: "Can you explain the difference between on-page SEO and off-page SEO?",
+        id: 5,
+        title: "What do you know about our company?",
+        desc: "Show that you’ve done the research about the place you’re applying at. It’s not about telling their story."
     },
     {
-        id: 'head3',
-        title: "How do you conduct keyword research for a new campaign?",
-    },
-    {
-        id: 'head4',
-        title: "What are some key metrics you track to measure the success of an SEO strategy?",
-    },
-    // {
-    //     id: 'head5',
-    //     title: "How do backlinks impact SEO, and how would you go about building them?",
-    // },
-    // {
-    //     id: 'head6',
-    //     title: "What strategies would you use to increase organic traffic to a website?",
-    // },
-]
-
-const TopSectionData = [
-    {
-        heading: "What is SEO and why is it important for digital marketing?",
-        description: [
-            "There are plenty of guides on how to write a resume online, but not all of them guarantee that your resume will make it to the second interview or even get any attention from the recruiter. But how can you figure out the best resume layouts to build your own?",
-            "But you must be wondering which resume would work the best for you? In this guide, we will assist you in deciding the best generic resume format so you can have a roadmap to write your resume further"],
-        description2: "So, to cater to that, we have brought you this straightforward guide with plenty of resume expert tips and examples that will increase your chances of getting recruiters' attention and eventually help you get the job you have been looking for.",
-        titlePro: "PRO TIP",
-        descriptionPro: ["Selecting the correct resume formats and templates is tough, but making one from scratch is also time-consuming, especially if you don't know where to start."],
-        iconPro: TipPro,
-        isTip: false,
-        id: 'head1',
-    },
-    {
-        heading: "Can you explain the difference between on-page SEO and off-page SEO?",
-        description: [
-            "There are me would work the b, deciding the best generic resume format so you can have a roadmap to write your resume further"],
-        description2: "So, to cater to that, we have brought you this straightforward guide with plenty of resume expert tips and examples that will increase your chances of getting recruiters' attention and eventually help you get the job you have been looking for.",
-        titlePro: "PRO TIP",
-        descriptionPro: ["Selecting the correct resume formats and templates is tough, but making one from scratch is also time-consuming, especially if you don't know where to start."],
-        iconPro: TipPro,
-        isTip: true,
-        id: 'head2',
-    },
-    {
-        heading: "How do you conduct keyword research for a new campaign?",
-        description: [
-            "There are plenty of guides onould work the bestwe will assist you in deciding the best generic resume format so you can have a roadmap to write your resume further"],
-        description2: "So, to cater to that, we have brought you this straightforward guide with plenty of resume expert tips and examples that will increase your chances of getting recruiters' attention and eventually help you get the job you have been looking for.",
-        titlePro: "PRO TIP",
-        descriptionPro: ["Selecting the correct resume formats and templates is tough, but making one from scratch is also time-consuming, especially if you don't know where to start."],
-        iconPro: TipPro,
-        isTip: false,
-        id: 'head3',
-    },
-    {
-        heading: "What are some key metrics you track to measure the success of an SEO strategy?",
-        description: [
-            "There are plenty of guide would work the best for you? In this guide, we will assist you in deciding the best generic resume format so you can have a roadmap to write your resume further"],
-        titlePro: "PRO TIP",
-        descriptionPro: ["Selecting the correct resume formats and templates is tough, but making one from scratch is also time-consuming, especially if you don't know where to start."],
-        iconPro: TipPro,
-        isTip: false,
-        id: 'head4',
+        id: 6,
+        title: "Why should we hire you?",
+        desc: "TProve that you’re confident in your skills and pitch yourself as the best person for the job."
     },
 ]
-
-export const resumeFormatData = {
-    DynVerticalTabs: VerticalTabsData,
-    TopSection: TopSectionData,
-    // FormatPoints: FormatPointsData,
-    // StepGuide: StepGuideData,
-    // SixStep: SixStepData,
-    // BottomSection: BottomSectionData
+const section3Data = {
+    title: "Company Research and Market Insights",
+    paragraphs: [
+        "Understanding a company’s market position, SEO footprint, and campaign tone shows you’re marketing-savvy. Use tools like SimilarWeb, LinkedIn, and SEMrush to gather insight."
+    ],
+    innerTitle: "Insights",
+    listItems: [
+        "Analyze their backlink profile or ad strategy to spark relevant questions.",
+        "Tools like Google Alerts can keep you updated on the company’s latest news.",
+        "Mention recent campaigns and provide thoughtful feedback or praise.",
+        "Bring examples of how you'd enhance their SEO or content funnel.",
+        "If applicable, compare their competitors' strategies for discussion.",
+        "Send a tailored follow-up referencing marketing goals discussed.",
+        "Custom templates are useful, but always reflect the brand’s voice.",
+        "Avoid jargon the company doesn’t use—mirror their marketing language.",
+        "Send a thoughtful second email if no response after a week."
+    ],
+    image: { src: image3, alt: "Company marketing research tools" },
+    cta: { text: "Start Researching Companies" },
+    interviewQuestionList: interviewQuestionList
+}
+// ====================== Tip 2 Data ======================
+const section3Tip = {
+    title: "Pro Tip",
+    icon: TipProComma,
+    description: "Showcase real campaign results with KPIs—interviewers remember metrics that matter.",
+    isTip: true
+}
+// ====================== Section 4 Data ======================
+const section4Data = {
+    title: "Behavioral Interview Strategies for Marketers",
+    paragraphs: [
+        "Use the STAR method to clearly explain how you executed campaigns, solved performance issues, and contributed to growth. Highlight marketing tools used and their impact."
+    ],
+    listItems: [
+        "Clear, results-backed storytelling",
+        "Demonstrates ROI thinking and creativity",
+        "Shows ownership of multi-channel strategies"
+    ],
+    image: { src: image2, alt: "STAR method for marketing interviews" },
+    cta: { text: "Learn the STAR Method" },
+}
+// ====================== Section 5 Data ======================
+const section5Data = {
+    title: "Follow-Up Tools and Communication Etiquette",
+    paragraphs: [
+        "Your follow-up is another opportunity to market yourself. Use personalized, well-timed messages to stand out—especially in roles where communication is key."
+    ],
+    innerTitle: "Etiquette",
+    listItems: [
+        "Send a thank-you email within 24 hours—mention specific marketing tools or campaign discussions.",
+        "Use scheduling tools like Mixmax or Gmail’s built-in options for optimal timing.",
+        "Reinforce your understanding of their marketing goals or challenges.",
+        "Attach relevant case studies or campaign summaries with clear labels.",
+        "If no reply, send a polite reminder after a few days.",
+        "Personalize your message with a callback to the conversation.",
+        "Use a structure, but adapt tone to reflect brand personality.",
+        "Maintain a polished tone—your writing reflects your marketing skills.",
+        "Respect their timeline, but show continued interest with follow-ups."
+    ],
+    image: { src: image3, alt: "Follow-up tools for marketers" },
+    cta: { text: "Download Follow-Up Templates" },
+}
+// ====================== PROS Data ======================
+const prosData = {
+    title: "Pros",
+    icon: pros,
+    description: "Gives you an edge in interviews by showing technical and strategic readiness for SEO and marketing roles.",
+    isPro: true
+}
+// ====================== CONS Data ======================
+const consData = {
+    title: "Cons",
+    icon: cons,
+    description: "Too much technical prep can dilute your storytelling—balance data with personal connection.",
+    isPro: false
 }
 
-const faqTip = [
-    { id: 1, point: 'Use professional fonts like Arial, Calibri, or Times New Roman', subHead: 'Font:' },
-    { id: 2, point: 'TUse 10–12 points for body text and slightly larger for headings.', subHead: 'Font Size:' },
-    { id: 3, point: 'Keep plenty of white space to make it easy to read.', subHead: 'Spacing:' },
-    { id: 4, point: 'Use these for lists to improve clarity', subHead: 'Bullet Points:' }
-]
+// ====================== TABS ======================
+const tabsData = [
+    { id: 'section1', title: section1Data.title || 'Section 1' },
+    { id: 'section2', title: section2Data?.title || 'Section 2' },
+    { id: 'section3', title: section3Data?.title || 'Section 3' },
+    { id: 'section4', title: section4Data?.title || 'Section 4' },
+    { id: 'section5', title: section5Data?.title || 'Section 5' },
+    { id: 'section6', title: prosData?.title || 'Pros' },
+    { id: 'section7', title: consData?.title || 'Cons' },
+];
+// ====================== TABS DATA ======================
+export const DynamicSectionData = {
+    section1: section1Data,
+    tip1: section1Tip,
+    section2: section2Data,
+    section3: section3Data,
+    tip2: section3Tip,
+    section4: section4Data,
+    section5: section5Data,
+    pros: prosData,
+    cons: consData,
+    DynamicTabsData: tabsData
+};
 
-const faqsCons = [
-    { id: 1, point: 'Double-check everything, especially contact details.', subHead: 'Spelling Errors:' },
-    { id: 2, point: 'Stick to 1–2 pages', subHead: 'Too Much Information:' },
-    { id: 3, point: 'Ensure everything aligns neatly and looks polished.', subHead: 'Unprofessional Formatting:' },
-    { id: 4, point: 'Avoid personal information like your age, photo, or hobbies unless requested.', subHead: 'Irrelevant Details:' }
-]
-
-const faqsPoints = [
-    { id: 1, point: 'Tailor your resume to make it fit for the job you are applying for', subHead: 'Positioning' },
-    { id: 2, point: 'present your unique and memorable identity', subHead: 'Personal branding:' },
-    { id: 3, point: 'a quick summary of what you want and offer.', subHead: 'Pitch:' },
-    { id: 4, point: 'visual design and structure of your resume. It should be concise and clear.', subHead: 'Presentation:' },
-    { id: 5, point: 'accurate information, as well as proofreading of the resume.', subHead: 'Professionalism:' }
-]
-
+// ====================== FAQs ======================
 const faqsList = [
     {
-        question: "How to format a resume that stands out? ",
+        question: "What is the best format for cover letter 2025? ",
         answer:
-            "A visually appealing resume grabs attention. However, don't go overboard with fancy fonts or colors.",
+            "In 2025, cover letters are likely to be modern with a professional format that emphasizes key skills and experiences. Of course, visual elements will come into play a bit more than in earlier formats, but clarity and readability above everything else. ",
     },
     {
-        question: "What are the common resume mistakes to avoid? ",
-        answer: "here are some common mistakes that you should avoid",
+        question: "What is the top rated cover letter format? ",
+        answer:
+            "The best generic cover letter format can be different for every person, but what is often most recommended is a reverse chronological format, which shows the work experience in descending order so that the employer can see the latest achievements more easily.  ",
+        titlePro: "PRO TIP",
+        descriptionPro: ["Moreover, for more top-rated cover letter formats that you can use to create your cover letter, visit AI Pro Cover Letter and select your preferred cover letter template and cover letter examples to create a well-structured, sleek, and eye-catching CV. "],
+        iconPro: TipPro,
+        isTip: true
     },
     {
-        question: "What are the 5 P's of a resume? ",
-        answer: "The 5 P’s of a resume that highlight the important elements of a resume are as follows:",
-        pointsHeading: "5 P's of a resume",
-        points: faqsPoints
+        question: "What is the biodata format for 2025? ",
+        answer:
+            "The biodata format includes all the important personal info, professional experience related to the job applied for, educational background, skills, and achievements presented as concisely as possible. The biodata format should match the type of job being applied for and the specific career stage of the candidate. ",
+    },
+    {
+        question: "What is the best cover letter format for 15 years experience?",
+        answer:
+            "For a candidate who has nearly 15 years of work experience, reverse chronological and combined cover letter formatting will be the best format for cover letter. This style of cover letter emphasizes skills and accomplishments, followed by a detailed work history, which allows more senior professionals to highlight their vast experience effectively. ",
     },
 ];
 
 export const faqs = {
     title: "Frequently Asked Questions (FAQs) ",
-    faqlist: faqsList,
+    faqlist: faqsList
 }
+
+
+

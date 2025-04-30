@@ -1,211 +1,291 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Image from 'next/image';
-// ============
-import CTA from '../custom/CTA';
-import ProConsCard from '../blog/blogDetailComponents/ProConsCard';
-// ============
-import image1 from 'media/images/SkillsSec.webp'
-import image2 from 'media/images/grammer.webp'
-import image3 from 'media/resume_template_images/template_2.webp'
-import pros from 'media/images/pros.webp';
-import cons from 'media/images/cons.webp';
+// ==============
+import { ProConsCard, CTA } from '@/components';
+import InterviewQuestionsCard from '../cards/InterviewQuestionsCard';
 
-import TipPro from 'media/images/TipPro.webp'
-import TipProComma from 'media/images/commaIcoon.webp'
-
-type DynamicContentProps = {
-    mainDivClass?: any;
-    id: string;
-    title?: string | ReactNode;
-    titleTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5'; // Extendable
-    titleClass?: string;
-    description?: ReactNode | any[];
-    description2?: ReactNode | any[];
-    descBase?: ReactNode | any[];
-    children?: ReactNode;
-    CtaText?: any;
-    titlePro?: string;
-    iconPro?: any;
-    descriptionPro?: string;
-    isTip?: any;
+type ImageData = {
+    src: any;
 };
 
-const DynamicContent = ({ mainDivClass,
-    id,
-    title,
-    titleTag: TitleTag = 'h2',
-    titleClass,
-    description,
-    description2,
-    descBase,
-    children,
-    CtaText,
-    titlePro,
-    iconPro,
-    descriptionPro,
-    isTip,
-}: DynamicContentProps) => {
+type TipCard = {
+    title: string;
+    icon: any;
+    description: string;
+    isTip?: boolean;
+    isPro?: boolean;
+};
+
+type Section = {
+    bulletPoints?: string[];
+    title?: string;
+    paragraphs?: string[];
+    innerTitle?: string;
+    image?: ImageData;
+    listItems?: string[];
+    cta?: { text: string; };
+    interviewQuestionList?: any;
+};
+
+type DynamicContentProps = {
+    id: string;
+    data: {
+        tip1?: TipCard;
+        tip2?: TipCard;
+        section1?: Section;
+        section2?: Section;
+        section3?: Section;
+        section4?: Section;
+        section5?: Section;
+        pros: TipCard;
+        cons: TipCard;
+    };
+};
+
+const DynamicContent = ({ data }: DynamicContentProps) => {
+    const {
+        tip1,
+        tip2,
+        section1,
+        section2,
+        section3,
+        section4,
+        section5,
+        pros,
+        cons,
+    } = data;
+
     return (
-        <div className={`scroll-mt-32 py-4 ${mainDivClass}`} id={id}>
-            <h2 className="">Best Cover Letter Formats to Impress in 2025</h2>
-            <p className="text-[16px] lg:text-[18px] text-justify">
-                The first thing you choose when making a cover letter is a cover letter format. Selecting the cover letter format is important as it reflects the story of your professional experience to the employers.  This will also affect the chances of you getting your dream job.",
-                "But you must be wondering which cover letter would work the best for you? In this guide, we will assist you in deciding the best generic cover letter format so you can have a roadmap to write your cover letter further
-            </p>
-            <p className="text-[16px] lg:text-[18px] text-justify">
-                The first thing you choose when making a cover letter is a cover letter format. Selecting the cover letter format is important as it reflects the story of your professional experience to the employers.  This will also affect the chances of you getting your dream job.",
-                "But you must be wondering which cover letter would work the best for you? In this guide, we will assist you in deciding the best generic cover letter format so you can have a roadmap to write your cover letter further
-            </p>
-
-            <ul className='list-disc pl-4 mt-2'>
-                <li>Candidates who have a steady working</li>
-                <li>Candidates who have a steady working</li>
-                <li>Candidates who have a steady working</li>
-                <li>Candidates who have a steady working</li>
-                <li>Candidates who have a steady working</li>
-            </ul>
-
-            <Image
-                src={image1}
-                alt="Resume benefits"
-                className='rounded-md w-full my-5'
-            />
-
-            <ProConsCard
-                title={titlePro}
-                icon={TipPro}
-                description="Candidates who have a steady working"
-                isTip={true}
-            />
-
-            <div className="grid grid-cols-2 items-center gap-5 mt-10">
-                <div className="">
-                    <h3 className='font-semibold'>Lorem ipsum dolor</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod fugiat adipisci dolor illo recusandae mollitia, nulla ex asperiores aperiam saepe unde, officiis cum nam exercitationem labore reprehenderit ullam. Quidem.</p>
-                    <ul className='list-disc pl-4 my-2'>
-                        <li>Candidates who have a steady working history and have</li>
-                        <li>Candidates who have a steady working history and have</li>
-                        <li>Candidates who have a steady working history and have</li>
-                    </ul>
-                    <div className=''>
-                        <CTA
-                            btn
-                            text="Import Resume"
-                            bgColor="bg-primary hover:bg-PrimaryDark"
-                            txtColor="text-white"
-                            border="border-0"
+        <>
+            {/* Section 1 */}
+            {section1 && (
+                <div className="scroll-mt-32" id="section1">
+                    <h2 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section1.title}</h2>
+                    {section1.paragraphs?.map((para, idx) => (
+                        <p key={idx} className="text-[16px] text-justify md:text-left mb-2">{para}</p>
+                    ))}
+                    {section1.bulletPoints && (
+                        <ul className="list-disc pl-4 mt-4">
+                            {section1.bulletPoints.map((item, idx) => (
+                                <li key={idx} className="text-[16px] text-left mb-2">{item}</li>
+                            ))}
+                        </ul>
+                    )}
+                    {section1.image && (
+                        <div className="my-8">
+                            <Image src={section1.image.src} alt="image" className="rounded-md w-full" />
+                        </div>
+                    )}
+                    {/* Tips 1 */}
+                    {tip1 && (
+                        <ProConsCard
+                            title={tip1.title}
+                            icon={tip1.icon}
+                            description={tip1.description}
+                            isTip={tip1.isTip}
+                            isPro={tip1.isPro}
                         />
+                    )}
+                </div>
+            )}
+
+            {/* Section 2 */}
+            {section2 && (
+                <div className="grid grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section2">
+                    <div>
+                        <h3 className='text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2'>{section2.title}</h3>
+                        {section2.paragraphs?.map((p, i) => (
+                            <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
+                        ))}
+                        {section2.listItems && (
+                            <ul className='list-disc pl-4 my-4'>
+                                {section2.listItems.map((item, i) => (
+                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                                ))}
+                            </ul>
+                        )}
+                        {section2.cta && (
+                            <CTA
+                                btn
+                                text={section2.cta.text}
+                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                txtColor="text-white"
+                                border="border-0"
+                            />
+                        )}
+                    </div>
+                    {section2.image?.src && (
+                        <div>
+                            <Image src={section2.image.src} alt="Image" className="rounded-md w-full" />
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {/* Section 3 */}
+            {section3 && (
+                <div className="grid grid-cols-12 gap-5 my-10 scroll-mt-32" id="section3">
+                    <div className="col-span-12">
+                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section3.title}</h3>
+                        {section3.paragraphs?.map((p, i) => (
+                            <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
+                        ))}
+                    </div>
+                    <div className="col-span-5">
+                        {section3.image && (
+                            <Image src={section3.image.src} alt="Image" className="rounded-md w-full" />
+                        )}
+                    </div>
+                    <div className="col-span-7">
+                        {section3.innerTitle && (
+                            <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section3.innerTitle}</h4>
+                        )}
+                        {section3.listItems && (
+                            <ul className="list-disc pl-4 my-4">
+                                {section3.listItems.map((item, i) => (
+                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                                ))}
+                            </ul>
+                        )}
+                        {section3.cta && (
+                            <CTA
+                                btn
+                                text={section3.cta.text}
+                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                txtColor="text-white"
+                                border="border-0"
+                            />
+                        )}
+                    </div>
+                    {/* Tips 2 */}
+                    <div className="col-span-12">
+                        {tip2 && (
+                            <ProConsCard
+                                title={tip2.title}
+                                icon={tip2.icon}
+                                description={tip2.description}
+                                isTip={tip2.isTip}
+                                isPro={tip2.isPro}
+                            />
+                        )}
+                    </div>
+
+                    {section3?.interviewQuestionList?.length && <div className="col-span-12 mb-4">
+                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mt-3 mb-5">The Most Common Job Interview Questions – Answered</h3>
+                        <div className='grid grid-cols-2  gap-5'>
+                            {
+                                section3?.interviewQuestionList?.map((data: any, index: any) => (
+                                    <div id={index}>
+                                        <InterviewQuestionsCard cardData={data} />
+
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>}
+
+                </div>
+            )}
+
+            {/* Section 4 */}
+            {section4 && (
+                <div className="grid grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section4">
+                    {section4.image?.src && (
+                        <div>
+                            <Image src={section4.image.src} alt="Image" className="rounded-md w-full" />
+                        </div>
+                    )}
+                    <div>
+                        <h3 className='text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2'>{section4.title}</h3>
+                        {section4.paragraphs?.map((p, i) => (
+                            <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
+                        ))}
+                        {section4.listItems && (
+                            <ul className='list-disc pl-4 my-4'>
+                                {section4.listItems.map((item, i) => (
+                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                                ))}
+                            </ul>
+                        )}
+                        {section4.cta && (
+                            <CTA
+                                btn
+                                text={section4.cta.text}
+                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                txtColor="text-white"
+                                border="border-0"
+                            />
+                        )}
                     </div>
                 </div>
-                <div className="">
-                    <Image
-                        src={image2}
-                        alt="Resume benefits"
-                        className='rounded-md w-full'
-                    />
-                </div>
-            </div>
-            <div className="grid grid-cols-12 gap-5 mt-10">
-                <div className="col-span-12">
-                    <h3 className='font-semibold'>Lorem ipsum dolor</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod fugiat adipisci dolor illo recusandae mollitia, nulla ex asperiores aperiam saepe unde, officiis cum nam exercitationem labore reprehenderit ullam. Quidem.</p>
-                </div>
-                <div className="col-span-5">
-                    <Image
-                        src={image3}
-                        alt="Resume benefits"
-                        className='rounded-md w-full'
-                    />
-                </div>
-                <div className="col-span-7">
-                    <h3 className='font-semibold'>Lorem ipsum dolor</h3>
-                    <ul className='list-disc pl-4 my-2'>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks </li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks </li>
-                    </ul>
-                    <div className=''>
-                        <CTA
-                            btn
-                            text="Import Resume"
-                            bgColor="bg-primary hover:bg-PrimaryDark"
-                            txtColor="text-white"
-                            border="border-0"
-                        />
+            )}
+
+            {/* Section 5 */}
+            {section5 && (
+                <div className="grid grid-cols-12 gap-5 mt-10 scroll-mt-32" id="section5">
+                    <div className="col-span-12">
+                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section5.title}</h3>
+                        {section5.paragraphs?.map((p, i) => (
+                            <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
+                        ))}
+                    </div>
+                    <div className="col-span-7">
+                        {section5.innerTitle && (
+                            <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section5.innerTitle}</h4>
+                        )}
+                        {section5.listItems && (
+                            <ul className="list-disc pl-4 my-4">
+                                {section5.listItems.map((item, i) => (
+                                    <li key={i} className="text-[16px] text-left mb-2">{item}</li>
+                                ))}
+                            </ul>
+                        )}
+                        {section5.cta && (
+                            <CTA
+                                btn
+                                text={section5.cta.text}
+                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                txtColor="text-white"
+                                border="border-0"
+                            />
+                        )}
+                    </div>
+                    <div className="col-span-5">
+                        {section5.image && (
+                            <Image src={section5.image.src} alt="Image" className="rounded-md w-full" />
+                        )}
                     </div>
                 </div>
+            )}
+
+            {/* Pros */}
+            <div className="flex flex-col gap-5 mt-5">
+                {pros && (
+                    <div className="scroll-mt-32" id="section6">
+                        <ProConsCard
+                            title={pros.title}
+                            icon={pros.icon}
+                            description={pros.description}
+                            isTip={pros.isTip}
+                            isPro={pros.isPro}
+                        />
+                    </div>
+                )}
+                {/* Pros and Cons */}
+                {cons && (
+                    <div className="scroll-mt-32" id="section7">
+                        <ProConsCard
+                            title={cons.title}
+                            icon={cons.icon}
+                            description={cons.description}
+                            isTip={cons.isTip}
+                            isPro={cons.isPro}
+                        />
+                    </div>
+                )}
             </div>
-            <ProConsCard
-                title={titlePro}
-                icon={TipProComma}
-                description="Candidates who have a steady working"
-                isTip={true}
-            />
-            <div className="grid grid-cols-2 items-center gap-5 mt-10">
-                <div className="">
-                    <Image
-                        src={image2}
-                        alt="Resume benefits"
-                        className='rounded-md w-full'
-                    />
-                </div>
-                <div className="">
-                    <h3 className='font-semibold'>Lorem ipsum dolor</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod fugiat adipisci dolor illo recusandae mollitia, nulla ex asperiores aperiam saepe unde, officiis cum nam exercitationem labore reprehenderit ullam. Quidem.</p>
-                    <ul className='list-disc pl-4 my-2'>
-                        <li>Candidates who have a steady working history and have</li>
-                        <li>Candidates who have a steady working history and have</li>
-                        <li>Candidates who have a steady working history and have</li>
-                    </ul>
-                    <CTA
-                        btn
-                        text="Import Resume"
-                        bgColor="bg-primary hover:bg-PrimaryDark"
-                        txtColor="text-white"
-                        border="border-0"
-                    />
-                </div>
-            </div>
-            <div className="grid grid-cols-12 gap-5 mt-10">
-                <div className="col-span-12">
-                    <h3 className='font-semibold'>Lorem ipsum dolor</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod fugiat adipisci dolor illo recusandae mollitia, nulla ex asperiores aperiam saepe unde, officiis cum nam exercitationem labore reprehenderit ullam. Quidem.</p>
-                </div>
-                <div className="col-span-7">
-                    <h3 className='font-semibold'>Lorem ipsum dolor</h3>
-                    <ul className='list-disc pl-4 my-2'>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks </li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks history and have not taken any long breaks</li>
-                        <li>Candidates who have a steady working history and have not taken any long breaks </li>
-                    </ul>
-                    <CTA
-                        btn
-                        text="Import Resume"
-                        bgColor="bg-primary hover:bg-PrimaryDark"
-                        txtColor="text-white"
-                        border="border-0"
-                    />
-                </div>
-                <div className="col-span-5">
-                    <Image
-                        src={image3}
-                        alt="Resume benefits"
-                        className='rounded-md w-full'
-                    />
-                </div>
-            </div>
-        </div>
+        </>
     );
-}
+};
 
-export default DynamicContent
+export default DynamicContent;

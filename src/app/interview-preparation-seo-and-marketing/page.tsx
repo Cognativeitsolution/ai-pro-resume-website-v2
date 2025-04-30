@@ -1,15 +1,14 @@
 'use client';
-
-import { InnerBanner, Faq, InterviewQuestionsSeo } from '@/components';
-import { BannerData, resumeFormatData, faqs } from './data';
-
+import { InnerBanner, Faq } from '@/components';
+import { BannerData, DynamicSectionData, faqs } from './data';
+import DynamicSection from '@/components/dynamicSection/DynamicSection';
 
 const page = () => {
 
     return (
         <>
             <InnerBanner {...BannerData} />
-            <InterviewQuestionsSeo data={resumeFormatData} />
+            <DynamicSection data={DynamicSectionData} />
             <Faq data={faqs} />
         </>
     );

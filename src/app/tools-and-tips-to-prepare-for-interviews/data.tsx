@@ -1,26 +1,20 @@
-// ======================
-import TipPro from 'media/images/TipPro.webp'
-import TipProComma from 'media/images/commaIcoon.webp'
-
-import Temp1 from 'media/cover_template_images/template_1.webp'
-import Temp2 from 'media/cover_template_images/template_2.webp'
-import Temp3 from 'media/cover_template_images/template_3.webp'
-import Temp4 from 'media/cover_template_images/template_4.webp'
-import Temp5 from 'media/cover_template_images/template_5.webp'
-import Temp6 from 'media/cover_template_images/template_6.webp'
-
+// ====================== IMAGES ======================
+import image1 from 'media/images/ourBenefitsImg.webp'
+import image2 from 'media/images/grammer.webp'
+import image3 from 'media/resume_template_images/template_2.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
+import TipPro from 'media/images/TipPro.webp';
+import TipProComma from 'media/images/commaIcoon.webp';
 
-
-
+// ====================== BANNER ======================
 export const BannerData = {
   title: (
     <>
-      Tips & Templates 2025
+      To Prepare For Interviews
     </>
   ),
-  subtitle: "Top Cover Letter Formats:",
+  subtitle: "Tools And Tips",
   description: (
     <>
       The three top cover letter formats for 2025 will help you grab employers' attention  <br className="hidden lg:block" />  and enrich your chances of securing your dream job.
@@ -28,62 +22,145 @@ export const BannerData = {
   ),
 };
 
-const VerticalTabsData = [
-  {
-    id: 'head1',
-    title: "Best Cover Letter Formats to Impress in 2025 ",
-  },
-  {
-    id: 'head2',
-    title: "This blog will include",
-  },
-  {
-    id: 'head3',
-    title: "3 Most Popular Cover Letter Formats",
-  },
-  {
-    id: 'head4',
-    title: "Reverse-Chronological Cover Letter Format ",
-  },
-  {
-    id: 'head5',
-    title: "Functional Cover Letter Formats",
-  },
-  {
-    id: 'head6',
-    title: "Combination Cover Letter Format",
-  },
-  {
-    id: 'head7',
-    title: "Cover Letter Formatting Tips For Writing A Perfect Cover Letter ",
-  },
-  {
-    id: 'head8',
-    title: "Cover Letter Templates That You Can Use To Grab an Employer’s Attention ",
-  },
-  {
-    id: 'head9',
-    title: "The Bottom Line",
-  },
-
-]
-
-const TopSectionData = {
-  heading: "Best Cover Letter Formats to Impress in 2025",
-  description: [
-    "The first thing you choose when making a cover letter is a cover letter format. Selecting the cover letter format is important as it reflects the story of your professional experience to the employers.  This will also affect the chances of you getting your dream job.",
-    "But you must be wondering which cover letter would work the best for you? In this guide, we will assist you in deciding the best generic cover letter format so you can have a roadmap to write your cover letter further"],
-  titlePro: "PRO TIP",
-  descriptionPro: [" Moreover, to grab the attention of your employers, you need to check all the elements of the best format for cover letter. These elements include a clear and well-structured cover letter. Such a cover letter will increase your chances of getting an interview."],
-  iconPro: TipPro,
+// ====================== Section 1 Data ======================
+const section1Data = {
+  title: "Essential Tools and Tips to Prepare for Interviews in 2025",
+  paragraphs: [
+    "Preparing for an interview isn’t just about reviewing your resume. The right tools and strategies can make all the difference.",
+    "Whether you're a first-time applicant or a seasoned professional, this guide will help you approach every interview with confidence and clarity."
+  ],
+  bulletPoints: [
+    "Practice with mock interviews and AI tools",
+    "Research companies thoroughly before your interview",
+    "Use STAR method for answering behavioral questions",
+    "Prepare key questions to ask the interviewer",
+    "Leverage tools for scheduling and follow-ups"
+  ],
+  image: { src: image1, alt: "Interview preparation tools" },
+}
+// ====================== Tip 1 Data ======================
+const section1Tip = {
+  title: "Quick Tip",
+  icon: TipPro,
+  description: "Record yourself answering common questions—it helps catch nervous habits and refine responses.",
   isTip: true
 }
-
-export const CoverLetterFormatData = {
-  DynVerticalTabsData: VerticalTabsData,
-  TopSection: TopSectionData,
+// ====================== Section 2 Data ======================
+const section2Data = {
+  title: "Interview Practice Tools",
+  paragraphs: [
+    "Online platforms now offer AI-powered mock interviews, real-time feedback, and expert coaching. Practicing regularly helps reduce anxiety and improve delivery."
+  ],
+  listItems: [
+    "Simulate real interview scenarios",
+    "Receive feedback on tone and content",
+    "Build confidence through repetition"
+  ],
+  image: { src: image2, alt: "Mock interview tool in action" },
+  cta: { text: "Try Practice Tools" }
 }
+// ====================== Section 3 Data ======================
+const section3Data = {
+  title: "Research and Company Insights",
+  paragraphs: [
+    "Knowing the company culture, recent news, and role expectations shows initiative. Use tools like LinkedIn, Glassdoor, and company websites to stay informed."
+  ],
+  innerTitle: "Insights",
+  listItems: [
+    "Always email your thank-you note within 24 hours. Keep it short, sincere, and customized to the interview.",
+    "Tools like Boomerang or Gmail’s built-in scheduler help you time your messages perfectly.",
+    "Mention specific topics discussed and reinforce your enthusiasm for the role.",
+    "Include work samples, portfolios, or requested documents with clear labels.",
+    "If a response timeline has passed, check in politely without being pushy.",
+    "Send a personalized request and reiterate one memorable moment from your conversation.",
+    "Templates ensure structure, but always adapt the tone to the specific job.",
+    "Avoid slang or emojis. Stay consistent with your professional image.",
+    "Wait 3–5 business days before sending a second follow-up message.",
+  ],
+  image: { src: image3, alt: "Company research tools" },
+  cta: { text: "Start Researching" },
+}
+// ====================== Tip 2 Data ======================
+const section3Tip = {
+  title: "Pro Tip",
+  icon: TipProComma,
+  description: "Bring examples of your work or results. Specific outcomes leave a lasting impression.",
+  isTip: true
+}
+// ====================== Section 4 Data ======================
+const section4Data = {
+  title: "Behavioral Interview Strategies",
+  paragraphs: [
+    "Master the STAR method (Situation, Task, Action, Result) to structure your answers clearly. It ensures you highlight your skills with relevant examples."
+  ],
+  listItems: [
+    "Clear, structured responses",
+    "Demonstrates problem-solving and adaptability",
+    "Shows results-driven thinking"
+  ],
+  image: { src: image2, alt: "STAR method for interviews" },
+  cta: { text: "Learn the STAR Method" },
+}
+// ====================== Section 5 Data ======================
+const section5Data = {
+  title: "Follow-Up Tools and Etiquette",
+  paragraphs: [
+    "Post-interview follow-ups can set you apart. Use templates and scheduling tools to send timely thank-you notes and reminders."
+  ],
+  innerTitle: "Etiquette",
+  listItems: [
+    "Always email your thank-you note within 24 hours. Keep it short, sincere, and customized to the interview.",
+    "Tools like Boomerang or Gmail’s built-in scheduler help you time your messages perfectly.",
+    "Mention specific topics discussed and reinforce your enthusiasm for the role.",
+    "Include work samples, portfolios, or requested documents with clear labels.",
+    "If a response timeline has passed, check in politely without being pushy.",
+    "Send a personalized request and reiterate one memorable moment from your conversation.",
+    "Templates ensure structure, but always adapt the tone to the specific job.",
+    "Avoid slang or emojis. Stay consistent with your professional image.",
+    "Wait 3–5 business days before sending a second follow-up message.",
+  ],
+  image: { src: image3, alt: "Interview follow-up checklist" },
+  cta: { text: "Download Follow-Up Templates" },
+}
+// ====================== PROS Data ======================
+const prosData = {
+  title: "Pros",
+  icon: pros,
+  description: "Provides clarity on strengths, improves confidence, and enhances interview performance.",
+  isPro: true
+}
+// ====================== CONS Data ======================
+const consData = {
+  title: "Cons",
+  icon: cons,
+  description: "Over-preparation can lead to sounding robotic; must be balanced with authenticity.",
+  isPro: false
+}
+// ====================== TABS ======================
+const tabsData = [
+  { id: 'section1', title: section1Data.title || 'Section 1' },
+  { id: 'section2', title: section2Data?.title || 'Section 2' },
+  { id: 'section3', title: section3Data?.title || 'Section 3' },
+  { id: 'section4', title: section4Data?.title || 'Section 4' },
+  { id: 'section5', title: section5Data?.title || 'Section 5' },
+  { id: 'section6', title: prosData?.title || 'Pros' },
+  { id: 'section7', title: consData?.title || 'Cons' },
+];
+// ====================== TABS DATA ======================
+export const DynamicSectionData = {
+  section1: section1Data,
+  tip1: section1Tip,
+  section2: section2Data,
+  section3: section3Data,
+  tip2: section3Tip,
+  section4: section4Data,
+  section5: section5Data,
+  pros: prosData,
+  cons: consData,
+  DynamicTabsData: tabsData
+};
 
+// ====================== FAQs ======================
 const faqsList = [
   {
     question: "What is the best format for cover letter 2025? ",

@@ -125,10 +125,10 @@ const Footer = () => {
                 />
               </div>
               <div className="flex gap-6 text-lg text-white">
-                <FaFacebookF className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300" />
-                <FaInstagram className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300" />
-                <FaLinkedinIn className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300" />
-                <FaPinterest className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300" />
+                <FaFacebookF className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300 cursor-pointer" />
+                <FaInstagram className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300 cursor-pointer" />
+                <FaLinkedinIn className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300 cursor-pointer" />
+                <FaPinterest className="text-[25px] xl:text-[30px] hover:scale-110 transition-all duration-300 cursor-pointer" />
               </div>
             </div>
 
