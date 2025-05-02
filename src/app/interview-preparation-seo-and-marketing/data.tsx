@@ -55,6 +55,48 @@ const section2Data = {
     cta: { text: "Try Marketing Practice Tools" }
 }
 // ====================== Section 3 Data ======================
+const section3Data = {
+    title: "Company Research & Market Insights",
+    paragraphs: [
+        "Understanding a company’s market position, SEO footprint, and campaign tone shows you’re marketing-savvy. Use tools like SimilarWeb, LinkedIn, and SEMrush to gather insight."
+    ],
+    innerTitle: "Insights",
+    listItems: [
+        "Analyze their backlink profile or ad strategy to spark relevant questions.",
+        "Tools like Google Alerts can keep you updated on the company’s latest news.",
+        "Mention recent campaigns and provide thoughtful feedback or praise.",
+        "Bring examples of how you'd enhance their SEO or content funnel.",
+        "If applicable, compare their competitors' strategies for discussion.",
+        "Send a tailored follow-up referencing marketing goals discussed.",
+        "Custom templates are useful, but always reflect the brand’s voice.",
+        "Avoid jargon the company doesn’t use—mirror their marketing language.",
+        "Send a thoughtful second email if no response after a week."
+    ],
+    image: { src: image3, alt: "Company marketing research tools" },
+    cta: { text: "Start Researching Companies" },
+}
+// ====================== Tip 2 Data ======================
+const section3Tip = {
+    title: "Pro Tip",
+    icon: TipProComma,
+    description: "Showcase real campaign results with KPIs—interviewers remember metrics that matter.",
+    isTip: true
+}
+// ====================== Section 4 Data ======================
+const section4Data = {
+    title: "Behavioral Interview Strategies for Marketers",
+    paragraphs: [
+        "Use the STAR method to clearly explain how you executed campaigns, solved performance issues, and contributed to growth. Highlight marketing tools used and their impact."
+    ],
+    listItems: [
+        "Clear, results-backed storytelling",
+        "Demonstrates ROI thinking and creativity",
+        "Shows ownership of multi-channel strategies"
+    ],
+    image: { src: image2, alt: "STAR method for marketing interviews" },
+    cta: { text: "Learn the STAR Method" },
+}
+// ====================== Section 5 Data ======================
 const interviewQuestionList = [
     {
         id: 1,
@@ -88,50 +130,15 @@ const interviewQuestionList = [
         desc: "TProve that you’re confident in your skills and pitch yourself as the best person for the job."
     },
 ]
-const section3Data = {
-    title: "Company Research & Market Insights",
+const section5Data = {
+    title: "The Most Common Job Interview Questions – Answered",
     paragraphs: [
-        "Understanding a company’s market position, SEO footprint, and campaign tone shows you’re marketing-savvy. Use tools like SimilarWeb, LinkedIn, and SEMrush to gather insight."
+        "Post-interview follow-ups can set you apart. Use templates and scheduling tools to send timely thank-you notes and reminders."
     ],
-    innerTitle: "Insights",
-    listItems: [
-        "Analyze their backlink profile or ad strategy to spark relevant questions.",
-        "Tools like Google Alerts can keep you updated on the company’s latest news.",
-        "Mention recent campaigns and provide thoughtful feedback or praise.",
-        "Bring examples of how you'd enhance their SEO or content funnel.",
-        "If applicable, compare their competitors' strategies for discussion.",
-        "Send a tailored follow-up referencing marketing goals discussed.",
-        "Custom templates are useful, but always reflect the brand’s voice.",
-        "Avoid jargon the company doesn’t use—mirror their marketing language.",
-        "Send a thoughtful second email if no response after a week."
-    ],
-    image: { src: image3, alt: "Company marketing research tools" },
-    cta: { text: "Start Researching Companies" },
     interviewQuestionList: interviewQuestionList
 }
-// ====================== Tip 2 Data ======================
-const section3Tip = {
-    title: "Pro Tip",
-    icon: TipProComma,
-    description: "Showcase real campaign results with KPIs—interviewers remember metrics that matter.",
-    isTip: true
-}
-// ====================== Section 4 Data ======================
-const section4Data = {
-    title: "Behavioral Interview Strategies for Marketers",
-    paragraphs: [
-        "Use the STAR method to clearly explain how you executed campaigns, solved performance issues, and contributed to growth. Highlight marketing tools used and their impact."
-    ],
-    listItems: [
-        "Clear, results-backed storytelling",
-        "Demonstrates ROI thinking and creativity",
-        "Shows ownership of multi-channel strategies"
-    ],
-    image: { src: image2, alt: "STAR method for marketing interviews" },
-    cta: { text: "Learn the STAR Method" },
-}
-// ====================== Section 5 Data ======================
-const section5Data = {
+// ====================== Section 6 Data ======================
+const section6Data = {
     title: "Follow-Up Tools and Communication Etiquette",
     paragraphs: [
         "Your follow-up is another opportunity to market yourself. Use personalized, well-timed messages to stand out—especially in roles where communication is key."
@@ -165,7 +172,6 @@ const consData = {
     description: "Too much technical prep can dilute your storytelling—balance data with personal connection.",
     isPro: false
 }
-
 // ====================== TABS ======================
 const tabsData = [
     { id: 'section1', title: section1Data.title || 'Section 1' },
@@ -173,8 +179,9 @@ const tabsData = [
     { id: 'section3', title: section3Data?.title || 'Section 3' },
     { id: 'section4', title: section4Data?.title || 'Section 4' },
     { id: 'section5', title: section5Data?.title || 'Section 5' },
-    { id: 'section6', title: prosData?.title || 'Pros' },
-    { id: 'section7', title: consData?.title || 'Cons' },
+    { id: 'section6', title: section6Data?.title || 'Section 6' },
+    { id: 'section7', title: prosData?.title || 'Pros' },
+    { id: 'section8', title: consData?.title || 'Cons' },
 ];
 // ====================== TABS DATA ======================
 export const DynamicSectionData = {
@@ -185,6 +192,7 @@ export const DynamicSectionData = {
     tip2: section3Tip,
     section4: section4Data,
     section5: section5Data,
+    section6: section6Data,
     pros: prosData,
     cons: consData,
     DynamicTabsData: tabsData

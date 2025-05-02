@@ -103,7 +103,48 @@ const section4Data = {
   cta: { text: "Learn the STAR Method" },
 }
 // ====================== Section 5 Data ======================
+const interviewQuestionList = [
+  {
+    id: 1,
+    title: "What do you like about your job?",
+    desc: "Recruiters ask you this question to understand your reasoning behind leaving your job."
+  },
+  {
+    id: 2,
+    title: "Tell me about yourself.",
+    desc: "This question about you, don’t be afraid to give a more personal answer strictly professional."
+  },
+  {
+    id: 3,
+    title: "Why are you applying for this position?",
+    desc: "This question is really the hiring manager’s to learn more about you. Be honest your answer."
+  },
+
+  {
+    id: 4,
+    title: "What are your weaknesses?",
+    desc: "A tricky question, try to answer it by tying weaknesses to the job you’re applying for."
+  },
+  {
+    id: 5,
+    title: "What are your strengths?",
+    desc: "A tricky question, try to answer it by tying your strengths to the job you’re applying for."
+  },
+  {
+    id: 6,
+    title: "Why should we hire you?",
+    desc: "TProve that you’re confident in your skills and pitch yourself as the best person for the job."
+  },
+]
 const section5Data = {
+  title: "The Most Common Job Interview Questions – Answered",
+  paragraphs: [
+    "Post-interview follow-ups can set you apart. Use templates and scheduling tools to send timely thank-you notes and reminders."
+  ],
+  interviewQuestionList: interviewQuestionList
+}
+// ====================== Section 6 Data ======================
+const section6Data = {
   title: "Follow-Up Tools and Etiquette",
   paragraphs: [
     "Post-interview follow-ups can set you apart. Use templates and scheduling tools to send timely thank-you notes and reminders."
@@ -144,8 +185,9 @@ const tabsData = [
   { id: 'section3', title: section3Data?.title || 'Section 3' },
   { id: 'section4', title: section4Data?.title || 'Section 4' },
   { id: 'section5', title: section5Data?.title || 'Section 5' },
-  { id: 'section6', title: prosData?.title || 'Pros' },
-  { id: 'section7', title: consData?.title || 'Cons' },
+  { id: 'section6', title: section6Data?.title || 'Section 6' },
+  { id: 'section7', title: prosData?.title || 'Pros' },
+  { id: 'section8', title: consData?.title || 'Cons' },
 ];
 // ====================== TABS DATA ======================
 export const DynamicSectionData = {
@@ -156,6 +198,7 @@ export const DynamicSectionData = {
   tip2: section3Tip,
   section4: section4Data,
   section5: section5Data,
+  section6: section6Data,
   pros: prosData,
   cons: consData,
   DynamicTabsData: tabsData

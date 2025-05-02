@@ -24,6 +24,7 @@ type PropsType = {
         section3: any;
         section4: any;
         section5: any;
+        section6: any;
         pros: any;
         cons: any;
         DynamicTabsData?: DynamicTabsData[];
