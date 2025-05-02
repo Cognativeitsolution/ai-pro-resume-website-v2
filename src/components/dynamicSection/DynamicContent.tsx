@@ -206,12 +206,11 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
 
                         {section3?.interviewQuestionList?.length && <div className="col-span-12 mb-4">
                             <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mt-3 mb-5">The Most Common Job Interview Questions – Answered</h3>
-                            <div className='grid grid-cols-2  gap-5'>
+                            <div className='grid md:grid-cols-2 gap-5'>
                                 {
                                     section3?.interviewQuestionList?.map((data: any, index: any) => (
-                                        <div id={index}>
+                                        <div key={index}>
                                             <InterviewQuestionsCard cardData={data} />
-
                                         </div>
                                     ))
                                 }
