@@ -1,0 +1,8 @@
+@media screen and (max-width: 370px) {
+  .RefHeader {
+    gap: 10px;
+  }
+  .RefSpan {
+    display: inline;
+  }
+}

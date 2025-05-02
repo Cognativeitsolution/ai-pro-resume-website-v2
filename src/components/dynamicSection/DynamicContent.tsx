@@ -103,7 +103,7 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
 
             {/* Section 2 */}
             {section2 && (
-                <div className="grid grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section2">
                     <div>
                         <h3 className='text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2'>{section2.title}</h3>
                         {section2.paragraphs?.map((p, i) => (
@@ -143,91 +143,94 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                 </div>
             )}
 
+            {/* Static Component */}
             <Tailor />
 
             {/* Section 3 */}
             {section3 && (
-                <div className="grid grid-cols-12 gap-5 my-10 scroll-mt-32" id="section3">
-                    <div className="col-span-12">
+                <>
+                    <div className='my-10 mb-5'>
                         <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section3.title}</h3>
                         {section3.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
                     </div>
-                    <div className="col-span-5">
-                        {section3.image && (
-                            <Image src={section3.image.src} alt="Image" className="rounded-md w-full" />
-                        )}
-                    </div>
-                    <div className="col-span-7">
-                        {section3.innerTitle && (
-                            <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section3.innerTitle}</h4>
-                        )}
-                        {section3.listItems && (
-                            <ul className="pl-1 my-4">
-                                {section3.listItems.map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
-                                        <Image
-                                            src={tick}
-                                            alt="check"
-                                            width={16}
-                                            height={16}
-                                            className="mt-[7px]"
-                                        />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                        {section3.cta && (
-                            <CTA
-                                btn
-                                text={section3.cta.text}
-                                bgColor="bg-primary hover:bg-PrimaryDark"
-                                txtColor="text-white"
-                                border="border-0"
-                            />
-                        )}
-                    </div>
-                    {/* Tips 2 */}
-                    <div className="col-span-12">
-                        {tip2 && (
-                            <ProConsCard
-                                title={tip2.title}
-                                icon={tip2.icon}
-                                description={tip2.description}
-                                isTip={tip2.isTip}
-                                isPro={tip2.isPro}
-                            />
-                        )}
-                    </div>
-
-                    {section3?.interviewQuestionList?.length && <div className="col-span-12 mb-4">
-                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mt-3 mb-5">The Most Common Job Interview Questions – Answered</h3>
-                        <div className='grid grid-cols-2  gap-5'>
-                            {
-                                section3?.interviewQuestionList?.map((data: any, index: any) => (
-                                    <div id={index}>
-                                        <InterviewQuestionsCard cardData={data} />
-
-                                    </div>
-                                ))
-                            }
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 scroll-mt-32" id="section3">
+                        <div className="col-span-12 lg:col-span-5">
+                            {section3.image && (
+                                <Image src={section3.image.src} alt="Image" className="rounded-md w-full" />
+                            )}
                         </div>
-                    </div>}
+                        <div className="col-span-12 lg:col-span-7">
+                            {section3.innerTitle && (
+                                <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section3.innerTitle}</h4>
+                            )}
+                            {section3.listItems && (
+                                <ul className="pl-1 my-4">
+                                    {section3.listItems.map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                            <Image
+                                                src={tick}
+                                                alt="check"
+                                                width={16}
+                                                height={16}
+                                                className="mt-[7px]"
+                                            />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                            {section3.cta && (
+                                <CTA
+                                    btn
+                                    text={section3.cta.text}
+                                    bgColor="bg-primary hover:bg-PrimaryDark"
+                                    txtColor="text-white"
+                                    border="border-0"
+                                />
+                            )}
+                        </div>
+                        {/* Tips 2 */}
+                        <div className="col-span-12">
+                            {tip2 && (
+                                <ProConsCard
+                                    title={tip2.title}
+                                    icon={tip2.icon}
+                                    description={tip2.description}
+                                    isTip={tip2.isTip}
+                                    isPro={tip2.isPro}
+                                />
+                            )}
+                        </div>
 
-                </div>
+                        {section3?.interviewQuestionList?.length && <div className="col-span-12 mb-4">
+                            <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mt-3 mb-5">The Most Common Job Interview Questions – Answered</h3>
+                            <div className='grid grid-cols-2  gap-5'>
+                                {
+                                    section3?.interviewQuestionList?.map((data: any, index: any) => (
+                                        <div id={index}>
+                                            <InterviewQuestionsCard cardData={data} />
+
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>}
+
+                    </div>
+                </>
             )}
 
             {/* Section 4 */}
             {section4 && (
-                <div className="grid grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section4">
                     {section4.image?.src && (
                         <div>
                             <Image src={section4.image.src} alt="Image" className="rounded-md w-full" />
                         </div>
                     )}
-                    <div>
+                    <div className='order-first lg:order-last'>
                         <h3 className='text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2'>{section4.title}</h3>
                         {section4.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
@@ -263,53 +266,55 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
 
             {/* Section 5 */}
             {section5 && (
-                <div className="grid grid-cols-12 gap-5 mt-10 scroll-mt-32" id="section5">
-                    <div className="col-span-12">
+                <>
+                    <div className='mt-10 mb-5'>
                         <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section5.title}</h3>
                         {section5.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
                     </div>
-                    <div className="col-span-7">
-                        {section5.innerTitle && (
-                            <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section5.innerTitle}</h4>
-                        )}
-                        {section5.listItems && (
-                            <ul className="pl-1 my-4">
-                                {section5.listItems.map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
-                                        <Image
-                                            src={tick}
-                                            alt="check"
-                                            width={16}
-                                            height={16}
-                                            className="mt-[7px]"
-                                        />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                        {section5.cta && (
-                            <CTA
-                                btn
-                                text={section5.cta.text}
-                                bgColor="bg-primary hover:bg-PrimaryDark"
-                                txtColor="text-white"
-                                border="border-0"
-                            />
-                        )}
+                    <div className="grid grid-cols-12 gap-5 scroll-mt-32" id="section5">
+                        <div className="col-span-12 lg:col-span-7 order-last lg:order-first">
+                            {section5.innerTitle && (
+                                <h4 className="text-[20px] sm:text-[25px] font-semibold mb-2">{section5.innerTitle}</h4>
+                            )}
+                            {section5.listItems && (
+                                <ul className="pl-1 my-4">
+                                    {section5.listItems.map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-2 text-[16px] text-left mb-2">
+                                            <Image
+                                                src={tick}
+                                                alt="check"
+                                                width={16}
+                                                height={16}
+                                                className="mt-[7px]"
+                                            />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                            {section5.cta && (
+                                <CTA
+                                    btn
+                                    text={section5.cta.text}
+                                    bgColor="bg-primary hover:bg-PrimaryDark"
+                                    txtColor="text-white"
+                                    border="border-0"
+                                />
+                            )}
+                        </div>
+                        <div className="col-span-12 lg:col-span-5">
+                            {section5.image && (
+                                <Image src={section5.image.src} alt="Image" className="rounded-md w-full" />
+                            )}
+                        </div>
                     </div>
-                    <div className="col-span-5">
-                        {section5.image && (
-                            <Image src={section5.image.src} alt="Image" className="rounded-md w-full" />
-                        )}
-                    </div>
-                </div>
+                </>
             )}
 
             {/* Pros */}
-            <div className="flex flex-col gap-5 mt-5">
+            <div className="flex flex-col gap-0 xl:gap-5 mt-5">
                 {pros && (
                     <div className="scroll-mt-32" id="section6">
                         <ProConsCard

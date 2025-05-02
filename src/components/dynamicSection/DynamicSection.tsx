@@ -38,34 +38,34 @@ const DynamicSection = ({ data }: PropsType) => {
     }, []);
 
     return (
-        <section className="py-5 md:py-10">
+        <section className="py-5 xl:py-10">
             <div className="container">
                 <DynBreadCrumbs />
-                <div className="relative grid lg:grid-cols-12 gap-4 xl:gap-8">
-                    <div className="lg:col-span-5 xl:col-span-4 static">
-                        <div className="sticky top-32 overflow-y-auto">
+                <div className="relative grid grid-cols-12 gap-4 xl:gap-8">
+                    <div className="col-span-12 xl:col-span-4 w-full static">
+                        <div className="xl:sticky top-32 xl:overflow-y-auto">
                             <DynamicTabs
                                 heading="Table Of Content"
                                 tabsData={data?.DynamicTabsData}
                                 setSectionId={setSectionId}
                             />
-                            <div className="mt-4 hidden lg:block relative z-10">
+                            <div className="mt-4 relative z-10">
                                 <Image src={verticleTabBg} alt="Resume benefits" />
-                                <div className="absolute z-20 top-0 w-full h-full flex flex-col items-center justify-center">
-                                    <div className="flex items-center justify-center gap-4 border-b py-6">
-                                        <div>
+                                <div className="absolute z-20 top-0 w-full h-full flex flex-col items-center justify-center px-10 xl:p-0">
+                                    <div className="flex flex-col xl:flex-row items-center justify-center gap-5 md:gap-10 xl:gap-4 border-b p-6">
+                                        <div className='hidden md:block w-[34%] md:w-[60%] lg:w-[75%] xl:w-[50%]'>
                                             <Image
                                                 src={TempBg}
                                                 alt="Resume preview"
                                                 height={220}
-                                                className="rounded-md"
+                                                className="rounded-md w-full"
                                             />
                                         </div>
-                                        <div className="flex flex-col items-center justify-center w-52">
-                                            <p className="text-3xl font-semibold text-white">
+                                        <div className="flex flex-col items-center justify-center w-[13rem] md:w-[30rem] xl:w-60">
+                                            <p className="text-[22px] leading-[27px] font-semibold text-white text-center xl:text-left mb-2">
                                                 Build your resume in 15 Minutes
                                             </p>
-                                            <p className="text-sm text-white">
+                                            <p className="text-sm text-white text-center xl:text-left">
                                                 Use professional field-tested resume templates that follow the exact ‘resume rules’ employers look for.
                                             </p>
                                         </div>
@@ -83,7 +83,7 @@ const DynamicSection = ({ data }: PropsType) => {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:col-span-7 xl:col-span-8">
+                    <div className="col-span-12 xl:col-span-8">
                         <DynamicContent id={sectionId} data={data} />
                     </div>
                 </div>

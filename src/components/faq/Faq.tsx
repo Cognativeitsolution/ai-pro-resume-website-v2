@@ -36,7 +36,7 @@ const Faq = (props: propsType) => {
       <section className="py-5 md:py-10">
         <div className="container">
           <div className="p-4 md:p-10 mx-auto rounded-2xl bg-indigo-200/20 backdrop-blur-none border-2 border-white">
-            <h3 className="text-center uppercase text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-10">
+            <h3 className="text-center uppercase text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold mb-5 lg:mb-10">
               {data.title}
             </h3>
 
