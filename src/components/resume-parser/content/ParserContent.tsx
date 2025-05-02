@@ -149,7 +149,7 @@ export default function ParserContent({ data }: PropsType) {
                                             <ul className="mt-2 ">
                                                 {item.list.map((item: any, index: any) => (
                                                     <li key={index} className="flex items-start gap-4">
-                                                        <span className="min-w-[18px] border-2">
+                                                        <span className="min-w-[18px]">
                                                             <Image
                                                                 src={check_1}
                                                                 alt="bullet"
@@ -206,7 +206,7 @@ export default function ParserContent({ data }: PropsType) {
                                                         <ul className="">
                                                             {section?.tab[activeTab]?.list?.map((li: any, idx: any) => (
                                                                 <li key={idx} className="flex items-start gap-4">
-                                                                    <span className="min-w-[18px] border-2">
+                                                                    <span className="min-w-[18px]">
                                                                         <Image
                                                                             src={check_1}
                                                                             alt="bullet"
