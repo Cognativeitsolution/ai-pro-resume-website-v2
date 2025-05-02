@@ -1,96 +1,48 @@
 "use client";
 import { CTA } from "@/components";
+import Image from "next/image";
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import check_1 from "media/images/check_1.webp";
+import Tailor from "@/components/dynamicSection/Tailor";
+
+type SemiContent = {
+    semiTitle?: string;
+    semiDescription?: ReactNode;
+    list?: string[];
+};
+
+type TabContent = {
+    title: string;
+    description?: ReactNode;
+    list?: string[];
+};
+
+type ParserContentList = {
+    title: string;
+    description: ReactNode;
+    semi?: SemiContent[];
+    tab?: TabContent[];
+    isTailor?: ReactNode
+};
 
 type ParserContentData = {
     subTitle?: string | ReactNode;
     title: string | ReactNode;
     description?: string | ReactNode;
+    sections?: ParserContentList[];
 };
 
 type PropsType = {
     data: ParserContentData;
-    sections?: { title: string; description: ReactNode; tab?: any[] }[];
 };
 
-export default function ParserContent({ data, sections = [] }: PropsType) {
+export default function ParserContent({ data }: PropsType) {
     const [activeIndex, setActiveIndex] = useState(0);
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
     const isScrolling = useRef(false);
     const scrollTimeout = useRef<any>(null);
     const [activeTab, setActiveTab] = useState(0);
-
-    // Generate sample sections if none provided
-    const allSections = [
-        {
-            title: "What is a Resume Parser?",
-            description: (
-                <p>
-                    It is a smart feature that scans your uploaded resume and extracts important information such as your summary, skills, language, experience, personal information, and qualifications. It then automatically settles these details into the corresponding sections of your new resume format. This means you can focus on personalizing your resume while the parser handles the rest.
-                </p>
-            )
-        },
-        {
-            title: "How to Use the Resume Parser",
-            description: (
-                <p>
-                    To use the Resume Parser, follow the steps below:
-                </p>
-            ),
-            tab: [
-                {
-                    title: "Import Resume",
-                    list: [
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                    ]
-                },
-                {
-                    title: "Sign Up & Login",
-                    list: [
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                    ]
-                },
-                {
-                    title: "Customization",
-                    list: [
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                    ]
-                },
-                {
-                    title: "Download Your Resume",
-                    list: [
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                        "On the homepage, you will find an option called Import Resume. Click on it to get started.",
-                    ]
-                },
-            ]
-        },
-        {
-            title: "What is a Resume Parser?",
-            description: (
-                <p>
-                    It is a smart feature that scans your uploaded resume and extracts important information such as your summary, skills, language, experience, personal information, and qualifications. It then automatically settles these details into the corresponding sections of your new resume format. This means you can focus on personalizing your resume while the parser handles the rest.
-                </p>
-            )
-        },
-        {
-            title: "What is a Resume Parser?",
-            description: (
-                <p>
-                    It is a smart feature that scans your uploaded resume and extracts important information such as your summary, skills, language, experience, personal information, and qualifications. It then automatically settles these details into the corresponding sections of your new resume format. This means you can focus on personalizing your resume while the parser handles the rest.
-                </p>
-            )
-        },
-        // You can continue adding other sections here if needed
-    ];
 
     const handleScroll = (index: number) => {
         clearTimeout(scrollTimeout.current);
@@ -151,15 +103,15 @@ export default function ParserContent({ data, sections = [] }: PropsType) {
                     {data?.description}
                 </p>
 
-                <div className="relative grid lg:grid-cols-12 gap-6 xl:gap-8 mt-12">
+                <div className="relative grid lg:grid-cols-12 gap-6 xl:gap-8 mt-8 md:mt-12">
                     {/* Sidebar Navigation */}
                     <div className="lg:col-span-4">
                         <div className="sticky top-32 py-2 pr-4">
                             <div className='p-4 xl:p-8 rounded-lg border-white border bg-indigo-200/20 backdrop-blur-none shadow-md '>
-                                <h3 className='text-xl mb-4 font-semibold text-center'>What is????</h3>
+                                <h3 className='text-xl mb-4 font-semibold text-center'>About Resume Parser</h3>
                                 <div className='divide-y-[1.5px] divide-[#ffffff] flex flex-col'>
-                                    {allSections.map((section, i) => (
-                                        <div key={i}>
+                                    {data?.sections?.map((section: any, i: any) => (
+                                        <React.Fragment key={i}>
                                             <button
                                                 onClick={() => handleScroll(i)}
                                                 className={`flex py-2 !my-1 last:mb-0 gap-2 cursor-pointer items-center ${i === activeIndex ? 'bg-PrimaryDark rounded-lg ps-5 text-white w-full' : ''}`}
@@ -168,7 +120,7 @@ export default function ParserContent({ data, sections = [] }: PropsType) {
                                                 <p className='px-3'>{section.title}</p>
 
                                             </button>
-                                        </div>
+                                        </React.Fragment>
                                     ))}
                                 </div>
                             </div>
@@ -177,77 +129,120 @@ export default function ParserContent({ data, sections = [] }: PropsType) {
 
                     {/* Main Content */}
                     <div className="lg:col-span-8">
-                        {/* <div className="space-y-10"> */}
-                        {allSections.map((section, i) => (
+
+                        {data?.sections?.map((section: any, i: any) => (
                             <article
                                 key={i}
                                 ref={(el) => { (sectionRefs.current[i] = el) }}
-                                className="scroll-mt-32 h-auto border p-6 mb-10"
+                                className="scroll-mt-32 h-auto py-2"
                                 id={`section-${i}`}
                             >
-                                <h2 className="text-2xl font-bold mb-4 text-gray-800">{section.title}</h2>
+                                <h2 className="text-2xl font-semibold text-gray-950 mb-2">{section.title}</h2>
                                 <div className="prose prose-blue max-w-none">{section.description}</div>
+                                {section?.semi && section.semi.map((item: any, index: any) => (
+                                    <div key={index} className="my-2">
+                                        <div className='flex gap-3 text-hamzaPrimary text-xl font-semibold mb-2'>
+                                            <div className=''>{index + 1 < 10 ? `0${index + 1}` : index + 1} <span className="ps-1">{item.semiTitle}</span></div>
+                                        </div>
+                                        <div className="prose prose-blue max-w-none ">{item.semiDescription}</div>
+                                        {item?.list &&
+                                            <ul className="mt-2 ">
+                                                {item.list.map((item: any, index: any) => (
+                                                    <li key={index} className="flex items-start gap-4">
+                                                        <span className="min-w-[18px] border-2">
+                                                            <Image
+                                                                src={check_1}
+                                                                alt="bullet"
+                                                                width={12}
+                                                                height={12}
+                                                                className="mt-[5px]"
+                                                            />
+                                                        </span>
+                                                        {item}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        }
+                                    </div>
+                                ))}
+
+                                {/* {section.isTailor && <Tailor />} */}
 
                                 {section?.tab && (
-                                    <div className="mt-6 md:mt-8">
-                                        {/* Tabs UI (Just Indicators) */}
-                                        <div className="flex items-center justify-center gap-3 flex-wrap mb-5">
-                                            {section.tab.map((tabItem, index) => (
+                                    <div className="">
+                                        <div className="flex items-center gap-1 sm:gap-3 flex-wrap border-b justify-center">
+                                            {section.tab.map((tabItem: any, index: any) => (
                                                 <React.Fragment key={index}>
                                                     <button
-                                                        className={`px-4 py-2 transition-colors ${activeTab === index
-                                                            ? "text-[#6A55DD] font-bold"
+                                                        className={`px-4 py-2 first:ps-0 transition-colors ${activeTab === index
+                                                            ? "text-[#6A55DD] font-semibold"
                                                             : "text-slate-900 font-semibold"
                                                             }`}
                                                         disabled
                                                     >
-                                                        Step {index + 1}
+                                                        <span className="sm:hidden block">{activeTab === index && "Step"} {index + 1}</span>
+                                                        <span className="hidden sm:block">Step {index + 1}</span>
                                                     </button>
 
-                                                    {/* Show the icon between steps except after the last one */}
                                                     {index < section.tab.length - 1 && (
-                                                        <FaAngleDoubleRight className="text-slate-900 text-sm mt-1" />
+                                                        <FaAngleDoubleRight className="text-slate-900 text-sm " />
                                                     )}
                                                 </React.Fragment>
                                             ))}
                                         </div>
 
-                                        {/* Tab content */}
+
                                         {section.tab[activeTab] && (
-                                            <div className="grid grid-cols-1 gap-5 my-5">
-                                                <div className="flex flex-col  gap-5 cursor-pointer w-9/12 mx-auto">
-                                                    <h3 className="text-xl font-semibold text-gray-800">
-                                                        {section.tab[activeTab].title}
-                                                    </h3>
-                                                    <ul className="list-disc pl-5 text-gray-700 border">
-                                                        {section.tab[activeTab].list.map((li, idx) => (
-                                                            <li key={idx}>{li}</li>
-                                                        ))}
-                                                    </ul>
+                                            <div className="grid grid-cols-1 mt-2 mb-5">
+                                                <div className="cursor-pointer">
+                                                    <div className='flex gap-3 text-hamzaPrimary text-xl font-semibold mb-2'>
+                                                        <div className='hidden sm:block'>{section.tab[activeTab].title}</div>
+                                                    </div>
+                                                    {section.tab[activeTab].description &&
+                                                        <div className="prose prose-blue max-w-none">{section.tab[activeTab].description}</div>
+                                                    }
+
+                                                    {section?.tab[activeTab]?.list &&
+                                                        <ul className="">
+                                                            {section?.tab[activeTab]?.list?.map((li: any, idx: any) => (
+                                                                <li key={idx} className="flex items-start gap-4">
+                                                                    <span className="min-w-[18px] border-2">
+                                                                        <Image
+                                                                            src={check_1}
+                                                                            alt="bullet"
+                                                                            width={12}
+                                                                            height={12}
+                                                                            className="mt-[5px]"
+                                                                        />
+                                                                    </span>
+                                                                    <p>{li}</p>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    }
                                                 </div>
                                             </div>
                                         )}
 
                                         {/* Next Button */}
-                                        <div className="mt-10 flex justify-center">
+                                        <div className="flex justify-center mt-4">
                                             {activeTab < section.tab.length - 1 ? (
                                                 <CTA
                                                     btn
-                                                    text="Next Step"
+                                                    text="Next"
                                                     handleClick={() => setActiveTab((prev) => prev + 1)}
-                                                    bgColor="bg-white hover:bg-primary"
+                                                    bgColor="bg-transparent hover:bg-primary"
                                                     txtColor="text-hamzaPrimary hover:text-white"
                                                     border="border-2 border-hamzaPrimary"
                                                 />
                                             ) : (
                                                 <CTA
                                                     btn
-                                                    text="Go to Next Section"
+                                                    text="Finish"
                                                     handleClick={() => {
                                                         setActiveTab(0); // Reset tab index
-                                                        // setActiveSectionIndex((prev: any) => Math.min(prev + 1, allSections.length - 1));
                                                     }}
-                                                    bgColor="bg-white hover:bg-primary"
+                                                    bgColor="bg-transparent hover:bg-primary"
                                                     txtColor="text-hamzaPrimary hover:text-white"
                                                     border="border-2 border-hamzaPrimary"
                                                 />
@@ -258,10 +253,9 @@ export default function ParserContent({ data, sections = [] }: PropsType) {
                             </article>
                         ))}
 
-                        {/* </div> */}
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

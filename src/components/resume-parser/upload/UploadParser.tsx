@@ -26,10 +26,10 @@ export default function UploadParser() {
         }
     };
     return (
-        <section className='relative -top-[220px] z-10 -mb-[220px]'>
+        <section className='relative md:-top-[170px] lg:-top-[270px] xl:-top-[250px]  z-10 md:-mb-[170px] lg:-mb-[270px] xl:-mb-[250px] '>
             <div className='container'>
                 <div className=" ring-1 ring-white bg-indigo-200/30 backdrop-blur-sm rounded-3xl shadow-md p-0">
-                    <div className='flex flex-col gap-4 my-8 pt-12 px-5 w-9/12 mx-auto pb-8'>
+                    <div className='flex flex-col gap-4 my-8 pt-12 px-5 w-11/12 sm:w-10/12 md:w-9/12 mx-auto pb-8'>
                         {/* Upload */}
                         <label htmlFor="uploadFile1"
                             className=" border-[1.2px] border-dashed border-[#7d16c4] font-semibold text-base rounded-3xl w-full h-52 flex 
@@ -59,7 +59,7 @@ export default function UploadParser() {
                                 border="border-0"
                             />
                         </div>
-                        <div className='bg-white p-5 w-full rounded-xl min-h-[350px]'>
+                        {/* <div className='bg-white p-5 w-full rounded-xl min-h-[350px]'>
                             <div className="flex space-x-4 border-b border-gray-300 mb-4 justify-center">
                                 <button
                                     onClick={() => setActiveTab('text')}
@@ -86,7 +86,7 @@ export default function UploadParser() {
                                     </pre>
                                 )}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
