@@ -11,7 +11,7 @@ import good_job from "../../../public/images/good_job.svg";
 const Formatting = () => {
   return (
     <>
-      <div className="bg-[#ece9fe] p-4 rounded-2xl shadow-md w-full mt-2">
+      <div className="bg-indigo-200/20 backdrop-blur-none border-2 border-white p-4 rounded-2xl w-full mt-2">
         {/* heading */}
         <div className="flex items-center gap-2">
           <Image src={formatting} alt="evaluation" />

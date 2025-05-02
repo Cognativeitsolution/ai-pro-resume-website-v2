@@ -4,8 +4,8 @@ import Image from "next/image";
 import evaluation from "../../../public/images/evaluation.svg";
 
 const ParsedResumeOverview = () => {
-  const totalBlocks = 6;
-  const filledBlocks = 5;
+  const totalBlocks = 9;
+  const filledBlocks = 7;
   const score = 83;
   return (
     <>

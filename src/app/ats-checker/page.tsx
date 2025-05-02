@@ -14,7 +14,7 @@ export default function Page() {
             {/* Content */}
             <div className="w-full xl:w-3/4 relative top-0 xl:top-24">
               <Evaluation />
-              <ParsedResumeOverview/>
+              {/* <ParsedResumeOverview/> */}
               <BuildATSfriendlyResume/>
               <IssuesFound/>
               <Formatting/>
