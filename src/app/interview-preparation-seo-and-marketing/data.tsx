@@ -58,29 +58,29 @@ const section2Data = {
 const interviewQuestionList = [
     {
         id: 1,
-        title: "What do you like at least about your job?",
-        desc: "Recruiters ask you this question because they want to better understand your reasoning behind leaving your job."
+        title: "What do you like about your job?",
+        desc: "Recruiters ask you this question to understand your reasoning behind leaving your job."
     },
     {
         id: 2,
         title: "Tell me about yourself.",
-        desc: "This question is all about you, so don’t be afraid to give a more personal answer  strictly professional."
+        desc: "This question about you, don’t be afraid to give a more personal answer strictly professional."
     },
     {
         id: 3,
         title: "Why are you applying for this position?",
-        desc: "This question is really the hiring manager’s way to learn a bit more about you. Be honest your answer."
+        desc: "This question is really the hiring manager’s to learn more about you. Be honest your answer."
     },
 
     {
         id: 4,
-        title: "What are your strengths and weaknesses?",
-        desc: "A tricky question, try to answer it by tying your strengths and weaknesses to the job you’re applying for."
+        title: "What are your weaknesses?",
+        desc: "A tricky question, try to answer it by tying weaknesses to the job you’re applying for."
     },
     {
         id: 5,
-        title: "What do you know about our company?",
-        desc: "Show that you’ve done the research about the place you’re applying at. It’s not about telling their story."
+        title: "What are your strengths?",
+        desc: "A tricky question, try to answer it by tying your strengths to the job you’re applying for."
     },
     {
         id: 6,
@@ -89,7 +89,7 @@ const interviewQuestionList = [
     },
 ]
 const section3Data = {
-    title: "Company Research and Market Insights",
+    title: "Company Research & Market Insights",
     paragraphs: [
         "Understanding a company’s market position, SEO footprint, and campaign tone shows you’re marketing-savvy. Use tools like SimilarWeb, LinkedIn, and SEMrush to gather insight."
     ],
