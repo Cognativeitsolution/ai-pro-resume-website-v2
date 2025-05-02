@@ -11,7 +11,7 @@ const Tailor = () => {
         <div className='pt-20'>
             <div className="grid grid-cols-12 items-center gap-5 xl:gap-10 p-6 rounded-2xl bg-indigo-200/20 backdrop-blur-none border-2 border-white">
                 <div className="col-span-12 lg:col-span-3 relative">
-                    <div className={`${style.tailorImg} static lg:absolute -top-[170px] xl:-top-[175px] left-0 h-[400px] w-full lg:w-[80%] xl:w-auto -mt-20 rounded-lg overflow-hidden`}>
+                    <div className={`${style.tailorImg} static lg:absolute -top-[170px] 2xl:-top-[175px] left-0 h-[400px] lg:h-[250px] 2xl:h-auto w-full lg:w-auto -mt-20 lg:mt-0 rounded-lg overflow-hidden`}>
                         <Image src={tailor} alt="tailor" className="w-full h-full" />
                     </div>
                 </div>
