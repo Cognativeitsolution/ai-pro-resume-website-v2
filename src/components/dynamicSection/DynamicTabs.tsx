@@ -40,7 +40,7 @@ const DynamicTabs = ({ heading, tabsData, setSectionId }: tabsData) => {
                                 scroll={true}
                                 onClick={() => handleSelectedTab(data?.id)}
                                 className={`flex py-3 gap-5 cursor-pointer items-center ${index === tabsData.length - 1 && selectedTab !== data?.id ? 'pb-0' : 'pb-3'}
-                                ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 text-white' : ''}`}
+                                ${selectedTab === data?.id ? 'bg-PrimaryDark rounded-lg ps-5 pe-2 text-white' : ''}`}
                             >
                                 <span className='text-lg font-light'><FaAngleDoubleRight /></span>
                                 <p>{data?.title}</p>
