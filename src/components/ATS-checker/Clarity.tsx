@@ -1,9 +1,9 @@
 import React from "react";
 import { CTA } from "@/components";
 import Image from "next/image";
-import formatting from "../../../public/images/formatting.svg";
-import conciseness from "../../../public/images/conciseness.svg";
-import impactful from "../../../public/images/impactful.svg";
+import formatting from "media/images/formatting.svg";
+import conciseness from "media/images/Conciseness.svg";
+import impactful from "media/images/impactful.svg";
 
 const Clarity = () => {
   const issues = [

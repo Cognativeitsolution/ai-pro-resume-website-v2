@@ -1,7 +1,7 @@
 // ======================
 import TipPro from 'media/images/TipPro.webp'
 import TipProComma from 'media/images/commaIcoon.webp'
-import TemlateImage from "media/cover_template_images/Template_23.webp"
+import TemlateImage from "media/cover_template_images/template_23.webp"
 import TemplateImage2 from 'media/cover_template_images/template_2.webp'
 import TemplateImage3 from 'media/cover_template_images/template_3.webp'
 import TemplateImage1 from 'media/cover_template_images/template_1.webp'
