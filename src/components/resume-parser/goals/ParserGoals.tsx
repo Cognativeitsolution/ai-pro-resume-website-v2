@@ -35,13 +35,13 @@ export default function ParserGoals({ data }: propsType) {
                     {data?.description}
                 </p>
                 <div className='relative'>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 mt-16 w-7/12 mx-auto ">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 mt-8 md:mt-16 w-full lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto ">
                         {data?.list?.map((item, index) => (
                             <div
                                 key={index}
-                                className="text-center flex flex-col items-center  bg-indigo-200/20 backdrop-blur-sm px-8 py-16 rounded-md border border-white shadow-md"
+                                className="text-center flex flex-col items-center  bg-indigo-200/20 backdrop-blur-sm px-8 py-6 md:py-16 rounded-md border border-white shadow-md"
                             >
-                                <div className="mb-8 ">
+                                <div className="mb-2 md:mb-8 ">
                                     <Image src={item?.icon} alt="icon" width={80} height={80} className='border rounded-full' />
                                 </div>
                                 <h3 className="text-[24px] text-slate-900 font-medium ">{item?.title}</h3>
@@ -49,10 +49,10 @@ export default function ParserGoals({ data }: propsType) {
                             </div>
                         ))}
                     </div>
-                    <div className="h-[280px] absolute top-72 left-20">
+                    <div className="h-[220px] lg:h-[280px] absolute top-72 left-0 xl:left-20 hidden lg:block">
                         <Image src={arrowLeft.src} alt="" width={80} height={80} />
                     </div>
-                    <div className="h-[280px] absolute top-24 right-20">
+                    <div className="h-[220px] lg:h-[280px] absolute top-24 right-0 xl:right-20 hidden lg:block">
                         <Image src={arrowRight.src} alt="" width={100} height={100} />
                     </div>
                 </div>

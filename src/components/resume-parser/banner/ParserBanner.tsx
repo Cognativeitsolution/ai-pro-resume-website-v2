@@ -40,21 +40,21 @@ const ParserBanner = (props: BannerProps) => {
                             {title}
                         </h1>
                         <div className="grid grid-cols-12 gap-4">
-                            <div className="col-span-6">
+                            <div className="hidden md:block col-span-6">
                                 <div className="flex relative">
-                                    <div className="h-[320px] ms-32">
+                                    <div className="h-[380] lg:h-[350px] 2xl:h-[320px] lg:ms-28 2xl:ms-32 mx-auto">
                                         <Image src={preview.src} alt="" width={320} height={320} />
                                     </div>
-                                    <div className="h-[280px] absolute top-40 right-12">
+                                    <div className="h-[280px] absolute top-40 right-0 2xl:right-12 hidden xl:block">
                                         <Image src={arrow.src} alt="" width={160} height={160} />
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-6 mt-10">
-                                <p className="text-[16px] lg:text-[18px] text-start text-white ">
+                            <div className="col-span-12 md:col-span-6 mt-2 md:mt-10">
+                                <p className="text-[16px] lg:text-[18px] md:text-start text-center text-white ">
                                     {description}
                                 </p>
-                                <div className="mt-3">
+                                <div className="mt-3 flex justify-center md:justify-start">
                                     <CTA
                                         btn
                                         text=" Import Resume"

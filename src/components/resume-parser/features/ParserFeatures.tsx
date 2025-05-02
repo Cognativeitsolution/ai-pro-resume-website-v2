@@ -33,7 +33,7 @@ export default function ParserFeatures({ data }: propsType) {
                 <p className="font-normal text-[16px] lg:text-[18px] text-center mt-4">
                     {data?.description}
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-10 mt-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-10 mt-8 md:mt-16">
                     {data?.list?.map((item, index) => (
                         <div
                             key={index}
