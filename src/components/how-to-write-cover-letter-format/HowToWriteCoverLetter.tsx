@@ -50,7 +50,9 @@ export default function HowToWriteCoverLetter(props: propsType) {
     return (
         <section className="py-5 md:py-10">
             <div className="container">
-                <DynBreadCrumbs />
+                <div className='my-5 md:mt-2'>
+                    <DynBreadCrumbs />
+                </div>
                 <div className='relative grid lg:grid-cols-12 gap-6 xl:gap-8'>
 
                     <div className="lg:col-span-5 xl:col-span-4 static">
@@ -357,57 +359,27 @@ export default function HowToWriteCoverLetter(props: propsType) {
                                                     </p>
                                                     {step?.resumeExamples?.list && (
                                                         <>
-                                                            <div className='hidden md:block'>
+                                                            <div className=''>
                                                                 {step?.resumeExamples?.list?.map((items: any, index: number) => (
                                                                     <div className='' key={index}>
-                                                                        <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                                                        <div className='max-w-[380px] mx-auto py-4'>
+                                                                        <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2 font-medium">{items.heading}</h5>
+                                                                        <p className="text-base">
+                                                                            {items.description}
+                                                                        </p>
+                                                                        <div className='max-w-[380px] mx-auto py-4  '>
                                                                             <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
                                                                         </div>
-                                                                        <div className="flex justify-center my-6">
+                                                                        <div className="flex justify-center my-6 ">
                                                                             <CTA
                                                                                 btn
-                                                                                text="Use This Template"
+                                                                                text="Create Resume"
                                                                                 bgColor="bg-primary hover:bg-PrimaryDark"
                                                                                 txtColor="text-white"
                                                                                 border="border-0"
                                                                             />
-                                                                        </div >
+                                                                        </div>
                                                                     </div>
                                                                 ))}
-                                                            </div>
-
-                                                            <div className="block md:hidden  ">
-                                                                <AutoPlaySlider
-                                                                    options={{ align: "start" }}
-                                                                    arrowPosition="!mt-2 mb-5 md:mb-8"
-                                                                >
-                                                                    {step?.resumeExamples?.list?.map((temp: any, index: number) => (
-                                                                        <div key={index} className="grow-0 shrink-0 basis-full sm:basis-[50%] ">
-                                                                            <div className="">
-                                                                                <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">
-                                                                                    {temp?.heading}
-                                                                                </h5>
-                                                                                <div className='max-w-[250px] mx-auto py-4'>
-                                                                                    <Image
-                                                                                        src={temp?.image}
-                                                                                        alt="Template Image"
-                                                                                        className='rounded-lg border overflow-hidden shadow-md'
-                                                                                    />
-                                                                                    <div className='mt-4 flex justify-center'>
-                                                                                        <CTA
-                                                                                            btn
-                                                                                            text="Use This Template"
-                                                                                            bgColor="bg-primary hover:bg-PrimaryDark"
-                                                                                            txtColor="text-white"
-                                                                                            border="border-0"
-                                                                                        />
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    ))}
-                                                                </AutoPlaySlider>
                                                             </div>
                                                         </>
                                                     )}

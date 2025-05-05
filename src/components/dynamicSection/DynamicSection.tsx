@@ -41,7 +41,9 @@ const DynamicSection = ({ data }: PropsType) => {
     return (
         <section className="py-5 xl:py-10">
             <div className="container">
-                <DynBreadCrumbs />
+                <div className='my-5 md:mt-2'>
+                    <DynBreadCrumbs />
+                </div>
                 <div className="relative grid grid-cols-12 gap-4 xl:gap-8">
                     <div className="col-span-12 xl:col-span-4 w-full static">
                         <div className="xl:sticky top-32 xl:overflow-y-auto">

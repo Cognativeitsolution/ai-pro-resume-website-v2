@@ -52,7 +52,9 @@ const BlogDetail = (props: propsType) => {
     return (
         <section className="py-5 md:py-10">
             <div className="container">
-                <DynBreadCrumbs />
+                <div className='my-5 md:mt-2'>
+                    <DynBreadCrumbs />
+                </div>
                 <div className='relative grid lg:grid-cols-12 gap-4 xl:gap-6'>
 
                     <div className="lg:col-span-5 xl:col-span-4 static">

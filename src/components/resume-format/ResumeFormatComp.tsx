@@ -48,7 +48,9 @@ export default function ResumeFormatComp(props: propsType) {
     return (
         <section className="py-5 md:py-10">
             <div className="container">
-                <DynBreadCrumbs />
+                <div className='my-5 md:mt-2'>
+                    <DynBreadCrumbs />
+                </div>
                 <div className='relative grid lg:grid-cols-12 gap-6 xl:gap-8'>
                     <div className="lg:col-span-5 xl:col-span-4 static">
                         <div className="sticky top-32 overflow-y-auto">
@@ -202,7 +204,7 @@ export default function ResumeFormatComp(props: propsType) {
                                 <>
                                     {data?.TemplateData?.list?.map((items: any, index: number) => (
                                         <div className='' key={index}>
-                                            <h5 className="text-[20px] md:text-[25px] lg:text-[30px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
+                                            <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2 font-medium">{items.heading}</h5>
                                             <p className="text-base">
                                                 {items.description}
                                             </p>
@@ -220,39 +222,7 @@ export default function ResumeFormatComp(props: propsType) {
                                             </div>
                                         </div>
                                     ))}
-                                    {/* <div className="block md:hidden  ">
-                                        <AutoPlaySlider
-                                            options={{ align: "start" }}
-                                            arrowPosition="!mt-2 mb-5 md:mb-8"
-                                        >
-                                            {data?.TemplateData?.list?.map((items: any, index: number) => (
-                                                <div key={index} className="grow-0 shrink-0 basis-full border-2 border-red-800">
-                                                    <div className='sm:pl-5'>
-                                                        <h5 className="text-[20px] md:text-[25px] lg:text-[30px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                                        <p className="text-base">
-                                                            {items.description}
-                                                        </p>
-                                                    </div>
-                                                    <div className='py-4 mx-auto max-w-[300px] sm:pl-5'>
 
-                                                        <Image
-                                                            src={items.image} alt={items.heading}
-                                                            className='rounded-lg border overflow-hidden shadow-md '
-                                                        />
-                                                        <div className='mt-4 flex justify-center'>
-                                                            <CTA
-                                                                btn
-                                                                text="Use This Template"
-                                                                bgColor="bg-primary hover:bg-PrimaryDark"
-                                                                txtColor="text-white"
-                                                                border="border-0"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </AutoPlaySlider>
-                                    </div> */}
                                 </>
                             )}
                         </DynMainDiv>
