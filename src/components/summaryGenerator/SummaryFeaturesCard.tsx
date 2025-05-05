@@ -20,9 +20,9 @@ const SummaryFeaturesCard = ({
 }: FeatureCardProps) => {
     return (
         <>
-            <div className={`grid grid-cols-12 items-center gap-y-4 xl:gap-20 mb-6`}>
-                {reverse ? <div className={`col-span-12 xl:col-span-6 order-last flex justify-center xl:justify-start xl:order-first`}>
-                    <div className="flex items-center lg:min-w-[470px] xl:min-w-[550px]">
+            <div className={`grid grid-cols-12 gap-y-4 xl:gap-20 mb-10`}>
+                {reverse ? <div className={`col-span-12 xl:col-span-4 order-last flex justify-center xl:justify-start xl:order-first`}>
+                    <div className="flex items-center rounded-xl overflow-hidden">
                         <video
                             src={video}
                             autoPlay
@@ -30,7 +30,7 @@ const SummaryFeaturesCard = ({
                     </div>
                 </div> : null}
 
-                <div className={`col-span-12 xl:col-span-6 ${reverse ? "ms-auto w-full" : ""}`}>
+                <div className={`col-span-12 xl:col-span-8 ${reverse ? "ms-auto w-full" : ""}`}>
                     <h3 className="text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2">
                         {title}
                     </h3>
@@ -60,8 +60,8 @@ const SummaryFeaturesCard = ({
                         </p>
                     )}
                 </div>
-                {reverse ? null : <div className={`col-span-12 xl:col-span-6 flex justify-center`}>
-                    <div className="flex items-center lg:min-w-[470px] xl:min-w-[550px] ">
+                {reverse ? null : <div className={`col-span-12 xl:col-span-4 flex justify-center`}>
+                    <div className="flex items-center rounded-xl overflow-hidden">
                         <video
                             src={video}
                             autoPlay
