@@ -1,11 +1,16 @@
 'use client'
-import { CTA } from '@/components';
-import React, { useState } from 'react'
-import UploadImg from 'media/resume_parser/upload-file.webp'
 import Image from 'next/image';
+import React, { useState } from 'react'
+// ==============
+import { CTA } from '@/components';
+// ==============
+import UploadImg from 'media/resume_parser/upload-file.webp'
 
-export default function UploadParser() {
-    const [activeTab, setActiveTab] = useState<'text' | 'json'>('text');
+interface UploadParserProps {
+    progress?: boolean;
+}
+
+export default function UploadParser({ progress }: UploadParserProps) {
     const [fileData, setFileData] = useState<{ name: string; file: File | null }>({
         name: "",
         file: null,
@@ -26,10 +31,26 @@ export default function UploadParser() {
         }
     };
     return (
-        <section className='relative md:-top-[170px] lg:-top-[270px] xl:-top-[250px]  z-10 md:-mb-[170px] lg:-mb-[270px] xl:-mb-[250px] '>
+        <section className={`relative z-10 ${progress ? "md:-mb-[180px] lg:-mb-[220px] md:-top-[160px] lg:-top-[220px]" : "md:-mb-[190px] lg:-mb-[270px] xl:-mb-[250px] md:-top-[170px] lg:-top-[270px] xl:-top-[250px]"}`}>
             <div className='container'>
-                <div className=" ring-1 ring-white bg-indigo-200/30 backdrop-blur-sm rounded-3xl shadow-md p-0">
-                    <div className='flex flex-col gap-4 my-8 pt-12 px-5 w-11/12 sm:w-10/12 md:w-9/12 mx-auto pb-8'>
+                <div className={`ring-1 ring-white bg-indigo-200/30 backdrop-blur-sm rounded-3xl shadow-md p-0 ${progress && "w-full lg:w-3/4 mx-auto"}`}>
+                    <div className='flex flex-col gap-4 my-8 px-5 w-11/12 sm:w-10/12 md:w-9/12 mx-auto py-8'>
+                        {/* Progress */}
+                        {progress && (
+                            <div className="flex flex-col items-start justify-start gap-5">
+                                <div className="flex items-center justify-center space-x-4">
+                                    <div className="text-[16px] font-medium text-white bg-zinc-800 w-8 h-8 flex items-center justify-center rounded-full">
+                                        1
+                                    </div>
+                                    <div className="bg-white w-24 h-0.5"></div>
+                                    <div className="text-[16px] font-medium text-white bg-zinc-800/50 w-8 h-8 flex items-center justify-center rounded-full">
+                                        2
+                                    </div>
+                                    <span className="text-[16px] font-medium text-white">Optional</span>
+                                </div>
+                                <p>First, we’ll need your resume to extract your experience and skills.</p>
+                            </div>
+                        )}
                         {/* Upload */}
                         <label htmlFor="uploadFile1"
                             className=" border-[1.2px] border-dashed border-[#7d16c4] font-semibold text-base rounded-3xl w-full h-52 flex 
@@ -38,7 +59,6 @@ export default function UploadParser() {
                                 <Image src={UploadImg} alt="upload" width={40} height={40} />
                             </div>
                             <h5 className='font-semibold text-[18px] text-zinc-950'>Upload Resume</h5>
-
                             <input
                                 type="file"
                                 id="uploadFile1"
@@ -47,10 +67,9 @@ export default function UploadParser() {
                                 className="hidden"
                             />
                             <p className="text-[15px] font-medium text-slate-400 ">{fileData.name ? `${fileData.name}` : "pdf, doc, docx"}</p>
-
                         </label>
 
-                        <div className='flex justify-center py-2'>
+                        <div className='flex justify-center pt-2'>
                             <CTA
                                 btn
                                 text="Create Resume"
@@ -59,36 +78,7 @@ export default function UploadParser() {
                                 border="border-0"
                             />
                         </div>
-                        {/* <div className='bg-white p-5 w-full rounded-xl min-h-[350px]'>
-                            <div className="flex space-x-4 border-b border-gray-300 mb-4 justify-center">
-                                <button
-                                    onClick={() => setActiveTab('text')}
-                                    className={`py-2 px-4 font-semibold ${activeTab === 'text' ? 'border-b-2 border-[#7d16c4] text-hamborder-[#7d16c4]' : 'text-gray-500'}`}
-                                >
-                                    Text
-                                </button>
-                                <button
-                                    onClick={() => setActiveTab('json')}
-                                    className={`py-2 px-4 font-semibold ${activeTab === 'json' ? 'border-b-2 border-[#7d16c4] text-hamborder-[#7d16c4]' : 'text-gray-500'}`}
-                                >
-                                    JSON
-                                </button>
-                            </div>
-
-                            <div className="text-sm text-gray-700 h-full">
-                                {activeTab === 'text' ? (
-                                    <div>
-                                        <p>This is a plain text preview of the resume.</p>
-                                    </div>
-                                ) : (
-                                    <pre className="bg-violet-100/75 p-3 rounded overflow-x-auto">
-                                        {JSON.stringify({ name: fileData.name }, null, 2)}
-                                    </pre>
-                                )}
-                            </div>
-                        </div> */}
                     </div>
-
                 </div>
             </div>
         </section>
