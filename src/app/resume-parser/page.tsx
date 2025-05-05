@@ -8,9 +8,9 @@ const page = () => {
     return (
         <>
             <ParserBanner {...BannerData} />
-            <UploadParser />
+            <UploadParser position={true} />
             <ParserContent data={ParserContentData} />
-            {/* <Tailor /> */}
+            <Tailor />
             <ParserFeatures data={ParserFeatureData} />
             <ParserGoals data={ParserGoalData} />
             <Faq data={faqs} />

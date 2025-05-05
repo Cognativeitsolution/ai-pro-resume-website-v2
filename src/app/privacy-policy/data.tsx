@@ -11,7 +11,7 @@ import image9 from "media/privacyPolicy/image-9.webp";
 export const BannerData = {
     title: (
         <>
-            Safeguarding Your Information with <br className="hidden lg:block" /> Resume Builder
+            Safeguarding Your Information with Resume Builder
         </>
     ),
     subtitle: "Privacy Policy",
