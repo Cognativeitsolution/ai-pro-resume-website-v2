@@ -339,73 +339,32 @@ export default function HowToWriteResume(props: propsType) {
                                         </div>
                                     ))}
 
-                                    {step?.resumeExamples && (
+                                    {step?.resumeExamples?.list && (
                                         <>
-                                            <h2 className="text-[18px] md:text-[24px] lg:text-[28px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold">
-                                                {step?.resumeExamples?.title}
-                                            </h2>
-                                            <p className="text-base">
-                                                {step?.resumeExamples?.description}
-                                            </p>
-                                            {step?.resumeExamples?.list && (
-                                                <>
-                                                    <div className='hidden md:block'>
-                                                        {step?.resumeExamples?.list?.map((items: any, index: number) => (
-                                                            <div className='' key={index}>
-                                                                <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">{items.heading}</h5>
-                                                                <div className='max-w-[380px] mx-auto py-4'>
-                                                                    <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
-                                                                </div>
-                                                                <div className="flex justify-center my-6">
-                                                                    <CTA
-                                                                        btn
-                                                                        text="Use This Template"
-                                                                        bgColor="bg-primary hover:bg-PrimaryDark"
-                                                                        txtColor="text-white"
-                                                                        border="border-0"
-                                                                    />
-                                                                </div >
-                                                            </div>
-                                                        ))}
+                                            <div className=''>
+                                                {step?.resumeExamples?.list?.map((items: any, index: number) => (
+                                                    <div className='' key={index}>
+                                                        <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2 font-medium">{items.heading}</h5>
+                                                        <p className="text-base">
+                                                            {items.description}
+                                                        </p>
+                                                        <div className='max-w-[380px] mx-auto py-4  '>
+                                                            <Image src={items.image} alt={items.heading} className='rounded-lg border overflow-hidden shadow-md' />
+                                                        </div>
+                                                        <div className="flex justify-center my-6 ">
+                                                            <CTA
+                                                                btn
+                                                                text="Create Resume"
+                                                                bgColor="bg-primary hover:bg-PrimaryDark"
+                                                                txtColor="text-white"
+                                                                border="border-0"
+                                                            />
+                                                        </div>
                                                     </div>
-
-                                                    <div className="block md:hidden  ">
-                                                        <AutoPlaySlider
-                                                            options={{ align: "start" }}
-                                                            arrowPosition="!mt-2 mb-5 md:mb-8"
-                                                        >
-                                                            {step?.resumeExamples?.list?.map((temp: any, index: number) => (
-                                                                <div key={index} className="grow-0 shrink-0 basis-full sm:basis-[50%] ">
-                                                                    <div className="">
-                                                                        <h5 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[30px] md:leading-[35px] lg:leading-[40px] py-2">
-                                                                            {temp?.heading}
-                                                                        </h5>
-                                                                        <div className='max-w-[250px] mx-auto py-4'>
-                                                                            <Image
-                                                                                src={temp?.image}
-                                                                                alt="Template Image"
-                                                                                className='rounded-lg border overflow-hidden shadow-md'
-                                                                            />
-                                                                            <div className='mt-4 flex justify-center'>
-                                                                                <CTA
-                                                                                    btn
-                                                                                    text="Use This Template"
-                                                                                    bgColor="bg-primary hover:bg-PrimaryDark"
-                                                                                    txtColor="text-white"
-                                                                                    border="border-0"
-                                                                                />
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            ))}
-                                                        </AutoPlaySlider>
-                                                    </div>
-                                                </>
-                                            )}
+                                                ))}
+                                            </div>
                                         </>
                                     )}
-
                                     {step?.bottomTip && (
                                         <ProConsCard
                                             title={step?.bottomTip?.proTitle}
