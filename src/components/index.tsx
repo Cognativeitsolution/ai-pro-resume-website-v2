@@ -111,6 +111,9 @@ const JobWinningResume = dynamic(
 const RelevanceOfContent = dynamic(
   () => import("./ATS-checker/RelevanceOfContent")
 );
+const CoverLetterSections = dynamic(
+  () => import("./builderSection/coverLetterSections/CoverLetterSections")
+);
 
 
 export {
@@ -183,4 +186,5 @@ export {
   Clarity,
   GrammerAndSpelling,
   ConcisenessAndImpact,
+  CoverLetterSections
 };
