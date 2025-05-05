@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useState } from "react";
 import { CTA } from "@/components";
 import Image from "next/image";
 import evaluation from "../../../public/images/evaluation.svg";
@@ -30,9 +32,23 @@ const Evaluation = () => {
       tooltip: { enabled: true },
     },
   };
-  const totalBlocks = 9;
-  const filledBlocks = 7;
+
+ const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 640); // sm = 640px
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+  
   const score2 = 83;
+  const totalBlocks = isSmallScreen ? 5 : 9;
+  const filledBlocks = isSmallScreen ? Math.round((score2 / 100) * 5) : Math.round((score2 / 100) * 9);
+
   return (
     <>
       <div className="bg-indigo-200/20 backdrop-blur-none border-2 border-white p-4 rounded-2xl w-full">

@@ -17,7 +17,7 @@ const GrammerAndSpelling = () => {
         <div className="flex items-center gap-2">
           <Image src={relevance} alt="evaluation" />
           <h2 className="text-[20px] font-semibold text-gray-800">
-            Grammer And Spelling
+            Grammar And Spelling
           </h2>
         </div>
 
@@ -46,15 +46,13 @@ const GrammerAndSpelling = () => {
             </p>
             <div className="space-y-2 max-w-2xl">
               {issues.map((issue, idx) => (
-                <>
-                  <div
-                    key={idx}
-                    className="bg-[#ffe0b9] text-black text-sm sm:text-base rounded flex items-center justify-start gap-2"
-                  >
-                    <div className="h-[40px] w-[6px] bg-[#da9b4c]"></div>
-                    <p>{issue}</p>
-                  </div>
-                </>
+                <div
+                  key={idx}
+                  className="bg-[#ffe0b9] text-black text-sm sm:text-base rounded flex items-center justify-start gap-2"
+                >
+                  <div className="h-[40px] w-[6px] bg-[#da9b4c]"></div>
+                  <p>{issue}</p>
+                </div>
               ))}
             </div>
           </div>
