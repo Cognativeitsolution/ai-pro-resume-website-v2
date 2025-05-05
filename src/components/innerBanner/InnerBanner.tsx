@@ -3,11 +3,12 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // ===============
-import { CTA } from "@/components";
+import { BreadCrumbs, CTA } from "@/components";
 import { useReferHeader } from "@/context/ReferHeaderContext";
 // ===============
 import inner_banner_bg from "media/images/inner-banner_bg.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
+import DynBreadCrumbs from "../dynamic-pages/DynBreadCrumbs";
 
 type BannerProps = {
   title?: string | ReactNode;
@@ -16,10 +17,11 @@ type BannerProps = {
   subdesc?: boolean;
   linkText?: string;
   href?: string;
+  breadCrumbsData?: any;
 };
 
 const InnerBanner = (props: BannerProps) => {
-  const { title, subtitle, description, subdesc, linkText, href } = props;
+  const { title, subtitle, description, subdesc, linkText, href, breadCrumbsData } = props;
   const { showReferHeader } = useReferHeader();
   return (
     <>
@@ -32,6 +34,10 @@ const InnerBanner = (props: BannerProps) => {
         />
         <div className="container mx-auto">
           <div className={`flex flex-col items-center justify-between pb-10 md:pb-40 lg:pb-56 ${showReferHeader ? 'pt-40 lg:pt-48' : 'pt-[7.5rem] lg:pt-44'}`}>
+            {breadCrumbsData &&
+              <div className='my-1'>
+                <DynBreadCrumbs color={breadCrumbsData} />
+              </div>}
             <p className="text-[16px] lg:text-[18px] xl:text-[20px] text-center text-white">
               {subtitle}
             </p>

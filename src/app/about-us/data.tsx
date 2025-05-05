@@ -28,14 +28,14 @@ const customerIcons = [icon1, icon2, icon3, icon4, icon5, icon6, icon1, icon2, i
 export const IconData = {
     title: "Trusted by Clients Worldwide",
     icons: customerIcons,
-    anyClass:"invert"
+    anyClass: "invert"
 };
 
 // ==========================
 export const FeaturesData = [
     {
         // image: aboutVideo,
-        video: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        video: "https://ik.imagekit.io/matrz1mbp/AI%20PRO%200001%20-%20Made%20with%20Clipchamp%20(1)%20(1).mp4?updatedAt=1718177027956",
         title: "Our Story",
         description:
             "AI Pro Resume started with a single aim: to make global job search easier for everyone. We understand that getting noticed can be tough due to excessive competition. Therefore, we developed a platform that caters to all your requirements and permits you to find your desired jobs easily. As a smart resume builder, our core mission is to combine AI technology with creative features that save time and make your professional profile incredible. Our focus is not just creating an ATS-friendly resume builder platform; we want to empower job seekers with professional resumes and cover letters that truly represent them and help them get the job they deserve. Join us for a successful career journey. ",
