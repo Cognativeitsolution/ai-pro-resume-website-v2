@@ -34,15 +34,13 @@ const IssuesFound = () => {
         {/* Issues List */}
         <div className="space-y-2 mb-5 max-w-xl mx-auto">
           {issues.map((issue, idx) => (
-            <>
-              <div
-                key={idx}
-                className="bg-red-100 text-black text-sm sm:text-base rounded flex items-center justify-start gap-2"
-              >
-                <div className="h-[40px] w-[6px] bg-red-500"></div>
-                <p>{issue}</p>
-              </div>
-            </>
+            <div
+              key={idx}
+              className="bg-red-100 text-black text-sm sm:text-base rounded flex items-center justify-start gap-2"
+            >
+              <div className="h-[40px] w-[6px] bg-red-500"></div>
+              <p>{issue}</p>
+            </div>
           ))}
         </div>
 
