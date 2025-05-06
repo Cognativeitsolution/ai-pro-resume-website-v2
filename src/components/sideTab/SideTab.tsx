@@ -37,7 +37,7 @@ export default function TabSection({ data }: propsType) {
     const activeItem = data.list[activeTab];
 
     return (
-        <section className="py-5 md:py-10">
+        <section className="py-5 md:py-10 ">
             <div className={"container mx-auto"}>
                 <h4 className={`font-normal text-[16px] md:text-[20px] text-center  from-[#3358c3] via-[#5548db] to-[#7d26e7] bg-gradient-to-r bg-clip-text text-transparent`}>
                     {data.subTitle}

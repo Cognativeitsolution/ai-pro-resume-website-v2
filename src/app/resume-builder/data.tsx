@@ -27,6 +27,16 @@ import image6 from "media/privacyPolicy/image-6.webp";
 import image7 from "media/privacyPolicy/image-7.webp";
 import image8 from "media/privacyPolicy/image-8.webp";
 import image9 from "media/privacyPolicy/image-9.webp";
+// ==========================
+import FeaturesImage1 from "media/resume_builder/check/contentimg-1.webp";
+import FeaturesImage2 from "media/resume_builder/check/contentimg-2.webp";
+import FeaturesImage3 from "media/resume_builder/check/contentimg-3.webp";
+import FeaturesImage4 from "media/resume_builder/check/contentimg-4.webp";
+import FeaturesImage5 from "media/resume_builder/check/contentimg-5.webp";
+import FeaturesImage6 from "media/resume_builder/check/contentimg-6.webp";
+import FeaturesImage7 from "media/resume_builder/check/contentimg-7.webp";
+import FeaturesImage8 from "media/resume_builder/check/contentimg-8.webp";
+
 
 
 // ==========================
@@ -144,23 +154,23 @@ export const findResumeData = {
 
 
 export const FeaturesData = [
-    {
-        isBuilder: true,
-        title: "Professional Resume Templates for Every Career",
-        description: [
-            "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
-            "Stand out with sleek, modern, or classic designs suited to your job search."
-        ],
-        reverse: true,
-        builderImg: [
-            {
-                img: image3,
-            },
-            {
-                img: image4,
-            },
-        ]
-    },
+    // {
+    //     isBuilder: true,
+    //     title: "Professional Resume Templates for Every Career",
+    //     description: [
+    //         "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
+    //         "Stand out with sleek, modern, or classic designs suited to your job search."
+    //     ],
+    //     reverse: true,
+    //     builderImg: [
+    //         {
+    //             img: FeaturesImage1,
+    //         },
+    //         {
+    //             img: FeaturesImage2,
+    //         },
+    //     ]
+    // },
     {
         isBuilder: true,
         title: "Flexible Drag & Drop Resume Builder",
@@ -171,11 +181,23 @@ export const FeaturesData = [
         ],
         builderImg: [
             {
-                img: image1,
+                img: FeaturesImage1,
+                top: "5%",
+                left: "0%",
+                zIndex: 5,
+                maxWidth: "70%",
+                right: "auto",
+                bottom: "auto",
             },
             {
-                img: image2,
-            }
+                img: FeaturesImage2,
+                top: "auto",
+                right: "5%",
+                zIndex: 4,
+                maxWidth: "70%",
+                left: "auto",
+                bottom: "5%",
+            },
         ]
     },
     {
@@ -189,11 +211,23 @@ export const FeaturesData = [
         reverse: true,
         builderImg: [
             {
-                img: image5,
+                img: FeaturesImage3,
+                top: "40%",
+                right: "10%",
+                zIndex: 5,
+                maxWidth: "70%",
+                left: "auto",
+                bottom: "5%",
             },
             {
-                img: image6,
-            }
+                img: FeaturesImage4,
+                top: "25%",
+                left: "10%",
+                zIndex: 4,
+                maxWidth: "70%",
+                right: "auto",
+                bottom: "auto",
+            },
         ]
     },
     {
@@ -206,10 +240,22 @@ export const FeaturesData = [
         ],
         builderImg: [
             {
-                img: image3,
+                img: FeaturesImage5,
+                top: "auto",
+                left: "auto",
+                zIndex: 5,
+                maxWidth: "60%",
+                right: "0%",
+                bottom: "auto",
             },
             {
-                img: image4,
+                img: FeaturesImage6,
+                top: "15%",
+                right: "auto",
+                zIndex: 4,
+                maxWidth: "50%",
+                left: "5%",
+                bottom: "auto",
             },
         ]
     },
@@ -224,46 +270,70 @@ export const FeaturesData = [
         reverse: true,
         builderImg: [
             {
-                img: image1,
+                img: FeaturesImage7,
+                top: "5%",
+                left: "0%",
+                zIndex: 5,
+                maxWidth: "70%",
+                right: "auto",
+                bottom: "auto",
             },
             {
-                img: image2,
-            }
+                img: FeaturesImage8,
+                top: "auto",
+                right: "5%",
+                zIndex: 4,
+                maxWidth: "70%",
+                left: "auto",
+                bottom: "5%",
+            },
         ]
     },
-    {
-        isBuilder: true,
-        title: "One-Click Job Targeting",
-        description: [
-            "Tailor your resume to specific job descriptions with intelligent keyword highlighting.",
-            "Match industry-relevant phrases to get through Applicant Tracking Systems (ATS)."
-        ],
-        builderImg: [
-            {
-                img: image5,
-            },
-            {
-                img: image6,
-            }
-        ]
-    },
-    {
-        isBuilder: true,
-        title: "Built-In Spell Checker and Formatting Assistant",
-        description: [
-            "Avoid typos and formatting mistakes with our real-time spell check.",
-            "Stay focused with clear alerts and formatting guidance as you type."
-        ],
-        reverse: true,
-        builderImg: [
-            {
-                img: image3,
-            },
-            {
-                img: image4,
-            },
-        ]
-    }
+    // {
+    //     isBuilder: true,
+    //     title: "One-Click Job Targeting",
+    //     description: [
+    //         "Tailor your resume to specific job descriptions with intelligent keyword highlighting.",
+    //         "Match industry-relevant phrases to get through Applicant Tracking Systems (ATS)."
+    //     ],
+    //     builderImg: [
+    //         {
+    //             img: FeaturesImage7,
+    //             top: "5%",
+    //             left: "0%",
+    //             zIndex: 5,
+    //             maxWidth: "70%",
+    //             right: "auto",
+    //             bottom: "auto",
+    //         },
+    //         {
+    //             img: FeaturesImage8,
+    //             top: "auto",
+    //             right: "5%",
+    //             zIndex: 4,
+    //             maxWidth: "70%",
+    //             left: "auto",
+    //             bottom: "5%",
+    //         },
+    //     ]
+    // },
+    // {
+    //     isBuilder: true,
+    //     title: "Built-In Spell Checker and Formatting Assistant",
+    //     description: [
+    //         "Avoid typos and formatting mistakes with our real-time spell check.",
+    //         "Stay focused with clear alerts and formatting guidance as you type."
+    //     ],
+    //     reverse: true,
+    //     builderImg: [
+    //         {
+    //             img: image3,
+    //         },
+    //         {
+    //             img: image4,
+    //         },
+    //     ]
+    // }
 
 ];
 
