@@ -18,10 +18,11 @@ type BannerProps = {
   linkText?: string;
   href?: string;
   breadCrumbsData?: any;
+  bannerImg?: any
 };
 
 const InnerBanner = (props: BannerProps) => {
-  const { title, subtitle, description, subdesc, linkText, href, breadCrumbsData } = props;
+  const { title, subtitle, description, subdesc, linkText, href, breadCrumbsData, bannerImg } = props;
   const { showReferHeader } = useReferHeader();
   return (
     <>
@@ -72,6 +73,19 @@ const InnerBanner = (props: BannerProps) => {
                 </div>
               </div>
             )}
+
+            {/* image section */}
+            {/* <div className="w-full hidden md:flex justify-center items-center py-6 md:py-10 overflow-hidden">
+              
+              <div className="w-full md:w-[70%] relative">
+                <Image
+                  src={bannerImg}
+                  alt="Laptop"
+                  priority
+                  className="w-full"
+                />
+              </div>
+            </div> */}
           </div>
         </div>
       </section>
