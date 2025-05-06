@@ -6,6 +6,13 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'translate-x-20',
+    '-translate-x-20',
+    'translate-y-20',
+    '-translate-y-20',
+    'duration-700',
+  ],
   theme: {
     extend: {
       container: {
