@@ -1,4 +1,7 @@
 // ==========================
+// import BannerImage from "media/resume_builder/resume-builder.gif";
+
+// ==========================
 import Template1 from "media/resume_template_images/template_1.webp";
 import Template2 from "media/resume_template_images/template_2.webp";
 import Template3 from "media/resume_template_images/template_3.webp";
@@ -15,7 +18,18 @@ import Contacts from "media/resume_parser/alignment.webp";
 import Language from "media/resume_parser/language.webp";
 import Certifications from "media/resume_parser/certification.webp";
 // ==========================
+import image1 from "media/privacyPolicy/image-1.webp";
+import image2 from "media/privacyPolicy/image-2.webp";
+import image3 from "media/privacyPolicy/image-3.webp";
+import image4 from "media/privacyPolicy/image-4.webp";
+import image5 from "media/privacyPolicy/image-5.webp";
+import image6 from "media/privacyPolicy/image-6.webp";
+import image7 from "media/privacyPolicy/image-7.webp";
+import image8 from "media/privacyPolicy/image-8.webp";
+import image9 from "media/privacyPolicy/image-9.webp";
 
+
+// ==========================
 export const BannerData = {
     title: (
         <>
@@ -25,7 +39,8 @@ export const BannerData = {
     ),
     // subtitle: "About us",
     description: "Create a modern, memorable resume that showcases your skills, achievements, and personality. AiPro Resume makes it easy and free to design a resume that gets noticed!",
-    breadCrumbsData: "text-white"
+    breadCrumbsData: "text-white",
+    // bannerImg: BannerImage
 };
 
 // ==========================
@@ -109,7 +124,7 @@ const findResumeTemplates = [
 
 export const findResumeData = {
     subTitle: "Templates",
-    title: "Find the Perfect Resume Example for Your Field",
+    title: (<>Find the Perfect Resume Example for Your Field</>),
     description: `To save you time and effort, we have introduced creative resume
     examples. These great resume examples are pre-written. You just have
     to click on them and add minor details to make your resume more
@@ -127,93 +142,175 @@ export const findResumeData = {
     ]
 }
 
+
+export const FeaturesData = [
+    {
+        isBuilder: true,
+        title: "Professional Resume Templates for Every Career",
+        description: [
+            "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
+            "Stand out with sleek, modern, or classic designs suited to your job search."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image3,
+            },
+            {
+                img: image4,
+            },
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Flexible Drag & Drop Resume Builder",
+        description: [
+            "You’re not limited to a fixed layout. Rearrange sections easily to spotlight your strengths.",
+            "Add, remove, or re-order sections like Work Experience, Skills, Education, and more.",
+            "Customize your resume your way – no design skills needed."
+        ],
+        builderImg: [
+            {
+                img: image1,
+            },
+            {
+                img: image2,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Smart Content Suggestions to Guide Your Writing",
+        description: [
+            "Access over 10,000 bullet point suggestions by job title and experience level.",
+            "Receive live prompts to refine weak or vague statements for a stronger impact.",
+            "Turn generic phrases into achievement-driven results."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image5,
+            },
+            {
+                img: image6,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Download Your Resume as PDF or TXT",
+        description: [
+            "Create a professional PDF resume that recruiters love with just one click.",
+            "Export a plain text version for easy editing or job portal uploads.",
+            "All formatting stays clean and consistent – no extra effort needed."
+        ],
+        builderImg: [
+            {
+                img: image3,
+            },
+            {
+                img: image4,
+            },
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Import Your Old Resume or LinkedIn Profile",
+        description: [
+            "Save time by uploading your existing resume or linking your LinkedIn profile.",
+            "We’ll automatically extract your experience, education, and skills into editable fields.",
+            "Start building your new resume in seconds without starting from scratch."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image1,
+            },
+            {
+                img: image2,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "One-Click Job Targeting",
+        description: [
+            "Tailor your resume to specific job descriptions with intelligent keyword highlighting.",
+            "Match industry-relevant phrases to get through Applicant Tracking Systems (ATS)."
+        ],
+        builderImg: [
+            {
+                img: image5,
+            },
+            {
+                img: image6,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Built-In Spell Checker and Formatting Assistant",
+        description: [
+            "Avoid typos and formatting mistakes with our real-time spell check.",
+            "Stay focused with clear alerts and formatting guidance as you type."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image3,
+            },
+            {
+                img: image4,
+            },
+        ]
+    }
+
+];
+
 // ==========================
-// export const FeaturesData = [
-//     {
-//         // image: aboutVideo,
-//         video: "https://ik.imagekit.io/matrz1mbp/AI%20PRO%200001%20-%20Made%20with%20Clipchamp%20(1)%20(1).mp4?updatedAt=1718177027956",
-//         title: "Our Story",
-//         description:
-//             "AI Pro Resume started with a single aim: to make global job search easier for everyone. We understand that getting noticed can be tough due to excessive competition. Therefore, we developed a platform that caters to all your requirements and permits you to find your desired jobs easily. As a smart resume builder, our core mission is to combine AI technology with creative features that save time and make your professional profile incredible. Our focus is not just creating an ATS-friendly resume builder platform; we want to empower job seekers with professional resumes and cover letters that truly represent them and help them get the job they deserve. Join us for a successful career journey. ",
-//         buttonText: "Create Resume",
-//     },
-//     {
-//         image: aboutCounter,
-//         title: "What we offer﻿",
-//         description:
-//             "We provide everything you need to stand out in the job market. Our certified resume writers make your application process smooth and stress-free. With our best AI job application tool, you can generate your ideal resumes and cover letters in seconds. If you are not in the mood to create a resume or cover letter manually, let our experts help you. AI Pro Resume is your AI resume assistant that offers captivating templates that easily pass ATS scanners. You can use our resume parser, which accurately fetches your data to reduce your manual efforts. With us, you can customize your resume and cover letter template smoothly. ",
-//         buttonText: "Create Resume",
-//         reverse: true
-//     },
 
-// ];
-
-// ==========================
-// const CounterList = [
-//     {
-//         icon: aboutCounter1.src,
-//         count: "2359+",
-//         label: "Resumes Made",
-//     },
-//     {
-//         icon: aboutCounter2.src,
-//         count: "471+",
-//         label: "Cover Letters Created",
-//     },
-//     {
-//         icon: aboutCounter3.src,
-//         count: "15+",
-//         label: "AI FEATURES",
-//     },
-// ];
-
-// export const CounterData = {
-//     title: "Start your journey toward your dream job with AI Pro Resume.",
-//     description: (
-//         <>
-//             We help you create customized, ATS-friendly resumes that stand out to recruiters. we have already assisted millions of job hunters in landing <br className="hidden xl:block" /> their perfect jobs. Become a successful professional with the smart resume builder today.
-//         </>
-//     ),
-//     counterlist: CounterList
-// }
-
-// ==========================
-// const stepperList = [
-//     {
-//         title: "Our Mission",
-//         description:
-//             "Our mission is your empowerment, a dynamic partnership extending beyond a typical service. With us, it's about more than templates; it's about a collaborative journey. We're here to enlighten your skills, unfold your story, and place your aspirations center stage.",
-//     },
-//     {
-//         title: "Our Vision",
-//         description:
-//             "Our vision is to be the bundle of innovation in the world of professional development. In our vision, inclusivity is key. AI resume builder pictures a landscape where cutting-edge technology seamlessly integrates with individual stories, making personalized career services accessible to all. AI Pro Resume is not merely a tool; it's a vibrant community encouraging innovation, authenticity, and adaptability.",
-//     },
-//     {
-//         title: "Our Process",
-//         description:
-//             "Transform your professional journey with AI Pro Resume. Kick start your professional journey by engaging with our user-friendly interface that welcomes you to AI-driven career elevation, where you make a resume by inputting your details to create your unique narrative. Our advanced AI algorithms then analyze this information, crafting a professional masterpiece that authentically represents your skills and experiences.",
-//     },
-// ];
-
-// export const StepperData = {
-//     title: "Our Goal",
-//     description: (
-//         <>
-//             We have seen fresh graduates struggle to create their Resumes and fail to pass the initial screening tests due to poorly made CVs. Thus, AI Pro Resume aims to provide you with recruiter-approved resumes so you can land the job you have been dreaming of. We have also been working hard to improve and explore creative ways to help you get the best features for creating your resumes.
-//         </>
-//     ),
-//     stepperList: stepperList
-
-// }
-
-// ==========================
-// export const ClientData = {
-//     title: "Our Valuable Clients",
-//     description: (
-//         <>
-//             Our Clients are our top priority and we are committed to providing them <br className="hidden lg:block" /> best service.
-//         </>
-//     ),
-// }
+const tabSectionList = [
+    {
+        id: 1,
+        image: Template1,
+        title: "Modern Resume",
+        semiTitle: "Sleek",
+    },
+    {
+        id: 2,
+        image: Template2,
+        title: "Classic Resume",
+        semiTitle: "Timeless",
+    },
+    {
+        id: 3,
+        image: Template3,
+        title: "Creative Resume",
+        semiTitle: "Artistic",
+    },
+    {
+        id: 4,
+        image: Template4,
+        title: "Modern Resume",
+        semiTitle: "Bold Edition",
+    },
+    {
+        id: 5,
+        image: Template5,
+        title: "Classic Resume",
+        semiTitle: "Professional Touch",
+    },
+    {
+        id: 6,
+        image: Template6,
+        title: "Creative Resume",
+        semiTitle: "Stylish Layout",
+    }
+]
+export const tabSectionData = {
+    subTitle: "Examples",
+    title: "Resume Examples for Inspiration",
+    description: "Explore professionally designed resume examples to inspire your own. Whether you're starting out or advancing your career, these samples offer layouts and content ideas for various roles and industries.",
+    list: tabSectionList
+};
 

@@ -36,223 +36,31 @@ import Certifications from "media/resume_parser/certification.webp";
 import Screening from "media/resume_parser/screening.webp";
 import DataBase from "media/resume_parser/database.webp";
 
+// import image1 from "media/privacyPolicy/image-1.webp";
+// import image2 from "media/privacyPolicy/image-2.webp";
+// import image3 from "media/privacyPolicy/image-3.webp";
+import image4 from "media/privacyPolicy/image-4.webp";
+import image5 from "media/privacyPolicy/image-5.webp";
+import image6 from "media/privacyPolicy/image-6.webp";
+import Template1 from "media/cover_template_images/template_1.webp";
+import Template2 from "media/cover_template_images/template_2.webp";
+import Template3 from "media/cover_template_images/template_3.webp";
+import Template4 from "media/cover_template_images/template_4.webp";
+import Template5 from "media/cover_template_images/template_5.webp";
+import Template6 from "media/cover_template_images/template_6.webp";
+
+
 // ====================== BANNER ======================
 export const BannerData = {
     title: (
         <>
-            Seo and Marketing
+            Build Your Perfect Standout Cover Letter Online
         </>
     ),
-    subtitle: "Interview Preparation",
-    description: "The three top cover letter formats op cover letter formats for 2025 will help you grab employers' attention and enrich your chances of securing your dream job."
-};
-// ====================== Section 1 Data ======================
-const section1Data = {
-    title: "Build your cover letter now. First, choose a design.",
-    paragraphs: [
-        "Interview preparation for SEO and marketing roles goes beyond just revisiting your portfolio. The right digital tools and data-driven strategies make a significant impact.",
-        "Whether you're applying for a junior SEO role or a senior marketing strategist position, this guide will ensure you stand out with preparation that reflects industry expertise."
-    ],
-    bulletPoints: [
-        "Use SEO platforms like Ahrefs and SEMrush for hands-on demos",
-        "Study company marketing campaigns and digital presence",
-        "Apply the STAR method using real campaign results",
-        "Prepare targeted questions about SEO tools and KPIs",
-        "Leverage schedulers and CRMs for post-interview follow-up"
-    ],
-    image: { src: image1, alt: "SEO interview preparation tools" },
-}
-// ====================== Tip 1 Data ======================
-const section1Tip = {
-    title: "Quick Tip",
-    icon: TipPro,
-    description: "Record your response to SEO scenario-based questions to evaluate clarity and keyword accuracy.",
-    isTip: true
-}
-// ====================== Section 2 Data ======================
-const section2Data = {
-    title: "Get a cover letter to be proud of!",
-    includedSecInTemplate: [
-        {
-            title: "Fill in your details.",
-            secImg: secImg1,
-            PositionImg1: secImg1Inner,
-        },
-        {
-            title: "Tailor to your needs.",
-            secImg: secImg2,
-            PositionImg1: secImg2Inner,
-        },
-        {
-            title: "Customize your design.",
-            secImg: secImg3,
-            PositionImg1: secImg3Inner1,
-            PositionImg2: secImg3Inner2,
-        },
-        {
-            title: "Check for errors and download.",
-            secImg: secImg4,
-            PositionImg1: secImg4Inner1,
-            PositionImg2: secImg4Inner2,
-            PositionImg3: secImg4Inner3
-        },
-    ]
-    // paragraphs: [
-    //     "Platforms now simulate SEO audits and campaign strategy walkthroughs. Practicing with real dashboards and case questions helps reinforce your tactical knowledge and communication skills."
-    // ],
-    // listItems: [
-    //     "Walk through real campaign audits",
-    //     "Receive feedback on strategy articulation",
-    //     "Refine metrics-based storytelling"
-    // ],
-    // image: { src: image2, alt: "SEO mock interview tool" },
-    // cta: { text: "Try Marketing Practice Tools" }
-}
-// ====================== Section 3 Data ======================
-const section3Data = {
-    title: "A feature-packed, yet streamlined cover letter builder",
-    paragraphs: [
-        "Understanding a company’s market position, SEO footprint, and campaign tone shows you’re marketing-savvy. Use tools like SimilarWeb, LinkedIn, and SEMrush to gather insight."
-    ],
-    innerTitle: "Insights",
-    listItems: [
-        "Analyze their backlink profile or ad strategy to spark relevant questions.",
-        "Tools like Google Alerts can keep you updated on the company’s latest news.",
-        "Mention recent campaigns and provide thoughtful feedback or praise.",
-        "Bring examples of how you'd enhance their SEO or content funnel.",
-        "If applicable, compare their competitors' strategies for discussion.",
-        "Send a tailored follow-up referencing marketing goals discussed.",
-        "Custom templates are useful, but always reflect the brand’s voice.",
-        "Avoid jargon the company doesn’t use—mirror their marketing language.",
-        "Send a thoughtful second email if no response after a week."
-    ],
-    image: { src: image3, alt: "Company marketing research tools" },
-    cta: { text: "Start Researching Companies" },
-}
-// ====================== Tip 2 Data ======================
-const section3Tip = {
-    title: "Pro Tip",
-    icon: TipProComma,
-    description: "Showcase real campaign results with KPIs—interviewers remember metrics that matter.",
-    isTip: true
-}
-// ====================== Section 4 Data ======================
-const section4Data = {
-    title: "Cover Letter Examples for Inspiration",
-    paragraphs: [
-        "Use the STAR method to clearly explain how you executed campaigns, solved performance issues, and contributed to growth. Highlight marketing tools used and their impact."
-    ],
-    listItems: [
-        "Clear, results-backed storytelling",
-        "Demonstrates ROI thinking and creativity",
-        "Shows ownership of multi-channel strategies"
-    ],
-    image: { src: image2, alt: "STAR method for marketing interviews" },
-    cta: { text: "Learn the STAR Method" },
-}
-// ====================== Section 5 Data ======================
-const interviewQuestionList = [
-    {
-        id: 1,
-        title: "What do you like about your job?",
-        desc: "Recruiters ask you this question to understand your reasoning behind leaving your job."
-    },
-    {
-        id: 2,
-        title: "Tell me about yourself.",
-        desc: "This question about you, don’t be afraid to give a more personal answer strictly professional."
-    },
-    {
-        id: 3,
-        title: "Why are you applying for this position?",
-        desc: "This question is really the hiring manager’s to learn more about you. Be honest your answer."
-    },
-
-    {
-        id: 4,
-        title: "What are your weaknesses?",
-        desc: "A tricky question, try to answer it by tying weaknesses to the job you’re applying for."
-    },
-    {
-        id: 5,
-        title: "What are your strengths?",
-        desc: "A tricky question, try to answer it by tying your strengths to the job you’re applying for."
-    },
-    {
-        id: 6,
-        title: "Why should we hire you?",
-        desc: "TProve that you’re confident in your skills and pitch yourself as the best person for the job."
-    },
-]
-const section5Data = {
-    title: "People from all over the world love our cover letter builder",
-    paragraphs: [
-        "Post-interview follow-ups can set you apart. Use templates and scheduling tools to send timely thank-you notes and reminders."
-    ],
-    interviewQuestionList: interviewQuestionList
-}
-// ====================== Section 6 Data ======================
-const section6Data = {
-    title: "Follow-Up Tools and Communication Etiquette",
-    paragraphs: [
-        "Your follow-up is another opportunity to market yourself. Use personalized, well-timed messages to stand out—especially in roles where communication is key."
-    ],
-    innerTitle: "Etiquette",
-    listItems: [
-        "Send a thank-you email within 24 hours—mention specific marketing tools or campaign discussions.",
-        "Use scheduling tools like Mixmax or Gmail’s built-in options for optimal timing.",
-        "Reinforce your understanding of their marketing goals or challenges.",
-        "Attach relevant case studies or campaign summaries with clear labels.",
-        "If no reply, send a polite reminder after a few days.",
-        "Personalize your message with a callback to the conversation.",
-        "Use a structure, but adapt tone to reflect brand personality.",
-        "Maintain a polished tone—your writing reflects your marketing skills.",
-        "Respect their timeline, but show continued interest with follow-ups."
-    ],
-    image: { src: image3, alt: "Follow-up tools for marketers" },
-    cta: { text: "Download Follow-Up Templates" },
-}
-// ====================== PROS Data ======================
-const prosData = {
-    title: "Pros",
-    icon: pros,
-    description: "Gives you an edge in interviews by showing technical and strategic readiness for SEO and marketing roles.",
-    isPro: true
-}
-// ====================== CONS Data ======================
-const consData = {
-    title: "Cons",
-    icon: cons,
-    description: "Too much technical prep can dilute your storytelling—balance data with personal connection.",
-    isPro: false
-}
-// ====================== TABS ======================
-const tabsData = [
-    { id: 'section1', title: section1Data.title || 'Section 1' },
-    { id: 'section2', title: section2Data?.title || 'Section 2' },
-    { id: 'section3', title: section3Data?.title || 'Section 3' },
-    { id: 'section4', title: section4Data?.title || 'Section 4' },
-    { id: 'section5', title: section5Data?.title || 'Section 5' },
-    { id: 'section6', title: section6Data?.title || 'Section 6' },
-    { id: 'section7', title: prosData?.title || 'Pros' },
-    { id: 'section8', title: consData?.title || 'Cons' },
-];
-// ====================== TABS DATA ======================
-export const DynamicSectionData = {
-    section1: section1Data,
-    tip1: section1Tip,
-    section2: section2Data,
-    section3: section3Data,
-    tip2: section3Tip,
-    section4: section4Data,
-    section5: section5Data,
-    section6: section6Data,
-    pros: prosData,
-    cons: consData,
-    DynamicTabsData: tabsData
+    subtitle: "Cover Letter builder",
+    description: "Ai Pro Resume is the cover letter builder that helps you tell your story. Beat the writer’s block with our cover letter generator. Just answer a few simple questions, customize the design, and save as PDF"
 };
 
-// ====================== FAQs ======================
 const faqsList = [
     {
         question: "What is the best format for cover letter 2025? ",
@@ -279,12 +87,10 @@ const faqsList = [
             "For a candidate who has nearly 15 years of work experience, reverse chronological and combined cover letter formatting will be the best format for cover letter. This style of cover letter emphasizes skills and accomplishments, followed by a detailed work history, which allows more senior professionals to highlight their vast experience effectively. ",
     },
 ];
-
 export const faqs = {
     title: "Frequently Asked Questions (FAQs) ",
     faqlist: faqsList
 }
-
 const ParserFeatureList = [
     {
         icon: Skills,
@@ -335,25 +141,21 @@ const ParserFeatureList = [
             "Identifies professional certifications and training to highlight continuous learning and development.",
     },
 ];
-
 export const ParserFeatureData = {
     title: (
         <>
-            Say Hello to Effortless Resume Upload
+            Say Hello to Effortless Cover Letter Upload
         </>
     ),
     subTitle: "Features",
     description: (
         <>
-            Our system intelligently analyzes and categorizes key resume data—such as skills, experience, and achievements—giving you a <br className="hidden lg:block" /> detailed   and structured profile overview to help streamline hiring decisions.
+            Our system intelligently analyzes and categorizes key Cover Letter data—such as skills, experience, and achievements—giving you a <br className="hidden lg:block" /> detailed   and structured profile overview to help streamline hiring decisions.
 
         </>
     ),
     list: ParserFeatureList
 };
-
-
-// title: "Get a cover letter to be proud of!",
 const includedSections = [
     {
         title: "Fill in your details.",
@@ -388,8 +190,202 @@ export const includedSecCoverLetter = {
     subTitle: "Included Sections",
     description: (
         <>
-            Our system intelligently analyzes and categorizes key resume data—such as skills, experience, and achievements—giving you a <br className="hidden lg:block" /> detailed   and structured profile overview to help streamline hiring decisions.
+            Our system intelligently analyzes and categorizes key Cover Letter data—such as skills, experience, and achievements—giving you a <br className="hidden lg:block" /> detailed   and structured profile overview to help streamline hiring decisions.
         </>
     ),
     list: includedSections
 }
+const findCoverLetterTemplates = [
+    { id: 1, image: Template1, is_paid: 0 },
+    { id: 2, image: Template2, is_paid: 1 },
+    { id: 3, image: Template3, is_paid: 0 },
+    { id: 1, image: Template4, is_paid: 0 },
+    { id: 2, image: Template5, is_paid: 1 },
+    { id: 3, image: Template6, is_paid: 0 },
+]
+export const findCoverLetterData = {
+    subTitle: "Templates",
+    title: (<>Find the Perfect Cover Letter Example for Your Field</>),
+    description: `To save you time and effort, we have introduced creative Cover Letter
+    examples. These great Cover Letter examples are pre-written. You just have
+    to click on them and add minor details to make your Cover Letter more
+    personalized.`,
+    templateList: findCoverLetterTemplates,
+    fullWidth: true,
+    descriptionBottom: [
+        `Our Resume builder is crafted with one goal in mind — to help you walk into your next job interview feeling confident . With professionally designed layouts and customizable sections, our tool lets you create a resume that reflects your true self — your mindset, personality, and professional strengths`,
+        (
+            <>
+                <p>But we go beyond the basics. With <span className=" text-hamzaPrimary font-medium">AI Pro Resume</span>, you’re encouraged to explore more than just your education and work history. Our smart builder helps you showcase your passions, values, and what truly drives you, giving employers a complete picture of who you are.</p>
+            </>
+        ),
+        `Not sure which style fits you best? Browse our collection of modern templates and find the one that tells your story best. `,
+    ]
+}
+export const FeaturesData = [
+    {
+        isBuilder: true,
+        title: "Professional Cover Letter Templates for Every Career",
+        description: [
+            "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
+            "Stand out with sleek, modern, or classic designs suited to your job search."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image3,
+            },
+            {
+                img: image4,
+            },
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Flexible Drag & Drop Cover Letter Builder",
+        description: [
+            "You’re not limited to a fixed layout. Rearrange sections easily to spotlight your strengths.",
+            "Add, remove, or re-order sections like Work Experience, Skills, Education, and more.",
+            "Customize your Cover Letter your way – no design skills needed."
+        ],
+        builderImg: [
+            {
+                img: image1,
+            },
+            {
+                img: image2,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Smart Content Suggestions to Guide Your Writing",
+        description: [
+            "Access over 10,000 bullet point suggestions by job title and experience level.",
+            "Receive live prompts to refine weak or vague statements for a stronger impact.",
+            "Turn generic phrases into achievement-driven results."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image5,
+            },
+            {
+                img: image6,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Download Your Resume as PDF or TXT",
+        description: [
+            "Create a professional PDF resume that recruiters love with just one click.",
+            "Export a plain text version for easy editing or job portal uploads.",
+            "All formatting stays clean and consistent – no extra effort needed."
+        ],
+        builderImg: [
+            {
+                img: image3,
+            },
+            {
+                img: image4,
+            },
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Import Your Old Resume or LinkedIn Profile",
+        description: [
+            "Save time by uploading your existing resume or linking your LinkedIn profile.",
+            "We’ll automatically extract your experience, education, and skills into editable fields.",
+            "Start building your new resume in seconds without starting from scratch."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image1,
+            },
+            {
+                img: image2,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "One-Click Job Targeting",
+        description: [
+            "Tailor your resume to specific job descriptions with intelligent keyword highlighting.",
+            "Match industry-relevant phrases to get through Applicant Tracking Systems (ATS)."
+        ],
+        builderImg: [
+            {
+                img: image5,
+            },
+            {
+                img: image6,
+            }
+        ]
+    },
+    {
+        isBuilder: true,
+        title: "Built-In Spell Checker and Formatting Assistant",
+        description: [
+            "Avoid typos and formatting mistakes with our real-time spell check.",
+            "Stay focused with clear alerts and formatting guidance as you type."
+        ],
+        reverse: true,
+        builderImg: [
+            {
+                img: image3,
+            },
+            {
+                img: image4,
+            },
+        ]
+    }
+
+];
+const tabSectionList = [
+    {
+        id: 1,
+        image: Template1,
+        title: "Modern Cover Letter",
+        semiTitle: "Sleek",
+    },
+    {
+        id: 2,
+        image: Template2,
+        title: "Classic Cover Letter",
+        semiTitle: "Timeless",
+    },
+    {
+        id: 3,
+        image: Template3,
+        title: "Creative Cover Letter",
+        semiTitle: "Artistic",
+    },
+    {
+        id: 4,
+        image: Template4,
+        title: "Modern Cover Letter",
+        semiTitle: "Bold Edition",
+    },
+    {
+        id: 5,
+        image: Template5,
+        title: "Classic Cover Letter",
+        semiTitle: "Professional Touch",
+    },
+    {
+        id: 6,
+        image: Template6,
+        title: "Creative Cover Letter",
+        semiTitle: "Stylish Layout",
+    }
+]
+export const tabSectionData = {
+    subTitle: "Examples",
+    title: "Cover Letter Examples for Inspiration",
+    description: "Explore professionally designed Cover Letter examples to inspire your own. Whether you're starting out or advancing your career, these samples offer layouts and content ideas for various roles and industries.",
+    list: tabSectionList
+};

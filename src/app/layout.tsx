@@ -35,9 +35,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${primary.variable} font-primary bgSecondary`}>
+      <body className={`${primary.variable} font-primary bgSecondary`} cz-shortcut-listen="true">
         <ConditionalLayout>
-          {children}
+          <main>
+            {children}
+          </main>
         </ConditionalLayout>
       </body>
     </html>
