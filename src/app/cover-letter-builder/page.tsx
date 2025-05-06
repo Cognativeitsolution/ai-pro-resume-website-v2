@@ -1,15 +1,16 @@
 'use client';
-import { InnerBanner, Faq, CoverLetterSections, ParserFeatures } from '@/components';
-import { BannerData, DynamicSectionData, faqs, includedSecCoverLetter, ParserFeatureData } from './data';
-import DynamicSection from '@/components/dynamicSection/DynamicSection';
+import { InnerBanner, Faq, CoverLetterSections, ParserFeatures, FindResumeTemplates } from '@/components';
+import { BannerData, faqs, findCoverLetterData, includedSecCoverLetter, ParserFeatureData, tabSectionData } from './data';
+import TabSection from '@/components/sideTab/SideTab';
 
 const page = () => {
-
     return (
         <>
             <InnerBanner {...BannerData} />
             <ParserFeatures data={ParserFeatureData} />
+            <FindResumeTemplates data={findCoverLetterData} />
             <CoverLetterSections sectionDetail={includedSecCoverLetter} />
+            <TabSection data={tabSectionData} />
             <Faq data={faqs} />
         </>
     );
