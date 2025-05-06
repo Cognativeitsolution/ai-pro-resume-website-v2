@@ -27,6 +27,10 @@ import image6 from "media/privacyPolicy/image-6.webp";
 import image7 from "media/privacyPolicy/image-7.webp";
 import image8 from "media/privacyPolicy/image-8.webp";
 import image9 from "media/privacyPolicy/image-9.webp";
+// ==========================
+import FeaturesImage1 from "media/resume_builder/check/contentimg-1.webp";
+import FeaturesImage2 from "media/resume_builder/check/contentimg-2.webp";
+
 
 
 // ==========================
@@ -144,23 +148,23 @@ export const findResumeData = {
 
 
 export const FeaturesData = [
-    {
-        isBuilder: true,
-        title: "Professional Resume Templates for Every Career",
-        description: [
-            "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
-            "Stand out with sleek, modern, or classic designs suited to your job search."
-        ],
-        reverse: true,
-        builderImg: [
-            {
-                img: image3,
-            },
-            {
-                img: image4,
-            },
-        ]
-    },
+    // {
+    //     isBuilder: true,
+    //     title: "Professional Resume Templates for Every Career",
+    //     description: [
+    //         "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
+    //         "Stand out with sleek, modern, or classic designs suited to your job search."
+    //     ],
+    //     reverse: true,
+    //     builderImg: [
+    //         {
+    //             img: FeaturesImage1,
+    //         },
+    //         {
+    //             img: FeaturesImage2,
+    //         },
+    //     ]
+    // },
     {
         isBuilder: true,
         title: "Flexible Drag & Drop Resume Builder",
@@ -171,11 +175,18 @@ export const FeaturesData = [
         ],
         builderImg: [
             {
-                img: image1,
+                img: FeaturesImage1,
+                zIndex: 5,
+                maxWidth: "70%",
+                right: "auto",
             },
             {
-                img: image2,
-            }
+                img: FeaturesImage2,
+                right: "5%",
+                zIndex: 4,
+                maxWidth: "70%",
+                left: "auto",
+            },
         ]
     },
     {

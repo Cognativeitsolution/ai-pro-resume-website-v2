@@ -31,18 +31,39 @@ const PrivacyFeaturesCard = ({
                     </div>
                 </div> : null}
                 {reverse || isBuilder && <>
-                    <div className={`col-span-12 xl:col-span-6 border border-red-950 order-last flex justify-center xl:justify-start xl:order-first relative`}>
-                        {builderImg?.map((item: any, index: number) => (
-                            <div
-                                key={index}
-                            >
-                                <Image
-                                    src={item?.img}
-                                    alt={`image`}
-                                    className="w-[300px] h-auto rounded-lg shadow-md"
-                                />
-                            </div>
-                        ))}
+                    <div className={`col-span-12 xl:col-span-6 border border-red-950 order-last flex flex-col justify-center xl:justify-start xl:order-first `}>
+                        <div className="border border-red-950">
+                            {builderImg?.map((item: any, index: number) => {
+
+                                return (
+                                    <div
+                                        key={index}>
+                                        <div
+                                            className={`border border-red-950 transition-all duration-700 ease-in-out`}
+                                            style={{
+                                                // top: item?.top,
+                                                // left: item?.left,
+                                                // right: item?.right,
+                                                // bottom: item?.bottom,
+                                                marginLeft: item?.left,
+                                                marginRight: item?.right,
+                                                marginTop: item?.top,
+                                                marginBottom: item?.bottom,
+                                                zIndex: item?.zIndex,
+                                                maxWidth: item?.maxWidth,
+                                                width: '100%',
+                                            }}
+                                        >
+                                            <Image
+                                                src={item?.img}
+                                                alt={`image`}
+                                                className="w-[480px] h-auto "
+                                            />
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </>}
 

@@ -67,6 +67,10 @@ export default {
           "0%": { opacity: "0", transform: "translateY(-10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        zoomIn: {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 0.5s ease-out forwards", "bounce-in-up": "bounce-in-up 0.8s ease-out forwards",
@@ -74,6 +78,7 @@ export default {
         float: "float 2s ease-in-out infinite",
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
         dropdown: "dropdown 0.3s ease-out forwards",
+        zoomIn: 'zoomIn 1s ease-out backwards',
       },
     },
   },
