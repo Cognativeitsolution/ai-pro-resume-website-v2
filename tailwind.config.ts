@@ -60,6 +60,11 @@ export default {
           "0%": { opacity: "0", transform: "translateY(-10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        scanner: {
+          '0%': { top: '-10%' },
+          '50%': { top: '100%', transform: 'scaleY(-1)' },
+          '100%': { top: '-10%' },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 0.5s ease-out forwards", "bounce-in-up": "bounce-in-up 0.8s ease-out forwards",
@@ -67,6 +72,7 @@ export default {
         float: "float 2s ease-in-out infinite",
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
         dropdown: "dropdown 0.3s ease-out forwards",
+        scanner: 'scanner 7s infinite',
       },
     },
   },

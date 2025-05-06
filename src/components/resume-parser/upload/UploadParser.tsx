@@ -46,7 +46,7 @@ export default function UploadParser({ progress }: UploadParserProps) {
                                     <div className="text-[16px] font-medium text-white bg-zinc-800/50 w-8 h-8 flex items-center justify-center rounded-full">
                                         2
                                     </div>
-                                    <span className="text-[16px] font-medium text-white">Optional</span>
+                                    <span className="text-[16px] font-medium text-black lg:text-white">Optional</span>
                                 </div>
                                 <p>First, we’ll need your resume to extract your experience and skills.</p>
                             </div>

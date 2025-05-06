@@ -33,21 +33,9 @@ const Evaluation = () => {
     },
   };
 
- const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsSmallScreen(window.innerWidth < 640); // sm = 640px
-    };
-
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
-  
   const score2 = 83;
-  const totalBlocks = isSmallScreen ? 5 : 9;
-  const filledBlocks = isSmallScreen ? Math.round((score2 / 100) * 5) : Math.round((score2 / 100) * 9);
+  const totalBlocks = 10;
+  const filledBlocks = Math.round((score2 / 100) * 10);
 
   return (
     <>
@@ -64,7 +52,7 @@ const Evaluation = () => {
             {/* Left Section */}
             <div className="flex-1 space-y-4 w-full md:w-1/2">
               <h3 className="text-xl font-bold text-gray-900 leading-snug">
-                We’ll Help You Enhance Your Resume <br /> And Impress Hiring
+                We’ll Help You Enhance Your Resume <br className="hidden lg:block" /> And Impress Hiring
                 Managers
               </h3>
 
@@ -152,23 +140,20 @@ const Evaluation = () => {
               </p>
               <div className="flex items-center justify-center w-full">
                 <div className="">
-                  <p className="text-sm text-center sm:text-start font-semibold text-black">
+                  <p className="text-sm text-center font-semibold text-black">
                     Resume Parser Score
                   </p>
                   <div className="flex space-x-1 sm:space-x-2 mt-1 px-0 sm:px-2 py-1 rounded-full">
                     {Array.from({ length: totalBlocks }).map((_, idx) => (
                       <div
                         key={idx}
-                        className={`w-8 h-3 rounded-full ${
-                          idx < filledBlocks ? "bg-[#a78bfa]" : "bg-gray-200"
-                        }`}
+                        className={`w-5 h-2 md:w-8 md:h-3 rounded-full ${idx < filledBlocks ? "bg-[#a78bfa]" : "bg-gray-200"
+                          }`}
                       />
                     ))}
                   </div>
                 </div>
-                <span className="text-[#a78bfa] text-md font-semibold mt-6">
-                  {score2}%
-                </span>
+                <span className="text-[#a78bfa] text-md font-semibold mt-6">&nbsp;&nbsp;{score2}%</span>
               </div>
               <p className="text-gray-500 text-[15px]">
                 Our resume parser evaluates and extracts your information just
