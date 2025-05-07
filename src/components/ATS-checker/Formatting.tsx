@@ -101,7 +101,7 @@ const Formatting = () => {
                   className="w-full rounded-md"
                 />
                 {/* Overlay Content */}
-                <div className="absolute inset-0 w-[80%] sm:w-[70%] h-[70%] md:h-[40%] mx-auto bg-[#6B4BB8]/70 flex flex-col items-center justify-center px-4 text-white text-center top-[20px] lg:top-[170px]">
+                <div className="absolute inset-0 w-[80%] sm:w-[70%] h-[70%] md:h-[50%] mx-auto bg-[#6B4BB8]/60 flex flex-col items-center justify-center px-4 text-white text-center top-[20px] md:top-[100px] lg:top-[130px]">
                   <p className="text-sm md:text-lg font-medium mb-3 hidden sm:block">
                     Automatically Create A Longer Version Of My{" "}
                     <br className="hidden sm:block" /> Resume With AI PRO Resume
