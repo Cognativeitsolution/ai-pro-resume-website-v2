@@ -63,7 +63,7 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
             {/* Section 1 */}
             {section1 && (
                 <div className="scroll-mt-32" id="section1">
-                    <h2 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section1.title}</h2>
+                    <h2 className="text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2">{section1.title}</h2>
                     {section1.paragraphs?.map((para, idx) => (
                         <p key={idx} className="text-[16px] text-justify md:text-left mb-2">{para}</p>
                     ))}
@@ -103,9 +103,9 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
 
             {/* Section 2 */}
             {section2 && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mt-10 scroll-mt-32" id="section2">
                     <div>
-                        <h3 className='text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2'>{section2.title}</h3>
+                        <h3 className='text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2'>{section2.title}</h3>
                         {section2.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
@@ -137,7 +137,7 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
                     </div>
                     {section2.image?.src && (
                         <div>
-                            <Image src={section2.image.src} alt="Image" className="rounded-md w-full" />
+                            <Image src={section2.image.src} alt="Image" className="w-full" />
                         </div>
                     )}
                 </div>
@@ -150,7 +150,7 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
             {section3 && (
                 <>
                     <div className='my-10 mb-5 scroll-mt-32' id="section3">
-                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section3.title}</h3>
+                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2">{section3.title}</h3>
                         {section3.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
@@ -209,14 +209,14 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
 
             {/* Section 4 */}
             {section4 && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10 scroll-mt-32" id="section4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mt-10 scroll-mt-32" id="section4">
                     {section4.image?.src && (
                         <div>
                             <Image src={section4.image.src} alt="Image" className="rounded-md w-full" />
                         </div>
                     )}
                     <div className='order-first lg:order-last'>
-                        <h3 className='text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2'>{section4.title}</h3>
+                        <h3 className='text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2'>{section4.title}</h3>
                         {section4.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}
@@ -252,10 +252,10 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
             {/* Section 5 */}
             {section5 && (
                 <div className="mt-10 scroll-mt-32" id="section5">
-                    <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold">{section5.title}</h3>
+                    <h3 className="text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold">{section5.title}</h3>
                     {section5.paragraphs?.map((p, i) => (
-                            <p key={i} className="text-[16px] text-justify md:text-left mb-6">{p}</p>
-                        ))}
+                        <p key={i} className="text-[16px] text-justify md:text-left mb-6">{p}</p>
+                    ))}
                     <div className='grid md:grid-cols-2 gap-5'>
                         {
                             section5?.interviewQuestionList?.map((data: any, index: any) => (
@@ -272,7 +272,7 @@ const DynamicContent = ({ data }: DynamicContentProps) => {
             {section6 && (
                 <>
                     <div className='mt-10 mb-5 scroll-mt-32' id="section6">
-                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] font-semibold mb-2">{section6.title}</h3>
+                        <h3 className="text-[20px] sm:text-[25px] md:text-[35px] leading-[30px] sm:leading-[35px] md:leading-[45px] font-semibold mb-2">{section6.title}</h3>
                         {section6.paragraphs?.map((p, i) => (
                             <p key={i} className="text-[16px] text-justify md:text-left mb-2">{p}</p>
                         ))}

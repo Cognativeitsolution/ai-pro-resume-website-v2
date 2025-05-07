@@ -1,7 +1,8 @@
 // ====================== IMAGES ======================
 import image1 from 'media/images/ourBenefitsImg.webp'
-import image2 from 'media/images/grammer.webp'
-import image3 from 'media/resume_template_images/template_2.webp'
+import image2 from 'media/seo-and-marketing/image-1.png'
+import image3 from 'media/seo-and-marketing/image-2.png'
+import image4 from 'media/resume_template_images/template_2.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
 import TipPro from 'media/images/TipPro.webp';
@@ -70,9 +71,12 @@ const section3Data = {
         "Send a tailored follow-up referencing marketing goals discussed.",
         "Custom templates are useful, but always reflect the brand’s voice.",
         "Avoid jargon the company doesn’t use—mirror their marketing language.",
+        "Send a thoughtful second email if no response after a week.",
+        "Custom templates are useful, but always reflect the brand’s voice.",
+        "Avoid jargon the company doesn’t use—mirror their marketing language.",
         "Send a thoughtful second email if no response after a week."
     ],
-    image: { src: image3, alt: "Company marketing research tools" },
+    image: { src: image4, alt: "Company marketing research tools" },
     cta: { text: "Start Researching Companies" },
 }
 // ====================== Tip 2 Data ======================
@@ -93,7 +97,7 @@ const section4Data = {
         "Demonstrates ROI thinking and creativity",
         "Shows ownership of multi-channel strategies"
     ],
-    image: { src: image2, alt: "STAR method for marketing interviews" },
+    image: { src: image3, alt: "STAR method for marketing interviews" },
     cta: { text: "Learn the STAR Method" },
 }
 // ====================== Section 5 Data ======================
@@ -153,9 +157,11 @@ const section6Data = {
         "Personalize your message with a callback to the conversation.",
         "Use a structure, but adapt tone to reflect brand personality.",
         "Maintain a polished tone—your writing reflects your marketing skills.",
+        "Respect their timeline, but show continued interest with follow-ups.",
+        "Maintain a polished tone—your writing reflects your marketing skills.",
         "Respect their timeline, but show continued interest with follow-ups."
     ],
-    image: { src: image3, alt: "Follow-up tools for marketers" },
+    image: { src: image4, alt: "Follow-up tools for marketers" },
     cta: { text: "Download Follow-Up Templates" },
 }
 // ====================== PROS Data ======================

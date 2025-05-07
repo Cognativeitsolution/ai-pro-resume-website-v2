@@ -1,7 +1,7 @@
-import grammer from "media/images/grammer.webp";
-import tailored from "media/images/tailored.webp";
-import professional from "media/images/20+professionally.webp";
-import resume_parser from "media/images/resume_parser.webp";
+import grammer from "media/services/image-1.png";
+import tailored from "media/services/image-2.png";
+import professional from "media/services/image-3.png";
+import resume_parser from "media/services/image-4.png";
 
 export const BannerData = {
   title: (

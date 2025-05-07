@@ -1,12 +1,18 @@
-import image1 from "media/privacyPolicy/image-1.webp";
-import image2 from "media/privacyPolicy/image-2.webp";
-import image3 from "media/privacyPolicy/image-3.webp";
-import image4 from "media/privacyPolicy/image-4.webp";
-import image5 from "media/privacyPolicy/image-5.webp";
-import image6 from "media/privacyPolicy/image-6.webp";
-import image7 from "media/privacyPolicy/image-7.webp";
-import image8 from "media/privacyPolicy/image-8.webp";
-import image9 from "media/privacyPolicy/image-9.webp";
+import image1 from "media/terms-and-conditions/image-1.png";
+import image2 from "media/terms-and-conditions/image-2.png";
+import image3 from "media/terms-and-conditions/image-3.png";
+import image4 from "media/terms-and-conditions/image-4.png";
+import image5 from "media/terms-and-conditions/image-5.png";
+import image6 from "media/terms-and-conditions/image-6.png";
+import image7 from "media/terms-and-conditions/image-7.png";
+import image8 from "media/terms-and-conditions/image-8.png";
+import image9 from "media/terms-and-conditions/image-9.png";
+import image10 from "media/terms-and-conditions/image-10.png";
+import image11 from "media/terms-and-conditions/image-11.png";
+import image12 from "media/terms-and-conditions/image-12.png";
+import image13 from "media/terms-and-conditions/image-13.png";
+import image14 from "media/terms-and-conditions/image-14.png";
+import image15 from "media/terms-and-conditions/image-15.png";
 
 export const BannerData = {
     title: (
@@ -99,18 +105,18 @@ export const FeaturesData = [
         ],
     },
     {
-        image: image4,
+        image: image10,
         title: "Cancellation Policy",
         description: "You can easily upgrade or downgrade your package by contacting the AI Pro Resume customer support team. We will assist you with making the changes to fit your needs. Once your cancellation is processed, you will receive a confirmation email regarding your order cancellations. We recommend reviewing your subscription details before making changes to ensure they suit your needs. If you need help or have any questions, please get in touch with our support team.",
         reverse: true
     },
     {
-        image: image5,
+        image: image11,
         title: "Payment-Related Issues",
         description: "Double-check your payment details to ensure everything is correct if payment is declined or failed. If the issue persists, try using a different payment method.",
     },
     {
-        image: image6,
+        image: image12,
         title: "Cancellation Policy",
         description: "You can pay for packages or services using:",
         list: [
@@ -122,7 +128,7 @@ export const FeaturesData = [
         reverse: true
     },
     {
-        image: image7,
+        image: image13,
         title: "Account-Related Issues",
         description: [
             "If you face any problems with your account, such as login issues, forgotten passwords, or unauthorized activity, our support team is ready to assist you. Keep your login details secure and avoid sharing them with others.",
@@ -130,14 +136,14 @@ export const FeaturesData = [
         ],
     },
     {
-        image: image8,
+        image: image14,
         title: "Subscriptions",
         description:
             "AI Pro Resume never saves your payment details. When your package is about to expire, we send you an email with the expiration date and details of the remaining features. You will get complete information of renewal and extensions of the package in the same email. For renewal or extension, contact our customer support team for assistance. Remember, you cannot change or cancel your package on your own. ",
         reverse: true
     },
     {
-        image: image9,
+        image: image15,
         title: "Contact Us",
         description: "Please contact AI Pro Resume at info@resumebuilder.com if you have any questions or reservations about these terms and conditions. This is a generic set of terms and conditions, and you should contact a legal professional to verify that it suits the unique needs of your AI Pro Resume service and is under applicable laws and regulations.",
     },

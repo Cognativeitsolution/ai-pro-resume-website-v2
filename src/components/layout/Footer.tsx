@@ -20,10 +20,12 @@ const Footer = () => {
       heading: "Quick Links",
       items: [
         { name: "Services", href: "/services" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "Dashboard", href: "/dashboard" },
         { name: "Create a resume", href: "/create-resume" },
         { name: "Create a Cover Letter", href: "/create-cover-letter" },
-        { name: "Dashboard", href: "/dashboard" },
-        { name: "Pricing", href: "/pricing" },
+        { name: "ATS Checker", href: "/ats-checker" },
+        { name: "Resume Parser", href: "/resume-parser" },
       ],
     },
     {
@@ -33,7 +35,9 @@ const Footer = () => {
         { name: "Resume Examples", href: "/resume-examples" },
         { name: "Cover Letter Templates", href: "/cover-letter-templates" },
         { name: "Cover Letter Examples", href: "/cover-letter-examples" },
-        { name: "Resume Parser", href: "/resume-parser" },
+        { name: "Resume Builder", href: "/resume-builder" },
+        { name: "Cover Letter Builder", href: "/cover-letter-builder" },
+        { name: "Resume Summary Generator", href: "/resume-summary-generator" },
       ],
     },
     {
@@ -41,9 +45,11 @@ const Footer = () => {
       items: [
         { name: "Blog", href: "/blog" },
         { name: "Resume Format", href: "/resume-format" },
-        { name: "Create a Cover Format", href: "/cover-letter-format" },
-        { name: "How to write resume", href: "/how-to-a-write-resume" },
-        { name: "How to write Cover Letter", href: "/how-to-write-a-cover-letter"},
+        { name: "Cover Letter Format", href: "/cover-letter-format" },
+        { name: "How to write a Resume", href: "/how-to-a-write-resume" },
+        { name: "How to write a Cover Letter", href: "/how-to-write-a-cover-letter"},
+        { name: "Interview Preparation Seo & Marketing", href: "/interview-preparation-seo-and-marketing"},
+        { name: "Tools And Tips To Prepare For Interviews", href: "/tools-and-tips-to-prepare-for-interviews"},
       ],
     },
     {
