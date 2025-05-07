@@ -1,11 +1,14 @@
 "use client"
-
-import React, { useEffect, useState } from "react";
-import { CTA } from "@/components";
+// ===================
+import React from "react";
 import Image from "next/image";
-import evaluation from "../../../public/images/evaluation.svg";
+// ===================
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
+// ===================
+import { CTA } from "@/components";
+// ===================
+import evaluation from "media/images/evaluation.webp";
 
 ChartJS.register(ArcElement, Tooltip);
 

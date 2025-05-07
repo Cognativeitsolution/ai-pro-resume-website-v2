@@ -1,9 +1,11 @@
 import React from "react";
-import { CTA } from "@/components";
 import Image from "next/image";
-import relevance from "../../../public/images/relevance.svg";
-import grammer from "../../../public/images/grammer.svg";
-import resume_length_3 from "../../../public/images/resume_length_3.svg";
+// ===================
+import { CTA } from "@/components";
+// ===================
+import relevance from "media/images/relevance.webp";
+import grammer from "media/images/grammer2.webp";
+import resume_length_3 from "media/images/resume_length_3.webp";
 
 const GrammerAndSpelling = () => {
   const issues = [

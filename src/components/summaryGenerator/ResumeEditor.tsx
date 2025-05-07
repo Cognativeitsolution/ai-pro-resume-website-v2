@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Image from "next/image";
 // =============
 import tick from "media/images/doubleTick.webp";
-import resumeCheck from "media/summaryGenerator/resumeCheck.png";
+import resumeCheck from "media/summaryGenerator/resumeCheck.webp";
 
 interface FeatureCardProps {
     title: string | ReactNode;

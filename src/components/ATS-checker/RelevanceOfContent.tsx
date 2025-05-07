@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
-import { CTA } from "@/components";
-import relevance from "../../../public/images/relevance.svg";
-import good_job from "../../../public/images/good_job.svg";
+import Image from "next/image";
+// ===================
+import relevance from "media/images/relevance.webp";
+import good_job from "media/images/good_job.webp";
 
 const RelevanceOfContent = () => {
   return (

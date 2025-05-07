@@ -1,10 +1,10 @@
 import React from "react";
-import { CTA } from "@/components";
 import Image from "next/image";
-import relevance from "../../../public/images/relevance.svg";
-import resume_length_3 from "../../../public/images/resume_length_3.svg";
-import impact_2 from "../../../public/images/impact_2.svg";
-import good_job from "../../../public/images/good_job.svg";
+// ===================
+import relevance from "media/images/relevance.webp";
+import resume_length_3 from "media/images/resume_length_3.webp";
+import impact_2 from "media/images/impact_2.webp";
+import good_job from "media/images/good_job.webp";
 
 const ConcisenessAndImpact = () => {
   const issues = [

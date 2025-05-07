@@ -1,9 +1,11 @@
 import React from "react";
-import { CTA } from "@/components";
 import Image from "next/image";
-import formatting from "media/images/formatting.svg";
-import conciseness from "media/images/Conciseness.svg";
-import impactful from "media/images/impactful.svg";
+// ===================
+import { CTA } from "@/components";
+// ===================
+import formatting from "media/images/formatting.webp";
+import conciseness from "media/images/Conciseness.webp";
+import impactful from "media/images/impactful.webp";
 
 const Clarity = () => {
   const issues = [

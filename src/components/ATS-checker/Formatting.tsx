@@ -1,12 +1,14 @@
 import React from "react";
-import { CTA } from "@/components";
 import Image from "next/image";
-import formatting from "../../../public/images/formatting.svg";
-import formatting_2 from "../../../public/images/formatting_2.svg";
-import short_resume from "../../../public/images/short_resume.svg";
-import short_resume_2 from "../../../public/images/short_resume_2.png";
-import resume_length_3 from "../../../public/images/resume_length_3.svg";
-import good_job from "../../../public/images/good_job.svg";
+// ===================
+import { CTA } from "@/components";
+// ===================
+import formatting from "media/images/formatting.webp";
+import formatting_2 from "media/images/formatting_2.webp";
+import short_resume from "media/images/short_resume.webp";
+import short_resume_2 from "media/images/short_resume_2.webp";
+import resume_length_3 from "media/images/resume_length_3.webp";
+import good_job from "media/images/good_job.webp";
 
 const Formatting = () => {
   return (

@@ -1,18 +1,18 @@
-import image1 from "media/terms-and-conditions/image-1.png";
-import image2 from "media/terms-and-conditions/image-2.png";
-import image3 from "media/terms-and-conditions/image-3.png";
-import image4 from "media/terms-and-conditions/image-4.png";
-import image5 from "media/terms-and-conditions/image-5.png";
-import image6 from "media/terms-and-conditions/image-6.png";
-import image7 from "media/terms-and-conditions/image-7.png";
-import image8 from "media/terms-and-conditions/image-8.png";
-import image9 from "media/terms-and-conditions/image-9.png";
-import image10 from "media/terms-and-conditions/image-10.png";
-import image11 from "media/terms-and-conditions/image-11.png";
-import image12 from "media/terms-and-conditions/image-12.png";
-import image13 from "media/terms-and-conditions/image-13.png";
-import image14 from "media/terms-and-conditions/image-14.png";
-import image15 from "media/terms-and-conditions/image-15.png";
+import image1 from "media/terms-and-conditions/image-1.webp";
+import image2 from "media/terms-and-conditions/image-2.webp";
+import image3 from "media/terms-and-conditions/image-3.webp";
+import image4 from "media/terms-and-conditions/image-4.webp";
+import image5 from "media/terms-and-conditions/image-5.webp";
+import image6 from "media/terms-and-conditions/image-6.webp";
+import image7 from "media/terms-and-conditions/image-7.webp";
+import image8 from "media/terms-and-conditions/image-8.webp";
+import image9 from "media/terms-and-conditions/image-9.webp";
+import image10 from "media/terms-and-conditions/image-10.webp";
+import image11 from "media/terms-and-conditions/image-11.webp";
+import image12 from "media/terms-and-conditions/image-12.webp";
+import image13 from "media/terms-and-conditions/image-13.webp";
+import image14 from "media/terms-and-conditions/image-14.webp";
+import image15 from "media/terms-and-conditions/image-15.webp";
 
 export const BannerData = {
     title: (

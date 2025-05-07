@@ -1,7 +1,9 @@
-import Image from "next/image";
 import React from "react";
-import issuesfound from "../../../public/images/issuesfound.png";
+import Image from "next/image";
+// ===================
 import { CTA } from "@/components";
+// ===================
+import issuesfound from "media/images/issuesfound.webp";
 
 const IssuesFound = () => {
   const issues = [
