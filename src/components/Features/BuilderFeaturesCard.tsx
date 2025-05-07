@@ -42,7 +42,7 @@ const BuilderFeaturesCard = ({
 
     return (
         <>
-            <div className={`grid grid-cols-12 items-center gap-y-4 xl:gap-20 mb-6`}>
+            <div className={`grid grid-cols-12 items-center gap-y-4 xl:gap-20 overflow-hidden mb-6`}>
                 {reverse || isBuilder && <>
                     <div className={`col-span-12 lg:col-span-6 order-last flex flex-col justify-center lg:justify-start lg:order-first `}>
                         <div ref={refLeft} className="min-h-[320px] sm:h-[400px] md:h-[480px] lg:h-[350px] xl:h-[380px] 2xl:h-[450px] relative">

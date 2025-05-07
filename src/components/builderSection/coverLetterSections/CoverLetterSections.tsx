@@ -1,7 +1,7 @@
 'use client'
-import { getTailwindTransitionClass } from '@/utils/transition';
-import Image from 'next/image';
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import Image from 'next/image';
+import { getTailwindTransitionClass } from '@/utils/transition';
 
 type data = {
     title?: any;
@@ -44,7 +44,7 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                 <h2 className="font-semibold text-slate-950 text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] text-center">
                     {sectionDetail?.title}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-0 lg:gap-12 xl:grid-cols-4 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-0 lg:gap-12 xl:grid-cols-4 overflow-hidden mt-10">
                     {sectionDetail?.list?.map((item: any, index: any) => (
                         <div key={index} className="flex flex-col gap-2 hover:shadow-lg mx-auto text-center border bg-indigo-200/20 backdrop-blur-none py-3 shadow-md rounded-2xl">
                             <div>

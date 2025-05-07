@@ -1,10 +1,6 @@
-import React from "react";
-// =================
-import { InnerBanner, FindResumeTemplates, ParserFeatures, PrivacyFeatures, CoverLetterSections, Faq, } from "@/components";
-// =================
+import { InnerBanner, FindResumeTemplates, ParserFeatures, CoverLetterSections, Faq, BuilderFeatures, TabSection, } from "@/components";
 import { BannerData, faqs, FeaturesData, findResumeData, includedSecCoverLetter, ParserFeatureData, tabSectionData } from "./data";
-import TabSection from "@/components/sideTab/SideTab";
-import BuilderFeatures from "@/components/Features/BuilderFeatures";
+// =================
 
 export default function Page() {
     return (

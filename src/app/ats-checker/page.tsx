@@ -1,16 +1,4 @@
-import {
-  BuildATSfriendlyResume,
-  Clarity,
-  ConcisenessAndImpact,
-  Evaluation,
-  Formatting,
-  GrammerAndSpelling,
-  IssuesFound,
-  JobWinningResume,
-  ParsedResumeOverview,
-  RelevanceOfContent,
-  YourScore,
-} from "@/components";
+import { BuildATSfriendlyResume, Clarity, ConcisenessAndImpact, Evaluation, Formatting, GrammerAndSpelling, IssuesFound, JobWinningResume, RelevanceOfContent, YourScore } from "@/components";
 // =====================
 
 export default function Page() {
@@ -24,7 +12,6 @@ export default function Page() {
             {/* Content */}
             <div className="w-full xl:w-3/4">
               <Evaluation />
-              {/* <ParsedResumeOverview/> */}
               <BuildATSfriendlyResume />
               <IssuesFound />
               <Formatting />

@@ -81,6 +81,7 @@ const SummaryFeatures = dynamic(() => import("./summaryGenerator/SummaryFeatures
 const Work = dynamic(() => import("./summaryGenerator/Work"));
 const ResumeEditor = dynamic(() => import("./summaryGenerator/ResumeEditor"));
 const TabSection = dynamic(() => import("./sideTab/SideTab"));
+const BuilderFeatures = dynamic(() => import("./Features/BuilderFeatures"));
 
 export {
   AutoPlaySlider,
@@ -164,4 +165,5 @@ export {
   Work,
   ResumeEditor,
   TabSection,
+  BuilderFeatures,
 };
