@@ -46,7 +46,7 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-0 lg:gap-12 xl:grid-cols-4 mt-10">
                     {sectionDetail?.list?.map((item: any, index: any) => (
-                        <div key={index} className="flex flex-col gap-2 transition-transform duration-300 hover:scale-105 hover:shadow-2xl mx-auto text-center border bg-indigo-200/20 backdrop-blur-none py-3 shadow-md rounded-2xl">
+                        <div key={index} className="flex flex-col gap-2 hover:shadow-lg mx-auto text-center border bg-indigo-200/20 backdrop-blur-none py-3 shadow-md rounded-2xl">
                             <div>
                                 <div className="h-[40px] mx-auto w-[40px] border-2 text-white border-white bg-slate-600 font-medium text-[20px] flex items-center justify-center rounded-full  shadow-2xl">
                                     <span>{index + 1}</span>
@@ -65,7 +65,7 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                                     alt={item?.title}
                                 />}
                                 {index === 1 && <Image
-                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 2500)}`}
+                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 1000)}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}
@@ -86,12 +86,12 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                                 {index === 3 && (
                                     <>
                                         <Image
-                                            className={`absolute w-[90px] top-[4px] left-[80px] ${getTailwindTransitionClass(show, 'left', 2000)}`}
+                                            className={`absolute w-[90px] top-[4px] left-[80px] ${getTailwindTransitionClass(show, 'left', 1000)}`}
                                             src={item?.PositionImg1}
                                             alt={item?.title}
                                         />
                                         <Image
-                                            className={`absolute w-[90px] top-[75px]  right-[65px] ${getTailwindTransitionClass(show, 'right', 2500)}`}
+                                            className={`absolute w-[90px] top-[75px]  right-[65px] ${getTailwindTransitionClass(show, 'right', 1500)}`}
                                             src={item?.PositionImg2}
                                             alt={item?.title}
                                         />

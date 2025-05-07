@@ -1,12 +1,5 @@
 // ====================== IMAGES ======================
-import image1 from 'media/images/ourBenefitsImg.webp'
-import image2 from 'media/images/grammer.webp'
-import image3 from 'media/resume_template_images/template_2.webp'
-import pros from 'media/images/pros.webp';
-import cons from 'media/images/cons.webp';
 import TipPro from 'media/images/TipPro.webp';
-import TipProComma from 'media/images/commaIcoon.webp';
-
 import secImg1 from 'media/coverLetterBuilder/secImg1.webp';
 import secImg1Inner from 'media/coverLetterBuilder/secImg1Inner.webp';
 
@@ -23,8 +16,6 @@ import secImg4Inner1 from 'media/coverLetterBuilder/secImg4Inner1.webp';
 import secImg4Inner2 from 'media/coverLetterBuilder/secImg4Inner2.webp';
 import secImg4Inner3 from 'media/coverLetterBuilder/secImg4Inner3.webp';
 
-
-
 import Skills from "media/resume_parser/skills.webp";
 import Experience from "media/resume_parser/experience.webp";
 import Achievements from "media/resume_parser/archievements.webp";
@@ -33,15 +24,6 @@ import Education from "media/resume_parser/employment.webp";
 import Contacts from "media/resume_parser/alignment.webp";
 import Language from "media/resume_parser/language.webp";
 import Certifications from "media/resume_parser/certification.webp";
-import Screening from "media/resume_parser/screening.webp";
-import DataBase from "media/resume_parser/database.webp";
-
-// import image1 from "media/privacyPolicy/image-1.webp";
-// import image2 from "media/privacyPolicy/image-2.webp";
-// import image3 from "media/privacyPolicy/image-3.webp";
-import image4 from "media/privacyPolicy/image-4.webp";
-import image5 from "media/privacyPolicy/image-5.webp";
-import image6 from "media/privacyPolicy/image-6.webp";
 import Template1 from "media/cover_template_images/template_1.webp";
 import Template2 from "media/cover_template_images/template_2.webp";
 import Template3 from "media/cover_template_images/template_3.webp";
@@ -49,7 +31,14 @@ import Template4 from "media/cover_template_images/template_4.webp";
 import Template5 from "media/cover_template_images/template_5.webp";
 import Template6 from "media/cover_template_images/template_6.webp";
 
-
+import FeaturesImage1 from "media/resume_builder/check/contentimg-1.webp";
+import FeaturesImage2 from "media/resume_builder/check/contentimg-2.webp";
+import FeaturesImage3 from "media/resume_builder/check/contentimg-3.webp";
+import FeaturesImage4 from "media/resume_builder/check/contentimg-4.webp";
+import FeaturesImage5 from "media/resume_builder/check/contentimg-5.webp";
+import FeaturesImage6 from "media/resume_builder/check/contentimg-6.webp";
+import FeaturesImage7 from "media/resume_builder/check/contentimg-7.webp";
+import FeaturesImage8 from "media/resume_builder/check/contentimg-8.webp";
 // ====================== BANNER ======================
 export const BannerData = {
     title: (
@@ -225,37 +214,25 @@ export const findCoverLetterData = {
 export const FeaturesData = [
     {
         isBuilder: true,
-        title: "Professional Cover Letter Templates for Every Career",
-        description: [
-            "Choose from 11 fully customizable templates tailored by industry, seniority level, and company culture.",
-            "Stand out with sleek, modern, or classic designs suited to your job search."
-        ],
-        reverse: true,
-        builderImg: [
-            {
-                img: image3,
-            },
-            {
-                img: image4,
-            },
-        ]
-    },
-    {
-        isBuilder: true,
-        title: "Flexible Drag & Drop Cover Letter Builder",
+        title: "Flexible Drag & Drop Resume Builder",
         description: [
             "You’re not limited to a fixed layout. Rearrange sections easily to spotlight your strengths.",
             "Add, remove, or re-order sections like Work Experience, Skills, Education, and more.",
-            "Customize your Cover Letter your way – no design skills needed."
+            "Customize your resume your way – no design skills needed.",
         ],
         builderImg: [
             {
-                img: image1,
+                img: FeaturesImage1,
+                className: "sm:absolute lg:top-[5%] sm:left-0 z-20 w-full sm:max-w-[70%]",
+                isShadow: true,
             },
             {
-                img: image2,
-            }
-        ]
+                img: FeaturesImage2,
+                className: "sm:absolute bottom-[0%] sm:bottom-[5%] sm:right-[5%] z-20 mx-auto max-w-[95%] sm:max-w-[70%]",
+                direction: 'right',
+                duration: 1500,
+            },
+        ],
     },
     {
         isBuilder: true,
@@ -263,17 +240,21 @@ export const FeaturesData = [
         description: [
             "Access over 10,000 bullet point suggestions by job title and experience level.",
             "Receive live prompts to refine weak or vague statements for a stronger impact.",
-            "Turn generic phrases into achievement-driven results."
+            "Turn generic phrases into achievement-driven results.",
         ],
         reverse: true,
         builderImg: [
             {
-                img: image5,
+                img: FeaturesImage3,
+                className: "sm:absolute top-[40%] right-0 z-20 w-full sm:max-w-[70%]",
+                direction: 'right',
+                duration: 1500,
             },
             {
-                img: image6,
-            }
-        ]
+                img: FeaturesImage4,
+                className: "sm:absolute top-[25%] left-[20%] z-10 mx-auto max-w-[90%] sm:max-w-[70%]",
+            },
+        ],
     },
     {
         isBuilder: true,
@@ -281,16 +262,20 @@ export const FeaturesData = [
         description: [
             "Create a professional PDF resume that recruiters love with just one click.",
             "Export a plain text version for easy editing or job portal uploads.",
-            "All formatting stays clean and consistent – no extra effort needed."
+            "All formatting stays clean and consistent – no extra effort needed.",
         ],
         builderImg: [
             {
-                img: image3,
+                img: FeaturesImage5,
+                className: "absolute right-0 sm:right-[20%] lg:right-[30%] -top-[5%] sm:top-auto z-20 max-w-[250px] sm:max-w-[50%] md:max-w-[45%] lg:max-w-[50%]",
             },
             {
-                img: image4,
+                img: FeaturesImage6,
+                className: "absolute top-[22%] sm:top-[25%] left-0 sm:left-[20%] lg:left-[10%] z-10 max-w-[250px] sm:max-w-[50%] md:max-w-[45%] lg:max-w-[50%]",
+                direction: 'right',
+                duration: 1500,
             },
-        ]
+        ],
     },
     {
         isBuilder: true,
@@ -298,52 +283,22 @@ export const FeaturesData = [
         description: [
             "Save time by uploading your existing resume or linking your LinkedIn profile.",
             "We’ll automatically extract your experience, education, and skills into editable fields.",
-            "Start building your new resume in seconds without starting from scratch."
+            "Start building your new resume in seconds without starting from scratch.",
         ],
         reverse: true,
         builderImg: [
             {
-                img: image1,
+                img: FeaturesImage7,
+                className: "absolute top-0 right-0 sm:right-[20%] lg:right-[2%]  z-10 max-w-[250px] sm:max-w-[50%] md:max-w-[45%] lg:max-w-[50%] ",
+                direction: 'right',
+                duration: 1500,
             },
             {
-                img: image2,
-            }
-        ]
-    },
-    {
-        isBuilder: true,
-        title: "One-Click Job Targeting",
-        description: [
-            "Tailor your resume to specific job descriptions with intelligent keyword highlighting.",
-            "Match industry-relevant phrases to get through Applicant Tracking Systems (ATS)."
+                img: FeaturesImage8,
+                className: "absolute top-[50%] sm:top-[35%] lg:top-[40%] sm:left-[10%] lg:left-[20%] 2xl:left-[25%] z-20 max-w-[50%] max-w-[200px] sm:max-w-[50%] md:max-w-[45%] lg:max-w-[50%] ",
+            },
         ],
-        builderImg: [
-            {
-                img: image5,
-            },
-            {
-                img: image6,
-            }
-        ]
     },
-    {
-        isBuilder: true,
-        title: "Built-In Spell Checker and Formatting Assistant",
-        description: [
-            "Avoid typos and formatting mistakes with our real-time spell check.",
-            "Stay focused with clear alerts and formatting guidance as you type."
-        ],
-        reverse: true,
-        builderImg: [
-            {
-                img: image3,
-            },
-            {
-                img: image4,
-            },
-        ]
-    }
-
 ];
 const tabSectionList = [
     {
