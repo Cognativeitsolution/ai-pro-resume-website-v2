@@ -48,13 +48,13 @@ export default function TabSection({ data }: propsType) {
                 <p className={`font-normal  text-[16px] text-center px-0 lg:px-40`}>
                     {data.description}
                 </p>
-                <div className="grid grid-cols-12 gap-y-10 xl:gap-5 mt-8 md:mt-16 ">
+                <div className="grid grid-cols-12 gap-y-10 gap-2 2xl:gap-5 mt-8 md:mt-16 ">
                     {/* Tabs */}
-                    <div className="col-span-5 flex flex-col items-start space-y-4">
+                    <div className="col-span-12 sm:col-span-5 md:col-span-6 lg:col-span-5 xl:col-span-4 2xl:col-span-5 flex flex-col items-start space-y-4">
                         {data.list.map((tab, index) => (
                             <button
                                 key={index}
-                                className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-200 w-[90%] border ${activeTab === index
+                                className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-200 w-full 2xl:w-[90%] border ${activeTab === index
                                     ? 'bg-hamzaPrimary text-white'
                                     : 'bg-indigo-200/20  text-gray-700 '
                                     }`}
@@ -65,19 +65,19 @@ export default function TabSection({ data }: propsType) {
                                     alt={tab.title}
                                     width={40}
                                     height={40}
-                                    className="rounded border shadow"
+                                    className="rounded border shadow hidden md:block"
                                 />
-                                {tab.title}&nbsp; &nbsp;-&nbsp; &nbsp;{tab.semiTitle}
+                                {tab.title}&nbsp; &nbsp;<span className='hidden md:block '>-&nbsp; &nbsp;{tab.semiTitle}</span>
                             </button>
                         ))}
                     </div>
 
                     {/* Tab Content */}
-                    <div className="col-span-7 flex relative">
+                    <div className="col-span-12 sm:col-span-7 md:col-span-6 lg:col-span-7 xl:col-span-8 2xl:col-span-7 flex relative">
                         <div className={` bg-indigo-200/20 backdrop-blur-none border-2 flex flex-col justify-center gap-4 mx-auto p-4 rounded transition-all duration-700 ${highlightBorder ? 'border-hamzaPrimary' : 'border-white'}`}>
                             <div className='flex justify-between'>
                                 <h2 className="text-xl font-semibold ">{activeItem.title}</h2>
-                                <div className='px-4 py-1 bg-hamzaPrimary text-white rounded-full'>
+                                <div className='px-4 py-1 hidden md:block bg-hamzaPrimary text-white rounded-full'>
                                     {activeItem.semiTitle}
                                 </div>
                             </div>
@@ -104,10 +104,10 @@ export default function TabSection({ data }: propsType) {
                             </div>
 
                         </div>
-                        <div className="h-[220px] lg:h-[280px] absolute top-96 left-16 hidden lg:block">
+                        <div className="h-[220px] lg:h-[280px] absolute top-96 left-16 hidden xl:block">
                             <Image src={arrowLeft.src} alt="" width={80} height={80} />
                         </div>
-                        <div className="h-[220px] lg:h-[280px] absolute top-4 right-16 hidden lg:block">
+                        <div className="h-[220px] lg:h-[280px] absolute top-4 right-16 hidden xl:block">
                             <Image src={arrowRight.src} alt="" width={100} height={100} />
                         </div>
                     </div>
