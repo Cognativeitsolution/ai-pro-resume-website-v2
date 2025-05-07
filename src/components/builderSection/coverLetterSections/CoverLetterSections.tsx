@@ -29,7 +29,7 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
             ([entry]) => {
                 if (entry.isIntersecting) setShow(true);
             },
-            { threshold: 0.3 }
+            { threshold: 0.9 }
         );
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
@@ -44,26 +44,28 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                 <h2 className="font-semibold text-slate-950 text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] text-center">
                     {sectionDetail?.title}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-10 xl:grid-cols-4 mt-8 md:mt-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-8 md:gap-x-0 lg:gap-12 xl:grid-cols-4 mt-10">
                     {sectionDetail?.list?.map((item: any, index: any) => (
-                        <div key={index} className="flex flex-col gap-4 text-center">
+                        <div key={index} className="flex flex-col gap-2 transition-transform duration-300 hover:scale-105 hover:shadow-2xl mx-auto text-center border bg-indigo-200/20 backdrop-blur-none py-3 shadow-md rounded-2xl">
                             <div>
-                                <div className="h-[52px] mx-auto w-[52px] border-2 text-slate-600  bg-slate-600/20  font-semibold text-[28px] flex items-center justify-center rounded-full  shadow-2xl">
+                                <div className="h-[40px] mx-auto w-[40px] border-2 text-white border-white bg-slate-600 font-medium text-[20px] flex items-center justify-center rounded-full  shadow-2xl">
                                     <span>{index + 1}</span>
                                 </div>
-                                <p className="text-[15px] font-base mt-2">{item?.title}</p>
+                                <div className='px-4 py-1 bg-indigo-400/80 mt-2 text-white shadow  font-medium text-[24px] capitalize rounded-sm'>
+                                    <p className="text-[15px] font-base">{item?.title}</p>
+                                </div>
                             </div>
-                            <div className='relative' ref={ref}>
-                                <div className="w-[80%] mx-auto h-[300px]">
+                            <div className='relative w-full' ref={ref}>
+                                <div className="w-[80%] mx-auto h-[280px]  flex justify-center shadow-sm">
                                     <Image className="h-full" src={item?.secImg} alt={item?.title} />
                                 </div>
                                 {index === 0 && <Image
-                                    className={`absolute top-[43px] right-[10px]  ${getTailwindTransitionClass(show, 'left')}`}
+                                    className={`absolute top-[43px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left')}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}
                                 {index === 1 && <Image
-                                    className={`absolute bottom-[-25px] right-[9px]  ${getTailwindTransitionClass(show, 'left')}`}
+                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left')}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}
@@ -75,7 +77,7 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                                             alt={item?.title}
                                         />
                                         <Image
-                                            className={`absolute w-[230px] top-[138px]  right-[5px] ${getTailwindTransitionClass(show, 'right')}`}
+                                            className={`absolute w-[230px] top-[138px]  right-[-5px] ${getTailwindTransitionClass(show, 'right')}`}
                                             src={item?.PositionImg2}
                                             alt={item?.title}
                                         />
@@ -106,7 +108,6 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                     ))}
                 </div>
             </div>
-
         </section>
     )
 }
