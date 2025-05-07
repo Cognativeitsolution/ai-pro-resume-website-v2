@@ -1,5 +1,6 @@
 import { Faq, IconSlider, InnerBanner, PrivacyFeatures, ShowAllTemplates, Welcome } from "@/components";
 import { BannerData, faqs, FeaturesData, IconData, WelcomeData } from "./data";
+// =================
 
 export default function Page() {
   return (

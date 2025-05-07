@@ -1,10 +1,10 @@
 import React from "react";
-import { CTA } from "@/components";
 import Image from "next/image";
-import relevance from "../../../public/images/relevance.svg";
-import resume_length_3 from "../../../public/images/resume_length_3.svg";
-import impact_2 from "../../../public/images/impact_2.svg";
-import good_job from "../../../public/images/good_job.svg";
+// ===================
+import relevance from "media/images/relevance.webp";
+import resume_length_3 from "media/images/resume_length_3.webp";
+import impact_2 from "media/images/impact_2.webp";
+import good_job from "media/images/good_job.webp";
 
 const ConcisenessAndImpact = () => {
   const issues = [
@@ -13,7 +13,7 @@ const ConcisenessAndImpact = () => {
   ];
   return (
     <>
-      <div className="bg-indigo-200/20 backdrop-blur-none border-2 border-white p-4 rounded-2xl w-full mt-5 mb-20">
+      <div className="bg-indigo-200/20 backdrop-blur-none border-2 border-white p-4 rounded-2xl w-full mt-5">
         {/* heading */}
         <div className="flex items-center gap-2">
           <Image src={relevance} alt="evaluation" />
@@ -27,7 +27,7 @@ const ConcisenessAndImpact = () => {
           <div className="flex-1 space-y-4 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Project Descriptions
               </h3>
             </div>
@@ -38,7 +38,7 @@ const ConcisenessAndImpact = () => {
               provident, similique sunt in culpa qui officia.
             </p>
 
-            <Image className="mx-auto" src={impact_2} alt="impactful" />
+            <Image className="mx-auto w-[80px] sm:w-auto" src={impact_2} alt="impactful" />
             <p className="text-black font-semibold text-center text-[16px] mx-auto flex items-center justify-center">
               Oops! <br />
               It looks like some Typo and inconsistent Capitalization issues
@@ -56,10 +56,10 @@ const ConcisenessAndImpact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-start justify-between gap-6 p-6 rounded-lg max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-6 rounded-lg mt-3 max-w-5xl mx-auto">
             {/* Left Section */}
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
                 With AI PRO Resume report, you get:
               </h3>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -87,7 +87,7 @@ const ConcisenessAndImpact = () => {
           <div className="flex-1 space-y-2 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Other Activities
               </h3>
             </div>
@@ -97,7 +97,7 @@ const ConcisenessAndImpact = () => {
               dolores et quas molestias excepturi sint occaecati cupiditate non
               provident, similique sunt in culpa qui officia.
             </p>
-            <Image className="mx-auto" src={good_job} alt="formatting_2" />
+            <Image className="mx-auto w-[120px] sm:w-auto" src={good_job} alt="formatting_2" />
             <p className="text-gray-500 text-[16px] mx-auto flex items-center justify-center font-bold">
               Good Job!
             </p>

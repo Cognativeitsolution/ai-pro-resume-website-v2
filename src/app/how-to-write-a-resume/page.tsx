@@ -1,8 +1,6 @@
-'use client';
-
 import { InnerBanner, Faq, HowToWriteResume } from '@/components';
 import { BannerData, FormatData, faqs } from './data';
-
+// =================
 
 const page = () => {
 

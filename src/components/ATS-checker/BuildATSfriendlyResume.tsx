@@ -1,6 +1,8 @@
 import React from "react";
-import ats from "../../../public/images/atsResumeBgImge.svg";
+// ===================
 import { CTA } from "@/components";
+// ===================
+import ats from "media/images/atsResumeBgImge.webp";
 
 const BuildATSfriendlyResume = () => {
   return (

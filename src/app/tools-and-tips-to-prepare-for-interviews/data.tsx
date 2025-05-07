@@ -1,8 +1,8 @@
 // ====================== IMAGES ======================
 import image1 from 'media/images/ourBenefitsImg.webp'
-import image2 from 'media/images/grammer.webp'
-import image3 from 'media/resume_template_images/template_2.webp'
-import image4 from 'media/images/20+professionally.webp'
+import image2 from 'media/tools-and-tips/image-1.webp'
+import image3 from 'media/tools-and-tips/image-2.webp'
+import image4 from 'media/resume_template_images/template_2.webp'
 import pros from 'media/images/pros.webp';
 import cons from 'media/images/cons.webp';
 import TipPro from 'media/images/TipPro.webp';
@@ -76,9 +76,8 @@ const section3Data = {
     "Send a personalized request and reiterate one memorable moment from your conversation.",
     "Templates ensure structure, but always adapt the tone to the specific job.",
     "Avoid slang or emojis. Stay consistent with your professional image.",
-    "Wait 3–5 business days before sending a second follow-up message.",
   ],
-  image: { src: image3, alt: "Company research tools" },
+  image: { src: image4, alt: "Company research tools" },
   cta: { text: "Start Researching" },
 }
 // ====================== Tip 2 Data ======================
@@ -99,7 +98,7 @@ const section4Data = {
     "Demonstrates problem-solving and adaptability",
     "Shows results-driven thinking"
   ],
-  image: { src: image4, alt: "STAR method for interviews" },
+  image: { src: image3, alt: "STAR method for interviews" },
   cta: { text: "Learn the STAR Method" },
 }
 // ====================== Section 5 Data ======================
@@ -159,9 +158,8 @@ const section6Data = {
     "Send a personalized request and reiterate one memorable moment from your conversation.",
     "Templates ensure structure, but always adapt the tone to the specific job.",
     "Avoid slang or emojis. Stay consistent with your professional image.",
-    "Wait 3–5 business days before sending a second follow-up message.",
   ],
-  image: { src: image3, alt: "Interview follow-up checklist" },
+  image: { src: image4, alt: "Interview follow-up checklist" },
   cta: { text: "Download Follow-Up Templates" },
 }
 // ====================== PROS Data ======================

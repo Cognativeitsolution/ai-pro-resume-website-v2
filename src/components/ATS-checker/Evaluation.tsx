@@ -1,11 +1,14 @@
 "use client"
-
-import React, { useEffect, useState } from "react";
-import { CTA } from "@/components";
+// ===================
+import React from "react";
 import Image from "next/image";
-import evaluation from "../../../public/images/evaluation.svg";
+// ===================
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
+// ===================
+import { CTA } from "@/components";
+// ===================
+import evaluation from "media/images/evaluation.webp";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -37,6 +40,8 @@ const Evaluation = () => {
   const totalBlocks = 10;
   const filledBlocks = Math.round((score2 / 100) * 10);
 
+
+
   return (
     <>
       <div className="bg-indigo-200/20 backdrop-blur-none border-2 border-white p-4 rounded-2xl w-full">
@@ -51,7 +56,7 @@ const Evaluation = () => {
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-5">
             {/* Left Section */}
             <div className="flex-1 space-y-4 w-full md:w-1/2">
-              <h3 className="text-xl font-bold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 We’ll Help You Enhance Your Resume <br className="hidden lg:block" /> And Impress Hiring
                 Managers
               </h3>
@@ -128,7 +133,7 @@ const Evaluation = () => {
           </div>
           <div className="bg-white p-5 rounded-2xl mt-[10px]">
             <div className="flex-1 space-y-4 w-full">
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 How Much of Your Resume Was Parsed?
               </h3>
               <p className="text-gray-500 text-[15px]">
@@ -147,7 +152,7 @@ const Evaluation = () => {
                     {Array.from({ length: totalBlocks }).map((_, idx) => (
                       <div
                         key={idx}
-                        className={`w-5 h-2 md:w-8 md:h-3 rounded-full ${idx < filledBlocks ? "bg-[#a78bfa]" : "bg-gray-200"
+                        className={`w-4 h-2 md:w-8 md:h-3 rounded-full ${idx < filledBlocks ? "bg-[#a78bfa]" : "bg-gray-200"
                           }`}
                       />
                     ))}

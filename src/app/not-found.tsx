@@ -10,7 +10,6 @@ import star from "media/images/star.webp"
 export default function NotFound() {
   return (
     <>
-
       <section className='mb-0 lg:pb-5 xl:pb-10'>
         <div className=" bg-PrimaryDark h-dvh flex items-center justify-center flex-col relative overflow-hidden">
           <div className="container relative mx-auto">

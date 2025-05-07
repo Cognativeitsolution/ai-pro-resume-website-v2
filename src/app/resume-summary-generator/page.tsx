@@ -1,8 +1,6 @@
-import { Faq, InnerBanner, UploadParser, } from "@/components";
+import { Faq, InnerBanner, ResumeEditor, SummaryFeatures, UploadParser, Work, } from "@/components";
 import { BannerData, faqs, ResumeEditorData, SummaryFeaturesData, WorkData, } from "./data";
-import SummaryFeatures from "@/components/summaryGenerator/SummaryFeatures";
-import Work from "@/components/summaryGenerator/Work";
-import ResumeEditor from "@/components/summaryGenerator/ResumeEditor";
+// =================
 
 export default function Page() {
   return (

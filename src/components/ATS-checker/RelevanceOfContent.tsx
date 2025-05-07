@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
-import { CTA } from "@/components";
-import relevance from "../../../public/images/relevance.svg";
-import good_job from "../../../public/images/good_job.svg";
+import Image from "next/image";
+// ===================
+import relevance from "media/images/relevance.webp";
+import good_job from "media/images/good_job.webp";
 
 const RelevanceOfContent = () => {
   return (
@@ -19,7 +19,7 @@ const RelevanceOfContent = () => {
           <div className="flex-1 space-y-2 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Other Activities
               </h3>
             </div>

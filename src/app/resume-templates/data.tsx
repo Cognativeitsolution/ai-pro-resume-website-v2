@@ -5,10 +5,10 @@ import icon4 from "media/customerIcons/ladders.webp";
 import icon5 from "media/customerIcons/snagajob.webp";
 import icon6 from "media/customerIcons/alison.webp";
 // ==========================
-import image1 from "media/privacyPolicy/image-1.webp";
-import image2 from "media/privacyPolicy/image-2.webp";
-import image3 from "media/privacyPolicy/image-3.webp";
-import image4 from "media/privacyPolicy/image-4.webp";
+import image1 from "media/resume-templates/image-1.webp";
+import image2 from "media/resume-templates/image-2.webp";
+import image3 from "media/resume-templates/image-3.webp";
+import image4 from "media/resume-templates/image-4.webp";
 // ==========================
 
 export const BannerData = {

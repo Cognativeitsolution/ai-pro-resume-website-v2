@@ -1,8 +1,6 @@
-'use client';
-
-import { Faq, ParserBanner, ParserContent, ParserFeatures, ParserGoals, UploadParser } from "@/components";
+import { Faq, ParserBanner, ParserContent, ParserFeatures, ParserGoals, Tailor, UploadParser } from "@/components";
 import { BannerData, ParserFeatureData, ParserGoalData, ParserContentData, faqs } from "./data";
-import Tailor from "@/components/dynamicSection/Tailor";
+// =================
 
 const page = () => {
     return (

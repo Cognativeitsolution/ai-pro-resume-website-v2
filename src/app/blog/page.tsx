@@ -1,15 +1,5 @@
-import {
-    InnerBanner,
-    Client,
-    Blogs,
-    Reviews,
-} from "@/components";
-import React from "react";
-import {
-    BannerData,
-    ClientData,
-    blogsData,
-} from "./data";
+import { InnerBanner, Client, Blogs, Reviews, } from "@/components";
+import { BannerData, ClientData, blogsData, } from "./data";
 import { reviewData } from "../data";
 
 export default function Page() {

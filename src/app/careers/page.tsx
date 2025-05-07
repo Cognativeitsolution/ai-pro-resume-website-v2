@@ -1,5 +1,3 @@
-import React from "react";
-// =================
 import { InnerBanner, Client, Reviews, CareerJobs, } from "@/components";
 // =================
 import { BannerData, CareerData, ClientData, } from "./data";

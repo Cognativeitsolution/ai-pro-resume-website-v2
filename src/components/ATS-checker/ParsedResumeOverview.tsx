@@ -1,7 +1,9 @@
 import React from "react";
-import { CTA } from "@/components";
 import Image from "next/image";
-import evaluation from "../../../public/images/evaluation.svg";
+// ===================
+import { CTA } from "@/components";
+// ===================
+import evaluation from "media/images/evaluation.webp";
 
 const ParsedResumeOverview = () => {
   const totalBlocks = 9;

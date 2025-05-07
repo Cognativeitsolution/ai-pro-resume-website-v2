@@ -1,7 +1,7 @@
-import grammer from "media/images/grammer.webp";
-import tailored from "media/images/tailored.webp";
-import professional from "media/images/20+professionally.webp";
-import resume_parser from "media/images/resume_parser.webp";
+import grammer from "media/services/image-1.webp";
+import tailored from "media/services/image-2.webp";
+import professional from "media/services/image-3.webp";
+import resume_parser from "media/services/image-4.webp";
 
 export const BannerData = {
   title: (
@@ -21,7 +21,7 @@ export const BannerData = {
     </>
   ),
 };
-
+// ==========================
 export const ServicesData = [
   {
     image: grammer,
@@ -68,7 +68,7 @@ export const ServicesData = [
     buttonText: "Add To Cart",
   },
 ];
-
+// ==========================
 export const ServicePageContent = [
   {
     title:
@@ -119,3 +119,30 @@ export const ServicePageContent = [
     ],
   },
 ];
+// ==========================
+const ResumeExamplesPagefaqsList = [
+  {
+    question: "What Makes Us The Best Resume Maker In The Market?",
+    answer:
+      "Our unique features, such as AI-based suggestions, professional resume writing, professional cover letter writing, professional resume review, professional cover letter review, free resume and cover letter templates, pre-written examples, and referral rewards, make us the top and most creative resume builder.",
+  },
+  {
+    question: "How Fast Can I Create My Resume?",
+    answer:
+      "You can create your resume in under 30 minutes using our ready-made templates and intuitive editor.",
+  },
+  {
+    question: "Are The Resume Templates Customizable?",
+    answer:
+      "Yes, all our resume templates are fully customizable — fonts, layout, colors, and content.",
+  },
+  {
+    question: "Do You Offer Cover Letter Services?",
+    answer:
+      "Yes, we offer cover letter writing and review services with multiple revisions for perfection.",
+  },
+];
+export const faqs = {
+  title: "FREQUENTLY ASKED QUESTIONS",
+  faqlist: ResumeExamplesPagefaqsList,
+};
