@@ -19,7 +19,7 @@ const IconSlider = (props: BannerProps) => {
                         <h2 className="text-[26px] md:text-[30px] lg:text-[40px] leading-[36px] md:leading-[40px] lg:leading-[50px] font-semibold text-center">
                             {title}
                         </h2>
-                        <div className="overflow-hidden mt-12">
+                        <div className="overflow-hidden mt-6 md:mt-10 lg:mt-12">
                             <AutoScrollSlider>
                                 {icons.map((src, index) => (
                                     <div key={index} className="grow-0 shrink-0 basis-[200px] min-w-0 pl-4 opacity-95">
