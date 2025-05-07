@@ -68,6 +68,16 @@ export default {
           '50%': { top: '100%', transform: 'scaleY(-1)' },
           '100%': { top: '-10%' },
         },
+        zoomIn: {
+          '0%': {
+            transform: 'scale(0.8)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'scale(1)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 0.5s ease-out forwards", "bounce-in-up": "bounce-in-up 0.8s ease-out forwards",
@@ -76,6 +86,7 @@ export default {
         diagonalFloat: "diagonalFloat 2s ease-in-out infinite",
         dropdown: "dropdown 0.3s ease-out forwards",
         scanner: 'scanner 7s infinite',
+        zoomIn: 'zoomIn 3s ease-in forwards',
       },
     },
   },

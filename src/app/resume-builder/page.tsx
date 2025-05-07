@@ -1,9 +1,10 @@
 import React from "react";
 // =================
-import { InnerBanner, FindResumeTemplates, ParserFeatures, PrivacyFeatures, } from "@/components";
+import { InnerBanner, FindResumeTemplates, ParserFeatures, PrivacyFeatures, CoverLetterSections, Faq, } from "@/components";
 // =================
-import { BannerData, FeaturesData, findResumeData, ParserFeatureData, tabSectionData } from "./data";
+import { BannerData, faqs, FeaturesData, findResumeData, includedSecCoverLetter, ParserFeatureData, tabSectionData } from "./data";
 import TabSection from "@/components/sideTab/SideTab";
+import BuilderFeatures from "@/components/Features/BuilderFeatures";
 
 export default function Page() {
     return (
@@ -11,8 +12,10 @@ export default function Page() {
             <InnerBanner {...BannerData} />
             <ParserFeatures data={ParserFeatureData} />
             <FindResumeTemplates data={findResumeData} />
-            <PrivacyFeatures data={FeaturesData} />
+            <BuilderFeatures data={FeaturesData} />
+            <CoverLetterSections sectionDetail={includedSecCoverLetter} />
             <TabSection data={tabSectionData} />
+            <Faq data={faqs} />
         </>
     );
 }
