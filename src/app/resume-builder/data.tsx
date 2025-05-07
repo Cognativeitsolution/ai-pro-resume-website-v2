@@ -216,6 +216,8 @@ export const FeaturesData = [
             {
                 img: FeaturesImage2,
                 className: "sm:absolute bottom-[0%] sm:bottom-[5%] sm:right-[5%] z-20 mx-auto max-w-[95%] sm:max-w-[70%]",
+                direction: 'right',
+                duration: 1500,
             },
         ],
     },
@@ -232,6 +234,8 @@ export const FeaturesData = [
             {
                 img: FeaturesImage3,
                 className: "sm:absolute top-[40%] right-0 z-20 w-full sm:max-w-[70%]",
+                direction: 'right',
+                duration: 1500,
             },
             {
                 img: FeaturesImage4,
@@ -255,6 +259,8 @@ export const FeaturesData = [
             {
                 img: FeaturesImage6,
                 className: "absolute top-[22%] sm:top-[25%] left-0 sm:left-[20%] lg:left-[10%] z-10 max-w-[250px] sm:max-w-[50%] md:max-w-[45%] lg:max-w-[50%]",
+                direction: 'right',
+                duration: 1500,
             },
         ],
     },
@@ -271,6 +277,8 @@ export const FeaturesData = [
             {
                 img: FeaturesImage7,
                 className: "absolute top-0 right-0 sm:right-[20%] lg:right-[2%]  z-10 max-w-[250px] sm:max-w-[50%] md:max-w-[45%] lg:max-w-[50%] ",
+                direction: 'right',
+                duration: 1500,
             },
             {
                 img: FeaturesImage8,

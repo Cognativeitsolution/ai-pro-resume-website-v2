@@ -12,7 +12,7 @@ export const getTailwindTransitionClass = (
     2500: 'duration-[2500ms]',
   };
 
-  const base = `transition-all ${baseDurations[duration] || 'duration-1000'} ease-out transform`;
+  const base = `transition-all ${baseDurations[duration] || 'duration-2000'} ease-out transform`;
 
   const hiddenMap = {
     left: 'opacity-0 -translate-x-20',

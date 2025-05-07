@@ -35,7 +35,6 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
         return () => observer.disconnect();
     }, []);
 
-
     return (
         <section className="py-5 md:py-10">
             <div className="container mx-auto">
@@ -61,12 +60,12 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                                     <Image className="h-full" src={item?.secImg} alt={item?.title} />
                                 </div>
                                 {index === 0 && <Image
-                                    className={`absolute top-[43px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 1000)}`}
+                                    className={`absolute top-[43px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 1500)}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}
                                 {index === 1 && <Image
-                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 500)}`}
+                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 2500)}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}

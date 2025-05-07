@@ -1,5 +1,7 @@
-import React from "react";
+'use client'
+import { getTailwindTransitionClass } from "@/utils/transition";
 import Image from "next/image";
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
 
 interface FeatureCardProps {
     title: string;
@@ -20,18 +22,36 @@ const BuilderFeaturesCard = ({
     isBuilder,
     builderImg
 }: FeatureCardProps) => {
+
+    const refRight = useRef(null);
+    const refLeft = useRef(null);
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setShow(entry.isIntersecting);
+            },
+            { threshold: 0.7 }
+        );
+        if (refRight.current) observer.observe(refRight.current);
+        if (refLeft.current) observer.observe(refLeft.current);
+        return () => observer.disconnect();
+    }, []);
+
+
     return (
         <>
             <div className={`grid grid-cols-12 items-center gap-y-4 xl:gap-20 mb-6`}>
                 {reverse || isBuilder && <>
                     <div className={`col-span-12 lg:col-span-6 order-last flex flex-col justify-center lg:justify-start lg:order-first `}>
-                        <div className="min-h-[320px] sm:h-[400px] md:h-[480px] lg:h-[350px] xl:h-[380px] 2xl:h-[450px] relative">
+                        <div ref={refLeft} className="min-h-[320px] sm:h-[400px] md:h-[480px] lg:h-[350px] xl:h-[380px] 2xl:h-[450px] relative">
                             {builderImg?.map((item: any, index: number) => {
                                 return (
                                     <div
                                         key={index}>
                                         <div
-                                            className={`${item?.className} animate-zoomIn`}
+                                            className={`${item?.className} ${getTailwindTransitionClass(show, item?.direction, item?.duration)}`}
                                         >
                                             <Image
                                                 src={item?.img}
@@ -41,7 +61,7 @@ const BuilderFeaturesCard = ({
                                         </div>
                                         {
                                             item?.isShadow && (
-                                                <div className={`absolute -z-10 w-[87%] sm:w-[60%]  lg:w-[60%] h-[34%] sm:h-[28%]  md:h-[32%] lg:h-[34%] top-[18%] left-[10%] bg-[#47445a] opacity-20 rounded-[10px] blur-[1px]`}>
+                                                <div className={`absolute -z-10 w-[87%] sm:w-[60%]  lg:w-[60%] h-[34%] sm:h-[28%]  md:h-[32%] lg:h-[34%] top-[18%] left-[10%] bg-[#47445a] opacity-20 rounded-[10px] blur-[1px]  ${getTailwindTransitionClass(show, item?.direction, item?.duration)}`}>
                                                 </div>
                                             )
                                         }
@@ -84,14 +104,14 @@ const BuilderFeaturesCard = ({
                 </div>
 
                 {!reverse || isBuilder && <div className={`col-span-12  lg:col-span-6 flex flex-col justify-center`}>
-                    <div className="min-h-[320px] sm:h-[400px] md:h-[480px] lg:h-[350px] xl:h-[380px] 2xl:h-[450px] relative">
+                    <div ref={refRight} className="min-h-[320px] sm:h-[400px] md:h-[480px] lg:h-[350px] xl:h-[380px] 2xl:h-[450px] relative">
                         {builderImg?.map((item: any, index: number) => {
 
                             return (
                                 <div
                                     key={index}>
                                     <div
-                                        className={`${item?.className} animate-zoomIn`}
+                                        className={`${item?.className}  ${getTailwindTransitionClass(show, item?.direction, item?.duration)}`}
                                     >
                                         <Image
                                             src={item?.img}
