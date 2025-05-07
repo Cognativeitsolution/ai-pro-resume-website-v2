@@ -27,13 +27,14 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) setShow(true);
+                setShow(entry.isIntersecting);
             },
-            { threshold: 0.9 }
+            { threshold: 0.7 }
         );
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
     }, []);
+
 
     return (
         <section className="py-5 md:py-10">
@@ -60,24 +61,24 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                                     <Image className="h-full" src={item?.secImg} alt={item?.title} />
                                 </div>
                                 {index === 0 && <Image
-                                    className={`absolute top-[43px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left')}`}
+                                    className={`absolute top-[43px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 1000)}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}
                                 {index === 1 && <Image
-                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left')}`}
+                                    className={`absolute bottom-[-25px] left-1/2 transform -translate-x-1/2   ${getTailwindTransitionClass(show, 'left', 500)}`}
                                     src={item?.PositionImg1}
                                     alt={item?.title}
                                 />}
                                 {index === 2 && (
                                     <>
                                         <Image
-                                            className={`absolute w-[230px] top-[80px] left-[-4px] ${getTailwindTransitionClass(show, 'left')}`}
+                                            className={`absolute w-[230px] top-[80px] left-[-4px] ${getTailwindTransitionClass(show, 'left', 1000)}`}
                                             src={item?.PositionImg1}
                                             alt={item?.title}
                                         />
                                         <Image
-                                            className={`absolute w-[230px] top-[138px]  right-[-5px] ${getTailwindTransitionClass(show, 'right')}`}
+                                            className={`absolute w-[230px] top-[138px]  right-[-5px] ${getTailwindTransitionClass(show, 'right', 1500)}`}
                                             src={item?.PositionImg2}
                                             alt={item?.title}
                                         />
@@ -86,17 +87,17 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
                                 {index === 3 && (
                                     <>
                                         <Image
-                                            className={`absolute w-[90px] top-[4px] left-[80px] ${getTailwindTransitionClass(show, 'left')}`}
+                                            className={`absolute w-[90px] top-[4px] left-[80px] ${getTailwindTransitionClass(show, 'left', 2000)}`}
                                             src={item?.PositionImg1}
                                             alt={item?.title}
                                         />
                                         <Image
-                                            className={`absolute w-[90px] top-[75px]  right-[65px] ${getTailwindTransitionClass(show, 'right')}`}
+                                            className={`absolute w-[90px] top-[75px]  right-[65px] ${getTailwindTransitionClass(show, 'right', 2500)}`}
                                             src={item?.PositionImg2}
                                             alt={item?.title}
                                         />
                                         <Image
-                                            className={`absolute w-[80px] bottom-[10px]  left-[65px] ${getTailwindTransitionClass(show, 'bottom')}`}
+                                            className={`absolute w-[80px] bottom-[10px]  left-[65px] ${getTailwindTransitionClass(show, 'bottom', 1000)}`}
                                             src={item?.PositionImg3}
                                             alt={item?.title}
                                         />
