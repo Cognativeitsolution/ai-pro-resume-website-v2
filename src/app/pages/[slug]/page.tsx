@@ -1,25 +1,15 @@
 "use client";
-import {
-    InnerBanner,
-    Features,
-    Counter,
-    Stepper,
-    Client,
-    Reviews,
-} from "@/components";
+// =================
 import React from "react";
-import {
-    BannerData,
-    ClientData,
-    CounterData,
-    FeaturesData,
-    StepperData,
-} from "./data";
-import { reviewData } from "../../data";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { OldAPI } from "@/services/oldService";
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+// =================
+import { InnerBanner, Features, Counter, Stepper, Client, Reviews, } from "@/components";
+import { BannerData, ClientData, CounterData, FeaturesData, StepperData, } from "./data";
+import { reviewData } from "../../data";
+import { OldAPI } from "@/services/oldService";
+// =================
 
 type PageDetails = {
     id: number;

@@ -1,10 +1,8 @@
-import React from "react";
-// =================
 import { Client, Counter, InnerBanner, PrivacyFeatures, Reviews, ServiceSection, Welcome } from "@/components";
-// =================
 import { BannerData, FeaturesData, WelcomeData } from "./data";
 import { ClientData, CounterData } from "../about-us/data";
 import { reviewData, serviceSectionData } from "../data";
+// =================
 
 export default function Page() {
     return (

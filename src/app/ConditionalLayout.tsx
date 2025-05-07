@@ -2,8 +2,7 @@
 // =============
 import { useEffect, useState, ReactNode } from "react";
 // =============
-import { Footer, Header } from "@/components";
-import Loader from "@/components/loader/MainLoader";
+import { Footer, Header, Loader } from "@/components";
 import { ReferHeaderProvider } from "@/context/ReferHeaderContext";
 import { OldAPI } from "@/services/oldService";
 

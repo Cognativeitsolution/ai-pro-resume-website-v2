@@ -1,7 +1,6 @@
-'use client';
 import { InnerBanner, Faq, ResumeFormatComp } from '@/components';
 import { BannerData, FormatDetailData, faqs } from './data';
-
+// =================
 
 const page = () => {
 

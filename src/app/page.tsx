@@ -1,6 +1,6 @@
-import React from "react";
 import { Ats, Banner, ExploreTemplates, Faq, FindResumeTemplates, ResumeFeatures, Reviews, ServiceSection, Steps, VideoSection, } from "@/components";
 import { bannerData, exploreTemplatesData, videoSectionData, stepsData, atsData, featuresData, findResumeData, serviceSectionData, reviewData, faqs } from "./data";
+// =================
 
 export default function Page() {
   return (

@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 // ==============
-import { ProConsCard, CTA } from '@/components';
-import InterviewQuestionsCard from '../cards/InterviewQuestionsCard';
+import { ProConsCard, CTA, Tailor, InterviewQuestionsCard } from '@/components';
 // ==============
 import tick from "media/images/doubleTick.webp";
-import Tailor from './Tailor';
 
 type ImageData = {
     src: any;

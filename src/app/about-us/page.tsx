@@ -1,9 +1,7 @@
-import React from "react";
-// =================
 import { InnerBanner, Features, Counter, Stepper, Client, Reviews, IconSlider, } from "@/components";
-// =================
 import { BannerData, ClientData, CounterData, FeaturesData, IconData, StepperData, } from "./data";
 import { reviewData } from "../data";
+// =================
 
 export default function Page() {
     return (

@@ -1,7 +1,6 @@
-'use client';
-import { InnerBanner, Faq } from '@/components';
+import { InnerBanner, Faq, DynamicSection } from '@/components';
 import { BannerData, DynamicSectionData, faqs } from './data';
-import DynamicSection from '@/components/dynamicSection/DynamicSection';
+// =================
 
 const page = () => {
 

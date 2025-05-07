@@ -1,11 +1,6 @@
-import React from "react";
-import {
-  Faq,
-  IconSlider,
-  InnerBanner,
-  CoverLetterCategories,
-} from "@/components";
+import { Faq, IconSlider, InnerBanner, CoverLetterCategories,} from "@/components";
 import { BannerData, faqs, IconData } from "./data";
+// =================
 
 export default function Page() {
   return (

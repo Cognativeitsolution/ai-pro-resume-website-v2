@@ -2,10 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 // ===================
-import { CTA } from '@/components';
-import DynamicContent from './DynamicContent';
-import DynamicTabs from './DynamicTabs';
-import DynBreadCrumbs from '../dynamic-pages/DynBreadCrumbs';
+import { CTA, DynamicContent, DynamicTabs, DynBreadCrumbs } from '@/components';
 // ===================
 import verticleTabBg from 'media/images/verticleTabBg.webp';
 import TempBg from 'media/resume_template_images/Template_24.webp';
