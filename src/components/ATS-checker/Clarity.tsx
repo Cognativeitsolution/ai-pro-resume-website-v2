@@ -25,7 +25,7 @@ const Clarity = () => {
           <div className="flex-1 space-y-2 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Conciseness
               </h3>
             </div>
@@ -38,7 +38,7 @@ const Clarity = () => {
               ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
               qui in ea voluptate
             </p>
-            <Image className="mx-auto" src={conciseness} alt="formatting_2" />
+            <Image className="mx-auto w-[80px] sm:w-auto" src={conciseness} alt="formatting_2" />
             <p className="text-gray-500 text-[16px] mx-auto flex items-center justify-center font-bold">
               Good Job!
             </p>
@@ -53,7 +53,7 @@ const Clarity = () => {
           <div className="flex-1 space-y-4 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Impactful 
               </h3>
             </div>
@@ -67,7 +67,7 @@ const Clarity = () => {
               qui in ea voluptate
             </p>
 
-            <Image className="mx-auto" src={impactful} alt="impactful" />
+            <Image className="mx-auto w-[70px] sm:w-auto" src={impactful} alt="impactful" />
             <p className="text-black font-semibold text-center text-[16px] mx-auto flex items-center justify-center">
               No! <br />
               Not so impactful Resume structure

@@ -26,7 +26,7 @@ const GrammerAndSpelling = () => {
           <div className="flex-1 space-y-4 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Capitalization
               </h3>
             </div>
@@ -76,10 +76,10 @@ const GrammerAndSpelling = () => {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-start justify-between gap-6 p-6 rounded-lg max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-6 rounded-lg max-w-5xl mx-auto">
             {/* Left Section */}
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
                 With AI PRO Resume report, you get:
               </h3>
               <ul className="list-disc list-inside text-gray-700 space-y-2">

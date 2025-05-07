@@ -24,7 +24,7 @@ const Formatting = () => {
           <div className="flex-1 space-y-4 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 File Format & Size
               </h3>
             </div>
@@ -72,7 +72,7 @@ const Formatting = () => {
           <div className="flex-1 space-y-4 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Resume Length
               </h3>
             </div>
@@ -101,7 +101,7 @@ const Formatting = () => {
                   className="w-full rounded-md"
                 />
                 {/* Overlay Content */}
-                <div className="absolute inset-0 w-[80%] sm:w-[70%] h-[70%] md:h-[40%] mx-auto bg-[#6B4BB8]/70 flex flex-col items-center justify-center px-4 text-white text-center top-[20px] lg:top-[170px]">
+                <div className="absolute inset-0 w-[80%] sm:w-[70%] h-[70%] md:h-[50%] mx-auto bg-[#6B4BB8]/60 flex flex-col items-center justify-center px-4 text-white text-center top-[20px] md:top-[100px] lg:top-[130px]">
                   <p className="text-sm md:text-lg font-medium mb-3 hidden sm:block">
                     Automatically Create A Longer Version Of My{" "}
                     <br className="hidden sm:block" /> Resume With AI PRO Resume
@@ -118,10 +118,10 @@ const Formatting = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row items-start justify-between gap-6 p-6 rounded-lg max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-start justify-between gap-6 rounded-lg max-w-5xl mx-auto">
               {/* Left Section */}
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-lg sm:text-2xl font-semibold text-gray-800 mb-4">
                   With AI PRO Resume report, you get:
                 </h3>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -152,7 +152,7 @@ const Formatting = () => {
           <div className="flex-1 space-y-2 w-full">
             <div className="flex items-center justify-start gap-2">
               <div className="w-[8px] h-[30px] rounded-xl bg-[#ece9fe]"></div>
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-snug">
                 Long Bullet Points
               </h3>
             </div>
@@ -167,7 +167,7 @@ const Formatting = () => {
               no more than 50 words is a must if you want to make
               your resume easy to read.
             </p>
-            <Image className="mx-auto" src={good_job} alt="formatting_2" />
+            <Image className="mx-auto w-[130px] sm:w-auto" src={good_job} alt="formatting_2" />
             <p className="text-gray-500 text-[16px] mx-auto flex items-center justify-center font-bold">
               Good Job!
             </p>
