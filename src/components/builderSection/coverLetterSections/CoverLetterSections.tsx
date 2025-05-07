@@ -29,7 +29,7 @@ const CoverLetterSections = ({ sectionDetail }: propsType) => {
             ([entry]) => {
                 setShow(entry.isIntersecting);
             },
-            { threshold: 0.7 }
+            { threshold: 0.1 }
         );
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();

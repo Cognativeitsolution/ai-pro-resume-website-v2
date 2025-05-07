@@ -32,7 +32,7 @@ const BuilderFeaturesCard = ({
             ([entry]) => {
                 setShow(entry.isIntersecting);
             },
-            { threshold: 0.7 }
+            { threshold: 0.1 }
         );
         if (refRight.current) observer.observe(refRight.current);
         if (refLeft.current) observer.observe(refLeft.current);
